@@ -1,6 +1,4 @@
-<h2 id=select>
-  <code>select</code>
-</h2>
+# Селектор
 
 <h3 id=select_add_all_entities>
   <code>select add_all_entities</code>
