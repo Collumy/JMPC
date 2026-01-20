@@ -15,7 +15,7 @@
 | `<all>`            | Все игроки         |
 
 
-**Важно:** эти селектор доступны только для действий от объекта `player`.
+**Важно:** эти селекторы доступны только для действий от объекта `player`.
 
 <h3 id=if_player_chat_colors_enabled>
   <code>player::chat_colors_enabled</code>
