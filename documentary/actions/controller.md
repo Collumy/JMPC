@@ -1,10 +1,10 @@
 # Контроллер
 ---
 
-## 1. async_run / async  
+## async_run / async  
 **Алиасы:** `async_run`, `async`  
 **Действие:** `controller_async_run`  
-Выполнить тело **в отдельном потоке** (не блокирует основной).  
+Выполнить тело в отдельном потоке
 
 ```ts
 controller async():
@@ -14,10 +14,10 @@ controller async():
 
 ---
 
-## 2. do_not_run / skip  
+## do_not_run / skip  
 **Алиасы:** `do_not_run`, `skip`  
 **Действие:** `controller_do_not_run`  
-Полностью **исключает** тело из скрипта (удобно для временного отключения).  
+Полностью исключает тело из скрипта
 
 ```ts
 controller skip():
@@ -26,9 +26,10 @@ controller skip():
 
 ---
 
-## 3. exception / catch_error / catch  
+## exception / catch_error / catch  
 **Алиасы:** `exception`, `catch_error`, `catch`  
 **Действие:** `controller_exception`  
+Поймать ошибку внутри блока кода
 
 | Аргумент | Тип     | Описание |
 |----------|---------|----------|
@@ -42,9 +43,10 @@ player::message("Ошибка: ${err.message}")
 
 ---
 
-## 4. measure_time / time / measure  
+## measure_time / time / measure  
 **Алиасы:** `measure_time`, `time`, `measure`  
-**Действие:** `controller_measure_time`  
+**Действие:** `controller_measure_time` 
+Измерить время
 
 | Аргумент | Тип  | Описание |
 |----------|------|----------|
