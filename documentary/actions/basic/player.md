@@ -1,19 +1,18 @@
 <h2 id=player>
   <code>player</code>
-  <a href="./actions.md" style="font-size: 14px; margin-left:">↩️</a>
 </h2>
 
 | **ID**             | **Название**       |
 |--------------------|--------------------|
 | `<current>`        | Текущая цель       |
-| `<default_player>` | Игрок по умолчанию |
-| `<killer_player>`  | Убийца             |
-| `<damager_player>` | Атакующий          |
-| `<shooter_player>` | Стрелок            |
+| `<default>`        | Игрок по умолчанию |
+| `<killer>`         | Убийца             |
+| `<damager>`        | Атакующий          |
+| `<shooter>`         | Стрелок            |
 | `<projectile>`     | Снаряд стрелка     |
-| `<victim_player>`  | Жертва             |
-| `<random_player>`  | Случайный игрок    |
-| `<all_players>`    | Все игроки         |
+| `<victim>`         | Жертва             |
+| `<random>`         | Случайный игрок    |
+| `<all>`            | Все игроки         |
 
 
 **Важно:** эти селекторы доступны только для действий от объекта `player`.
@@ -29,7 +28,7 @@
 
 **Пример использования:**
 ```ts
-if(player::chat_colors_enabled()){
+if player(chat_colors_enabled()){
     player::message("Условие верно");
 }
 ```
@@ -45,13 +44,13 @@ if(player::chat_colors_enabled()){
 
 **Пример использования:**
 ```ts
-if(player::chat_message_equals(["chat_messages", "chat_messages"])){
+if player(chat_message_equals(["chat_messages", "chat_messages"])){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::chat_message_equals(chat_messages=["chat_messages", "chat_messages"])){
+if player(chat_message_equals(chat_messages=["chat_messages", "chat_messages"])){
     player::message("Условие верно");
 }
 ```
@@ -73,13 +72,13 @@ if(player::chat_message_equals(chat_messages=["chat_messages", "chat_messages"])
 
 **Пример использования:**
 ```ts
-if(player::collides_at_location(location(0,0,0,0,0))){
+if player(collides_at_location(location(0,0,0,0,0))){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::collides_at_location(location=location(0,0,0,0,0))){
+if player(collides_at_location(location=location(0,0,0,0,0))){
     player::message("Условие верно");
 }
 ```
@@ -101,13 +100,13 @@ if(player::collides_at_location(location=location(0,0,0,0,0))){
 
 **Пример использования:**
 ```ts
-if(player::collides_using_hitbox(location(0,0,0,0,0), location(0,0,0,0,0))){
+if player(collides_using_hitbox(location(0,0,0,0,0), location(0,0,0,0,0))){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::collides_using_hitbox(min=location(0,0,0,0,0), max=location(0,0,0,0,0))){
+if player(collides_using_hitbox(min=location(0,0,0,0,0), max=location(0,0,0,0,0))){
     player::message("Условие верно");
 }
 ```
@@ -130,13 +129,13 @@ if(player::collides_using_hitbox(min=location(0,0,0,0,0), max=location(0,0,0,0,0
 
 **Пример использования:**
 ```ts
-if(player::collides_with_entity("name_or_uuid", "CONTAINS")){
+if player(collides_with_entity("name_or_uuid", "CONTAINS")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::collides_with_entity(name_or_uuid="name_or_uuid", check_type="CONTAINS")){
+if player(collides_with_entity(name_or_uuid="name_or_uuid", check_type="CONTAINS")){
     player::message("Условие верно");
 }
 ```
@@ -159,13 +158,13 @@ if(player::collides_with_entity(name_or_uuid="name_or_uuid", check_type="CONTAIN
 
 **Пример использования:**
 ```ts
-if(player::cursor_item_equals([item("stick"), item("stick")], "EXACTLY")){
+if player(cursor_item_equals([item("stick"), item("stick")], "EXACTLY")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::cursor_item_equals(items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
+if player(cursor_item_equals(items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
     player::message("Условие верно");
 }
 ```
@@ -188,7 +187,7 @@ if(player::cursor_item_equals(items=[item("stick"), item("stick")], comparison_m
 
 **Пример использования:**
 ```ts
-if(player::is_dummy()){
+if player(is_dummy()){
     player::message("Условие верно");
 }
 ```
@@ -204,13 +203,13 @@ if(player::is_dummy()){
 
 **Пример использования:**
 ```ts
-if(player::gamemode_equals("ADVENTURE")){
+if player(gamemode_equals("ADVENTURE")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::gamemode_equals(gamemode="ADVENTURE")){
+if player(gamemode_equals(gamemode="ADVENTURE")){
     player::message("Условие верно");
 }
 ```
@@ -232,13 +231,13 @@ if(player::gamemode_equals(gamemode="ADVENTURE")){
 
 **Пример использования:**
 ```ts
-if(player::has_input("FORWARD")){
+if player(has_input("FORWARD")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::has_input(input_type="FORWARD")){
+if player(has_input(input_type="FORWARD")){
     player::message("Условие верно");
 }
 ```
@@ -260,13 +259,13 @@ if(player::has_input(input_type="FORWARD")){
 
 **Пример использования:**
 ```ts
-if(player::has_item([item("stick"), item("stick")], "ALL", "EXACTLY")){
+if player(has_item([item("stick"), item("stick")], "ALL", "EXACTLY")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::has_item(items=[item("stick"), item("stick")], check_mode="ALL", comparison_mode="EXACTLY")){
+if player(has_item(items=[item("stick"), item("stick")], check_mode="ALL", comparison_mode="EXACTLY")){
     player::message("Условие верно");
 }
 ```
@@ -290,13 +289,13 @@ if(player::has_item(items=[item("stick"), item("stick")], check_mode="ALL", comp
 
 **Пример использования:**
 ```ts
-if(player::has_item_at_least(item("stick"), 1, "EXACTLY")){
+if player(has_item_at_least(item("stick"), 1, "EXACTLY")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::has_item_at_least(item=item("stick"), count=1, comparison_mode="EXACTLY")){
+if player(has_item_at_least(item=item("stick"), count=1, comparison_mode="EXACTLY")){
     player::message("Условие верно");
 }
 ```
@@ -320,13 +319,13 @@ if(player::has_item_at_least(item=item("stick"), count=1, comparison_mode="EXACT
 
 **Пример использования:**
 ```ts
-if(player::has_item_in_slot([1, 2], [item("stick"), item("stick")], "EXACTLY")){
+if player(has_item_in_slot([1, 2], [item("stick"), item("stick")], "EXACTLY")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::has_item_in_slot(slots=[1, 2], items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
+if player(has_item_in_slot(slots=[1, 2], items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
     player::message("Условие верно");
 }
 ```
@@ -350,13 +349,13 @@ if(player::has_item_in_slot(slots=[1, 2], items=[item("stick"), item("stick")], 
 
 **Пример использования:**
 ```ts
-if(player::has_potion_effect([potion("slow_falling"), potion("slow_falling")], "ALL")){
+if player(has_potion_effect([potion("slow_falling"), potion("slow_falling")], "ALL")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::has_potion_effect(potions=[potion("slow_falling"), potion("slow_falling")], check_mode="ALL")){
+if player(has_potion_effect(potions=[potion("slow_falling"), potion("slow_falling")], check_mode="ALL")){
     player::message("Условие верно");
 }
 ```
@@ -381,13 +380,13 @@ if(player::has_potion_effect(potions=[potion("slow_falling"), potion("slow_falli
 
 **Пример использования:**
 ```ts
-if(player::has_privilege("BUILDER", "FALSE")){
+if player(has_privilege("BUILDER", "FALSE")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::has_privilege(privilege="BUILDER", exact="FALSE")){
+if player(has_privilege(privilege="BUILDER", exact="FALSE")){
     player::message("Условие верно");
 }
 ```
@@ -410,13 +409,13 @@ if(player::has_privilege(privilege="BUILDER", exact="FALSE")){
 
 **Пример использования:**
 ```ts
-if(player::has_room_for_item([item("stick"), item("stick")], "ARMOR", "ALL")){
+if player(has_room_for_item([item("stick"), item("stick")], "ARMOR", "ALL")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::has_room_for_item(items=[item("stick"), item("stick")], checked_slots="ARMOR", check_mode="ALL")){
+if player(has_room_for_item(items=[item("stick"), item("stick")], checked_slots="ARMOR", check_mode="ALL")){
     player::message("Условие верно");
 }
 ```
@@ -440,13 +439,13 @@ if(player::has_room_for_item(items=[item("stick"), item("stick")], checked_slots
 
 **Пример использования:**
 ```ts
-if(player::hotbar_slot_equals(1)){
+if player(hotbar_slot_equals(1)){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::hotbar_slot_equals(slot=1)){
+if player(hotbar_slot_equals(slot=1)){
     player::message("Условие верно");
 }
 ```
@@ -468,13 +467,13 @@ if(player::hotbar_slot_equals(slot=1)){
 
 **Пример использования:**
 ```ts
-if(player::in_area(location(0,0,0,0,0), location(0,0,0,0,0), "FALSE", "HITBOX", "CONTAINS")){
+if player(in_area(location(0,0,0,0,0), location(0,0,0,0,0), "FALSE", "HITBOX", "CONTAINS")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::in_area(location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0), ignore_y_axis="FALSE", intersect_type="HITBOX", check_type="CONTAINS")){
+if player(in_area(location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0), ignore_y_axis="FALSE", intersect_type="HITBOX", check_type="CONTAINS")){
     player::message("Условие верно");
 }
 ```
@@ -500,13 +499,13 @@ if(player::in_area(location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0
 
 **Пример использования:**
 ```ts
-if(player::inventory_menu_slot_equals([1, 2], [item("stick"), item("stick")], "EXACTLY")){
+if player(inventory_menu_slot_equals([1, 2], [item("stick"), item("stick")], "EXACTLY")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::inventory_menu_slot_equals(slots=[1, 2], items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
+if player(inventory_menu_slot_equals(slots=[1, 2], items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
     player::message("Условие верно");
 }
 ```
@@ -530,13 +529,13 @@ if(player::inventory_menu_slot_equals(slots=[1, 2], items=[item("stick"), item("
 
 **Пример использования:**
 ```ts
-if(player::inventory_type_open("ANVIL")){
+if player(inventory_type_open("ANVIL")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::inventory_type_open(inventory_type="ANVIL")){
+if player(inventory_type_open(inventory_type="ANVIL")){
     player::message("Условие верно");
 }
 ```
@@ -558,7 +557,7 @@ if(player::inventory_type_open(inventory_type="ANVIL")){
 
 **Пример использования:**
 ```ts
-if(player::is_allow_server_listing()){
+if player(is_allow_server_listing()){
     player::message("Условие верно");
 }
 ```
@@ -574,7 +573,7 @@ if(player::is_allow_server_listing()){
 
 **Пример использования:**
 ```ts
-if(player::is_blocking()){
+if player(is_blocking()){
     player::message("Условие верно");
 }
 ```
@@ -590,7 +589,7 @@ if(player::is_blocking()){
 
 **Пример использования:**
 ```ts
-if(player::is_disguised()){
+if player(is_disguised()){
     player::message("Условие верно");
 }
 ```
@@ -606,7 +605,7 @@ if(player::is_disguised()){
 
 **Пример использования:**
 ```ts
-if(player::is_flying()){
+if player(is_flying()){
     player::message("Условие верно");
 }
 ```
@@ -622,7 +621,7 @@ if(player::is_flying()){
 
 **Пример использования:**
 ```ts
-if(player::is_gliding()){
+if player(is_gliding()){
     player::message("Условие верно");
 }
 ```
@@ -638,13 +637,13 @@ if(player::is_gliding()){
 
 **Пример использования:**
 ```ts
-if(player::holding([item("stick"), item("stick")], "EITHER_HAND", "EXACTLY")){
+if player(holding([item("stick"), item("stick")], "EITHER_HAND", "EXACTLY")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::holding(items=[item("stick"), item("stick")], hand_slot="EITHER_HAND", comparison_mode="EXACTLY")){
+if player(holding(items=[item("stick"), item("stick")], hand_slot="EITHER_HAND", comparison_mode="EXACTLY")){
     player::message("Условие верно");
 }
 ```
@@ -668,13 +667,13 @@ if(player::holding(items=[item("stick"), item("stick")], hand_slot="EITHER_HAND"
 
 **Пример использования:**
 ```ts
-if(player::is_looking_at_block(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], [location(0,0,0,0,0), location(0,0,0,0,0)], 1, "ALWAYS")){
+if player(is_looking_at_block(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], [location(0,0,0,0,0), location(0,0,0,0,0)], 1, "ALWAYS")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::is_looking_at_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], locations=[location(0,0,0,0,0), location(0,0,0,0,0)], distance=1, fluid_mode="ALWAYS")){
+if player(is_looking_at_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], locations=[location(0,0,0,0,0), location(0,0,0,0,0)], distance=1, fluid_mode="ALWAYS")){
     player::message("Условие верно");
 }
 ```
@@ -699,13 +698,13 @@ if(player::is_looking_at_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:o
 
 **Пример использования:**
 ```ts
-if(player::is_near(1, location(0,0,0,0,0), "FALSE")){
+if player(is_near(1, location(0,0,0,0,0), "FALSE")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::is_near(range=1, location=location(0,0,0,0,0), ignore_y_axis="FALSE")){
+if player(is_near(range=1, location=location(0,0,0,0,0), ignore_y_axis="FALSE")){
     player::message("Условие верно");
 }
 ```
@@ -729,7 +728,7 @@ if(player::is_near(range=1, location=location(0,0,0,0,0), ignore_y_axis="FALSE")
 
 **Пример использования:**
 ```ts
-if(player::is_on_ground()){
+if player(is_on_ground()){
     player::message("Условие верно");
 }
 ```
@@ -745,7 +744,7 @@ if(player::is_on_ground()){
 
 **Пример использования:**
 ```ts
-if(player::is_online_mode()){
+if player(is_online_mode()){
     player::message("Условие верно");
 }
 ```
@@ -761,13 +760,13 @@ if(player::is_online_mode()){
 
 **Пример использования:**
 ```ts
-if(player::is_riding_entity(["entity_ids", "entity_ids"], "FARTHEST")){
+if player(is_riding_entity(["entity_ids", "entity_ids"], "FARTHEST")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::is_riding_entity(entity_ids=["entity_ids", "entity_ids"], compare_mode="FARTHEST")){
+if player(is_riding_entity(entity_ids=["entity_ids", "entity_ids"], compare_mode="FARTHEST")){
     player::message("Условие верно");
 }
 ```
@@ -790,7 +789,7 @@ if(player::is_riding_entity(entity_ids=["entity_ids", "entity_ids"], compare_mod
 
 **Пример использования:**
 ```ts
-if(player::is_self_disguised()){
+if player(is_self_disguised()){
     player::message("Условие верно");
 }
 ```
@@ -806,7 +805,7 @@ if(player::is_self_disguised()){
 
 **Пример использования:**
 ```ts
-if(player::is_sleeping()){
+if player(is_sleeping()){
     player::message("Условие верно");
 }
 ```
@@ -822,7 +821,7 @@ if(player::is_sleeping()){
 
 **Пример использования:**
 ```ts
-if(player::is_sneaking()){
+if player(is_sneaking()){
     player::message("Условие верно");
 }
 ```
@@ -838,7 +837,7 @@ if(player::is_sneaking()){
 
 **Пример использования:**
 ```ts
-if(player::is_sprinting()){
+if player(is_sprinting()){
     player::message("Условие верно");
 }
 ```
@@ -854,13 +853,13 @@ if(player::is_sprinting()){
 
 **Пример использования:**
 ```ts
-if(player::is_standing_on_block(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], [location(0,0,0,0,0), location(0,0,0,0,0)], "FALSE")){
+if player(is_standing_on_block(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], [location(0,0,0,0,0), location(0,0,0,0,0)], "FALSE")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::is_standing_on_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], locations=[location(0,0,0,0,0), location(0,0,0,0,0)], only_solid="FALSE")){
+if player(is_standing_on_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], locations=[location(0,0,0,0,0), location(0,0,0,0,0)], only_solid="FALSE")){
     player::message("Условие верно");
 }
 ```
@@ -884,7 +883,7 @@ if(player::is_standing_on_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:
 
 **Пример использования:**
 ```ts
-if(player::is_swimming()){
+if player(is_swimming()){
     player::message("Условие верно");
 }
 ```
@@ -900,13 +899,13 @@ if(player::is_swimming()){
 
 **Пример использования:**
 ```ts
-if(player::is_using_item([item("stick"), item("stick")], "EXACTLY")){
+if player(is_using_item([item("stick"), item("stick")], "EXACTLY")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::is_using_item(items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
+if player(is_using_item(items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
     player::message("Условие верно");
 }
 ```
@@ -929,13 +928,13 @@ if(player::is_using_item(items=[item("stick"), item("stick")], comparison_mode="
 
 **Пример использования:**
 ```ts
-if(player::is_wearing_item([item("stick"), item("stick")], "ALL", "EXACTLY")){
+if player(is_wearing_item([item("stick"), item("stick")], "ALL", "EXACTLY")){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::is_wearing_item(items=[item("stick"), item("stick")], check_mode="ALL", comparison_mode="EXACTLY")){
+if player(is_wearing_item(items=[item("stick"), item("stick")], check_mode="ALL", comparison_mode="EXACTLY")){
     player::message("Условие верно");
 }
 ```
@@ -959,13 +958,13 @@ if(player::is_wearing_item(items=[item("stick"), item("stick")], check_mode="ALL
 
 **Пример использования:**
 ```ts
-if(player::item_is_not_on_cooldown([item("stick"), item("stick")])){
+if player(item_is_not_on_cooldown([item("stick"), item("stick")])){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::item_is_not_on_cooldown(items=[item("stick"), item("stick")])){
+if player(item_is_not_on_cooldown(items=[item("stick"), item("stick")])){
     player::message("Условие верно");
 }
 ```
@@ -987,13 +986,13 @@ if(player::item_is_not_on_cooldown(items=[item("stick"), item("stick")])){
 
 **Пример использования:**
 ```ts
-if(player::name_equals(["names_or_uuids", "names_or_uuids"])){
+if player(name_equals(["names_or_uuids", "names_or_uuids"])){
     player::message("Условие верно");
 }
 
 //Или в сухую по ключам
 
-if(player::name_equals(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
+if player(name_equals(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
     player::message("Условие верно");
 }
 ```
@@ -1015,7 +1014,7 @@ if(player::name_equals(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
 
 **Пример использования:**
 ```ts
-if(player::text_filtering_enabled()){
+if player(text_filtering_enabled()){
     player::message("Условие верно");
 }
 ```
