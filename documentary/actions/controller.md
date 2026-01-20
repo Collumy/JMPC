@@ -1,5 +1,4 @@
 # Контроллер
----
 
 ## async_run / async  
 **Алиасы:** `async_run`, `async`  
