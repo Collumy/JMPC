@@ -38,7 +38,7 @@ controller skip():
 ```ts
 controller catch(err):
     n: num--
-player::message("Ошибка: ${err.message}")
+player::message("Ошибка: ${err}")
 ```
 
 ---
@@ -54,7 +54,7 @@ player::message("Ошибка: ${err.message}")
 | duration | enum | единица измерения: `NANOSECONDS`, `MICROSECONDS`, `MILLISECONDS` |
 
 ```ts
-controller measure(t, MILLISECONDS):
+controller measure(t, "MILLISECONDS"):
     wait(1)
 player::message("Выполнено за ${t} мс")
 ```
