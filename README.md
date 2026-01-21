@@ -90,7 +90,7 @@ a = location(1, 2, 3);
 b = item("stone_sword", nbt={"minecraft:damage": 1})
 ```
 
-[📓 Список фабрик](./documentation/values/value.md)
+[📓 Список значений](./documentation/values/expressions.md)
 
 ---
 
