@@ -633,8 +633,8 @@ call function swap(x, y) -> new_x, new_y
 ```ts
 // variables.jp
 
-a = 1;
-b = 2;
+a = 1
+b = 2
 ```
 
 ```ts
