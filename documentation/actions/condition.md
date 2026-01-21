@@ -44,7 +44,7 @@ event player_join:
 
 Поставьте `not` или `!` сразу после открывающей скобки:
 
-```
+```ts
 if (not player(is_sneaking())):
 if (!player(is_flying())):
 ```
