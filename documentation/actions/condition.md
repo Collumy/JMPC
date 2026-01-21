@@ -21,7 +21,24 @@ else:
 ## Использование
 
 Заместо `if(player::is_flying())` как в jmcc, здесь нужно писать `if player(is_flying())`.
-То есть просто выносите player, entity, world, variable за скобку
+То есть просто выносите player, entity, world, variable за скобку.
+Если же вы ничего не укажите: `if ()`, то это активирует режим кастомных условий:
+
+```ts
+event player_join:
+    if (num == 1):
+    if (num != 1):
+    if (num > 9):       
+    if (num >= 9):             
+    if (num < 9):            
+    if (num <= 9):                 
+
+    // строковые проверки
+    if (text.contains("hello")):             
+    if (username.startswith("Mr","Mrs","Dr")): 
+    if (filename.endswith(".txt",".log")):   
+    if (!message.contains("spam","banned")): 
+```
 
 ## Отрицание
 
