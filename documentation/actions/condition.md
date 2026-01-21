@@ -37,7 +37,6 @@ event player_join:
     if (text.contains("hello")):             
     if (username.startswith("Mr","Mrs","Dr")): 
     if (filename.endswith(".txt",".log")):   
-    if (!message.contains("spam","banned")): 
 ```
 
 ## Отрицание
