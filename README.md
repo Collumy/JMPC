@@ -646,7 +646,7 @@ function say_hello:
 ```
 
 ```ts
-// index.jc
+// index.jp
 
 import variables.jp
 from utils import say_hello
