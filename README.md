@@ -248,7 +248,7 @@ event player_join:
 
 Теперь при входе игрока ему будет писаться сообщение "Привет!".
 
-Другие события определяются аналогичным способом, только айди события `player_join` будет изменяться на [📓 другое нужное]./documentation/start/event.mdd).
+Другие события определяются аналогичным способом, только айди события `player_join` будет изменяться на [📓 другое нужное](./documentation/start/event.mdd).
 
 ---
 
@@ -514,7 +514,29 @@ for index in range(10):
 
 ---
 
-#### Функции и процессы
+### Контроль действий, контроллер, селектор
+
+```ts
+wait(5, "SECONDS") // ждать 5 секунд
+exit               // остановить код
+continue           // пропустить итерацию
+break              // остановить повторение
+return             // вернуться до вызова
+
+controller catch(var): // поймать ошибку
+controller measure():  // измерить время выполнения
+
+select player_by_name()                                // выбрать игрока по имени
+select player_by_conditional(if player(is_sneaking())) // выбрать игрока если игрок крадётся
+```
+
+[📓 Контроль действий](./documentation/actions/code_control.md)
+[📓 Контроллер](./documentation/actions/controller.md)
+[📓 Селектор](./documentation/actions/select.md)
+
+---
+
+## Функции и процессы
 
 
 #### Импортирование
