@@ -394,7 +394,7 @@ n: num = floor(num)
 Используются для работы со списками.
 
 ```ts
-list: value = g\`var\`[10]
+list: value = g`var`[10]
 // Получение значения из списка
 
 l: myList.append(1, 2, 3, 4, 5)
@@ -407,7 +407,7 @@ l: myList.append(1, 2, 3, 4, 5)
 
 
 ```ts
-map: i\`length\` = len(g`myMap`)
+map: i`length` = len(g`myMap`)
 // Получение размера словаря
 
 d: list.sort()
