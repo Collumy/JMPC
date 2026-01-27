@@ -1,5 +1,5 @@
 import json
-import os
+import o
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 VALUES_CACHE = {}
@@ -16,3 +16,4 @@ def load_json(file: str):
                 VALUES_CACHE[file] = data
                 return data
     raise FileNotFoundError(f"Файл '{file}' не найден в {DATA_DIR}")
+
