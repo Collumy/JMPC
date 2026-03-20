@@ -1,7 +1,7 @@
 # Селектор
 
 <h3 id=select_add_all_entities>
-  <code>select add_all_entities</code>
+  <code>select.add_all_entities</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -11,11 +11,11 @@
 
 **Пример использования:**
 ```ts
-select add_all_entities()
+select.add_all_entities()
 ```
 
 <h3 id=select_add_all_mobs>
-  <code>select add_all_mobs</code>
+  <code>select.add_all_mobs</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -25,11 +25,11 @@ select add_all_entities()
 
 **Пример использования:**
 ```ts
-select add_all_mobs()
+select.add_all_mobs()
 ```
 
 <h3 id=select_add_all_players>
-  <code>select add_all_players</code>
+  <code>select.add_all_players</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -39,11 +39,11 @@ select add_all_mobs()
 
 **Пример использования:**
 ```ts
-select add_all_players()
+select.add_all_players()
 ```
 
 <h3 id=select_add_entity_by_conditional>
-  <code>select add_entity_by_conditional</code>
+  <code>select.add_entity_by_conditional</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -53,11 +53,11 @@ select add_all_players()
 
 **Пример использования:**
 ```ts
-select add_entity_by_conditional(if player(is_flying()))
+select.add_entity_by_conditional(player(is_flying()))
 ```
 
 <h3 id=select_add_entity_by_name>
-  <code>select add_entity_by_name</code>
+  <code>select.add_entity_by_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -67,11 +67,11 @@ select add_entity_by_conditional(if player(is_flying()))
 
 **Пример использования:**
 ```ts
-select add_entity_by_name(["name_or_uuid", "name_or_uuid"])
+select.add_entity_by_name(["name_or_uuid", "name_or_uuid"])
 
 //Или в сухую по ключам
 
-select add_entity_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
+select.add_entity_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 ```
 
 **Аргументы:**
@@ -81,7 +81,7 @@ select add_entity_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 | name_or_uuid | Список\[Текст\] | Имя или UUID сущности<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=select_add_event_target>
-  <code>select add_event_target</code>
+  <code>select.add_event_target</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -91,11 +91,11 @@ select add_entity_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 
 **Пример использования:**
 ```ts
-select add_event_target("DAMAGER")
+select.add_event_target("DAMAGER")
 
 //Или в сухую по ключам
 
-select add_event_target(selection_type="DAMAGER")
+select.add_event_target(selection_type="DAMAGER")
 ```
 
 **Аргументы:**
@@ -105,7 +105,7 @@ select add_event_target(selection_type="DAMAGER")
 | selection_type | Маркер<br/>**DAMAGER** - Атакующий<br/>**DEFAULT** - По умолчанию<br/>**KILLER** - Убийца<br/>**PROJECTILE** - Снаряд стрелка<br/>**SHOOTER** - Стрелок<br/>**VICTIM** - Жертва | Тип цели выборки |
 
 <h3 id=select_add_last_entity>
-  <code>select add_last_entity</code>
+  <code>select.add_last_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -115,11 +115,11 @@ select add_event_target(selection_type="DAMAGER")
 
 **Пример использования:**
 ```ts
-select add_last_entity()
+select.add_last_entity()
 ```
 
 <h3 id=select_add_last_mob>
-  <code>select add_last_mob</code>
+  <code>select.add_last_mob</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -129,11 +129,11 @@ select add_last_entity()
 
 **Пример использования:**
 ```ts
-select add_last_mob()
+select.add_last_mob()
 ```
 
 <h3 id=select_add_mob_by_name>
-  <code>select add_mob_by_name</code>
+  <code>select.add_mob_by_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -143,11 +143,11 @@ select add_last_mob()
 
 **Пример использования:**
 ```ts
-select add_mob_by_name(["name_or_uuid", "name_or_uuid"])
+select.add_mob_by_name(["name_or_uuid", "name_or_uuid"])
 
 //Или в сухую по ключам
 
-select add_mob_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
+select.add_mob_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 ```
 
 **Аргументы:**
@@ -157,7 +157,7 @@ select add_mob_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 | name_or_uuid | Список\[Текст\] | Имя или UUID моба<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=select_add_player_by_conditional>
-  <code>select add_player_by_conditional</code>
+  <code>select.add_player_by_conditional</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -167,11 +167,11 @@ select add_mob_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 
 **Пример использования:**
 ```ts
-select add_player_by_conditional(if player(is_flying()))
+select.add_player_by_conditional(player(is_flying()))
 ```
 
 <h3 id=select_add_player_by_name>
-  <code>select add_player_by_name</code>
+  <code>select.add_player_by_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -181,11 +181,11 @@ select add_player_by_conditional(if player(is_flying()))
 
 **Пример использования:**
 ```ts
-select add_player_by_name(["name_or_uuid", "name_or_uuid"])
+select.add_player_by_name(["name_or_uuid", "name_or_uuid"])
 
 //Или в сухую по ключам
 
-select add_player_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
+select.add_player_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 ```
 
 **Аргументы:**
@@ -195,7 +195,7 @@ select add_player_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 | name_or_uuid | Список\[Текст\] | Имя или UUID игрока<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=select_add_random_entity>
-  <code>select add_random_entity</code>
+  <code>select.add_random_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -205,11 +205,11 @@ select add_player_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 
 **Пример использования:**
 ```ts
-select add_random_entity()
+select.add_random_entity()
 ```
 
 <h3 id=select_add_random_mob>
-  <code>select add_random_mob</code>
+  <code>select.add_random_mob</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -219,11 +219,11 @@ select add_random_entity()
 
 **Пример использования:**
 ```ts
-select add_random_mob()
+select.add_random_mob()
 ```
 
 <h3 id=select_add_random_player>
-  <code>select add_random_player</code>
+  <code>select.add_random_player</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -233,11 +233,11 @@ select add_random_mob()
 
 **Пример использования:**
 ```ts
-select add_random_player()
+select.add_random_player()
 ```
 
 <h3 id=select_all_entities>
-  <code>select all_entities</code>
+  <code>select.all_entities</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -247,11 +247,11 @@ select add_random_player()
 
 **Пример использования:**
 ```ts
-select all_entities()
+select.all_entities()
 ```
 
 <h3 id=select_all_mobs>
-  <code>select all_mobs</code>
+  <code>select.all_mobs</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -261,11 +261,11 @@ select all_entities()
 
 **Пример использования:**
 ```ts
-select all_mobs()
+select.all_mobs()
 ```
 
 <h3 id=select_all_players>
-  <code>select all_players</code>
+  <code>select.all_players</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -275,11 +275,11 @@ select all_mobs()
 
 **Пример использования:**
 ```ts
-select all_players()
+select.all_players()
 ```
 
 <h3 id=select_dummy>
-  <code>select dummy</code>
+  <code>select.dummy</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -289,11 +289,11 @@ select all_players()
 
 **Пример использования:**
 ```ts
-select dummy()
+select.dummy()
 ```
 
 <h3 id=select_entity_by_conditional>
-  <code>select entity_by_conditional</code>
+  <code>select.entity_by_conditional</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -303,11 +303,11 @@ select dummy()
 
 **Пример использования:**
 ```ts
-select entity_by_conditional(if player(is_flying()))
+select.entity_by_conditional(player(is_flying()))
 ```
 
 <h3 id=select_entity_by_name>
-  <code>select entity_by_name</code>
+  <code>select.entity_by_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -317,11 +317,11 @@ select entity_by_conditional(if player(is_flying()))
 
 **Пример использования:**
 ```ts
-select entity_by_name(["name_or_uuid", "name_or_uuid"])
+select.entity_by_name(["name_or_uuid", "name_or_uuid"])
 
 //Или в сухую по ключам
 
-select entity_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
+select.entity_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 ```
 
 **Аргументы:**
@@ -331,7 +331,7 @@ select entity_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 | name_or_uuid | Список\[Текст\] | Имя или UUID цели<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=select_event_target>
-  <code>select event_target</code>
+  <code>select.event_target</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -341,11 +341,11 @@ select entity_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 
 **Пример использования:**
 ```ts
-select event_target("DAMAGER")
+select.event_target("DAMAGER")
 
 //Или в сухую по ключам
 
-select event_target(selection_type="DAMAGER")
+select.event_target(selection_type="DAMAGER")
 ```
 
 **Аргументы:**
@@ -355,7 +355,7 @@ select event_target(selection_type="DAMAGER")
 | selection_type | Маркер<br/>**DAMAGER** - Атакующий<br/>**DEFAULT** - По умолчанию<br/>**KILLER** - Убийца<br/>**PROJECTILE** - Снаряд стрелка<br/>**SHOOTER** - Стрелок<br/>**VICTIM** - Жертва | Тип цели выборки |
 
 <h3 id=select_filter_by_conditional>
-  <code>select filter_by_conditional</code>
+  <code>select.filter_by_conditional</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -365,11 +365,11 @@ select event_target(selection_type="DAMAGER")
 
 **Пример использования:**
 ```ts
-select filter_by_conditional(if player(is_flying()))
+select.filter_by_conditional(player(is_flying()))
 ```
 
 <h3 id=select_filter_by_distance>
-  <code>select filter_by_distance</code>
+  <code>select.filter_by_distance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -379,11 +379,11 @@ select filter_by_conditional(if player(is_flying()))
 
 **Пример использования:**
 ```ts
-select filter_by_distance(location(0,0,0,0,0), 1, "FALSE", "FARTHEST")
+select.filter_by_distance(location(0,0,0,0,0), 1, "FALSE", "FARTHEST")
 
 //Или в сухую по ключам
 
-select filter_by_distance(location=location(0,0,0,0,0), selection_size=1, ignore_y_axis="FALSE", compare_mode="FARTHEST")
+select.filter_by_distance(location=location(0,0,0,0,0), selection_size=1, ignore_y_axis="FALSE", compare_mode="FARTHEST")
 ```
 
 **Аргументы:**
@@ -396,7 +396,7 @@ select filter_by_distance(location=location(0,0,0,0,0), selection_size=1, ignore
 | compare_mode   | Маркер<br/>**FARTHEST** - Дальние цели<br/>**NEAREST** - Ближайшие цели | Тип сравнения         |
 
 <h3 id=select_filter_by_raycast>
-  <code>select filter_by_raycast</code>
+  <code>select.filter_by_raycast</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -406,11 +406,11 @@ select filter_by_distance(location=location(0,0,0,0,0), selection_size=1, ignore
 
 **Пример использования:**
 ```ts
-select filter_by_raycast(`variable`, location(0,0,0,0,0), 1, 2, 3, "FALSE", "FALSE", "ALWAYS")
+select.filter_by_raycast(`variable`, location(0,0,0,0,0), 1, 2, 3, "FALSE", "FALSE", "ALWAYS")
 
 //Или в сухую по ключам
 
-select filter_by_raycast(variable=`variable`, origin=location(0,0,0,0,0), max_distance=1, ray_size=2, selection_size=3, consider_blocks="FALSE", ignore_passable_blocks="FALSE", fluid_collision_mode="ALWAYS")
+select.filter_by_raycast(variable=`variable`, origin=location(0,0,0,0,0), max_distance=1, ray_size=2, selection_size=3, consider_blocks="FALSE", ignore_passable_blocks="FALSE", fluid_collision_mode="ALWAYS")
 ```
 
 **Аргументы:**
@@ -427,7 +427,7 @@ select filter_by_raycast(variable=`variable`, origin=location(0,0,0,0,0), max_di
 | fluid_collision_mode   | Маркер<br/>**ALWAYS** - Не игнорировать<br/>**NEVER** - Полностью игнорировать<br/>**SOURCE_ONLY** - Учитывать только источник жидкости | Игнорировать жидкость             |
 
 <h3 id=select_filter_randomly>
-  <code>select filter_randomly</code>
+  <code>select.filter_randomly</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -437,11 +437,11 @@ select filter_by_raycast(variable=`variable`, origin=location(0,0,0,0,0), max_di
 
 **Пример использования:**
 ```ts
-select filter_randomly(1)
+select.filter_randomly(1)
 
 //Или в сухую по ключам
 
-select filter_randomly(size=1)
+select.filter_randomly(size=1)
 ```
 
 **Аргументы:**
@@ -451,7 +451,7 @@ select filter_randomly(size=1)
 | size | Число | Количество целей |
 
 <h3 id=select_invert>
-  <code>select invert</code>
+  <code>select.invert</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -461,11 +461,11 @@ select filter_randomly(size=1)
 
 **Пример использования:**
 ```ts
-select invert()
+select.invert()
 ```
 
 <h3 id=select_last_entity>
-  <code>select last_entity</code>
+  <code>select.last_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -475,11 +475,11 @@ select invert()
 
 **Пример использования:**
 ```ts
-select last_entity()
+select.last_entity()
 ```
 
 <h3 id=select_last_mob>
-  <code>select last_mob</code>
+  <code>select.last_mob</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -489,11 +489,11 @@ select last_entity()
 
 **Пример использования:**
 ```ts
-select last_mob()
+select.last_mob()
 ```
 
 <h3 id=select_mob_by_name>
-  <code>select mob_by_name</code>
+  <code>select.mob_by_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -503,11 +503,11 @@ select last_mob()
 
 **Пример использования:**
 ```ts
-select mob_by_name(["name_or_uuid", "name_or_uuid"])
+select.mob_by_name(["name_or_uuid", "name_or_uuid"])
 
 //Или в сухую по ключам
 
-select mob_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
+select.mob_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 ```
 
 **Аргументы:**
@@ -517,7 +517,7 @@ select mob_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 | name_or_uuid | Список\[Текст\] | Имя или UUID цели<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=select_player_by_conditional>
-  <code>select player_by_conditional</code>
+  <code>select.player_by_conditional</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -527,11 +527,11 @@ select mob_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 
 **Пример использования:**
 ```ts
-select player_by_conditional(if player(is_flying()))
+select.player_by_conditional(player(is_flying()))
 ```
 
 <h3 id=select_player_by_name>
-  <code>select player_by_name</code>
+  <code>select.player_by_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -541,11 +541,11 @@ select player_by_conditional(if player(is_flying()))
 
 **Пример использования:**
 ```ts
-select player_by_name(["name_or_uuid", "name_or_uuid"])
+select.player_by_name(["name_or_uuid", "name_or_uuid"])
 
 //Или в сухую по ключам
 
-select player_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
+select.player_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 ```
 
 **Аргументы:**
@@ -555,7 +555,7 @@ select player_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 | name_or_uuid | Список\[Текст\] | Имя или UUID цели<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=select_random_entity>
-  <code>select random_entity</code>
+  <code>select.random_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -565,11 +565,11 @@ select player_by_name(name_or_uuid=["name_or_uuid", "name_or_uuid"])
 
 **Пример использования:**
 ```ts
-select random_entity()
+select.random_entity()
 ```
 
 <h3 id=select_random_mob>
-  <code>select random_mob</code>
+  <code>select.random_mob</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -579,11 +579,11 @@ select random_entity()
 
 **Пример использования:**
 ```ts
-select random_mob()
+select.random_mob()
 ```
 
 <h3 id=select_random_player>
-  <code>select random_player</code>
+  <code>select.random_player</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -593,11 +593,11 @@ select random_mob()
 
 **Пример использования:**
 ```ts
-select random_player()
+select.random_player()
 ```
 
 <h3 id=select_reset>
-  <code>select reset</code>
+  <code>select.reset</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -607,5 +607,5 @@ select random_player()
 
 **Пример использования:**
 ```ts
-select reset()
+select.reset()
 ```
