@@ -27,14 +27,14 @@ else:
 ```ts
 event player_join:
     if (num == 1):
-    if (num != 1):
+    if num != 1:
     if (num > 9):       
     if (num >= 9):             
-    if (num < 9):            
-    if (num <= 9):                 
+    if num < 9:            
+    if num <= 9:                 
 
     // строковые проверки
-    if (text.contains("hello")):             
+    if text.contains("hello"):             
     if (username.startswith("Mr","Mrs","Dr")): 
     if (filename.endswith(".txt",".log")):   
 ```
