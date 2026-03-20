@@ -6,7 +6,7 @@
 Выполнить тело в отдельном потоке
 
 ```ts
-controller async():
+controller.async():
     wait(5)
     player::message("Асинхронное сообщение!")
 ```
@@ -19,7 +19,7 @@ controller async():
 Полностью исключает тело из скрипта
 
 ```ts
-controller skip():
+controller.skip():
     list = []   // никогда не выполнится
 ```
 
@@ -35,7 +35,7 @@ controller skip():
 | variable | variable | переменная, куда запишется объект ошибки |
 
 ```ts
-controller catch(err):
+controller.catch(err):
     n: num--
 player::message("Ошибка: ${err}")
 ```
