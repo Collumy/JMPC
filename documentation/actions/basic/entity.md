@@ -20,7 +20,7 @@
 **Важно:** эти селекторы доступны только для действий от объекта `entity`.
 
 <h3 id=entity_attach_lead>
-  <code>entity::attach_lead</code>
+  <code>entity.attach_lead</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -32,11 +32,11 @@
 
 **Пример использования:**
 ```ts
-entity::attach_lead("name_or_uuid", location(0,0,0,0,0));
+entity.attach_lead("name_or_uuid", location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-entity::attach_lead(name_or_uuid="name_or_uuid", location=location(0,0,0,0,0));
+entity.attach_lead(name_or_uuid="name_or_uuid", location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -47,7 +47,7 @@ entity::attach_lead(name_or_uuid="name_or_uuid", location=location(0,0,0,0,0));
 | location     | Местоположение | Местоположение забора |
 
 <h3 id=entity_celar_potion_effects>
-  <code>entity::clear_potion_effects</code>
+  <code>entity.clear_potion_effects</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -57,11 +57,11 @@ entity::attach_lead(name_or_uuid="name_or_uuid", location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-entity::clear_potion_effects();
+entity.clear_potion_effects();
 ```
 
 <h3 id=entity_clear_merchant_recipes>
-  <code>entity::clear_merchant_recipes</code>
+  <code>entity.clear_merchant_recipes</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -74,11 +74,11 @@ entity::clear_potion_effects();
 
 **Пример использования:**
 ```ts
-entity::clear_merchant_recipes();
+entity.clear_merchant_recipes();
 ```
 
 <h3 id=entity_complete_using_active_item>
-  <code>entity::complete_using_active_item</code>
+  <code>entity.complete_using_active_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -90,11 +90,11 @@ entity::clear_merchant_recipes();
 
 **Пример использования:**
 ```ts
-entity::complete_using_active_item();
+entity.complete_using_active_item();
 ```
 
 <h3 id=entity_damage>
-  <code>entity::damage</code>
+  <code>entity.damage</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -104,11 +104,11 @@ entity::complete_using_active_item();
 
 **Пример использования:**
 ```ts
-entity::damage(1, "source");
+entity.damage(1, "source");
 
 //Или в сухую по ключам
 
-entity::damage(damage=1, source="source");
+entity.damage(damage=1, source="source");
 ```
 
 **Аргументы:**
@@ -119,7 +119,7 @@ entity::damage(damage=1, source="source");
 | source | Текст | Источник урона (имя или UUID существа) |
 
 <h3 id=entity_disguise_as_block>
-  <code>entity::disguise_as_block</code>
+  <code>entity.disguise_as_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -129,11 +129,11 @@ entity::damage(damage=1, source="source");
 
 **Пример использования:**
 ```ts
-entity::disguise_as_block("minecraft:oak_log[axis=x]");
+entity.disguise_as_block("minecraft:oak_log[axis=x]");
 
 //Или в сухую по ключам
 
-entity::disguise_as_block(block="minecraft:oak_log[axis=x]");
+entity.disguise_as_block(block="minecraft:oak_log[axis=x]");
 ```
 
 **Аргументы:**
@@ -143,7 +143,7 @@ entity::disguise_as_block(block="minecraft:oak_log[axis=x]");
 | block | Блок | Блок для маскировки |
 
 <h3 id=entity_disguise_as_entity>
-  <code>entity::disguise_as_entity</code>
+  <code>entity.disguise_as_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -153,11 +153,11 @@ entity::disguise_as_block(block="minecraft:oak_log[axis=x]");
 
 **Пример использования:**
 ```ts
-entity::disguise_as_entity(item("stick"));
+entity.disguise_as_entity(item("stick"));
 
 //Или в сухую по ключам
 
-entity::disguise_as_entity(entity_type=item("stick"));
+entity.disguise_as_entity(entity_type=item("stick"));
 ```
 
 **Аргументы:**
@@ -167,7 +167,7 @@ entity::disguise_as_entity(entity_type=item("stick"));
 | entity_type | Предмет | Сущность для маскировки |
 
 <h3 id=entity_disguise_as_item>
-  <code>entity::disguise_as_item</code>
+  <code>entity.disguise_as_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -177,11 +177,11 @@ entity::disguise_as_entity(entity_type=item("stick"));
 
 **Пример использования:**
 ```ts
-entity::disguise_as_item(item("stick"));
+entity.disguise_as_item(item("stick"));
 
 //Или в сухую по ключам
 
-entity::disguise_as_item(item=item("stick"));
+entity.disguise_as_item(item=item("stick"));
 ```
 
 **Аргументы:**
@@ -191,7 +191,7 @@ entity::disguise_as_item(item=item("stick"));
 | item | Предмет | Предмет для маскировки |
 
 <h3 id=entity_disguise_as_player>
-  <code>entity::disguise_as_player</code>
+  <code>entity.disguise_as_player</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -201,11 +201,11 @@ entity::disguise_as_item(item=item("stick"));
 
 **Пример использования:**
 ```ts
-entity::disguise_as_player("name_or_uuid", "display_name", "MOJANG");
+entity.disguise_as_player("name_or_uuid", "display_name", "MOJANG");
 
 //Или в сухую по ключам
 
-entity::disguise_as_player(name_or_uuid="name_or_uuid", display_name="display_name", server_type="MOJANG");
+entity.disguise_as_player(name_or_uuid="name_or_uuid", display_name="display_name", server_type="MOJANG");
 ```
 
 **Аргументы:**
@@ -217,7 +217,7 @@ entity::disguise_as_player(name_or_uuid="name_or_uuid", display_name="display_na
 | server_type  | Маркер<br/>**MOJANG** - Скин Mojang<br/>**SERVER** - Скин JustMC | Тип сервера скинов                  |
 
 <h3 id=entity_dummy>
-  <code>entity::dummy</code>
+  <code>entity.dummy</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -227,11 +227,11 @@ entity::disguise_as_player(name_or_uuid="name_or_uuid", display_name="display_na
 
 **Пример использования:**
 ```ts
-entity::dummy();
+entity.dummy();
 ```
 
 <h3 id=entity_eat_grass>
-  <code>entity::eat_grass</code>
+  <code>entity.eat_grass</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -243,11 +243,11 @@ entity::dummy();
 
 **Пример использования:**
 ```ts
-entity::eat_grass();
+entity.eat_grass();
 ```
 
 <h3 id=entity_eat_target>
-  <code>entity::eat_target</code>
+  <code>entity.eat_target</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -259,11 +259,11 @@ entity::eat_grass();
 
 **Пример использования:**
 ```ts
-entity::eat_target("name_or_uuid");
+entity.eat_target("name_or_uuid");
 
 //Или в сухую по ключам
 
-entity::eat_target(name_or_uuid="name_or_uuid");
+entity.eat_target(name_or_uuid="name_or_uuid");
 ```
 
 **Аргументы:**
@@ -273,7 +273,7 @@ entity::eat_target(name_or_uuid="name_or_uuid");
 | name_or_uuid | Текст | Имя или UUID цели |
 
 <h3 id=entity_explode>
-  <code>entity::explode</code>
+  <code>entity.explode</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -287,11 +287,11 @@ entity::eat_target(name_or_uuid="name_or_uuid");
 
 **Пример использования:**
 ```ts
-entity::explode();
+entity.explode();
 ```
 
 <h3 id=entity_face_location>
-  <code>entity::face_location</code>
+  <code>entity.face_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -301,11 +301,11 @@ entity::explode();
 
 **Пример использования:**
 ```ts
-entity::face_location(location(0,0,0,0,0));
+entity.face_location(location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-entity::face_location(location=location(0,0,0,0,0));
+entity.face_location(location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -315,7 +315,7 @@ entity::face_location(location=location(0,0,0,0,0));
 | location | Местоположение | Местоположение |
 
 <h3 id=entity_get_attribute>
-  <code>entity::get_attribute</code>
+  <code>entity.get_attribute</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -325,15 +325,15 @@ entity::face_location(location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-`variable` = entity::get_attribute("GENERIC_MAX_HEALTH", "VALUE");
+`variable` = entity.get_attribute("GENERIC_MAX_HEALTH", "VALUE");
 
 //Или в сухую позиционно
 
-entity::get_attribute(`variable`, "GENERIC_MAX_HEALTH", "VALUE");
+entity.get_attribute(`variable`, "GENERIC_MAX_HEALTH", "VALUE");
 
 //Или в сухую по ключам
 
-entity::get_attribute(variable=`variable`, attribute_type="GENERIC_MAX_HEALTH", return_value="VALUE");
+entity.get_attribute(variable=`variable`, attribute_type="GENERIC_MAX_HEALTH", return_value="VALUE");
 ```
 
 **Аргументы:**
@@ -345,7 +345,7 @@ entity::get_attribute(variable=`variable`, attribute_type="GENERIC_MAX_HEALTH", 
 | return_value   | Маркер<br/>**VALUE** - Текущее значение<br/>**BASE_VALUE** - Базовое значение<br/>**DEFAULT_VALUE** - Значение по умолчанию                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Тип значения              |
 
 <h3 id=entity_get_custom_tag>
-  <code>entity::get_custom_tag</code>
+  <code>entity.get_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -355,15 +355,15 @@ entity::get_attribute(variable=`variable`, attribute_type="GENERIC_MAX_HEALTH", 
 
 **Пример использования:**
 ```ts
-`variable` = entity::get_custom_tag("name", "any value");
+`variable` = entity.get_custom_tag("name", "any value");
 
 //Или в сухую позиционно
 
-entity::get_custom_tag(`variable`, "name", "any value");
+entity.get_custom_tag(`variable`, "name", "any value");
 
 //Или в сухую по ключам
 
-entity::get_custom_tag(variable=`variable`, name="name", default="any value");
+entity.get_custom_tag(variable=`variable`, name="name", default="any value");
 ```
 
 **Аргументы:**
@@ -375,7 +375,7 @@ entity::get_custom_tag(variable=`variable`, name="name", default="any value");
 | default  | Любое значение               | Значение по умолчанию     |
 
 <h3 id=entity_get_equipment_item>
-  <code>entity::get_equipment_item</code>
+  <code>entity.get_equipment_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -385,15 +385,15 @@ entity::get_custom_tag(variable=`variable`, name="name", default="any value");
 
 **Пример использования:**
 ```ts
-`variable` = entity::get_equipment_item("HAND");
+`variable` = entity.get_equipment_item("HAND");
 
 //Или в сухую позиционно
 
-entity::get_equipment_item(`variable`, "HAND");
+entity.get_equipment_item(`variable`, "HAND");
 
 //Или в сухую по ключам
 
-entity::get_equipment_item(variable=`variable`, slot="HAND");
+entity.get_equipment_item(variable=`variable`, slot="HAND");
 ```
 
 **Аргументы:**
@@ -404,7 +404,7 @@ entity::get_equipment_item(variable=`variable`, slot="HAND");
 | slot     | Маркер<br/>**HAND** - Основная рука<br/>**OFF_HAND** - Второстепенная рука<br/>**FEET** - Ботинки<br/>**LEGS** - Поножи<br/>**CHEST** - Нагрудник<br/>**HEAD** - Шлем<br/>**BODY** - Тело<br/>**SADDLE** - Седло | Слот снаряжения           |
 
 <h3 id=entity_get_nbt>
-  <code>entity::get_nbt</code>
+  <code>entity.get_nbt</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -414,15 +414,15 @@ entity::get_equipment_item(variable=`variable`, slot="HAND");
 
 **Пример использования:**
 ```ts
-`variable` = entity::get_nbt("path", "ANY_VALUE");
+`variable` = entity.get_nbt("path", "ANY_VALUE");
 
 //Или в сухую позиционно
 
-entity::get_nbt(`variable`, "path", "ANY_VALUE");
+entity.get_nbt(`variable`, "path", "ANY_VALUE");
 
 //Или в сухую по ключам
 
-entity::get_nbt(variable=`variable`, path="path", value_type="ANY_VALUE");
+entity.get_nbt(variable=`variable`, path="path", value_type="ANY_VALUE");
 ```
 
 **Аргументы:**
@@ -434,7 +434,7 @@ entity::get_nbt(variable=`variable`, path="path", value_type="ANY_VALUE");
 | value_type | Маркер<br/>**ANY_VALUE** - Любое значение<br/>**NBT_STRING** - NBT-строка | Тип данных                |
 
 <h3 id=entity_give_potion_effects>
-  <code>entity::give_potion_effects</code>
+  <code>entity.give_potion_effects</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -444,11 +444,11 @@ entity::get_nbt(variable=`variable`, path="path", value_type="ANY_VALUE");
 
 **Пример использования:**
 ```ts
-entity::give_potion_effects([potion("slow_falling"), potion("slow_falling")], "FALSE", "FALSE", "AMBIENT");
+entity.give_potion_effects([potion("slow_falling"), potion("slow_falling")], "FALSE", "FALSE", "AMBIENT");
 
 //Или в сухую по ключам
 
-entity::give_potion_effects(potions=[potion("slow_falling"), potion("slow_falling")], overwrite="FALSE", show_icon="FALSE", particle_mode="AMBIENT");
+entity.give_potion_effects(potions=[potion("slow_falling"), potion("slow_falling")], overwrite="FALSE", show_icon="FALSE", particle_mode="AMBIENT");
 ```
 
 **Аргументы:**
@@ -461,7 +461,7 @@ entity::give_potion_effects(potions=[potion("slow_falling"), potion("slow_fallin
 | particle_mode | Маркер<br/>**AMBIENT** - Прозрачными<br/>**NONE** - Нет<br/>**REGULAR** - Да | Показывать частицы                                              |
 
 <h3 id=entity_heal>
-  <code>entity::heal</code>
+  <code>entity.heal</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -471,11 +471,11 @@ entity::give_potion_effects(potions=[potion("slow_falling"), potion("slow_fallin
 
 **Пример использования:**
 ```ts
-entity::heal(1);
+entity.heal(1);
 
 //Или в сухую по ключам
 
-entity::heal(heal=1);
+entity.heal(heal=1);
 ```
 
 **Аргументы:**
@@ -485,7 +485,7 @@ entity::heal(heal=1);
 | heal | Число | Количество половинок сердец для излечения |
 
 <h3 id=entity_ignite_creeper>
-  <code>entity::ignite_creeper</code>
+  <code>entity.ignite_creeper</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -497,11 +497,11 @@ entity::heal(heal=1);
 
 **Пример использования:**
 ```ts
-entity::ignite_creeper();
+entity.ignite_creeper();
 ```
 
 <h3 id=entity_jump>
-  <code>entity::jump</code>
+  <code>entity.jump</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -513,11 +513,11 @@ entity::ignite_creeper();
 
 **Пример использования:**
 ```ts
-entity::jump();
+entity.jump();
 ```
 
 <h3 id=entity_launch_forward>
-  <code>entity::launch_forward</code>
+  <code>entity.launch_forward</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -527,11 +527,11 @@ entity::jump();
 
 **Пример использования:**
 ```ts
-entity::launch_forward(1, "FALSE", "YAW");
+entity.launch_forward(1, "FALSE", "YAW");
 
 //Или в сухую по ключам
 
-entity::launch_forward(power=1, increment="FALSE", launch_axis="YAW");
+entity.launch_forward(power=1, increment="FALSE", launch_axis="YAW");
 ```
 
 **Аргументы:**
@@ -543,7 +543,7 @@ entity::launch_forward(power=1, increment="FALSE", launch_axis="YAW");
 | launch_axis | Маркер<br/>**YAW** - Только по горизонтали<br/>**YAW_AND_PITCH** - Все оси | Ось запуска               |
 
 <h3 id=entity_launch_projectile>
-  <code>entity::launch_projectile</code>
+  <code>entity.launch_projectile</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -553,11 +553,11 @@ entity::launch_forward(power=1, increment="FALSE", launch_axis="YAW");
 
 **Пример использования:**
 ```ts
-entity::launch_projectile(item("stick"), location(0,0,0,0,0), "name", 1, 2, particle("fire"));
+entity.launch_projectile(item("stick"), location(0,0,0,0,0), "name", 1, 2, particle("fire"));
 
 //Или в сухую по ключам
 
-entity::launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0), name="name", speed=1, inaccuracy=2, trail=particle("fire"));
+entity.launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0), name="name", speed=1, inaccuracy=2, trail=particle("fire"));
 ```
 
 **Аргументы:**
@@ -572,7 +572,7 @@ entity::launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0)
 | trail      | Эффект частиц  | След, который будет оставаться за снарядом       |
 
 <h3 id=entity_launch_to_location>
-  <code>entity::launch_to_location</code>
+  <code>entity.launch_to_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -582,11 +582,11 @@ entity::launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0)
 
 **Пример использования:**
 ```ts
-entity::launch_to_location(location(0,0,0,0,0), 1, "FALSE");
+entity.launch_to_location(location(0,0,0,0,0), 1, "FALSE");
 
 //Или в сухую по ключам
 
-entity::launch_to_location(location=location(0,0,0,0,0), power=1, increment="FALSE");
+entity.launch_to_location(location=location(0,0,0,0,0), power=1, increment="FALSE");
 ```
 
 **Аргументы:**
@@ -598,7 +598,7 @@ entity::launch_to_location(location=location(0,0,0,0,0), power=1, increment="FAL
 | increment | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Учитывать текущую инерцию |
 
 <h3 id=entity_launch_up>
-  <code>entity::launch_up</code>
+  <code>entity.launch_up</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -608,11 +608,11 @@ entity::launch_to_location(location=location(0,0,0,0,0), power=1, increment="FAL
 
 **Пример использования:**
 ```ts
-entity::launch_up(1, "FALSE");
+entity.launch_up(1, "FALSE");
 
 //Или в сухую по ключам
 
-entity::launch_up(power=1, increment="FALSE");
+entity.launch_up(power=1, increment="FALSE");
 ```
 
 **Аргументы:**
@@ -623,7 +623,7 @@ entity::launch_up(power=1, increment="FALSE");
 | increment | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Учитывать текущую инерцию |
 
 <h3 id=entity_leave_vehicle>
-  <code>entity::leave_vehicle</code>
+  <code>entity.leave_vehicle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -633,11 +633,11 @@ entity::launch_up(power=1, increment="FALSE");
 
 **Пример использования:**
 ```ts
-entity::leave_vehicle();
+entity.leave_vehicle();
 ```
 
 <h3 id=entity_mimic_disguise_from_entity>
-  <code>entity::mimic_disguise_from_entity</code>
+  <code>entity.mimic_disguise_from_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -647,11 +647,11 @@ entity::leave_vehicle();
 
 **Пример использования:**
 ```ts
-entity::mimic_disguise_from_entity("name_or_uuid", "TRUE", "TRUE");
+entity.mimic_disguise_from_entity("name_or_uuid", "TRUE", "TRUE");
 
 //Или в сухую по ключам
 
-entity::mimic_disguise_from_entity(name_or_uuid="name_or_uuid", include_disguise="TRUE", remove_original_entity="TRUE");
+entity.mimic_disguise_from_entity(name_or_uuid="name_or_uuid", include_disguise="TRUE", remove_original_entity="TRUE");
 ```
 
 **Аргументы:**
@@ -663,7 +663,7 @@ entity::mimic_disguise_from_entity(name_or_uuid="name_or_uuid", include_disguise
 | remove_original_entity | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет | Удалить настоящую сущность           |
 
 <h3 id=entity_modify_piglin_barter_materials>
-  <code>entity::modify_piglin_barter_materials</code>
+  <code>entity.modify_piglin_barter_materials</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -677,11 +677,11 @@ entity::mimic_disguise_from_entity(name_or_uuid="name_or_uuid", include_disguise
 
 **Пример использования:**
 ```ts
-entity::modify_piglin_barter_materials([item("stick"), item("stick")], "ADD");
+entity.modify_piglin_barter_materials([item("stick"), item("stick")], "ADD");
 
 //Или в сухую по ключам
 
-entity::modify_piglin_barter_materials(materials=[item("stick"), item("stick")], modification_mode="ADD");
+entity.modify_piglin_barter_materials(materials=[item("stick"), item("stick")], modification_mode="ADD");
 ```
 
 **Аргументы:**
@@ -692,7 +692,7 @@ entity::modify_piglin_barter_materials(materials=[item("stick"), item("stick")],
 | modification_mode | Маркер<br/>**ADD** - Добавление<br/>**REMOVE** - Удаление | Режим изменения                                                     |
 
 <h3 id=entity_modify_piglin_interested_materials>
-  <code>entity::modify_piglin_interested_materials</code>
+  <code>entity.modify_piglin_interested_materials</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -706,11 +706,11 @@ entity::modify_piglin_barter_materials(materials=[item("stick"), item("stick")],
 
 **Пример использования:**
 ```ts
-entity::modify_piglin_interested_materials([item("stick"), item("stick")], "ADD");
+entity.modify_piglin_interested_materials([item("stick"), item("stick")], "ADD");
 
 //Или в сухую по ключам
 
-entity::modify_piglin_interested_materials(materials=[item("stick"), item("stick")], modification_mode="ADD");
+entity.modify_piglin_interested_materials(materials=[item("stick"), item("stick")], modification_mode="ADD");
 ```
 
 **Аргументы:**
@@ -721,7 +721,7 @@ entity::modify_piglin_interested_materials(materials=[item("stick"), item("stick
 | modification_mode | Маркер<br/>**ADD** - Добавление<br/>**REMOVE** - Удаление | Режим изменения                                                     |
 
 <h3 id=entity_move_to_location>
-  <code>entity::move_to_location</code>
+  <code>entity.move_to_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -733,11 +733,11 @@ entity::modify_piglin_interested_materials(materials=[item("stick"), item("stick
 
 **Пример использования:**
 ```ts
-entity::move_to_location(location(0,0,0,0,0), 1);
+entity.move_to_location(location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-entity::move_to_location(location=location(0,0,0,0,0), speed=1);
+entity.move_to_location(location=location(0,0,0,0,0), speed=1);
 ```
 
 **Аргументы:**
@@ -748,7 +748,7 @@ entity::move_to_location(location=location(0,0,0,0,0), speed=1);
 | speed    | Число          | Скорость передвижения   |
 
 <h3 id=entity_move_to_location_stop>
-  <code>entity::move_to_location_stop</code>
+  <code>entity.move_to_location_stop</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -760,11 +760,11 @@ entity::move_to_location(location=location(0,0,0,0,0), speed=1);
 
 **Пример использования:**
 ```ts
-entity::move_to_location_stop();
+entity.move_to_location_stop();
 ```
 
 <h3 id=entity_play_damage_animation>
-  <code>entity::play_damage_animation</code>
+  <code>entity.play_damage_animation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -774,11 +774,11 @@ entity::move_to_location_stop();
 
 **Пример использования:**
 ```ts
-entity::play_damage_animation("CRITICAL_DAMAGE");
+entity.play_damage_animation("CRITICAL_DAMAGE");
 
 //Или в сухую по ключам
 
-entity::play_damage_animation(damage_type="CRITICAL_DAMAGE");
+entity.play_damage_animation(damage_type="CRITICAL_DAMAGE");
 ```
 
 **Аргументы:**
@@ -788,7 +788,7 @@ entity::play_damage_animation(damage_type="CRITICAL_DAMAGE");
 | damage_type | Маркер<br/>**CRITICAL_DAMAGE** - Критический<br/>**DAMAGE** - Обычный<br/>**MAGICAL_DAMAGE** - Магический | Тип урона |
 
 <h3 id=entity_play_hurt_animation>
-  <code>entity::play_hurt_animation</code>
+  <code>entity.play_hurt_animation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -798,11 +798,11 @@ entity::play_damage_animation(damage_type="CRITICAL_DAMAGE");
 
 **Пример использования:**
 ```ts
-entity::play_hurt_animation(1);
+entity.play_hurt_animation(1);
 
 //Или в сухую по ключам
 
-entity::play_hurt_animation(yaw=1);
+entity.play_hurt_animation(yaw=1);
 ```
 
 **Аргументы:**
@@ -812,7 +812,7 @@ entity::play_hurt_animation(yaw=1);
 | yaw | Число | Угол получения урона (0-360) |
 
 <h3 id=entity_ram_target>
-  <code>entity::ram_target</code>
+  <code>entity.ram_target</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -824,11 +824,11 @@ entity::play_hurt_animation(yaw=1);
 
 **Пример использования:**
 ```ts
-entity::ram_target("name_or_uuid");
+entity.ram_target("name_or_uuid");
 
 //Или в сухую по ключам
 
-entity::ram_target(name_or_uuid="name_or_uuid");
+entity.ram_target(name_or_uuid="name_or_uuid");
 ```
 
 **Аргументы:**
@@ -838,7 +838,7 @@ entity::ram_target(name_or_uuid="name_or_uuid");
 | name_or_uuid | Текст | Имя или UUID сущности |
 
 <h3 id=entity_remove>
-  <code>entity::remove</code>
+  <code>entity.remove</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -848,11 +848,11 @@ entity::ram_target(name_or_uuid="name_or_uuid");
 
 **Пример использования:**
 ```ts
-entity::remove();
+entity.remove();
 ```
 
 <h3 id=entity_remove_custom_tag>
-  <code>entity::remove_custom_tag</code>
+  <code>entity.remove_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -862,11 +862,11 @@ entity::remove();
 
 **Пример использования:**
 ```ts
-entity::remove_custom_tag("name");
+entity.remove_custom_tag("name");
 
 //Или в сухую по ключам
 
-entity::remove_custom_tag(name="name");
+entity.remove_custom_tag(name="name");
 ```
 
 **Аргументы:**
@@ -876,7 +876,7 @@ entity::remove_custom_tag(name="name");
 | name | Текст | Имя тега |
 
 <h3 id=entity_remove_disguise>
-  <code>entity::remove_disguise</code>
+  <code>entity.remove_disguise</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -886,11 +886,11 @@ entity::remove_custom_tag(name="name");
 
 **Пример использования:**
 ```ts
-entity::remove_disguise();
+entity.remove_disguise();
 ```
 
 <h3 id=entity_remove_merchant_recipe>
-  <code>entity::remove_merchant_recipe</code>
+  <code>entity.remove_merchant_recipe</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -903,11 +903,11 @@ entity::remove_disguise();
 
 **Пример использования:**
 ```ts
-entity::remove_merchant_recipe(1);
+entity.remove_merchant_recipe(1);
 
 //Или в сухую по ключам
 
-entity::remove_merchant_recipe(recipe_index=1);
+entity.remove_merchant_recipe(recipe_index=1);
 ```
 
 **Аргументы:**
@@ -917,7 +917,7 @@ entity::remove_merchant_recipe(recipe_index=1);
 | recipe_index | Число | Индекс товара |
 
 <h3 id=entity_remove_potion_effect>
-  <code>entity::remove_potion_effect</code>
+  <code>entity.remove_potion_effect</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -927,11 +927,11 @@ entity::remove_merchant_recipe(recipe_index=1);
 
 **Пример использования:**
 ```ts
-entity::remove_potion_effect([potion("slow_falling"), potion("slow_falling")]);
+entity.remove_potion_effect([potion("slow_falling"), potion("slow_falling")]);
 
 //Или в сухую по ключам
 
-entity::remove_potion_effect(effects=[potion("slow_falling"), potion("slow_falling")]);
+entity.remove_potion_effect(effects=[potion("slow_falling"), potion("slow_falling")]);
 ```
 
 **Аргументы:**
@@ -941,7 +941,7 @@ entity::remove_potion_effect(effects=[potion("slow_falling"), potion("slow_falli
 | effects | Список\[Зелье\] | Эффекты для удаления<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=entity_reset_display_brightness>
-  <code>entity::reset_display_brightness</code>
+  <code>entity.reset_display_brightness</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -953,11 +953,11 @@ entity::remove_potion_effect(effects=[potion("slow_falling"), potion("slow_falli
 
 **Пример использования:**
 ```ts
-entity::reset_display_brightness();
+entity.reset_display_brightness();
 ```
 
 <h3 id=entity_reset_display_glow_color>
-  <code>entity::reset_display_glow_color</code>
+  <code>entity.reset_display_glow_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -970,11 +970,11 @@ entity::reset_display_brightness();
 
 **Пример использования:**
 ```ts
-entity::reset_display_glow_color();
+entity.reset_display_glow_color();
 ```
 
 <h3 id=entity_reset_text_display_background>
-  <code>entity::reset_text_display_background</code>
+  <code>entity.reset_text_display_background</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -986,11 +986,11 @@ entity::reset_display_glow_color();
 
 **Пример использования:**
 ```ts
-entity::reset_text_display_background();
+entity.reset_text_display_background();
 ```
 
 <h3 id=entity_retrieve_fishing_hook>
-  <code>entity::retrieve_fishing_hook</code>
+  <code>entity.retrieve_fishing_hook</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1002,11 +1002,11 @@ entity::reset_text_display_background();
 
 **Пример использования:**
 ```ts
-entity::retrieve_fishing_hook("MAIN_HAND");
+entity.retrieve_fishing_hook("MAIN_HAND");
 
 //Или в сухую по ключам
 
-entity::retrieve_fishing_hook(slot="MAIN_HAND");
+entity.retrieve_fishing_hook(slot="MAIN_HAND");
 ```
 
 **Аргументы:**
@@ -1016,7 +1016,7 @@ entity::retrieve_fishing_hook(slot="MAIN_HAND");
 | slot | Маркер<br/>**MAIN_HAND** - Основная рука<br/>**OFF_HAND** - Второстепенная рука | Тип руки |
 
 <h3 id=entity_ride_entity>
-  <code>entity::ride_entity</code>
+  <code>entity.ride_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1026,11 +1026,11 @@ entity::retrieve_fishing_hook(slot="MAIN_HAND");
 
 **Пример использования:**
 ```ts
-entity::ride_entity("name_or_uuid");
+entity.ride_entity("name_or_uuid");
 
 //Или в сухую по ключам
 
-entity::ride_entity(name_or_uuid="name_or_uuid");
+entity.ride_entity(name_or_uuid="name_or_uuid");
 ```
 
 **Аргументы:**
@@ -1040,7 +1040,7 @@ entity::ride_entity(name_or_uuid="name_or_uuid");
 | name_or_uuid | Текст | Имя или UUID цели |
 
 <h3 id=entity_roll_armadillo>
-  <code>entity::roll_armadillo</code>
+  <code>entity.roll_armadillo</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1052,11 +1052,11 @@ entity::ride_entity(name_or_uuid="name_or_uuid");
 
 **Пример использования:**
 ```ts
-entity::roll_armadillo("ROLL_OUT");
+entity.roll_armadillo("ROLL_OUT");
 
 //Или в сухую по ключам
 
-entity::roll_armadillo(roll="ROLL_OUT");
+entity.roll_armadillo(roll="ROLL_OUT");
 ```
 
 **Аргументы:**
@@ -1066,7 +1066,7 @@ entity::roll_armadillo(roll="ROLL_OUT");
 | roll | Маркер<br/>**ROLL_OUT** - Развернутый<br/>**ROLL_UP** - Свернутый | Состояние защиты |
 
 <h3 id=entity_set_absorption_health>
-  <code>entity::set_absorption_health</code>
+  <code>entity.set_absorption_health</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1076,11 +1076,11 @@ entity::roll_armadillo(roll="ROLL_OUT");
 
 **Пример использования:**
 ```ts
-entity::set_absorption_health(1);
+entity.set_absorption_health(1);
 
 //Или в сухую по ключам
 
-entity::set_absorption_health(health=1);
+entity.set_absorption_health(health=1);
 ```
 
 **Аргументы:**
@@ -1090,7 +1090,7 @@ entity::set_absorption_health(health=1);
 | health | Число | Количество дополнительного здоровья |
 
 <h3 id=entity_set_ai>
-  <code>entity::set_ai</code>
+  <code>entity.set_ai</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1100,11 +1100,11 @@ entity::set_absorption_health(health=1);
 
 **Пример использования:**
 ```ts
-entity::set_ai("FALSE");
+entity.set_ai("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_ai(ai="FALSE");
+entity.set_ai(ai="FALSE");
 ```
 
 **Аргументы:**
@@ -1114,7 +1114,7 @@ entity::set_ai(ai="FALSE");
 | ai | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Интеллект |
 
 <h3 id=entity_set_allay_dancing>
-  <code>entity::set_allay_dancing</code>
+  <code>entity.set_allay_dancing</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1126,11 +1126,11 @@ entity::set_ai(ai="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_allay_dancing("FALSE");
+entity.set_allay_dancing("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_allay_dancing(dance="FALSE");
+entity.set_allay_dancing(dance="FALSE");
 ```
 
 **Аргументы:**
@@ -1140,7 +1140,7 @@ entity::set_allay_dancing(dance="FALSE");
 | dance | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Анимация танца |
 
 <h3 id=entity_set_angry>
-  <code>entity::set_angry</code>
+  <code>entity.set_angry</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1158,11 +1158,11 @@ entity::set_allay_dancing(dance="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_angry("target", "FALSE");
+entity.set_angry("target", "FALSE");
 
 //Или в сухую по ключам
 
-entity::set_angry(target="target", angry="FALSE");
+entity.set_angry(target="target", angry="FALSE");
 ```
 
 **Аргументы:**
@@ -1173,7 +1173,7 @@ entity::set_angry(target="target", angry="FALSE");
 | angry  | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Режим гнева |
 
 <h3 id=entity_set_animal_age>
-  <code>entity::set_animal_age</code>
+  <code>entity.set_animal_age</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1183,11 +1183,11 @@ entity::set_angry(target="target", angry="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_animal_age(1, "DISABLE");
+entity.set_animal_age(1, "DISABLE");
 
 //Или в сухую по ключам
 
-entity::set_animal_age(age=1, lock="DISABLE");
+entity.set_animal_age(age=1, lock="DISABLE");
 ```
 
 **Аргументы:**
@@ -1198,7 +1198,7 @@ entity::set_animal_age(age=1, lock="DISABLE");
 | lock | Маркер<br/>**DISABLE** - Выключено<br/>**DONT_CHANGE** - Не заменять<br/>**ENABLE** - Включено | Остановить взросление |
 
 <h3 id=entity_set_armor_items>
-  <code>entity::set_armor_items</code>
+  <code>entity.set_armor_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1210,11 +1210,11 @@ entity::set_animal_age(age=1, lock="DISABLE");
 
 **Пример использования:**
 ```ts
-entity::set_armor_items(item("stick"), item("stick"), item("stick"), item("stick"));
+entity.set_armor_items(item("stick"), item("stick"), item("stick"), item("stick"));
 
 //Или в сухую по ключам
 
-entity::set_armor_items(helmet=item("stick"), chestplate=item("stick"), leggings=item("stick"), boots=item("stick"));
+entity.set_armor_items(helmet=item("stick"), chestplate=item("stick"), leggings=item("stick"), boots=item("stick"));
 ```
 
 **Аргументы:**
@@ -1227,7 +1227,7 @@ entity::set_armor_items(helmet=item("stick"), chestplate=item("stick"), leggings
 | boots      | Предмет | Ботинки       |
 
 <h3 id=entity_set_armor_stand_parts>
-  <code>entity::set_armor_stand_parts</code>
+  <code>entity.set_armor_stand_parts</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1239,11 +1239,11 @@ entity::set_armor_items(helmet=item("stick"), chestplate=item("stick"), leggings
 
 **Пример использования:**
 ```ts
-entity::set_armor_stand_parts("DISABLE", "DISABLE");
+entity.set_armor_stand_parts("DISABLE", "DISABLE");
 
 //Или в сухую по ключам
 
-entity::set_armor_stand_parts(arms="DISABLE", base_plate="DISABLE");
+entity.set_armor_stand_parts(arms="DISABLE", base_plate="DISABLE");
 ```
 
 **Аргументы:**
@@ -1254,7 +1254,7 @@ entity::set_armor_stand_parts(arms="DISABLE", base_plate="DISABLE");
 | base_plate | Маркер<br/>**DISABLE** - Выключить<br/>**DONT_CHANGE** - Не изменять<br/>**ENABLE** - Включить | Видимость плиты |
 
 <h3 id=entity_set_armor_stand_pose>
-  <code>entity::set_armor_stand_pose</code>
+  <code>entity.set_armor_stand_pose</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1266,11 +1266,11 @@ entity::set_armor_stand_parts(arms="DISABLE", base_plate="DISABLE");
 
 **Пример использования:**
 ```ts
-entity::set_armor_stand_pose(1, 2, 3, "BODY");
+entity.set_armor_stand_pose(1, 2, 3, "BODY");
 
 //Или в сухую по ключам
 
-entity::set_armor_stand_pose(x_rotation=1, y_rotation=2, z_rotation=3, body_part="BODY");
+entity.set_armor_stand_pose(x_rotation=1, y_rotation=2, z_rotation=3, body_part="BODY");
 ```
 
 **Аргументы:**
@@ -1283,7 +1283,7 @@ entity::set_armor_stand_pose(x_rotation=1, y_rotation=2, z_rotation=3, body_part
 | body_part  | Маркер<br/>**BODY** - Тело<br/>**HEAD** - Голова<br/>**LEFT_ARM** - Левая рука<br/>**LEFT_LEG** - Левая нога<br/>**RIGHT_ARM** - Правая рука<br/>**RIGHT_LEG** - Правая нога | Часть стойки для изменения |
 
 <h3 id=entity_set_arrow_hit_sound>
-  <code>entity::set_arrow_hit_sound</code>
+  <code>entity.set_arrow_hit_sound</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1296,11 +1296,11 @@ entity::set_armor_stand_pose(x_rotation=1, y_rotation=2, z_rotation=3, body_part
 
 **Пример использования:**
 ```ts
-entity::set_arrow_hit_sound(sound("entity.zombie.hurt"));
+entity.set_arrow_hit_sound(sound("entity.zombie.hurt"));
 
 //Или в сухую по ключам
 
-entity::set_arrow_hit_sound(sound=sound("entity.zombie.hurt"));
+entity.set_arrow_hit_sound(sound=sound("entity.zombie.hurt"));
 ```
 
 **Аргументы:**
@@ -1310,7 +1310,7 @@ entity::set_arrow_hit_sound(sound=sound("entity.zombie.hurt"));
 | sound | Звук | Звук попадания |
 
 <h3 id=entity_set_arrow_pierce>
-  <code>entity::set_arrow_pierce</code>
+  <code>entity.set_arrow_pierce</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1320,11 +1320,11 @@ entity::set_arrow_hit_sound(sound=sound("entity.zombie.hurt"));
 
 **Пример использования:**
 ```ts
-entity::set_arrow_pierce(1);
+entity.set_arrow_pierce(1);
 
 //Или в сухую по ключам
 
-entity::set_arrow_pierce(pierce=1);
+entity.set_arrow_pierce(pierce=1);
 ```
 
 **Аргументы:**
@@ -1334,7 +1334,7 @@ entity::set_arrow_pierce(pierce=1);
 | pierce | Число | Количество пронзаний |
 
 <h3 id=entity_set_attribute>
-  <code>entity::set_attribute</code>
+  <code>entity.set_attribute</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1344,11 +1344,11 @@ entity::set_arrow_pierce(pierce=1);
 
 **Пример использования:**
 ```ts
-entity::set_attribute(1, "CAMERA_DISTANCE");
+entity.set_attribute(1, "CAMERA_DISTANCE");
 
 //Или в сухую по ключам
 
-entity::set_attribute(value=1, attribute_type="CAMERA_DISTANCE");
+entity.set_attribute(value=1, attribute_type="CAMERA_DISTANCE");
 ```
 
 **Аргументы:**
@@ -1359,7 +1359,7 @@ entity::set_attribute(value=1, attribute_type="CAMERA_DISTANCE");
 | attribute_type | Маркер<br/>**CAMERA_DISTANCE** - Расстояние камеры при виде от третьего лица<br/>**GENERIC_ARMOR** - Очки защиты (generic.armor)<br/>**GENERIC_ARMOR_TOUGHNESS** - Очки плотности защиты (generic.armor_toughness)<br/>**GENERIC_ATTACK_DAMAGE** - Урон атаки (generic.attack_damage)<br/>**GENERIC_ATTACK_KNOCKBACK** - Отталкивание атаки (generic.attack_knockback)<br/>**GENERIC_ATTACK_SPEED** - Скорость атаки (generic.attack_speed)<br/>**GENERIC_BURNING_TIME** - Время горения<br/>**GENERIC_EXPLOSION_KNOCKBACK_RESISTANCE** - Сопротивление отбрасыванию от взрыва<br/>**GENERIC_FALL_DAMAGE_MULTIPLIER** - Множитель урона от падения<br/>**GENERIC_FLYING_SPEED** - Скорость полёта (generic.flying_speed)<br/>**GENERIC_FOLLOW_RANGE** - Расстояние следования (generic.follow_range)<br/>**GENERIC_GRAVITY** - Гравитация<br/>**GENERIC_JUMP_STRENGTH** - Сила прыжка<br/>**GENERIC_KNOCKBACK_RESISTANCE** - Сопротивление отталкиванию (generic.knockback_resistance)<br/>**GENERIC_LUCK** - Удача рыбалки (generic.luck)<br/>**GENERIC_MAX_ABSORPTION** - Максимальное поглощение (generic.max_absorption)<br/>**GENERIC_MAX_HEALTH** - Максимальное здоровье (generic.max_health)<br/>**GENERIC_MOVEMENT_EFFICIENCY** - Скорость передвижения по замедляющим блокам<br/>**GENERIC_MOVEMENT_SPEED** - Скорость передвижения (generic.movement_speed)<br/>**GENERIC_OXYGEN_BONUS** - Воздух под водой<br/>**GENERIC_SAFE_FALL_DISTANCE** - Безопасная высота падения<br/>**GENERIC_SCALE** - Масштаб<br/>**GENERIC_STEP_HEIGHT** - Высота шага<br/>**GENERIC_WATER_MOVEMENT_EFFICIENCY** - Скорость передвижения под водой<br/>**PLAYER_BLOCK_BREAK_SPEED** - Скорость ломания блока<br/>**PLAYER_BLOCK_INTERACTION_RANGE** - Расстояние взаимодействия с блоками<br/>**PLAYER_ENTITY_INTERACTION_RANGE** - Расстояние взаимодействия с сущностями<br/>**PLAYER_MINING_EFFICIENCY** - Скорость копания<br/>**PLAYER_SNEAKING_SPEED** - Скорость передвижения крадясь<br/>**PLAYER_SUBMERGED_MINING_SPEED** - Скорость копания под водой<br/>**PLAYER_SWEEPING_DAMAGE_RATIO** - Коэффициент разящего удара<br/>**TEMP_RANGE** - Расстояние приманивания<br/>**WAYPOINT_RECEIVE_RANGE** - Расстояние улавливания локатора (waypoint_receive_range)<br/>**WAYPOINT_TRANSMIT_RANGE** - Расстояние улавливания локатором (waypoint_transmit_range)<br/>**ZOMBIE_SPAWN_REINFORCEMENTS** - Шанс подкрепления зомби | Тип атрибута      |
 
 <h3 id=entity_set_aware>
-  <code>entity::set_aware</code>
+  <code>entity.set_aware</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1371,11 +1371,11 @@ entity::set_attribute(value=1, attribute_type="CAMERA_DISTANCE");
 
 **Пример использования:**
 ```ts
-entity::set_aware("FALSE");
+entity.set_aware("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_aware(aware="FALSE");
+entity.set_aware(aware="FALSE");
 ```
 
 **Аргументы:**
@@ -1385,7 +1385,7 @@ entity::set_aware(aware="FALSE");
 | aware | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Осведомлённость |
 
 <h3 id=entity_set_axolotl_type>
-  <code>entity::set_axolotl_type</code>
+  <code>entity.set_axolotl_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1397,11 +1397,11 @@ entity::set_aware(aware="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_axolotl_type("BLUE");
+entity.set_axolotl_type("BLUE");
 
 //Или в сухую по ключам
 
-entity::set_axolotl_type(axolotl_type="BLUE");
+entity.set_axolotl_type(axolotl_type="BLUE");
 ```
 
 **Аргументы:**
@@ -1411,7 +1411,7 @@ entity::set_axolotl_type(axolotl_type="BLUE");
 | axolotl_type | Маркер<br/>**BLUE** - Синий<br/>**CYAN** - Голубой<br/>**GOLD** - Золотой<br/>**LUCY** - Лейкист<br/>**WILD** - Коричневый | Тип аксолотля |
 
 <h3 id=entity_set_baby>
-  <code>entity::set_baby</code>
+  <code>entity.set_baby</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1421,11 +1421,11 @@ entity::set_axolotl_type(axolotl_type="BLUE");
 
 **Пример использования:**
 ```ts
-entity::set_baby("FALSE");
+entity.set_baby("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_baby(baby="FALSE");
+entity.set_baby(baby="FALSE");
 ```
 
 **Аргументы:**
@@ -1435,7 +1435,7 @@ entity::set_baby(baby="FALSE");
 | baby | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Режим ребёнка |
 
 <h3 id=entity_set_base_arrow_damage>
-  <code>entity::set_base_arrow_damage</code>
+  <code>entity.set_base_arrow_damage</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1451,11 +1451,11 @@ entity::set_baby(baby="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_base_arrow_damage(1);
+entity.set_base_arrow_damage(1);
 
 //Или в сухую по ключам
 
-entity::set_base_arrow_damage(damage=1);
+entity.set_base_arrow_damage(damage=1);
 ```
 
 **Аргументы:**
@@ -1465,7 +1465,7 @@ entity::set_base_arrow_damage(damage=1);
 | damage | Число | Урон     |
 
 <h3 id=entity_set_bee_has_stinger>
-  <code>entity::set_bee_has_stinger</code>
+  <code>entity.set_bee_has_stinger</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1477,11 +1477,11 @@ entity::set_base_arrow_damage(damage=1);
 
 **Пример использования:**
 ```ts
-entity::set_bee_has_stinger("TRUE");
+entity.set_bee_has_stinger("TRUE");
 
 //Или в сухую по ключам
 
-entity::set_bee_has_stinger(stinger="TRUE");
+entity.set_bee_has_stinger(stinger="TRUE");
 ```
 
 **Аргументы:**
@@ -1491,7 +1491,7 @@ entity::set_bee_has_stinger(stinger="TRUE");
 | stinger | Маркер<br/>**TRUE** - Есть<br/>**FALSE** - Нет | Состояние жала |
 
 <h3 id=entity_set_bee_nectar>
-  <code>entity::set_bee_nectar</code>
+  <code>entity.set_bee_nectar</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1503,11 +1503,11 @@ entity::set_bee_has_stinger(stinger="TRUE");
 
 **Пример использования:**
 ```ts
-entity::set_bee_nectar("FALSE");
+entity.set_bee_nectar("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_bee_nectar(nectar="FALSE");
+entity.set_bee_nectar(nectar="FALSE");
 ```
 
 **Аргументы:**
@@ -1517,7 +1517,7 @@ entity::set_bee_nectar(nectar="FALSE");
 | nectar | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Видимость пыльцы |
 
 <h3 id=entity_set_block_display_block>
-  <code>entity::set_block_display_block</code>
+  <code>entity.set_block_display_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1529,11 +1529,11 @@ entity::set_bee_nectar(nectar="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_block_display_block("minecraft:oak_log[axis=x]");
+entity.set_block_display_block("minecraft:oak_log[axis=x]");
 
 //Или в сухую по ключам
 
-entity::set_block_display_block(displayed_block="minecraft:oak_log[axis=x]");
+entity.set_block_display_block(displayed_block="minecraft:oak_log[axis=x]");
 ```
 
 **Аргументы:**
@@ -1543,7 +1543,7 @@ entity::set_block_display_block(displayed_block="minecraft:oak_log[axis=x]");
 | displayed_block | Блок | Отображаемый блок |
 
 <h3 id=entity_set_camel_dashing>
-  <code>entity::set_camel_dashing</code>
+  <code>entity.set_camel_dashing</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1555,11 +1555,11 @@ entity::set_block_display_block(displayed_block="minecraft:oak_log[axis=x]");
 
 **Пример использования:**
 ```ts
-entity::set_camel_dashing("FALSE");
+entity.set_camel_dashing("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_camel_dashing(dashing="FALSE");
+entity.set_camel_dashing(dashing="FALSE");
 ```
 
 **Аргументы:**
@@ -1569,7 +1569,7 @@ entity::set_camel_dashing(dashing="FALSE");
 | dashing | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Анимация рывка |
 
 <h3 id=entity_set_carrying_chest>
-  <code>entity::set_carrying_chest</code>
+  <code>entity.set_carrying_chest</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1583,11 +1583,11 @@ entity::set_camel_dashing(dashing="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_carrying_chest("FALSE");
+entity.set_carrying_chest("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_carrying_chest(carrying="FALSE");
+entity.set_carrying_chest(carrying="FALSE");
 ```
 
 **Аргументы:**
@@ -1597,7 +1597,7 @@ entity::set_carrying_chest(carrying="FALSE");
 | carrying | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Наличие сундука |
 
 <h3 id=entity_set_cat_lying_down>
-  <code>entity::set_cat_lying_down</code>
+  <code>entity.set_cat_lying_down</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1609,11 +1609,11 @@ entity::set_carrying_chest(carrying="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_cat_lying_down("FALSE");
+entity.set_cat_lying_down("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_cat_lying_down(lying_down="FALSE");
+entity.set_cat_lying_down(lying_down="FALSE");
 ```
 
 **Аргументы:**
@@ -1623,7 +1623,7 @@ entity::set_cat_lying_down(lying_down="FALSE");
 | lying_down | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Режим лежания |
 
 <h3 id=entity_set_cat_type>
-  <code>entity::set_cat_type</code>
+  <code>entity.set_cat_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1635,11 +1635,11 @@ entity::set_cat_lying_down(lying_down="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_cat_type("ALL_BLACK");
+entity.set_cat_type("ALL_BLACK");
 
 //Или в сухую по ключам
 
-entity::set_cat_type(cat_type="ALL_BLACK");
+entity.set_cat_type(cat_type="ALL_BLACK");
 ```
 
 **Аргументы:**
@@ -1649,7 +1649,7 @@ entity::set_cat_type(cat_type="ALL_BLACK");
 | cat_type | Маркер<br/>**ALL_BLACK** - Чёрная<br/>**BLACK** - Чёрно-белая<br/>**BRITISH_SHORTHAIR** - Британская короткошёрстная<br/>**CALICO** - Ситцевая<br/>**JELLIE** - Бело-серая<br/>**PERSIAN** - Персидская<br/>**RAGDOLL** - Тряпичная<br/>**RED** - Рыжая<br/>**SIAMESE** - Сиамская<br/>**TABBY** - Полосатая<br/>**WHITE** - Белая | Тип кошки |
 
 <h3 id=entity_set_celebrating>
-  <code>entity::set_celebrating</code>
+  <code>entity.set_celebrating</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1662,11 +1662,11 @@ entity::set_cat_type(cat_type="ALL_BLACK");
 
 **Пример использования:**
 ```ts
-entity::set_celebrating("FALSE");
+entity.set_celebrating("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_celebrating(celebrating="FALSE");
+entity.set_celebrating(celebrating="FALSE");
 ```
 
 **Аргументы:**
@@ -1676,7 +1676,7 @@ entity::set_celebrating(celebrating="FALSE");
 | celebrating | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Режим празднования |
 
 <h3 id=entity_set_chicken_type>
-  <code>entity::set_chicken_type</code>
+  <code>entity.set_chicken_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1688,11 +1688,11 @@ entity::set_celebrating(celebrating="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_chicken_type("COLD");
+entity.set_chicken_type("COLD");
 
 //Или в сухую по ключам
 
-entity::set_chicken_type(variant="COLD");
+entity.set_chicken_type(variant="COLD");
 ```
 
 **Аргументы:**
@@ -1702,7 +1702,7 @@ entity::set_chicken_type(variant="COLD");
 | variant | Маркер<br/>**COLD** - Снежная<br/>**WARM** - Тропическая<br/>**TEMPERATE** - Обычная | Тип окраски |
 
 <h3 id=entity_set_collidable>
-  <code>entity::set_collidable</code>
+  <code>entity.set_collidable</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1712,11 +1712,11 @@ entity::set_chicken_type(variant="COLD");
 
 **Пример использования:**
 ```ts
-entity::set_collidable("FALSE");
+entity.set_collidable("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_collidable(collidable="FALSE");
+entity.set_collidable(collidable="FALSE");
 ```
 
 **Аргументы:**
@@ -1726,7 +1726,7 @@ entity::set_collidable(collidable="FALSE");
 | collidable | Маркер<br/>**FALSE** - Не сталкивается с другими существами<br/>**TRUE** - Сталкивается с другими существами | Режим столкновения |
 
 <h3 id=entity_set_cow_type>
-  <code>entity::set_cow_type</code>
+  <code>entity.set_cow_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1738,11 +1738,11 @@ entity::set_collidable(collidable="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_cow_type("COLD");
+entity.set_cow_type("COLD");
 
 //Или в сухую по ключам
 
-entity::set_cow_type(variant="COLD");
+entity.set_cow_type(variant="COLD");
 ```
 
 **Аргументы:**
@@ -1752,7 +1752,7 @@ entity::set_cow_type(variant="COLD");
 | variant | Маркер<br/>**COLD** - Снежная<br/>**WARM** - Тропическая<br/>**TEMPERATE** - Обычная | Тип окраски |
 
 <h3 id=entity_set_creeper_charge>
-  <code>entity::set_creeper_charge</code>
+  <code>entity.set_creeper_charge</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1764,11 +1764,11 @@ entity::set_cow_type(variant="COLD");
 
 **Пример использования:**
 ```ts
-entity::set_creeper_charge("FALSE");
+entity.set_creeper_charge("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_creeper_charge(charged="FALSE");
+entity.set_creeper_charge(charged="FALSE");
 ```
 
 **Аргументы:**
@@ -1778,7 +1778,7 @@ entity::set_creeper_charge(charged="FALSE");
 | charged | Маркер<br/>**FALSE** - Не заряжен<br/>**TRUE** - Заряжен | Заряженность крипера |
 
 <h3 id=entity_set_creeper_fuse>
-  <code>entity::set_creeper_fuse</code>
+  <code>entity.set_creeper_fuse</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1790,11 +1790,11 @@ entity::set_creeper_charge(charged="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_creeper_fuse(1);
+entity.set_creeper_fuse(1);
 
 //Или в сухую по ключам
 
-entity::set_creeper_fuse(fuse_ticks=1);
+entity.set_creeper_fuse(fuse_ticks=1);
 ```
 
 **Аргументы:**
@@ -1804,7 +1804,7 @@ entity::set_creeper_fuse(fuse_ticks=1);
 | fuse_ticks | Число | Время до взрыва (в тиках) |
 
 <h3 id=entity_set_current_health>
-  <code>entity::set_current_health</code>
+  <code>entity.set_current_health</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1814,11 +1814,11 @@ entity::set_creeper_fuse(fuse_ticks=1);
 
 **Пример использования:**
 ```ts
-entity::set_current_health(1);
+entity.set_current_health(1);
 
 //Или в сухую по ключам
 
-entity::set_current_health(health=1);
+entity.set_current_health(health=1);
 ```
 
 **Аргументы:**
@@ -1828,7 +1828,7 @@ entity::set_current_health(health=1);
 | health | Число | Количество здоровья |
 
 <h3 id=entity_set_custom_name>
-  <code>entity::set_custom_name</code>
+  <code>entity.set_custom_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1838,11 +1838,11 @@ entity::set_current_health(health=1);
 
 **Пример использования:**
 ```ts
-entity::set_custom_name("custom_name");
+entity.set_custom_name("custom_name");
 
 //Или в сухую по ключам
 
-entity::set_custom_name(custom_name="custom_name");
+entity.set_custom_name(custom_name="custom_name");
 ```
 
 **Аргументы:**
@@ -1852,7 +1852,7 @@ entity::set_custom_name(custom_name="custom_name");
 | custom_name | Текст | Имя существа |
 
 <h3 id=entity_set_custom_name_visibility>
-  <code>entity::set_custom_name_visibility</code>
+  <code>entity.set_custom_name_visibility</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1862,11 +1862,11 @@ entity::set_custom_name(custom_name="custom_name");
 
 **Пример использования:**
 ```ts
-entity::set_custom_name_visibility("FALSE");
+entity.set_custom_name_visibility("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_custom_name_visibility(visibility="FALSE");
+entity.set_custom_name_visibility(visibility="FALSE");
 ```
 
 **Аргументы:**
@@ -1876,7 +1876,7 @@ entity::set_custom_name_visibility(visibility="FALSE");
 | visibility | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Видимость имени |
 
 <h3 id=entity_set_custom_tag>
-  <code>entity::set_custom_tag</code>
+  <code>entity.set_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1886,11 +1886,11 @@ entity::set_custom_name_visibility(visibility="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_custom_tag("name", "value");
+entity.set_custom_tag("name", "value");
 
 //Или в сухую по ключам
 
-entity::set_custom_tag(name="name", value="value");
+entity.set_custom_tag(name="name", value="value");
 ```
 
 **Аргументы:**
@@ -1901,7 +1901,7 @@ entity::set_custom_tag(name="name", value="value");
 | value | Текст | Значение тега |
 
 <h3 id=entity_set_death_drops>
-  <code>entity::set_death_drops</code>
+  <code>entity.set_death_drops</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1911,11 +1911,11 @@ entity::set_custom_tag(name="name", value="value");
 
 **Пример использования:**
 ```ts
-entity::set_death_drops("FALSE");
+entity.set_death_drops("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_death_drops(drops="FALSE");
+entity.set_death_drops(drops="FALSE");
 ```
 
 **Аргументы:**
@@ -1925,7 +1925,7 @@ entity::set_death_drops(drops="FALSE");
 | drops | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Выпадение предметов |
 
 <h3 id=entity_set_death_time>
-  <code>entity::set_death_time</code>
+  <code>entity.set_death_time</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1935,11 +1935,11 @@ entity::set_death_drops(drops="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_death_time(1);
+entity.set_death_time(1);
 
 //Или в сухую по ключам
 
-entity::set_death_time(death_time=1);
+entity.set_death_time(death_time=1);
 ```
 
 **Аргументы:**
@@ -1949,7 +1949,7 @@ entity::set_death_time(death_time=1);
 | death_time | Число | Длительность смерти (в тиках) |
 
 <h3 id=entity_set_default_visible>
-  <code>entity::set_default_visible</code>
+  <code>entity.set_default_visible</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1961,11 +1961,11 @@ entity::set_death_time(death_time=1);
 
 **Пример использования:**
 ```ts
-entity::set_default_visible("TRUE");
+entity.set_default_visible("TRUE");
 
 //Или в сухую по ключам
 
-entity::set_default_visible(default_visible="TRUE");
+entity.set_default_visible(default_visible="TRUE");
 ```
 
 **Аргументы:**
@@ -1975,7 +1975,7 @@ entity::set_default_visible(default_visible="TRUE");
 | default_visible | Маркер<br/>**TRUE** - Видимый<br/>**FALSE** - Невидимый | Видимость |
 
 <h3 id=entity_set_despawning>
-  <code>entity::set_despawning</code>
+  <code>entity.set_despawning</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1985,11 +1985,11 @@ entity::set_default_visible(default_visible="TRUE");
 
 **Пример использования:**
 ```ts
-entity::set_despawning("FALSE");
+entity.set_despawning("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_despawning(despawning="FALSE");
+entity.set_despawning(despawning="FALSE");
 ```
 
 **Аргументы:**
@@ -1998,7 +1998,7 @@ entity::set_despawning(despawning="FALSE");
 |------------|----------------------------------------------------------|---------------------|
 | despawning | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Пропадание существа |
 <h3 id=entity_set_display_billboard>
-  <code>entity::set_display_billboard</code>
+  <code>entity.set_display_billboard</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2010,11 +2010,11 @@ entity::set_despawning(despawning="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_display_billboard("CENTER");
+entity.set_display_billboard("CENTER");
 
 //Или в сухую по ключам
 
-entity::set_display_billboard(billboard_type="CENTER");
+entity.set_display_billboard(billboard_type="CENTER");
 ```
 
 **Аргументы:**
@@ -2024,7 +2024,7 @@ entity::set_display_billboard(billboard_type="CENTER");
 | billboard_type | Маркер<br/>**CENTER** - Всегда повёрнут к игроку<br/>**FIXED** - Фиксированный<br/>**HORIZONTAL** - Фиксированный по горизонтали<br/>**VERTICAL** - Фиксированный по вертикали | Режим отображения |
 
 <h3 id=entity_set_display_brightness>
-  <code>entity::set_display_brightness</code>
+  <code>entity.set_display_brightness</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2036,11 +2036,11 @@ entity::set_display_billboard(billboard_type="CENTER");
 
 **Пример использования:**
 ```ts
-entity::set_display_brightness(1, 2);
+entity.set_display_brightness(1, 2);
 
 //Или в сухую по ключам
 
-entity::set_display_brightness(block_light_level=1, sky_light_level=2);
+entity.set_display_brightness(block_light_level=1, sky_light_level=2);
 ```
 
 **Аргументы:**
@@ -2051,7 +2051,7 @@ entity::set_display_brightness(block_light_level=1, sky_light_level=2);
 | sky_light_level   | Число | Уровень света от неба   |
 
 <h3 id=entity_set_display_correct_transformation_matrix>
-  <code>entity::set_display_correct_transformation_matrix</code>
+  <code>entity.set_display_correct_transformation_matrix</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2063,11 +2063,11 @@ entity::set_display_brightness(block_light_level=1, sky_light_level=2);
 
 **Пример использования:**
 ```ts
-entity::set_display_correct_transformation_matrix([1, 2]);
+entity.set_display_correct_transformation_matrix([1, 2]);
 
 //Или в сухую по ключам
 
-entity::set_display_correct_transformation_matrix(matrix=[1, 2]);
+entity.set_display_correct_transformation_matrix(matrix=[1, 2]);
 ```
 
 **Аргументы:**
@@ -2077,7 +2077,7 @@ entity::set_display_correct_transformation_matrix(matrix=[1, 2]);
 | matrix | Список\[Число\] | Матрица из 16 чисел<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=entity_set_display_culling_suze>
-  <code>entity::set_display_culling_size</code>
+  <code>entity.set_display_culling_size</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2089,11 +2089,11 @@ entity::set_display_correct_transformation_matrix(matrix=[1, 2]);
 
 **Пример использования:**
 ```ts
-entity::set_display_culling_size(1, 2);
+entity.set_display_culling_size(1, 2);
 
 //Или в сухую по ключам
 
-entity::set_display_culling_size(width=1, height=2);
+entity.set_display_culling_size(width=1, height=2);
 ```
 
 **Аргументы:**
@@ -2104,7 +2104,7 @@ entity::set_display_culling_size(width=1, height=2);
 | height | Число | Вертикальный размер   |
 
 <h3 id=entity_set_display_glow_color>
-  <code>entity::set_display_glow_color</code>
+  <code>entity.set_display_glow_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2117,11 +2117,11 @@ entity::set_display_culling_size(width=1, height=2);
 
 **Пример использования:**
 ```ts
-entity::set_display_glow_color("color_hexadecimal");
+entity.set_display_glow_color("color_hexadecimal");
 
 //Или в сухую по ключам
 
-entity::set_display_glow_color(color_hexadecimal="color_hexadecimal");
+entity.set_display_glow_color(color_hexadecimal="color_hexadecimal");
 ```
 
 **Аргументы:**
@@ -2131,7 +2131,7 @@ entity::set_display_glow_color(color_hexadecimal="color_hexadecimal");
 | color_hexadecimal | Текст | HEX цвет |
 
 <h3 id=entity_set_display_interpolation>
-  <code>entity::set_display_interpolation</code>
+  <code>entity.set_display_interpolation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2143,11 +2143,11 @@ entity::set_display_glow_color(color_hexadecimal="color_hexadecimal");
 
 **Пример использования:**
 ```ts
-entity::set_display_interpolation(1, 2);
+entity.set_display_interpolation(1, 2);
 
 //Или в сухую по ключам
 
-entity::set_display_interpolation(interpolation_duration=1, interpolation_delay=2);
+entity.set_display_interpolation(interpolation_duration=1, interpolation_delay=2);
 ```
 
 **Аргументы:**
@@ -2158,7 +2158,7 @@ entity::set_display_interpolation(interpolation_duration=1, interpolation_delay=
 | interpolation_delay    | Число | Задержка перед интерполяцией |
 
 <h3 id=entity_set_display_rotation_from_axis_angle>
-  <code>entity::set_display_rotation_from_axis_angle</code>
+  <code>entity.set_display_rotation_from_axis_angle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2170,11 +2170,11 @@ entity::set_display_interpolation(interpolation_duration=1, interpolation_delay=
 
 **Пример использования:**
 ```ts
-entity::set_display_rotation_from_axis_angle(vector(0,0,0), 1, "ADD", "DEGREES", "LEFT_ROTATION");
+entity.set_display_rotation_from_axis_angle(vector(0,0,0), 1, "ADD", "DEGREES", "LEFT_ROTATION");
 
 //Или в сухую по ключам
 
-entity::set_display_rotation_from_axis_angle(axis_vector=vector(0,0,0), angle=1, mode="ADD", input="DEGREES", rotation="LEFT_ROTATION");
+entity.set_display_rotation_from_axis_angle(axis_vector=vector(0,0,0), angle=1, mode="ADD", input="DEGREES", rotation="LEFT_ROTATION");
 ```
 
 **Аргументы:**
@@ -2188,7 +2188,7 @@ entity::set_display_rotation_from_axis_angle(axis_vector=vector(0,0,0), angle=1,
 | rotation    | Маркер<br/>**LEFT_ROTATION** - Левый поворот (Поворот х Размер)<br/>**RIGHT_ROTATION** - Правый поворот (Размер х Поворот) | Порядок применения поворота |
 
 <h3 id=entity_set_display_rotation_from_euler_angles>
-  <code>entity::set_display_rotation_from_euler_angles</code>
+  <code>entity.set_display_rotation_from_euler_angles</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2200,11 +2200,11 @@ entity::set_display_rotation_from_axis_angle(axis_vector=vector(0,0,0), angle=1,
 
 **Пример использования:**
 ```ts
-entity::set_display_rotation_from_euler_angles(1, 2, 3, "ADD", "DEGREES", "LEFT_ROTATION");
+entity.set_display_rotation_from_euler_angles(1, 2, 3, "ADD", "DEGREES", "LEFT_ROTATION");
 
 //Или в сухую по ключам
 
-entity::set_display_rotation_from_euler_angles(pitch=1, yaw=2, roll=3, mode="ADD", input="DEGREES", rotation="LEFT_ROTATION");
+entity.set_display_rotation_from_euler_angles(pitch=1, yaw=2, roll=3, mode="ADD", input="DEGREES", rotation="LEFT_ROTATION");
 ```
 
 **Аргументы:**
@@ -2219,7 +2219,7 @@ entity::set_display_rotation_from_euler_angles(pitch=1, yaw=2, roll=3, mode="ADD
 | rotation | Маркер<br/>**LEFT_ROTATION** - Левый поворот (Поворот х Размер)<br/>**RIGHT_ROTATION** - Правый поворот (Размер х Поворот) | Порядок применения поворота |
 
 <h3 id=entity_set_display_scale>
-  <code>entity::set_display_scale</code>
+  <code>entity.set_display_scale</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2231,11 +2231,11 @@ entity::set_display_rotation_from_euler_angles(pitch=1, yaw=2, roll=3, mode="ADD
 
 **Пример использования:**
 ```ts
-entity::set_display_scale(vector(0,0,0), "ADD");
+entity.set_display_scale(vector(0,0,0), "ADD");
 
 //Или в сухую по ключам
 
-entity::set_display_scale(scale_vector=vector(0,0,0), mode="ADD");
+entity.set_display_scale(scale_vector=vector(0,0,0), mode="ADD");
 ```
 
 **Аргументы:**
@@ -2246,7 +2246,7 @@ entity::set_display_scale(scale_vector=vector(0,0,0), mode="ADD");
 | mode         | Маркер<br/>**ADD** - Добавление<br/>**SET** - Установка | Режим установки |
 
 <h3 id=entity_set_display_shadow>
-  <code>entity::set_display_shadow</code>
+  <code>entity.set_display_shadow</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2258,11 +2258,11 @@ entity::set_display_scale(scale_vector=vector(0,0,0), mode="ADD");
 
 **Пример использования:**
 ```ts
-entity::set_display_shadow(1, 2);
+entity.set_display_shadow(1, 2);
 
 //Или в сухую по ключам
 
-entity::set_display_shadow(shadow_radius=1, shadow_opacity_percentage=2);
+entity.set_display_shadow(shadow_radius=1, shadow_opacity_percentage=2);
 ```
 
 **Аргументы:**
@@ -2273,7 +2273,7 @@ entity::set_display_shadow(shadow_radius=1, shadow_opacity_percentage=2);
 | shadow_opacity_percentage | Число | Процент непрозрачности |
 
 <h3 id=entity_set_display_teleport_duration>
-  <code>entity::set_display_teleport_duration</code>
+  <code>entity.set_display_teleport_duration</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2285,11 +2285,11 @@ entity::set_display_shadow(shadow_radius=1, shadow_opacity_percentage=2);
 
 **Пример использования:**
 ```ts
-entity::set_display_teleport_duration(1);
+entity.set_display_teleport_duration(1);
 
 //Или в сухую по ключам
 
-entity::set_display_teleport_duration(duration=1);
+entity.set_display_teleport_duration(duration=1);
 ```
 
 **Аргументы:**
@@ -2299,7 +2299,7 @@ entity::set_display_teleport_duration(duration=1);
 | duration | Число | Длительность телепорта |
 
 <h3 id=entity_set_display_transformation_matrix>
-  <code>entity::set_display_transformation_matrix</code>
+  <code>entity.set_display_transformation_matrix</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2313,11 +2313,11 @@ entity::set_display_teleport_duration(duration=1);
 
 **Пример использования:**
 ```ts
-entity::set_display_transformation_matrix([1, 2]);
+entity.set_display_transformation_matrix([1, 2]);
 
 //Или в сухую по ключам
 
-entity::set_display_transformation_matrix(row_major_matrix=[1, 2]);
+entity.set_display_transformation_matrix(row_major_matrix=[1, 2]);
 ```
 
 **Аргументы:**
@@ -2327,7 +2327,7 @@ entity::set_display_transformation_matrix(row_major_matrix=[1, 2]);
 | row_major_matrix | Список\[Число\] | Матрица из 16 чисел<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=entity_set_display_translation>
-  <code>entity::set_display_translation</code>
+  <code>entity.set_display_translation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2339,11 +2339,11 @@ entity::set_display_transformation_matrix(row_major_matrix=[1, 2]);
 
 **Пример использования:**
 ```ts
-entity::set_display_translation(vector(0,0,0), "ADD");
+entity.set_display_translation(vector(0,0,0), "ADD");
 
 //Или в сухую по ключам
 
-entity::set_display_translation(translation_vector=vector(0,0,0), mode="ADD");
+entity.set_display_translation(translation_vector=vector(0,0,0), mode="ADD");
 ```
 
 **Аргументы:**
@@ -2354,7 +2354,7 @@ entity::set_display_translation(translation_vector=vector(0,0,0), mode="ADD");
 | mode               | Маркер<br/>**ADD** - Добавление<br/>**SET** - Установка | Режим установки |
 
 <h3 id=entity_set_display_view_range>
-  <code>entity::set_display_view_range</code>
+  <code>entity.set_display_view_range</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2366,11 +2366,11 @@ entity::set_display_translation(translation_vector=vector(0,0,0), mode="ADD");
 
 **Пример использования:**
 ```ts
-entity::set_display_view_range(1);
+entity.set_display_view_range(1);
 
 //Или в сухую по ключам
 
-entity::set_display_view_range(view_range=1);
+entity.set_display_view_range(view_range=1);
 ```
 
 **Аргументы:**
@@ -2380,7 +2380,7 @@ entity::set_display_view_range(view_range=1);
 | view_range | Число | Дальность видимости |
 
 <h3 id=entity_set_dragon_phase>
-  <code>entity::set_dragon_phase</code>
+  <code>entity.set_dragon_phase</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2392,11 +2392,11 @@ entity::set_display_view_range(view_range=1);
 
 **Пример использования:**
 ```ts
-entity::set_dragon_phase("BREATH_ATTACK");
+entity.set_dragon_phase("BREATH_ATTACK");
 
 //Или в сухую по ключам
 
-entity::set_dragon_phase(phase="BREATH_ATTACK");
+entity.set_dragon_phase(phase="BREATH_ATTACK");
 ```
 
 **Аргументы:**
@@ -2406,7 +2406,7 @@ entity::set_dragon_phase(phase="BREATH_ATTACK");
 | phase | Маркер<br/>**BREATH_ATTACK** - Атака дыханием<br/>**CHARGE_PLAYER** - Атака на игрока<br/>**CIRCLING** - Кружение<br/>**DYING** - Смерть<br/>**FLY_TO_PORTAL** - Полёт к порталу<br/>**HOVER** - Полёт<br/>**LAND_ON_PORTAL** - Приземление на портал<br/>**LEAVE_PORTAL** - Покидание портала<br/>**ROAR_BEFORE_ATTACK** - Крик перед атакой<br/>**SEARCH_FOR_BREATH_ATTACK_TARGET** - Поиск цели для атаки дыханием<br/>**STRAFING** - Уворот | Фаза Эндер-дракона |
 
 <h3 id=entity_set_dye_color>
-  <code>entity::set_dye_color</code>
+  <code>entity.set_dye_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2421,11 +2421,11 @@ entity::set_dragon_phase(phase="BREATH_ATTACK");
 
 **Пример использования:**
 ```ts
-entity::set_dye_color("BLACK");
+entity.set_dye_color("BLACK");
 
 //Или в сухую по ключам
 
-entity::set_dye_color(color="BLACK");
+entity.set_dye_color(color="BLACK");
 ```
 
 **Аргументы:**
@@ -2435,7 +2435,7 @@ entity::set_dye_color(color="BLACK");
 | color | Маркер<br/>**BLACK** - Чёрный<br/>**BLUE** - Синий<br/>**BROWN** - Коричневый<br/>**CYAN** - Бирюзовый<br/>**GRAY** - Серый<br/>**GREEN** - Зелёный<br/>**LIGHT_BLUE** - Голубой<br/>**LIGHT_GRAY** - Светло-серый<br/>**LIME** - Лаймовый<br/>**MAGENTA** - Пурпурный<br/>**ORANGE** - Оранжевый<br/>**PINK** - Розовый<br/>**PURPLE** - Фиолетовый<br/>**RED** - Красный<br/>**WHITE** - Белый<br/>**YELLOW** - Жёлтый | Цвет сущности |
 
 <h3 id=entity_set_end_crystal_beam>
-  <code>entity::set_end_crystal_beam</code>
+  <code>entity.set_end_crystal_beam</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2447,11 +2447,11 @@ entity::set_dye_color(color="BLACK");
 
 **Пример использования:**
 ```ts
-entity::set_end_crystal_beam(location(0,0,0,0,0));
+entity.set_end_crystal_beam(location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-entity::set_end_crystal_beam(beam=location(0,0,0,0,0));
+entity.set_end_crystal_beam(beam=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -2461,7 +2461,7 @@ entity::set_end_crystal_beam(beam=location(0,0,0,0,0));
 | beam | Местоположение | Местоположение для указания |
 
 <h3 id=entity_set_enderman_block>
-  <code>entity::set_enderman_block</code>
+  <code>entity.set_enderman_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2473,11 +2473,11 @@ entity::set_end_crystal_beam(beam=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-entity::set_enderman_block("minecraft:oak_log[axis=x]");
+entity.set_enderman_block("minecraft:oak_log[axis=x]");
 
 //Или в сухую по ключам
 
-entity::set_enderman_block(block="minecraft:oak_log[axis=x]");
+entity.set_enderman_block(block="minecraft:oak_log[axis=x]");
 ```
 
 **Аргументы:**
@@ -2487,7 +2487,7 @@ entity::set_enderman_block(block="minecraft:oak_log[axis=x]");
 | block | Блок | Отображаемый блок |
 
 <h3 id=entity_set_equipment_item>
-  <code>entity::set_equipment_item</code>
+  <code>entity.set_equipment_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2497,11 +2497,11 @@ entity::set_enderman_block(block="minecraft:oak_log[axis=x]");
 
 **Пример использования:**
 ```ts
-entity::set_equipment_item(item("stick"), "BODY");
+entity.set_equipment_item(item("stick"), "BODY");
 
 //Или в сухую по ключам
 
-entity::set_equipment_item(item=item("stick"), slot="BODY");
+entity.set_equipment_item(item=item("stick"), slot="BODY");
 ```
 
 **Аргументы:**
@@ -2512,7 +2512,7 @@ entity::set_equipment_item(item=item("stick"), slot="BODY");
 | slot | Маркер<br/>**BODY** - Тело<br/>**CHEST** - Нагрудник<br/>**FEET** - Ботинки<br/>**HAND** - Основная рука<br/>**HEAD** - Шлем<br/>**LEGS** - Поножи<br/>**OFF_HAND** - Второстепенная рука | Слот снаряжения     |
 
 <h3 id=entity_set_explosive_power>
-  <code>entity::set_explosive_power</code>
+  <code>entity.set_explosive_power</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2526,11 +2526,11 @@ entity::set_equipment_item(item=item("stick"), slot="BODY");
 
 **Пример использования:**
 ```ts
-entity::set_explosive_power(1);
+entity.set_explosive_power(1);
 
 //Или в сухую по ключам
 
-entity::set_explosive_power(power=1);
+entity.set_explosive_power(power=1);
 ```
 
 **Аргументы:**
@@ -2540,7 +2540,7 @@ entity::set_explosive_power(power=1);
 | power | Число | Сила взрыва |
 
 <h3 id=entity_set_fall_distance>
-  <code>entity::set_fall_distance</code>
+  <code>entity.set_fall_distance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2550,11 +2550,11 @@ entity::set_explosive_power(power=1);
 
 **Пример использования:**
 ```ts
-entity::set_fall_distance(1);
+entity.set_fall_distance(1);
 
 //Или в сухую по ключам
 
-entity::set_fall_distance(fall_distance=1);
+entity.set_fall_distance(fall_distance=1);
 ```
 
 **Аргументы:**
@@ -2564,7 +2564,7 @@ entity::set_fall_distance(fall_distance=1);
 | fall_distance | Число | Дистанция падения |
 
 <h3 id=entity_set_falling_block_type>
-  <code>entity::set_falling_block_type</code>
+  <code>entity.set_falling_block_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2576,11 +2576,11 @@ entity::set_fall_distance(fall_distance=1);
 
 **Пример использования:**
 ```ts
-entity::set_falling_block_type("minecraft:oak_log[axis=x]");
+entity.set_falling_block_type("minecraft:oak_log[axis=x]");
 
 //Или в сухую по ключам
 
-entity::set_falling_block_type(block="minecraft:oak_log[axis=x]");
+entity.set_falling_block_type(block="minecraft:oak_log[axis=x]");
 ```
 
 **Аргументы:**
@@ -2590,7 +2590,7 @@ entity::set_falling_block_type(block="minecraft:oak_log[axis=x]");
 | block | Блок | Новый блок |
 
 <h3 id=entity_set_fire_ticks>
-  <code>entity::set_fire_ticks</code>
+  <code>entity.set_fire_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2600,11 +2600,11 @@ entity::set_falling_block_type(block="minecraft:oak_log[axis=x]");
 
 **Пример использования:**
 ```ts
-entity::set_fire_ticks(1);
+entity.set_fire_ticks(1);
 
 //Или в сухую по ключам
 
-entity::set_fire_ticks(ticks=1);
+entity.set_fire_ticks(ticks=1);
 ```
 
 **Аргументы:**
@@ -2614,7 +2614,7 @@ entity::set_fire_ticks(ticks=1);
 | ticks | Число | Длительность (в тиках) |
 
 <h3 id=entity_set_fishing_wait>
-  <code>entity::set_fishing_wait</code>
+  <code>entity.set_fishing_wait</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2626,11 +2626,11 @@ entity::set_fire_ticks(ticks=1);
 
 **Пример использования:**
 ```ts
-entity::set_fishing_wait(1, "MAX_WAIT");
+entity.set_fishing_wait(1, "MAX_WAIT");
 
 //Или в сухую по ключам
 
-entity::set_fishing_wait(time=1, wait_type="MAX_WAIT");
+entity.set_fishing_wait(time=1, wait_type="MAX_WAIT");
 ```
 
 **Аргументы:**
@@ -2641,7 +2641,7 @@ entity::set_fishing_wait(time=1, wait_type="MAX_WAIT");
 | wait_type | Маркер<br/>**MAX_WAIT** - Максимальная задержка<br/>**MIN_MAX_WAIT** - Минимальная и максимальная задержка<br/>**MIN_WAIT** - Минимальная задержка<br/>**WAIT** - Текущая задержка | Тип задержки |
 
 <h3 id=entity_set_fox_leaping>
-  <code>entity::set_fox_leaping</code>
+  <code>entity.set_fox_leaping</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2653,11 +2653,11 @@ entity::set_fishing_wait(time=1, wait_type="MAX_WAIT");
 
 **Пример использования:**
 ```ts
-entity::set_fox_leaping("FALSE");
+entity.set_fox_leaping("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_fox_leaping(leaping="FALSE");
+entity.set_fox_leaping(leaping="FALSE");
 ```
 
 **Аргументы:**
@@ -2667,7 +2667,7 @@ entity::set_fox_leaping(leaping="FALSE");
 | leaping | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Анимация прыжка |
 
 <h3 id=entity_set_fox_type>
-  <code>entity::set_fox_type</code>
+  <code>entity.set_fox_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2679,11 +2679,11 @@ entity::set_fox_leaping(leaping="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_fox_type("RED");
+entity.set_fox_type("RED");
 
 //Или в сухую по ключам
 
-entity::set_fox_type(fox_type="RED");
+entity.set_fox_type(fox_type="RED");
 ```
 
 **Аргументы:**
@@ -2693,7 +2693,7 @@ entity::set_fox_type(fox_type="RED");
 | fox_type | Маркер<br/>**RED** - Стандартный<br/>**SNOW** - Зимний | Тип лисы |
 
 <h3 id=entity_set_freeze_ticks>
-  <code>entity::set_freeze_ticks</code>
+  <code>entity.set_freeze_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2703,11 +2703,11 @@ entity::set_fox_type(fox_type="RED");
 
 **Пример использования:**
 ```ts
-entity::set_freeze_ticks(1, "FALSE");
+entity.set_freeze_ticks(1, "FALSE");
 
 //Или в сухую по ключам
 
-entity::set_freeze_ticks(ticks=1, ticking_locked="FALSE");
+entity.set_freeze_ticks(ticks=1, ticking_locked="FALSE");
 ```
 
 **Аргументы:**
@@ -2718,7 +2718,7 @@ entity::set_freeze_ticks(ticks=1, ticking_locked="FALSE");
 | ticking_locked | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Блокировка состояния (время не будет изменяться) |
 
 <h3 id=entity_set_friction>
-  <code>entity::set_friction</code>
+  <code>entity.set_friction</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2728,11 +2728,11 @@ entity::set_freeze_ticks(ticks=1, ticking_locked="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_friction("NOT_SET");
+entity.set_friction("NOT_SET");
 
 //Или в сухую по ключам
 
-entity::set_friction(friction="NOT_SET");
+entity.set_friction(friction="NOT_SET");
 ```
 
 **Аргументы:**
@@ -2742,7 +2742,7 @@ entity::set_friction(friction="NOT_SET");
 | friction | Маркер<br/>**NOT_SET** - По умолчанию<br/>**TRUE** - Да<br/>**FALSE** - Нет | Испытывать трение |
 
 <h3 id=entity_set_frog_type>
-  <code>entity::set_frog_type</code>
+  <code>entity.set_frog_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2754,11 +2754,11 @@ entity::set_friction(friction="NOT_SET");
 
 **Пример использования:**
 ```ts
-entity::set_frog_type("COLD");
+entity.set_frog_type("COLD");
 
 //Или в сухую по ключам
 
-entity::set_frog_type(frog_variant="COLD");
+entity.set_frog_type(frog_variant="COLD");
 ```
 
 **Аргументы:**
@@ -2768,7 +2768,7 @@ entity::set_frog_type(frog_variant="COLD");
 | frog_variant | Маркер<br/>**COLD** - Холодный<br/>**TEMPERATE** - Умеренный<br/>**WARM** - Тёплый | Тип жабы |
 
 <h3 id=entity_set_fuse_ticks>
-  <code>entity::set_fuse_ticks</code>
+  <code>entity.set_fuse_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2782,11 +2782,11 @@ entity::set_frog_type(frog_variant="COLD");
 
 **Пример использования:**
 ```ts
-entity::set_fuse_ticks(1);
+entity.set_fuse_ticks(1);
 
 //Или в сухую по ключам
 
-entity::set_fuse_ticks(fuse_ticks=1);
+entity.set_fuse_ticks(fuse_ticks=1);
 ```
 
 **Аргументы:**
@@ -2796,7 +2796,7 @@ entity::set_fuse_ticks(fuse_ticks=1);
 | fuse_ticks | Число | Время до взрыва (в тиках) |
 
 <h3 id=entity_set_gliding>
-  <code>entity::set_gliding</code>
+  <code>entity.set_gliding</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2806,11 +2806,11 @@ entity::set_fuse_ticks(fuse_ticks=1);
 
 **Пример использования:**
 ```ts
-entity::set_gliding("FALSE");
+entity.set_gliding("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_gliding(is_gliding="FALSE");
+entity.set_gliding(is_gliding="FALSE");
 ```
 
 **Аргументы:**
@@ -2820,7 +2820,7 @@ entity::set_gliding(is_gliding="FALSE");
 | is_gliding | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Полёт на элитрах |
 
 <h3 id=entity_set_glow_squid_dark>
-  <code>entity::set_glow_squid_dark</code>
+  <code>entity.set_glow_squid_dark</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2832,11 +2832,11 @@ entity::set_gliding(is_gliding="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_glow_squid_dark(1);
+entity.set_glow_squid_dark(1);
 
 //Или в сухую по ключам
 
-entity::set_glow_squid_dark(dark_ticks=1);
+entity.set_glow_squid_dark(dark_ticks=1);
 ```
 
 **Аргументы:**
@@ -2846,7 +2846,7 @@ entity::set_glow_squid_dark(dark_ticks=1);
 | dark_ticks | Число | Время тьмы (в тиках) |
 
 <h3 id=entity_set_glowing>
-  <code>entity::set_glowing</code>
+  <code>entity.set_glowing</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2856,11 +2856,11 @@ entity::set_glow_squid_dark(dark_ticks=1);
 
 **Пример использования:**
 ```ts
-entity::set_glowing("FALSE");
+entity.set_glowing("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_glowing(glowing="FALSE");
+entity.set_glowing(glowing="FALSE");
 ```
 
 **Аргументы:**
@@ -2870,7 +2870,7 @@ entity::set_glowing(glowing="FALSE");
 | glowing | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Свечение |
 
 <h3 id=entity_set_goat_screaming>
-  <code>entity::set_goat_screaming</code>
+  <code>entity.set_goat_screaming</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2882,11 +2882,11 @@ entity::set_glowing(glowing="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_goat_screaming("FALSE");
+entity.set_goat_screaming("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_goat_screaming(screams="FALSE");
+entity.set_goat_screaming(screams="FALSE");
 ```
 
 **Аргументы:**
@@ -2896,7 +2896,7 @@ entity::set_goat_screaming(screams="FALSE");
 | screams | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Тег "Кричащий" |
 
 <h3 id=entity_set_gravity>
-  <code>entity::set_gravity</code>
+  <code>entity.set_gravity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2906,11 +2906,11 @@ entity::set_goat_screaming(screams="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_gravity("FALSE");
+entity.set_gravity("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_gravity(gravity="FALSE");
+entity.set_gravity(gravity="FALSE");
 ```
 
 **Аргументы:**
@@ -2920,7 +2920,7 @@ entity::set_gravity(gravity="FALSE");
 | gravity | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Гравитация |
 
 <h3 id=entity_set_hanging_facing_location>
-  <code>entity::set_hanging_facing_location</code>
+  <code>entity.set_hanging_facing_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2936,11 +2936,11 @@ entity::set_gravity(gravity="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_hanging_facing_location("NORTH", "TRUE");
+entity.set_hanging_facing_location("NORTH", "TRUE");
 
 //Или в сухую по ключам
 
-entity::set_hanging_facing_location(facing="NORTH", force="TRUE");
+entity.set_hanging_facing_location(facing="NORTH", force="TRUE");
 ```
 
 **Аргументы:**
@@ -2951,7 +2951,7 @@ entity::set_hanging_facing_location(facing="NORTH", force="TRUE");
 | force  | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет                                                                                    | Игнорировать доступность размещения |
 
 <h3 id=entity_set_horse_jump>
-  <code>entity::set_horse_jump</code>
+  <code>entity.set_horse_jump</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2966,11 +2966,11 @@ entity::set_hanging_facing_location(facing="NORTH", force="TRUE");
 
 **Пример использования:**
 ```ts
-entity::set_horse_jump(1);
+entity.set_horse_jump(1);
 
 //Или в сухую по ключам
 
-entity::set_horse_jump(power=1);
+entity.set_horse_jump(power=1);
 ```
 
 **Аргументы:**
@@ -2980,7 +2980,7 @@ entity::set_horse_jump(power=1);
 | power | Число | Сила прыжка |
 
 <h3 id=entity_set_horse_pattern>
-  <code>entity::set_horse_pattern</code>
+  <code>entity.set_horse_pattern</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2992,11 +2992,11 @@ entity::set_horse_jump(power=1);
 
 **Пример использования:**
 ```ts
-entity::set_horse_pattern("BLACK", "BLACK_DOTS");
+entity.set_horse_pattern("BLACK", "BLACK_DOTS");
 
 //Или в сухую по ключам
 
-entity::set_horse_pattern(horse_color="BLACK", horse_style="BLACK_DOTS");
+entity.set_horse_pattern(horse_color="BLACK", horse_style="BLACK_DOTS");
 ```
 
 **Аргументы:**
@@ -3007,7 +3007,7 @@ entity::set_horse_pattern(horse_color="BLACK", horse_style="BLACK_DOTS");
 | horse_style | Маркер<br/>**BLACK_DOTS** - Тёмные пятна на спине<br/>**DO_NOT_CHANGE** - Не изменять<br/>**NONE** - Без узора<br/>**WHITE** - Белые полосы на ногах и голове<br/>**WHITEFIELD** - Крупные белые пятна<br/>**WHITE_DOTS** - Мелкие белые пятна | Узор лошади |
 
 <h3 id=entity_set_immune_to_zombification>
-  <code>entity::set_immune_to_zombification</code>
+  <code>entity.set_immune_to_zombification</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3021,11 +3021,11 @@ entity::set_horse_pattern(horse_color="BLACK", horse_style="BLACK_DOTS");
 
 **Пример использования:**
 ```ts
-entity::set_immune_to_zombification("FALSE");
+entity.set_immune_to_zombification("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_immune_to_zombification(is_immune="FALSE");
+entity.set_immune_to_zombification(is_immune="FALSE");
 ```
 
 **Аргументы:**
@@ -3035,7 +3035,7 @@ entity::set_immune_to_zombification(is_immune="FALSE");
 | is_immune | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Иммунитет к зомбифицированию |
 
 <h3 id=entity_set_interaction_responsive>
-  <code>entity::set_interaction_responsive</code>
+  <code>entity.set_interaction_responsive</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3047,11 +3047,11 @@ entity::set_immune_to_zombification(is_immune="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_interaction_responsive("FALSE");
+entity.set_interaction_responsive("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_interaction_responsive(responsive="FALSE");
+entity.set_interaction_responsive(responsive="FALSE");
 ```
 
 **Аргументы:**
@@ -3061,7 +3061,7 @@ entity::set_interaction_responsive(responsive="FALSE");
 | responsive | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Отзывчивость |
 
 <h3 id=entity_set_interaction_size>
-  <code>entity::set_interaction_size</code>
+  <code>entity.set_interaction_size</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3073,11 +3073,11 @@ entity::set_interaction_responsive(responsive="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_interaction_size(1, 2);
+entity.set_interaction_size(1, 2);
 
 //Или в сухую по ключам
 
-entity::set_interaction_size(width=1, height=2);
+entity.set_interaction_size(width=1, height=2);
 ```
 
 **Аргументы:**
@@ -3088,7 +3088,7 @@ entity::set_interaction_size(width=1, height=2);
 | height | Число | Вертикальный размер   |
 
 <h3 id=entity_set_invisible>
-  <code>entity::set_invisible</code>
+  <code>entity.set_invisible</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3098,11 +3098,11 @@ entity::set_interaction_size(width=1, height=2);
 
 **Пример использования:**
 ```ts
-entity::set_invisible("FALSE");
+entity.set_invisible("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_invisible(invisible="FALSE");
+entity.set_invisible(invisible="FALSE");
 ```
 
 **Аргументы:**
@@ -3112,7 +3112,7 @@ entity::set_invisible(invisible="FALSE");
 | invisible | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Режим невидимости |
 
 <h3 id=entity_set_invulnerability_ticks>
-  <code>entity::set_invulnerability_ticks</code>
+  <code>entity.set_invulnerability_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3122,11 +3122,11 @@ entity::set_invisible(invisible="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_invulnerability_ticks(1);
+entity.set_invulnerability_ticks(1);
 
 //Или в сухую по ключам
 
-entity::set_invulnerability_ticks(ticks=1);
+entity.set_invulnerability_ticks(ticks=1);
 ```
 
 **Аргументы:**
@@ -3136,7 +3136,7 @@ entity::set_invulnerability_ticks(ticks=1);
 | ticks | Число | Длительность неуязвимости (в тиках) |
 
 <h3 id=entity_set_invulnerable>
-  <code>entity::set_invulnerable</code>
+  <code>entity.set_invulnerable</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3146,11 +3146,11 @@ entity::set_invulnerability_ticks(ticks=1);
 
 **Пример использования:**
 ```ts
-entity::set_invulnerable("FALSE");
+entity.set_invulnerable("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_invulnerable(invulnerable="FALSE");
+entity.set_invulnerable(invulnerable="FALSE");
 ```
 
 **Аргументы:**
@@ -3160,7 +3160,7 @@ entity::set_invulnerable(invulnerable="FALSE");
 | invulnerable | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Неуязвимость |
 
 <h3 id=entity_set_item>
-  <code>entity::set_item</code>
+  <code>entity.set_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3172,11 +3172,11 @@ entity::set_invulnerable(invulnerable="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_item(item("stick"));
+entity.set_item(item("stick"));
 
 //Или в сухую по ключам
 
-entity::set_item(item=item("stick"));
+entity.set_item(item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3186,7 +3186,7 @@ entity::set_item(item=item("stick"));
 | item | Предмет | Предмет для установки |
 
 <h3 id=entity_set_item_display_item>
-  <code>entity::set_item_display_item</code>
+  <code>entity.set_item_display_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3198,11 +3198,11 @@ entity::set_item(item=item("stick"));
 
 **Пример использования:**
 ```ts
-entity::set_item_display_item(item("stick"));
+entity.set_item_display_item(item("stick"));
 
 //Или в сухую по ключам
 
-entity::set_item_display_item(displayed_item=item("stick"));
+entity.set_item_display_item(displayed_item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3212,7 +3212,7 @@ entity::set_item_display_item(displayed_item=item("stick"));
 | displayed_item | Предмет | Отображаемый предмет |
 
 <h3 id=entity_set_item_display_model_type>
-  <code>entity::set_item_display_model_type</code>
+  <code>entity.set_item_display_model_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3224,11 +3224,11 @@ entity::set_item_display_item(displayed_item=item("stick"));
 
 **Пример использования:**
 ```ts
-entity::set_item_display_model_type("FIRSTPERSON_LEFTHAND");
+entity.set_item_display_model_type("FIRSTPERSON_LEFTHAND");
 
 //Или в сухую по ключам
 
-entity::set_item_display_model_type(display_model_type="FIRSTPERSON_LEFTHAND");
+entity.set_item_display_model_type(display_model_type="FIRSTPERSON_LEFTHAND");
 ```
 
 **Аргументы:**
@@ -3238,7 +3238,7 @@ entity::set_item_display_model_type(display_model_type="FIRSTPERSON_LEFTHAND");
 | display_model_type | Маркер<br/>**FIRSTPERSON_LEFTHAND** - Левая рука от первого лица<br/>**FIRSTPERSON_RIGHTHAND** - Правая рука от первого лица<br/>**FIXED** - Фиксированный<br/>**GROUND** - На земле<br/>**GUI** - Инвентарь<br/>**HEAD** - Голова<br/>**NONE** - Стандартный<br/>**THIRDPERSON_LEFTHAND** - Левая рука от третьего лица<br/>**THIRDPERSON_RIGHTHAND** - Правая рука от третьего лица | Тип модели |
 
 <h3 id=entity_set_item_frame_item_drop_chance>
-  <code>entity::set_item_frame_item_drop_chance</code>
+  <code>entity.set_item_frame_item_drop_chance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3251,11 +3251,11 @@ entity::set_item_display_model_type(display_model_type="FIRSTPERSON_LEFTHAND");
 
 **Пример использования:**
 ```ts
-entity::set_item_frame_item_drop_chance(1);
+entity.set_item_frame_item_drop_chance(1);
 
 //Или в сухую по ключам
 
-entity::set_item_frame_item_drop_chance(drop_chance=1);
+entity.set_item_frame_item_drop_chance(drop_chance=1);
 ```
 
 **Аргументы:**
@@ -3265,7 +3265,7 @@ entity::set_item_frame_item_drop_chance(drop_chance=1);
 | drop_chance | Число | Шанс (0-100, по умолчанию: 100) |
 
 <h3 id=entity_set_item_in_frame>
-  <code>entity::set_item_in_frame</code>
+  <code>entity.set_item_in_frame</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3277,11 +3277,11 @@ entity::set_item_frame_item_drop_chance(drop_chance=1);
 
 **Пример использования:**
 ```ts
-entity::set_item_in_frame(item("stick"), "FALSE");
+entity.set_item_in_frame(item("stick"), "FALSE");
 
 //Или в сухую по ключам
 
-entity::set_item_in_frame(item=item("stick"), play_sound="FALSE");
+entity.set_item_in_frame(item=item("stick"), play_sound="FALSE");
 ```
 
 **Аргументы:**
@@ -3292,7 +3292,7 @@ entity::set_item_in_frame(item=item("stick"), play_sound="FALSE");
 | play_sound | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Проиграть звук |
 
 <h3 id=entity_set_item_owner>
-  <code>entity::set_item_owner</code>
+  <code>entity.set_item_owner</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3304,11 +3304,11 @@ entity::set_item_in_frame(item=item("stick"), play_sound="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_item_owner("name_or_uuid");
+entity.set_item_owner("name_or_uuid");
 
 //Или в сухую по ключам
 
-entity::set_item_owner(name_or_uuid="name_or_uuid");
+entity.set_item_owner(name_or_uuid="name_or_uuid");
 ```
 
 **Аргументы:**
@@ -3318,7 +3318,7 @@ entity::set_item_owner(name_or_uuid="name_or_uuid");
 | name_or_uuid | Текст | Имя или UUID владельца |
 
 <h3 id=entity_set_llama_type>
-  <code>entity::set_llama_type</code>
+  <code>entity.set_llama_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3330,11 +3330,11 @@ entity::set_item_owner(name_or_uuid="name_or_uuid");
 
 **Пример использования:**
 ```ts
-entity::set_llama_type("BROWN");
+entity.set_llama_type("BROWN");
 
 //Или в сухую по ключам
 
-entity::set_llama_type(type="BROWN");
+entity.set_llama_type(type="BROWN");
 ```
 
 **Аргументы:**
@@ -3344,7 +3344,7 @@ entity::set_llama_type(type="BROWN");
 | type | Маркер<br/>**BROWN** - Коричневый<br/>**CREAMY** - Бежевый<br/>**GRAY** - Серый<br/>**WHITE** - Белый | Цвет для установки |
 
 <h3 id=entity_set_location>
-  <code>entity::set_location</code>
+  <code>entity.set_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3354,11 +3354,11 @@ entity::set_llama_type(type="BROWN");
 
 **Пример использования:**
 ```ts
-entity::set_location(vector(0,0,0), "FALSE");
+entity.set_location(vector(0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-entity::set_location(velocity=vector(0,0,0), increment="FALSE");
+entity.set_location(velocity=vector(0,0,0), increment="FALSE");
 ```
 
 **Аргументы:**
@@ -3369,7 +3369,7 @@ entity::set_location(velocity=vector(0,0,0), increment="FALSE");
 | increment | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Учитывать текущую инерцию |
 
 <h3 id=entity_set_marker>
-  <code>entity::set_marker</code>
+  <code>entity.set_marker</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3381,11 +3381,11 @@ entity::set_location(velocity=vector(0,0,0), increment="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_marker("FALSE");
+entity.set_marker("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_marker(marker="FALSE");
+entity.set_marker(marker="FALSE");
 ```
 
 **Аргументы:**
@@ -3395,7 +3395,7 @@ entity::set_marker(marker="FALSE");
 | marker | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Режим маркера |
 
 <h3 id=entity_set_max_health>
-  <code>entity::set_max_health</code>
+  <code>entity.set_max_health</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3405,11 +3405,11 @@ entity::set_marker(marker="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_max_health(1, "FALSE");
+entity.set_max_health(1, "FALSE");
 
 //Или в сухую по ключам
 
-entity::set_max_health(max_health=1, heal_to_max="FALSE");
+entity.set_max_health(max_health=1, heal_to_max="FALSE");
 ```
 
 **Аргументы:**
@@ -3420,7 +3420,7 @@ entity::set_max_health(max_health=1, heal_to_max="FALSE");
 | heal_to_max | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Исцелить существо                |
 
 <h3 id=entity_set_merchant_recipe>
-  <code>entity::set_merchant_recipe</code>
+  <code>entity.set_merchant_recipe</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3433,11 +3433,11 @@ entity::set_max_health(max_health=1, heal_to_max="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_merchant_recipe(item("stick"), 1, 2, item("stick"), 3, item("stick"), 4, 5, 6, 7, "APPEND", "FALSE", "FALSE");
+entity.set_merchant_recipe(item("stick"), 1, 2, item("stick"), 3, item("stick"), 4, 5, 6, 7, "APPEND", "FALSE", "FALSE");
 
 //Или в сухую по ключам
 
-entity::set_merchant_recipe(result=item("stick"), uses=1, max_uses=2, ingredient_one=item("stick"), villager_experience=3, ingredient_two=item("stick"), price_multiplifier=4, demand=5, index=6, special_price=7, mode="APPEND", experience_reward="FALSE", ignore_discounts="FALSE");
+entity.set_merchant_recipe(result=item("stick"), uses=1, max_uses=2, ingredient_one=item("stick"), villager_experience=3, ingredient_two=item("stick"), price_multiplifier=4, demand=5, index=6, special_price=7, mode="APPEND", experience_reward="FALSE", ignore_discounts="FALSE");
 ```
 
 **Аргументы:**
@@ -3459,7 +3459,7 @@ entity::set_merchant_recipe(result=item("stick"), uses=1, max_uses=2, ingredient
 | ignore_discounts    | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить  | Игнорирование скидок                  |
 
 <h3 id=entity_set_minecart_block>
-  <code>entity::set_minecart_block</code>
+  <code>entity.set_minecart_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3471,11 +3471,11 @@ entity::set_merchant_recipe(result=item("stick"), uses=1, max_uses=2, ingredient
 
 **Пример использования:**
 ```ts
-entity::set_minecart_block("minecraft:oak_log[axis=x]", 1);
+entity.set_minecart_block("minecraft:oak_log[axis=x]", 1);
 
 //Или в сухую по ключам
 
-entity::set_minecart_block(block="minecraft:oak_log[axis=x]", block_offset=1);
+entity.set_minecart_block(block="minecraft:oak_log[axis=x]", block_offset=1);
 ```
 
 **Аргументы:**
@@ -3486,7 +3486,7 @@ entity::set_minecart_block(block="minecraft:oak_log[axis=x]", block_offset=1);
 | block_offset | Число | Сдвиг в блоках     |
 
 <h3 id=entity_set_mob_aggressive>
-  <code>entity::set_mob_aggressive</code>
+  <code>entity.set_mob_aggressive</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3507,11 +3507,11 @@ entity::set_minecart_block(block="minecraft:oak_log[axis=x]", block_offset=1);
 
 **Пример использования:**
 ```ts
-entity::set_mob_aggressive("FALSE");
+entity.set_mob_aggressive("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_mob_aggressive(aggressive="FALSE");
+entity.set_mob_aggressive(aggressive="FALSE");
 ```
 
 **Аргументы:**
@@ -3521,7 +3521,7 @@ entity::set_mob_aggressive(aggressive="FALSE");
 | aggressive | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Агрессивность |
 
 <h3 id=entity_set_mushroom_cow_type>
-  <code>entity::set_mushroom_cow_type</code>
+  <code>entity.set_mushroom_cow_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3533,11 +3533,11 @@ entity::set_mob_aggressive(aggressive="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_mushroom_cow_type("BROWN");
+entity.set_mushroom_cow_type("BROWN");
 
 //Или в сухую по ключам
 
-entity::set_mushroom_cow_type(cow_type="BROWN");
+entity.set_mushroom_cow_type(cow_type="BROWN");
 ```
 
 **Аргументы:**
@@ -3547,7 +3547,7 @@ entity::set_mushroom_cow_type(cow_type="BROWN");
 | cow_type | Маркер<br/>**BROWN** - Коричневая<br/>**RED** - Красная | Тип грибной коровы |
 
 <h3 id=entity_set_no_physics>
-  <code>entity::no_physics</code>
+  <code>entity.no_physics</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3557,11 +3557,11 @@ entity::set_mushroom_cow_type(cow_type="BROWN");
 
 **Пример использования:**
 ```ts
-entity::no_physics("TRUE");
+entity.no_physics("TRUE");
 
 //Или в сухую по ключам
 
-entity::no_physics(no_physics="TRUE");
+entity.no_physics(no_physics="TRUE");
 ```
 
 **Аргументы:**
@@ -3571,7 +3571,7 @@ entity::no_physics(no_physics="TRUE");
 | no_physics | Маркер<br/>**TRUE** - Нет<br/>**FALSE** - Да | Физика   |
 
 <h3 id=entity_set_painting_art>
-  <code>entity::set_painting_art</code>
+  <code>entity.set_painting_art</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3583,11 +3583,11 @@ entity::no_physics(no_physics="TRUE");
 
 **Пример использования:**
 ```ts
-entity::set_painting_art("art", "TRUE");
+entity.set_painting_art("art", "TRUE");
 
 //Или в сухую по ключам
 
-entity::set_painting_art(art="art", force="TRUE");
+entity.set_painting_art(art="art", force="TRUE");
 ```
 
 **Аргументы:**
@@ -3598,7 +3598,7 @@ entity::set_painting_art(art="art", force="TRUE");
 | force | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет | Игнорировать доступность размещения |
 
 <h3 id=entity_set_panda_gene>
-  <code>entity::set_panda_gene</code>
+  <code>entity.set_panda_gene</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3610,11 +3610,11 @@ entity::set_painting_art(art="art", force="TRUE");
 
 **Пример использования:**
 ```ts
-entity::set_panda_gene("BOTH", "AGGRESSIVE");
+entity.set_panda_gene("BOTH", "AGGRESSIVE");
 
 //Или в сухую по ключам
 
-entity::set_panda_gene(gene="BOTH", gene_type="AGGRESSIVE");
+entity.set_panda_gene(gene="BOTH", gene_type="AGGRESSIVE");
 ```
 
 **Аргументы:**
@@ -3625,7 +3625,7 @@ entity::set_panda_gene(gene="BOTH", gene_type="AGGRESSIVE");
 | gene_type | Маркер<br/>**AGGRESSIVE** - Агрессивный<br/>**BROWN** - Суровый<br/>**LAZY** - Ленивый<br/>**NORMAL** - Нормальный<br/>**PLAYFUL** - Игривый<br/>**WEAK** - Слабый<br/>**WORRIED** - Тревожный | Тип гена |
 
 <h3 id=entity_set_panda_on_back>
-  <code>entity::set_panda_on_back</code>
+  <code>entity.set_panda_on_back</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3637,11 +3637,11 @@ entity::set_panda_gene(gene="BOTH", gene_type="AGGRESSIVE");
 
 **Пример использования:**
 ```ts
-entity::set_panda_on_back("TRUE");
+entity.set_panda_on_back("TRUE");
 
 //Или в сухую по ключам
 
-entity::set_panda_on_back(on_back="TRUE");
+entity.set_panda_on_back(on_back="TRUE");
 ```
 
 **Аргументы:**
@@ -3651,7 +3651,7 @@ entity::set_panda_on_back(on_back="TRUE");
 | on_back | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет | Состояние сидения |
 
 <h3 id=entity_set_panda_rolling>
-  <code>entity::set_panda_rolling</code>
+  <code>entity.set_panda_rolling</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3663,11 +3663,11 @@ entity::set_panda_on_back(on_back="TRUE");
 
 **Пример использования:**
 ```ts
-entity::set_panda_rolling("TRUE");
+entity.set_panda_rolling("TRUE");
 
 //Или в сухую по ключам
 
-entity::set_panda_rolling(rolling="TRUE");
+entity.set_panda_rolling(rolling="TRUE");
 ```
 
 **Аргументы:**
@@ -3677,7 +3677,7 @@ entity::set_panda_rolling(rolling="TRUE");
 | rolling | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет | Состояние переката |
 
 <h3 id=entity_set_panda_sad_ticks>
-  <code>entity::set_panda_sad_ticks</code>
+  <code>entity.set_panda_sad_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3689,11 +3689,11 @@ entity::set_panda_rolling(rolling="TRUE");
 
 **Пример использования:**
 ```ts
-entity::set_panda_sad_ticks(1);
+entity.set_panda_sad_ticks(1);
 
 //Или в сухую по ключам
 
-entity::set_panda_sad_ticks(sad_ticks=1);
+entity.set_panda_sad_ticks(sad_ticks=1);
 ```
 
 **Аргументы:**
@@ -3703,7 +3703,7 @@ entity::set_panda_sad_ticks(sad_ticks=1);
 | sad_ticks | Число | Время грусти |
 
 <h3 id=entity_set_parrot_type>
-  <code>entity::set_parrot_type</code>
+  <code>entity.set_parrot_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3715,11 +3715,11 @@ entity::set_panda_sad_ticks(sad_ticks=1);
 
 **Пример использования:**
 ```ts
-entity::set_parrot_type("BLUE");
+entity.set_parrot_type("BLUE");
 
 //Или в сухую по ключам
 
-entity::set_parrot_type(parrot_type="BLUE");
+entity.set_parrot_type(parrot_type="BLUE");
 ```
 
 **Аргументы:**
@@ -3729,7 +3729,7 @@ entity::set_parrot_type(parrot_type="BLUE");
 | parrot_type | Маркер<br/>**BLUE** - Синий<br/>**CYAN** - Бирюзовый<br/>**GRAY** - Серый<br/>**GREEN** - Зелёный<br/>**RED** - Красный | Тип попугая |
 
 <h3 id=entity_set_persistence>
-  <code>entity::set_persistence</code>
+  <code>entity.set_persistence</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3742,11 +3742,11 @@ entity::set_parrot_type(parrot_type="BLUE");
 
 **Пример использования:**
 ```ts
-entity::set_persistence("FALSE");
+entity.set_persistence("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_persistence(persistence="FALSE");
+entity.set_persistence(persistence="FALSE");
 ```
 
 **Аргументы:**
@@ -3756,7 +3756,7 @@ entity::set_persistence(persistence="FALSE");
 | persistence | Маркер<br/>**FALSE** - Будет исчезать<br/>**TRUE** - Не будет исчезать | Исчезание существа |
 
 <h3 id=entity_set_persistent>
-  <code>entity::set_persistent</code>
+  <code>entity.set_persistent</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3766,11 +3766,11 @@ entity::set_persistence(persistence="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_persistent("TRUE");
+entity.set_persistent("TRUE");
 
 //Или в сухую по ключам
 
-entity::set_persistent(persistent="TRUE");
+entity.set_persistent(persistent="TRUE");
 ```
 
 **Аргументы:**
@@ -3780,7 +3780,7 @@ entity::set_persistent(persistent="TRUE");
 | persistent | Маркер<br/>**TRUE** - Сохранять<br/>**FALSE** - Удалять | Сохранение сущности |
 
 <h3 id=entity_set_pickup>
-  <code>entity::set_pickup</code>
+  <code>entity.set_pickup</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3792,11 +3792,11 @@ entity::set_persistent(persistent="TRUE");
 
 **Пример использования:**
 ```ts
-entity::set_pickup("TRUE", "TRUE");
+entity.set_pickup("TRUE", "TRUE");
 
 //Или в сухую по ключам
 
-entity::set_pickup(can_mob_pickup="TRUE", can_player_pickup="TRUE");
+entity.set_pickup(can_mob_pickup="TRUE", can_player_pickup="TRUE");
 ```
 
 **Аргументы:**
@@ -3807,7 +3807,7 @@ entity::set_pickup(can_mob_pickup="TRUE", can_player_pickup="TRUE");
 | can_player_pickup | Маркер<br/>**TRUE** - Включен<br/>**FALSE** - Отключен | Подбор игроками |
 
 <h3 id=entity_set_pickup_delay>
-  <code>entity::set_pickup_delay</code>
+  <code>entity.set_pickup_delay</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3819,11 +3819,11 @@ entity::set_pickup(can_mob_pickup="TRUE", can_player_pickup="TRUE");
 
 **Пример использования:**
 ```ts
-entity::set_pickup_delay(1);
+entity.set_pickup_delay(1);
 
 //Или в сухую по ключам
 
-entity::set_pickup_delay(delay=1);
+entity.set_pickup_delay(delay=1);
 ```
 
 **Аргументы:**
@@ -3833,7 +3833,7 @@ entity::set_pickup_delay(delay=1);
 | delay | Число | Задержка |
 
 <h3 id=entity_set_pig_type>
-  <code>entity::set_pig_type</code>
+  <code>entity.set_pig_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3845,11 +3845,11 @@ entity::set_pickup_delay(delay=1);
 
 **Пример использования:**
 ```ts
-entity::set_pig_type("COLD");
+entity.set_pig_type("COLD");
 
 //Или в сухую по ключам
 
-entity::set_pig_type(variant="COLD");
+entity.set_pig_type(variant="COLD");
 ```
 
 **Аргументы:**
@@ -3859,7 +3859,7 @@ entity::set_pig_type(variant="COLD");
 | variant | Маркер<br/>**COLD** - Снежная<br/>**WARM** - Тропическая<br/>**TEMPERATE** - Обычная | Тип окраски |
 
 <h3 id=entity_set_piglin_able_to_hunt>
-  <code>entity::set_piglin_able_to_hunt</code>
+  <code>entity.set_piglin_able_to_hunt</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3871,11 +3871,11 @@ entity::set_pig_type(variant="COLD");
 
 **Пример использования:**
 ```ts
-entity::set_piglin_able_to_hunt("FALSE");
+entity.set_piglin_able_to_hunt("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_piglin_able_to_hunt(able="FALSE");
+entity.set_piglin_able_to_hunt(able="FALSE");
 ```
 
 **Аргументы:**
@@ -3885,7 +3885,7 @@ entity::set_piglin_able_to_hunt(able="FALSE");
 | able | Маркер<br/>**FALSE** - Не охотится<br/>**TRUE** - Охотится | Состояние охоты |
 
 <h3 id=entity_set_piglin_charging_crossbow>
-  <code>entity::set_piglin_charging_crossbow</code>
+  <code>entity.set_piglin_charging_crossbow</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3897,11 +3897,11 @@ entity::set_piglin_able_to_hunt(able="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_piglin_charging_crossbow("FALSE");
+entity.set_piglin_charging_crossbow("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_piglin_charging_crossbow(charging="FALSE");
+entity.set_piglin_charging_crossbow(charging="FALSE");
 ```
 
 **Аргументы:**
@@ -3911,7 +3911,7 @@ entity::set_piglin_charging_crossbow(charging="FALSE");
 | charging | Маркер<br/>**FALSE** - Не заряжать<br/>**TRUE** - Заряжать | Состояние зарядки |
 
 <h3 id=entity_set_piglin_dancing>
-  <code>entity::set_piglin_dancing</code>
+  <code>entity.set_piglin_dancing</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3925,11 +3925,11 @@ entity::set_piglin_charging_crossbow(charging="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_piglin_dancing(1);
+entity.set_piglin_dancing(1);
 
 //Или в сухую по ключам
 
-entity::set_piglin_dancing(dancing_time=1);
+entity.set_piglin_dancing(dancing_time=1);
 ```
 
 **Аргументы:**
@@ -3939,7 +3939,7 @@ entity::set_piglin_dancing(dancing_time=1);
 | dancing_time | Число | Продолжительность танца (в тиках) |
 
 <h3 id=entity_set_pose>
-  <code>entity::set_pose</code>
+  <code>entity.set_pose</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3949,11 +3949,11 @@ entity::set_piglin_dancing(dancing_time=1);
 
 **Пример использования:**
 ```ts
-entity::set_pose("CROAKING");
+entity.set_pose("CROAKING");
 
 //Или в сухую по ключам
 
-entity::set_pose(pose="CROAKING");
+entity.set_pose(pose="CROAKING");
 ```
 
 **Аргументы:**
@@ -3963,7 +3963,7 @@ entity::set_pose(pose="CROAKING");
 | pose | Маркер<br/>**CROAKING** - Кваканье (для Жаб)<br/>**CROUCHING** - Приседание<br/>**DIGGING** - Зарывание в землю (для Хранителя)<br/>**DYING** - Смерть<br/>**EMERGING** - Появление из земли (для Хранителя)<br/>**FALL_FLYING** - Полёт на Элитрах<br/>**INHALING** - Вдыхание (для Вихря)<br/>**LONG_JUMPING** - Длинный прыжок<br/>**ROARING** - Рёв (для Хранителя)<br/>**SHOOTING** - Выстреливание (для Вихря)<br/>**SITTING** - Сидение<br/>**SLEEPING** - Лежание<br/>**SLIDING** - Скольжение (для Вихря)<br/>**SNEAKING** - creative_plus.action.entity_set_pose.argument.pose.enum.sneaking.name<br/>**SNIFFING** - Нюханье (для Хранителя)<br/>**SPIN_ATTACK** - Использование Тягуна<br/>**STANDING** - Обычное состояние<br/>**SWIMMING** - Плавание<br/>**USING_TONGUE** - Использование языка (для Жаб) | Отображаемая поза |
 
 <h3 id=entity_set_potion_cloud_radius>
-  <code>entity::set_potion_cloud_radius</code>
+  <code>entity.set_potion_cloud_radius</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3977,11 +3977,11 @@ entity::set_pose(pose="CROAKING");
 
 **Пример использования:**
 ```ts
-entity::set_potion_cloud_radius(1, 2);
+entity.set_potion_cloud_radius(1, 2);
 
 //Или в сухую по ключам
 
-entity::set_potion_cloud_radius(radius=1, shrinking_speed=2);
+entity.set_potion_cloud_radius(radius=1, shrinking_speed=2);
 ```
 
 **Аргументы:**
@@ -3992,7 +3992,7 @@ entity::set_potion_cloud_radius(radius=1, shrinking_speed=2);
 | shrinking_speed | Число | Скорость |
 
 <h3 id=entity_set_primed_tnt_block>
-  <code>entity::set_primed_tnt_block</code>
+  <code>entity.set_primed_tnt_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4004,11 +4004,11 @@ entity::set_potion_cloud_radius(radius=1, shrinking_speed=2);
 
 **Пример использования:**
 ```ts
-entity::set_primed_tnt_block("minecraft:oak_log[axis=x]");
+entity.set_primed_tnt_block("minecraft:oak_log[axis=x]");
 
 //Или в сухую по ключам
 
-entity::set_primed_tnt_block(block="minecraft:oak_log[axis=x]");
+entity.set_primed_tnt_block(block="minecraft:oak_log[axis=x]");
 ```
 
 **Аргументы:**
@@ -4018,7 +4018,7 @@ entity::set_primed_tnt_block(block="minecraft:oak_log[axis=x]");
 | block | Блок | Блок     |
 
 <h3 id=entity_set_projectile_display_item>
-  <code>entity::set_projectile_display_item</code>
+  <code>entity.set_projectile_display_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4037,11 +4037,11 @@ entity::set_primed_tnt_block(block="minecraft:oak_log[axis=x]");
 
 **Пример использования:**
 ```ts
-entity::set_projectile_display_item(item("stick"));
+entity.set_projectile_display_item(item("stick"));
 
 //Или в сухую по ключам
 
-entity::set_projectile_display_item(item=item("stick"));
+entity.set_projectile_display_item(item=item("stick"));
 ```
 
 **Аргументы:**
@@ -4051,7 +4051,7 @@ entity::set_projectile_display_item(item=item("stick"));
 | item | Предмет | Предмет для установки |
 
 <h3 id=entity_set_projectile_power>
-  <code>entity::set_projectile_power</code>
+  <code>entity.set_projectile_power</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4065,11 +4065,11 @@ entity::set_projectile_display_item(item=item("stick"));
 
 **Пример использования:**
 ```ts
-entity::set_projectile_power(vector(0,0,0));
+entity.set_projectile_power(vector(0,0,0));
 
 //Или в сухую по ключам
 
-entity::set_projectile_power(power=vector(0,0,0));
+entity.set_projectile_power(power=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -4079,7 +4079,7 @@ entity::set_projectile_power(power=vector(0,0,0));
 | power | Вектор | Вектор движения |
 
 <h3 id=entity_set_projectile_shooter>
-  <code>entity::set_projectile_shooter</code>
+  <code>entity.set_projectile_shooter</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4089,11 +4089,11 @@ entity::set_projectile_power(power=vector(0,0,0));
 
 **Пример использования:**
 ```ts
-entity::set_projectile_shooter("uuid");
+entity.set_projectile_shooter("uuid");
 
 //Или в сухую по ключам
 
-entity::set_projectile_shooter(uuid="uuid");
+entity.set_projectile_shooter(uuid="uuid");
 ```
 
 **Аргументы:**
@@ -4103,7 +4103,7 @@ entity::set_projectile_shooter(uuid="uuid");
 | uuid | Текст | Имя или UUID стрелка |
 
 <h3 id=entity_set_rabbit_type>
-  <code>entity::set_rabbit_type</code>
+  <code>entity.set_rabbit_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4115,11 +4115,11 @@ entity::set_projectile_shooter(uuid="uuid");
 
 **Пример использования:**
 ```ts
-entity::set_rabbit_type("BLACK");
+entity.set_rabbit_type("BLACK");
 
 //Или в сухую по ключам
 
-entity::set_rabbit_type(rabbit_type="BLACK");
+entity.set_rabbit_type(rabbit_type="BLACK");
 ```
 
 **Аргументы:**
@@ -4129,7 +4129,7 @@ entity::set_rabbit_type(rabbit_type="BLACK");
 | rabbit_type | Маркер<br/>**BLACK** - Чёрный<br/>**BLACK_AND_WHITE** - Чёрно-белый<br/>**BROWN** - Коричневый<br/>**GOLD** - Золотой<br/>**SALT_AND_PEPPER** - Бело-коричневый<br/>**THE_KILLER_BUNNY** - Кролик-убийца<br/>**WHITE** - Белый | Тип кролика |
 
 <h3 id=entity_set_rearing>
-  <code>entity::set_rearing</code>
+  <code>entity.set_rearing</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4141,11 +4141,11 @@ entity::set_rabbit_type(rabbit_type="BLACK");
 
 **Пример использования:**
 ```ts
-entity::set_rearing("FALSE");
+entity.set_rearing("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_rearing(rearing="FALSE");
+entity.set_rearing(rearing="FALSE");
 ```
 
 **Аргументы:**
@@ -4155,7 +4155,7 @@ entity::set_rearing(rearing="FALSE");
 | rearing | Маркер<br/>**FALSE** - Обычное состояние<br/>**TRUE** - Стоять на задних ногах | Поза лошади |
 
 <h3 id=entity_set_riptiding>
-  <code>entity::set_riptiding</code>
+  <code>entity.set_riptiding</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4165,11 +4165,11 @@ entity::set_rearing(rearing="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_riptiding("FALSE");
+entity.set_riptiding("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_riptiding(riptiding="FALSE");
+entity.set_riptiding(riptiding="FALSE");
 ```
 
 **Аргументы:**
@@ -4179,7 +4179,7 @@ entity::set_riptiding(riptiding="FALSE");
 | riptiding | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Анимация 'Тягун' |
 
 <h3 id=entity_set_rotation>
-  <code>entity::set_rotation</code>
+  <code>entity.set_rotation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4189,11 +4189,11 @@ entity::set_riptiding(riptiding="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_rotation(1, 2);
+entity.set_rotation(1, 2);
 
 //Или в сухую по ключам
 
-entity::set_rotation(yaw=1, pitch=2);
+entity.set_rotation(yaw=1, pitch=2);
 ```
 
 **Аргументы:**
@@ -4204,7 +4204,7 @@ entity::set_rotation(yaw=1, pitch=2);
 | pitch | Число | Вертикальный поворот (pitch) |
 
 <h3 id=entity_set_rotation_by_vector>
-  <code>entity::set_rotation_by_vector</code>
+  <code>entity.set_rotation_by_vector</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4214,11 +4214,11 @@ entity::set_rotation(yaw=1, pitch=2);
 
 **Пример использования:**
 ```ts
-entity::set_rotation_by_vector(vector(0,0,0));
+entity.set_rotation_by_vector(vector(0,0,0));
 
 //Или в сухую по ключам
 
-entity::set_rotation_by_vector(vector=vector(0,0,0));
+entity.set_rotation_by_vector(vector=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -4228,7 +4228,7 @@ entity::set_rotation_by_vector(vector=vector(0,0,0));
 | vector | Вектор | Вектор для поворота |
 
 <h3 id=entity_set_sheep_sheared>
-  <code>entity::set_sheep_sheared</code>
+  <code>entity.set_sheep_sheared</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4240,11 +4240,11 @@ entity::set_rotation_by_vector(vector=vector(0,0,0));
 
 **Пример использования:**
 ```ts
-entity::set_sheep_sheared("FALSE");
+entity.set_sheep_sheared("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_sheep_sheared(sheared="FALSE");
+entity.set_sheep_sheared(sheared="FALSE");
 ```
 
 **Аргументы:**
@@ -4254,7 +4254,7 @@ entity::set_sheep_sheared(sheared="FALSE");
 | sheared | Маркер<br/>**FALSE** - Без шерсти<br/>**TRUE** - С шерстью | Присутствие шерсти |
 
 <h3 id=entity_set_shulker_bullet_target>
-  <code>entity::set_shulker_bullet_target</code>
+  <code>entity.set_shulker_bullet_target</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4266,11 +4266,11 @@ entity::set_sheep_sheared(sheared="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_shulker_bullet_target("target");
+entity.set_shulker_bullet_target("target");
 
 //Или в сухую по ключам
 
-entity::set_shulker_bullet_target(target="target");
+entity.set_shulker_bullet_target(target="target");
 ```
 
 **Аргументы:**
@@ -4280,7 +4280,7 @@ entity::set_shulker_bullet_target(target="target");
 | target | Текст | Имя или UUID цели |
 
 <h3 id=entity_set_shulker_peek>
-  <code>entity::set_shulker_peek</code>
+  <code>entity.set_shulker_peek</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4292,11 +4292,11 @@ entity::set_shulker_bullet_target(target="target");
 
 **Пример использования:**
 ```ts
-entity::set_shulker_peek(1, "TRUE");
+entity.set_shulker_peek(1, "TRUE");
 
 //Или в сухую по ключам
 
-entity::set_shulker_peek(rolling=1, silent="TRUE");
+entity.set_shulker_peek(rolling=1, silent="TRUE");
 ```
 
 **Аргументы:**
@@ -4307,7 +4307,7 @@ entity::set_shulker_peek(rolling=1, silent="TRUE");
 | silent  | Маркер<br/>**TRUE** - Нет<br/>**FALSE** - Да | Звук от изменения открытости |
 
 <h3 id=entity_set_silenced>
-  <code>entity::set_silenced</code>
+  <code>entity.set_silenced</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4317,11 +4317,11 @@ entity::set_shulker_peek(rolling=1, silent="TRUE");
 
 **Пример использования:**
 ```ts
-entity::set_silenced("FALSE");
+entity.set_silenced("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_silenced(silenced="FALSE");
+entity.set_silenced(silenced="FALSE");
 ```
 
 **Аргументы:**
@@ -4331,7 +4331,7 @@ entity::set_silenced(silenced="FALSE");
 | silenced | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Заглушение |
 
 <h3 id=entity_set_sitting>
-  <code>entity::set_sitting</code>
+  <code>entity.set_sitting</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4347,11 +4347,11 @@ entity::set_silenced(silenced="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_sitting("FALSE");
+entity.set_sitting("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_sitting(sitting="FALSE");
+entity.set_sitting(sitting="FALSE");
 ```
 
 **Аргументы:**
@@ -4361,7 +4361,7 @@ entity::set_sitting(sitting="FALSE");
 | sitting | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Режим сидения |
 
 <h3 id=entity_set_size>
-  <code>entity::set_size</code>
+  <code>entity.set_size</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4374,11 +4374,11 @@ entity::set_sitting(sitting="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_size(1);
+entity.set_size(1);
 
 //Или в сухую по ключам
 
-entity::set_size(size=1);
+entity.set_size(size=1);
 ```
 
 **Аргументы:**
@@ -4388,7 +4388,7 @@ entity::set_size(size=1);
 | size | Число | Размер   |
 
 <h3 id=entity_set_sniffer_state>
-  <code>entity::set_sniffer_state</code>
+  <code>entity.set_sniffer_state</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4400,11 +4400,11 @@ entity::set_size(size=1);
 
 **Пример использования:**
 ```ts
-entity::set_sniffer_state("DIGGING");
+entity.set_sniffer_state("DIGGING");
 
 //Или в сухую по ключам
 
-entity::set_sniffer_state(state="DIGGING");
+entity.set_sniffer_state(state="DIGGING");
 ```
 
 **Аргументы:**
@@ -4414,7 +4414,7 @@ entity::set_sniffer_state(state="DIGGING");
 | state | Маркер<br/>**DIGGING** - Копает<br/>**FEELING_HAPPY** - Чувстует себя счастливым<br/>**IDLING** - Обычное состояние<br/>**RISING** - Поднимается<br/>**SCENTING** - Идёт по следу<br/>**SEARCHING** - Ищет<br/>**SNIFFING** - Нюхает | Состояние нюхача |
 
 <h3 id=entity_set_snowman_pumpkin>
-  <code>entity::set_snowman_pumpkin</code>
+  <code>entity.set_snowman_pumpkin</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4426,11 +4426,11 @@ entity::set_sniffer_state(state="DIGGING");
 
 **Пример использования:**
 ```ts
-entity::set_snowman_pumpkin("FALSE");
+entity.set_snowman_pumpkin("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_snowman_pumpkin(pumpkin="FALSE");
+entity.set_snowman_pumpkin(pumpkin="FALSE");
 ```
 
 **Аргументы:**
@@ -4440,7 +4440,7 @@ entity::set_snowman_pumpkin(pumpkin="FALSE");
 | pumpkin | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Видимость тыквы |
 
 <h3 id=entity_set_tame>
-  <code>entity::set_tame</code>
+  <code>entity.set_tame</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4457,11 +4457,11 @@ entity::set_snowman_pumpkin(pumpkin="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_tame("name_or_uuid");
+entity.set_tame("name_or_uuid");
 
 //Или в сухую по ключам
 
-entity::set_tame(name_or_uuid="name_or_uuid");
+entity.set_tame(name_or_uuid="name_or_uuid");
 ```
 
 **Аргументы:**
@@ -4471,7 +4471,7 @@ entity::set_tame(name_or_uuid="name_or_uuid");
 | name_or_uuid | Текст | Имя или UUID хозяина |
 
 <h3 id=entity_set_target>
-  <code>entity::set_target</code>
+  <code>entity.set_target</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4485,11 +4485,11 @@ entity::set_tame(name_or_uuid="name_or_uuid");
 
 **Пример использования:**
 ```ts
-entity::set_target("name_or_uuid");
+entity.set_target("name_or_uuid");
 
 //Или в сухую по ключам
 
-entity::set_target(name_or_uuid="name_or_uuid");
+entity.set_target(name_or_uuid="name_or_uuid");
 ```
 
 **Аргументы:**
@@ -4499,7 +4499,7 @@ entity::set_target(name_or_uuid="name_or_uuid");
 | name_or_uuid | Текст | Имя или UUID цели |
 
 <h3 id=entity_set_text_display_alignment>
-  <code>entity::set_text_display_alignment</code>
+  <code>entity.set_text_display_alignment</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4511,11 +4511,11 @@ entity::set_target(name_or_uuid="name_or_uuid");
 
 **Пример использования:**
 ```ts
-entity::set_text_display_alignment("CENTER");
+entity.set_text_display_alignment("CENTER");
 
 //Или в сухую по ключам
 
-entity::set_text_display_alignment(text_alignment="CENTER");
+entity.set_text_display_alignment(text_alignment="CENTER");
 ```
 
 **Аргументы:**
@@ -4525,7 +4525,7 @@ entity::set_text_display_alignment(text_alignment="CENTER");
 | text_alignment | Маркер<br/>**CENTER** - По центру<br/>**LEFT** - Слева<br/>**RIGHT** - Справа | Выравнивание текста |
 
 <h3 id=entity_set_text_display_background>
-  <code>entity::set_text_display_background</code>
+  <code>entity.set_text_display_background</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4537,11 +4537,11 @@ entity::set_text_display_alignment(text_alignment="CENTER");
 
 **Пример использования:**
 ```ts
-entity::set_text_display_background("color_hexadecimal", 1);
+entity.set_text_display_background("color_hexadecimal", 1);
 
 //Или в сухую по ключам
 
-entity::set_text_display_background(color_hexadecimal="color_hexadecimal", opacity=1);
+entity.set_text_display_background(color_hexadecimal="color_hexadecimal", opacity=1);
 ```
 
 **Аргументы:**
@@ -4552,7 +4552,7 @@ entity::set_text_display_background(color_hexadecimal="color_hexadecimal", opaci
 | opacity           | Число | Процент непрозрачности |
 
 <h3 id=entity_set_text_display_line_width>
-  <code>entity::set_text_display_line_width</code>
+  <code>entity.set_text_display_line_width</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4564,11 +4564,11 @@ entity::set_text_display_background(color_hexadecimal="color_hexadecimal", opaci
 
 **Пример использования:**
 ```ts
-entity::set_text_display_line_width(1);
+entity.set_text_display_line_width(1);
 
 //Или в сухую по ключам
 
-entity::set_text_display_line_width(line_width=1);
+entity.set_text_display_line_width(line_width=1);
 ```
 
 **Аргументы:**
@@ -4578,7 +4578,7 @@ entity::set_text_display_line_width(line_width=1);
 | line_width | Число | Ширина строки |
 
 <h3 id=entity_set_text_display_opacity>
-  <code>entity::set_text_display_opacity</code>
+  <code>entity.set_text_display_opacity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4590,11 +4590,11 @@ entity::set_text_display_line_width(line_width=1);
 
 **Пример использования:**
 ```ts
-entity::set_text_display_opacity(1);
+entity.set_text_display_opacity(1);
 
 //Или в сухую по ключам
 
-entity::set_text_display_opacity(text_opacity=1);
+entity.set_text_display_opacity(text_opacity=1);
 ```
 
 **Аргументы:**
@@ -4604,7 +4604,7 @@ entity::set_text_display_opacity(text_opacity=1);
 | text_opacity | Число | Прозрачность текста |
 
 <h3 id=entity_set_text_display_see_through>
-  <code>entity::set_text_display_see_through</code>
+  <code>entity.set_text_display_see_through</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4616,11 +4616,11 @@ entity::set_text_display_opacity(text_opacity=1);
 
 **Пример использования:**
 ```ts
-entity::set_text_display_see_through("FALSE");
+entity.set_text_display_see_through("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_text_display_see_through(enable_see_through="FALSE");
+entity.set_text_display_see_through(enable_see_through="FALSE");
 ```
 
 **Аргументы:**
@@ -4630,7 +4630,7 @@ entity::set_text_display_see_through(enable_see_through="FALSE");
 | enable_see_through | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Видимость через блоки |
 
 <h3 id=entity_set_text_display_text>
-  <code>entity::set_text_display_text</code>
+  <code>entity.set_text_display_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4642,11 +4642,11 @@ entity::set_text_display_see_through(enable_see_through="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_text_display_text(["displayed_text", "displayed_text"], "CONCATENATION");
+entity.set_text_display_text(["displayed_text", "displayed_text"], "CONCATENATION");
 
 //Или в сухую по ключам
 
-entity::set_text_display_text(displayed_text=["displayed_text", "displayed_text"], merging_mode="CONCATENATION");
+entity.set_text_display_text(displayed_text=["displayed_text", "displayed_text"], merging_mode="CONCATENATION");
 ```
 
 **Аргументы:**
@@ -4657,7 +4657,7 @@ entity::set_text_display_text(displayed_text=["displayed_text", "displayed_text"
 | merging_mode   | Маркер<br/>**CONCATENATION** - Объединение<br/>**SEPARATE_LINES** - Разделение на строки<br/>**SPACES** - Разделение пробелом | Объединение текста                                              |
 
 <h3 id=entity_set_text_display_text_shadow>
-  <code>entity::set_text_display_text_shadow</code>
+  <code>entity.set_text_display_text_shadow</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4669,11 +4669,11 @@ entity::set_text_display_text(displayed_text=["displayed_text", "displayed_text"
 
 **Пример использования:**
 ```ts
-entity::set_text_display_text_shadow("FALSE");
+entity.set_text_display_text_shadow("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_text_display_text_shadow(enable_text_shadow="FALSE");
+entity.set_text_display_text_shadow(enable_text_shadow="FALSE");
 ```
 
 **Аргументы:**
@@ -4683,7 +4683,7 @@ entity::set_text_display_text_shadow(enable_text_shadow="FALSE");
 | enable_text_shadow | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Тень текста |
 
 <h3 id=entity_set_tropical_fish_pattern>
-  <code>entity::set_tropical_fish_pattern</code>
+  <code>entity.set_tropical_fish_pattern</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4695,11 +4695,11 @@ entity::set_text_display_text_shadow(enable_text_shadow="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_tropical_fish_pattern("BLACK", "BLACK", "BETTY");
+entity.set_tropical_fish_pattern("BLACK", "BLACK", "BETTY");
 
 //Или в сухую по ключам
 
-entity::set_tropical_fish_pattern(pattern_color="BLACK", body_color="BLACK", pattern="BETTY");
+entity.set_tropical_fish_pattern(pattern_color="BLACK", body_color="BLACK", pattern="BETTY");
 ```
 
 **Аргументы:**
@@ -4711,7 +4711,7 @@ entity::set_tropical_fish_pattern(pattern_color="BLACK", body_color="BLACK", pat
 | pattern       | Маркер<br/>**BETTY** - Betty<br/>**BLOCKFISH** - Blockfish<br/>**BRINELY** - Brinely<br/>**CLAYFISH** - Clayfish<br/>**DASHER** - Dasher<br/>**DO_NOT_CHANGE** - Не изменять<br/>**FLOPPER** - Flopper<br/>**GLITTER** - Glitter<br/>**KOB** - Kob<br/>**SNOOPER** - Snooper<br/>**SPOTTY** - Spotty<br/>**STRIPEY** - Stripey<br/>**SUNSTREAK** - SunStreak                                                                                                 | Узор       |
 
 <h3 id=entity_set_vex_charging>
-  <code>entity::set_vex_charging</code>
+  <code>entity.set_vex_charging</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4723,11 +4723,11 @@ entity::set_tropical_fish_pattern(pattern_color="BLACK", body_color="BLACK", pat
 
 **Пример использования:**
 ```ts
-entity::set_vex_charging("FALSE");
+entity.set_vex_charging("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_vex_charging(charging="FALSE");
+entity.set_vex_charging(charging="FALSE");
 ```
 
 **Аргументы:**
@@ -4737,7 +4737,7 @@ entity::set_vex_charging(charging="FALSE");
 | charging | Маркер<br/>**FALSE** - Не злой<br/>**TRUE** - Злой | Стадия злости |
 
 <h3 id=entity_set_vex_limited_lifetime_ticks>
-  <code>entity::set_vex_limited_lifetime_ticks</code>
+  <code>entity.set_vex_limited_lifetime_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4749,11 +4749,11 @@ entity::set_vex_charging(charging="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_vex_limited_lifetime_ticks(1);
+entity.set_vex_limited_lifetime_ticks(1);
 
 //Или в сухую по ключам
 
-entity::set_vex_limited_lifetime_ticks(lifetime=1);
+entity.set_vex_limited_lifetime_ticks(lifetime=1);
 ```
 
 **Аргументы:**
@@ -4763,7 +4763,7 @@ entity::set_vex_limited_lifetime_ticks(lifetime=1);
 | lifetime | Число | Время жизни |
 
 <h3 id=entity_set_villager_biome>
-  <code>entity::set_villager_biome</code>
+  <code>entity.set_villager_biome</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4775,11 +4775,11 @@ entity::set_vex_limited_lifetime_ticks(lifetime=1);
 
 **Пример использования:**
 ```ts
-entity::set_villager_biome("DESERT");
+entity.set_villager_biome("DESERT");
 
 //Или в сухую по ключам
 
-entity::set_villager_biome(biome="DESERT");
+entity.set_villager_biome(biome="DESERT");
 ```
 
 **Аргументы:**
@@ -4789,7 +4789,7 @@ entity::set_villager_biome(biome="DESERT");
 | biome | Маркер<br/>**DESERT** - Пустынный<br/>**JUNGLE** - Джунгли<br/>**PLAINS** - Равнины<br/>**SAVANNA** - Саванна<br/>**SNOW** - Снежный<br/>**SWAMP** - Болото<br/>**TAIGA** - Тайга | Биом     |
 
 <h3 id=entity_set_villager_experience>
-  <code>entity::set_villager_experience</code>
+  <code>entity.set_villager_experience</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4801,11 +4801,11 @@ entity::set_villager_biome(biome="DESERT");
 
 **Пример использования:**
 ```ts
-entity::set_villager_experience(1);
+entity.set_villager_experience(1);
 
 //Или в сухую по ключам
 
-entity::set_villager_experience(experience=1);
+entity.set_villager_experience(experience=1);
 ```
 
 **Аргументы:**
@@ -4815,7 +4815,7 @@ entity::set_villager_experience(experience=1);
 | experience | Число | Количество опыта |
 
 <h3 id=entity_set_villager_profession>
-  <code>entity::set_villager_profession</code>
+  <code>entity.set_villager_profession</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4828,11 +4828,11 @@ entity::set_villager_experience(experience=1);
 
 **Пример использования:**
 ```ts
-entity::set_villager_profession("ARMORER");
+entity.set_villager_profession("ARMORER");
 
 //Или в сухую по ключам
 
-entity::set_villager_profession(profession="ARMORER");
+entity.set_villager_profession(profession="ARMORER");
 ```
 
 **Аргументы:**
@@ -4842,7 +4842,7 @@ entity::set_villager_profession(profession="ARMORER");
 | profession | Маркер<br/>**ARMORER** - Бронник<br/>**BUTCHER** - Мясник<br/>**CARTOGRAPHER** - Картограф<br/>**CLERIC** - Священник<br/>**FARMER** - Фермер<br/>**FISHERMAN** - Рыбак<br/>**FLETCHER** - Лучник<br/>**LEATHERWORKER** - Кожевник<br/>**LIBRARIAN** - Библиотекарь<br/>**MASON** - Каменщик<br/>**NITWIT** - Нищий<br/>**NONE** - Без профессии<br/>**SHEPHERD** - Пастух<br/>**TOOLSMITH** - Инструментальщик<br/>**WEAPONSMITH** - Оружейник | Профессия жителя |
 
 <h3 id=entity_set_visual_fire>
-  <code>entity::set_visual_fire</code>
+  <code>entity.set_visual_fire</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4852,11 +4852,11 @@ entity::set_villager_profession(profession="ARMORER");
 
 **Пример использования:**
 ```ts
-entity::set_visual_fire("FALSE");
+entity.set_visual_fire("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_visual_fire(visual_fire="FALSE");
+entity.set_visual_fire(visual_fire="FALSE");
 ```
 
 **Аргументы:**
@@ -4866,7 +4866,7 @@ entity::set_visual_fire(visual_fire="FALSE");
 | visual_fire | Маркер<br/>**FALSE** - Выключить<br/>**NOT_SET** - По умолчанию<br/>**TRUE** - Включить | Отображение огня |
 
 <h3 id=entity_set_warden_anger_level>
-  <code>entity::set_warden_anger_level</code>
+  <code>entity.set_warden_anger_level</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4880,11 +4880,11 @@ entity::set_visual_fire(visual_fire="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_warden_anger_level("name_or_uuid", 1);
+entity.set_warden_anger_level("name_or_uuid", 1);
 
 //Или в сухую по ключам
 
-entity::set_warden_anger_level(name_or_uuid="name_or_uuid", anger=1);
+entity.set_warden_anger_level(name_or_uuid="name_or_uuid", anger=1);
 ```
 
 **Аргументы:**
@@ -4895,7 +4895,7 @@ entity::set_warden_anger_level(name_or_uuid="name_or_uuid", anger=1);
 | anger        | Число | Уровень гнева (от 0 до 150) |
 
 <h3 id=entity_set_warden_digging>
-  <code>entity::set_warden_digging</code>
+  <code>entity.set_warden_digging</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4907,11 +4907,11 @@ entity::set_warden_anger_level(name_or_uuid="name_or_uuid", anger=1);
 
 **Пример использования:**
 ```ts
-entity::set_warden_digging("DIG_DOWN");
+entity.set_warden_digging("DIG_DOWN");
 
 //Или в сухую по ключам
 
-entity::set_warden_digging(digging="DIG_DOWN");
+entity.set_warden_digging(digging="DIG_DOWN");
 ```
 
 **Аргументы:**
@@ -4921,7 +4921,7 @@ entity::set_warden_digging(digging="DIG_DOWN");
 | digging | Маркер<br/>**DIG_DOWN** - Закапывание<br/>**EMERGE** - Появление | Состояние копания |
 
 <h3 id=entity_set_wearing_saddle>
-  <code>entity::set_wearing_saddle</code>
+  <code>entity.set_wearing_saddle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4935,11 +4935,11 @@ entity::set_warden_digging(digging="DIG_DOWN");
 
 **Пример использования:**
 ```ts
-entity::set_wearing_saddle("FALSE");
+entity.set_wearing_saddle("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_wearing_saddle(wearing="FALSE");
+entity.set_wearing_saddle(wearing="FALSE");
 ```
 
 **Аргументы:**
@@ -4949,7 +4949,7 @@ entity::set_wearing_saddle(wearing="FALSE");
 | wearing | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Наличие седла |
 
 <h3 id=entity_set_wither_invulnerability_ticks>
-  <code>entity::set_wither_invulnerability_ticks</code>
+  <code>entity.set_wither_invulnerability_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4961,11 +4961,11 @@ entity::set_wearing_saddle(wearing="FALSE");
 
 **Пример использования:**
 ```ts
-entity::set_wither_invulnerability_ticks(1);
+entity.set_wither_invulnerability_ticks(1);
 
 //Или в сухую по ключам
 
-entity::set_wither_invulnerability_ticks(ticks=1);
+entity.set_wither_invulnerability_ticks(ticks=1);
 ```
 
 **Аргументы:**
@@ -4975,7 +4975,7 @@ entity::set_wither_invulnerability_ticks(ticks=1);
 | ticks | Число | Длительность неуязвимости (в тиках) |
 
 <h3 id=entity_set_wolf_sound_variant>
-  <code>entity::set_wolf_sound_variant</code>
+  <code>entity.set_wolf_sound_variant</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4987,11 +4987,11 @@ entity::set_wither_invulnerability_ticks(ticks=1);
 
 **Пример использования:**
 ```ts
-entity::set_wolf_sound_variant("ANGRY");
+entity.set_wolf_sound_variant("ANGRY");
 
 //Или в сухую по ключам
 
-entity::set_wolf_sound_variant(sound_variant="ANGRY");
+entity.set_wolf_sound_variant(sound_variant="ANGRY");
 ```
 
 **Аргументы:**
@@ -5001,7 +5001,7 @@ entity::set_wolf_sound_variant(sound_variant="ANGRY");
 | sound_variant | Маркер<br/>**ANGRY** - Злой<br/>**BIG** - Большой<br/>**CLASSIC** - Обычный<br/>**CUTE** - Добрый<br/>**GRUMPY** - Сварливый<br/>**PUGLIN** - Мопс<br/>**SAD** - Грустный | Тип издаваемых звуков |
 
 <h3 id=entity_set_wolf_type>
-  <code>entity::set_wolf_type</code>
+  <code>entity.set_wolf_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5013,11 +5013,11 @@ entity::set_wolf_sound_variant(sound_variant="ANGRY");
 
 **Пример использования:**
 ```ts
-entity::set_wolf_type("ASHEN");
+entity.set_wolf_type("ASHEN");
 
 //Или в сухую по ключам
 
-entity::set_wolf_type(wolf_type="ASHEN");
+entity.set_wolf_type(wolf_type="ASHEN");
 ```
 
 **Аргументы:**
@@ -5027,7 +5027,7 @@ entity::set_wolf_type(wolf_type="ASHEN");
 | wolf_type | Маркер<br/>**ASHEN** - Пепельный<br/>**SNOWY** - Снежный<br/>**RUSTY** - Рыжий<br/>**BLACK** - Чёрный<br/>**CHESTNUT** - Каштановый<br/>**SPOTTED** - Пятнистый<br/>**STRIPED** - Полосатый<br/>**PALE** - Обычный | Тип волка |
 
 <h3 id=entity_set_zombie_arms_raised>
-  <code>entity::set_zombie_arms_raised</code>
+  <code>entity.set_zombie_arms_raised</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5039,11 +5039,11 @@ entity::set_wolf_type(wolf_type="ASHEN");
 
 **Пример использования:**
 ```ts
-entity::set_zombie_arms_raised("FALSE");
+entity.set_zombie_arms_raised("FALSE");
 
 //Или в сухую по ключам
 
-entity::set_zombie_arms_raised(arms_raised="FALSE");
+entity.set_zombie_arms_raised(arms_raised="FALSE");
 ```
 
 **Аргументы:**
@@ -5053,7 +5053,7 @@ entity::set_zombie_arms_raised(arms_raised="FALSE");
 | arms_raised | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Поднятие рук |
 
 <h3 id=entity_shear>
-  <code>entity::shear</code>
+  <code>entity.shear</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5068,11 +5068,11 @@ entity::set_zombie_arms_raised(arms_raised="FALSE");
 
 **Пример использования:**
 ```ts
-entity::shear();
+entity.shear();
 ```
 
 <h3 id=entity_shear_sheep>
-  <code>entity::shear_sheep</code>
+  <code>entity.shear_sheep</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5084,11 +5084,11 @@ entity::shear();
 
 **Пример использования:**
 ```ts
-entity::shear_sheep();
+entity.shear_sheep();
 ```
 
 <h3 id=entity_sleep>
-  <code>entity::sleep</code>
+  <code>entity.sleep</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5100,11 +5100,11 @@ entity::shear_sheep();
 
 **Пример использования:**
 ```ts
-entity::sleep("FALSE");
+entity.sleep("FALSE");
 
 //Или в сухую по ключам
 
-entity::sleep(sleep="FALSE");
+entity.sleep(sleep="FALSE");
 ```
 
 **Аргументы:**
@@ -5114,7 +5114,7 @@ entity::sleep(sleep="FALSE");
 | sleep | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Режим сна |
 
 <h3 id=entity_swing_hand>
-  <code>entity::swing_hand</code>
+  <code>entity.swing_hand</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5124,11 +5124,11 @@ entity::sleep(sleep="FALSE");
 
 **Пример использования:**
 ```ts
-entity::swing_hand("MAIN");
+entity.swing_hand("MAIN");
 
 //Или в сухую по ключам
 
-entity::swing_hand(hand_type="MAIN");
+entity.swing_hand(hand_type="MAIN");
 ```
 
 **Аргументы:**
@@ -5138,7 +5138,7 @@ entity::swing_hand(hand_type="MAIN");
 | hand_type | Маркер<br/>**MAIN** - Главная<br/>**OFF** - Второстепенная | Тип руки |
 
 <h3 id=entity_teleport>
-  <code>entity::teleport</code>
+  <code>entity.teleport</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5148,11 +5148,11 @@ entity::swing_hand(hand_type="MAIN");
 
 **Пример использования:**
 ```ts
-entity::teleport(location(0,0,0,0,0), "FALSE");
+entity.teleport(location(0,0,0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-entity::teleport(location=location(0,0,0,0,0), keep_rotation="FALSE");
+entity.teleport(location=location(0,0,0,0,0), keep_rotation="FALSE");
 ```
 
 **Аргументы:**
@@ -5163,7 +5163,7 @@ entity::teleport(location=location(0,0,0,0,0), keep_rotation="FALSE");
 | keep_rotation | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Оставить текущий поворот |
 
 <h3 id=entity_use_item>
-  <code>entity::use_item</code>
+  <code>entity.use_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5175,11 +5175,11 @@ entity::teleport(location=location(0,0,0,0,0), keep_rotation="FALSE");
 
 **Пример использования:**
 ```ts
-entity::use_item("MAIN_HAND", "FALSE");
+entity.use_item("MAIN_HAND", "FALSE");
 
 //Или в сухую по ключам
 
-entity::use_item(hand="MAIN_HAND", enable="FALSE");
+entity.use_item(hand="MAIN_HAND", enable="FALSE");
 ```
 
 **Аргументы:**
@@ -5190,7 +5190,7 @@ entity::use_item(hand="MAIN_HAND", enable="FALSE");
 | enable | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить                        | Использование |
 
 <h3 id=if_entity_collides_at_location>
-  <code>entity::collides_at_location</code>
+  <code>entity.collides_at_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5201,13 +5201,13 @@ entity::use_item(hand="MAIN_HAND", enable="FALSE");
 **Пример использования:**
 ```ts
 if entity(collides_at_location(location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(collides_at_location(location=location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5218,7 +5218,7 @@ if entity(collides_at_location(location=location(0,0,0,0,0))){
 | location | Местоположение | Местоположение для проверки |
 
 <h3 id=if_entity_collides_using_hitbox>
-  <code>entity::collides_using_hitbox</code>
+  <code>entity.collides_using_hitbox</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5229,13 +5229,13 @@ if entity(collides_at_location(location=location(0,0,0,0,0))){
 **Пример использования:**
 ```ts
 if entity(collides_using_hitbox(location(0,0,0,0,0), location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(collides_using_hitbox(min=location(0,0,0,0,0), max=location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5247,7 +5247,7 @@ if entity(collides_using_hitbox(min=location(0,0,0,0,0), max=location(0,0,0,0,0)
 | max | Местоположение | Второй угол хитбокса |
 
 <h3 id=if_entity_collides_with_entity>
-  <code>entity::collides_with_entity</code>
+  <code>entity.collides_with_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5258,13 +5258,13 @@ if entity(collides_using_hitbox(min=location(0,0,0,0,0), max=location(0,0,0,0,0)
 **Пример использования:**
 ```ts
 if entity(collides_with_entity("name_or_uuid", "CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(collides_with_entity(name_or_uuid="name_or_uuid", check_type="CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5276,7 +5276,7 @@ if entity(collides_with_entity(name_or_uuid="name_or_uuid", check_type="CONTAINS
 | check_type   | Маркер<br/>**CONTAINS** - Содержит<br/>**OVERLAPS** - Пересекается | Тип проверки столкновения |
 
 <h3 id=if_entity_dummy>
-  <code>entity::is_dummy</code>
+  <code>entity.is_dummy</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5287,12 +5287,12 @@ if entity(collides_with_entity(name_or_uuid="name_or_uuid", check_type="CONTAINS
 **Пример использования:**
 ```ts
 if entity(is_dummy()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_entity_exists>
-  <code>entity::exists</code>
+  <code>entity.exists</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5303,12 +5303,12 @@ if entity(is_dummy()){
 **Пример использования:**
 ```ts
 if entity(exists()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_entity_has_custom_tag>
-  <code>entity::has_custom_tag</code>
+  <code>entity.has_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5319,13 +5319,13 @@ if entity(exists()){
 **Пример использования:**
 ```ts
 if entity(has_custom_tag("tag", ["tag_value", "tag_value"], "CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(has_custom_tag(tag="tag", tag_value=["tag_value", "tag_value"], compare_type="CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5338,7 +5338,7 @@ if entity(has_custom_tag(tag="tag", tag_value=["tag_value", "tag_value"], compar
 | compare_type | Маркер<br/>**CONTAINS** - Содержит<br/>**ENDS_WITH** - Заканчивается на<br/>**EQUALS** - Точное соответствие<br/>**STARTS_WITH** - Начинается на | Тип сравнения                                              |
 
 <h3 id=if_entity_has_potion_effect>
-  <code>entity::has_potion_effect</code>
+  <code>entity.has_potion_effect</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5349,13 +5349,13 @@ if entity(has_custom_tag(tag="tag", tag_value=["tag_value", "tag_value"], compar
 **Пример использования:**
 ```ts
 if entity(has_potion_effect([potion("slow_falling"), potion("slow_falling")], "ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(has_potion_effect(potions=[potion("slow_falling"), potion("slow_falling")], check_mode="ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5367,7 +5367,7 @@ if entity(has_potion_effect(potions=[potion("slow_falling"), potion("slow_fallin
 | check_mode | Маркер<br/>**ALL** - Все эффекты<br/>**ANY** - Любой эффект | Режим проверки                                                  |
 
 <h3 id=if_entity_in_area>
-  <code>entity::in_area</code>
+  <code>entity.in_area</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5378,13 +5378,13 @@ if entity(has_potion_effect(potions=[potion("slow_falling"), potion("slow_fallin
 **Пример использования:**
 ```ts
 if entity(in_area(location(0,0,0,0,0), location(0,0,0,0,0), "FALSE", "HITBOX", "CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(in_area(location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0), ignore_y_axis="FALSE", intersect_type="HITBOX", check_type="CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5399,7 +5399,7 @@ if entity(in_area(location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0)
 | check_type     | Маркер<br/>**CONTAINS** - Содержит<br/>**OVERLAPS** - Пересекается | Тип проверки хитбокса |
 
 <h3 id=if_entity_is_disguised>
-  <code>entity::is_disguised</code>
+  <code>entity.is_disguised</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5410,12 +5410,12 @@ if entity(in_area(location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0)
 **Пример использования:**
 ```ts
 if entity(is_disguised()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_entity_is_grounded>
-  <code>entity::is_grounded</code>
+  <code>entity.is_grounded</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5426,12 +5426,12 @@ if entity(is_disguised()){
 **Пример использования:**
 ```ts
 if entity(is_grounded()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_entity_is_item>
-  <code>entity::is_item</code>
+  <code>entity.is_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5442,12 +5442,12 @@ if entity(is_grounded()){
 **Пример использования:**
 ```ts
 if entity(is_item()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_entity_is_minecraft_tagged>
-  <code>entity::is_minecraft_tagged</code>
+  <code>entity.is_minecraft_tagged</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5460,13 +5460,13 @@ if entity(is_item()){
 **Пример использования:**
 ```ts
 if entity(is_minecraft_tagged("namespace")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(is_minecraft_tagged(namespace="namespace")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5477,7 +5477,7 @@ if entity(is_minecraft_tagged(namespace="namespace")){
 | namespace | Текст | Minecraft-тег |
 
 <h3 id=if_entity_is_mob>
-  <code>entity::is_mob</code>
+  <code>entity.is_mob</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5488,12 +5488,12 @@ if entity(is_minecraft_tagged(namespace="namespace")){
 **Пример использования:**
 ```ts
 if entity(is_mob()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_entity_is_near_location>
-  <code>entity::is_near_location</code>
+  <code>entity.is_near_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5504,13 +5504,13 @@ if entity(is_mob()){
 **Пример использования:**
 ```ts
 if entity(is_near_location(1, location(0,0,0,0,0), "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(is_near_location(range=1, location=location(0,0,0,0,0), ignore_y_axis="FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5523,7 +5523,7 @@ if entity(is_near_location(range=1, location=location(0,0,0,0,0), ignore_y_axis=
 | ignore_y_axis | Маркер<br/>**FALSE** - Не игнорировать<br/>**TRUE** - Игнорировать | Игнорировать ось Y          |
 
 <h3 id=if_entity_is_projectile>
-  <code>entity::is_projectile</code>
+  <code>entity.is_projectile</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5534,12 +5534,12 @@ if entity(is_near_location(range=1, location=location(0,0,0,0,0), ignore_y_axis=
 **Пример использования:**
 ```ts
 if entity(is_projectile()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_entity_is_riding_entity>
-  <code>entity::is_riding_entity</code>
+  <code>entity.is_riding_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5550,13 +5550,13 @@ if entity(is_projectile()){
 **Пример использования:**
 ```ts
 if entity(is_riding_entity(["entity_ids", "entity_ids"], "FARTHEST")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(is_riding_entity(entity_ids=["entity_ids", "entity_ids"], compare_mode="FARTHEST")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5568,7 +5568,7 @@ if entity(is_riding_entity(entity_ids=["entity_ids", "entity_ids"], compare_mode
 | compare_mode | Маркер<br/>**FARTHEST** - creative_plus.action.if_entity_is_riding_entity.argument.compare_mode.enum.farthest.name<br/>**NAME_OR_UUID** - Имя или UUID<br/>**NEAREST** - creative_plus.action.if_entity_is_riding_entity.argument.compare_mode.enum.nearest.name<br/>**TYPE** - Тип существа | Режим проверки                                                      |
 
 <h3 id=if_entity_is_standing_on_block>
-  <code>entity::is_standing_on_block</code>
+  <code>entity.is_standing_on_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5579,13 +5579,13 @@ if entity(is_riding_entity(entity_ids=["entity_ids", "entity_ids"], compare_mode
 **Пример использования:**
 ```ts
 if entity(is_standing_on_block(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], [location(0,0,0,0,0), location(0,0,0,0,0)], "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(is_standing_on_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], locations=[location(0,0,0,0,0), location(0,0,0,0,0)], only_solid="FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5598,7 +5598,7 @@ if entity(is_standing_on_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:o
 | only_solid | Маркер<br/>**FALSE** - Учитывать<br/>**TRUE** - Не учитывать | Учитывать проходимые блоки                                               |
 
 <h3 id=if_entity_is_type>
-  <code>entity::is_type</code>
+  <code>entity.is_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5609,13 +5609,13 @@ if entity(is_standing_on_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:o
 **Пример использования:**
 ```ts
 if entity(is_type([item("stick"), item("stick")])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(is_type(entity_types=[item("stick"), item("stick")])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5626,7 +5626,7 @@ if entity(is_type(entity_types=[item("stick"), item("stick")])){
 | entity_types | Список\[Предмет\] | Тип существа<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_entity_is_undead>
-  <code>entity::is_undead</code>
+  <code>entity.is_undead</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5637,12 +5637,12 @@ if entity(is_type(entity_types=[item("stick"), item("stick")])){
 **Пример использования:**
 ```ts
 if entity(is_undead()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_entity_is_vehicle>
-  <code>entity::is_vehicle</code>
+  <code>entity.is_vehicle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5653,12 +5653,12 @@ if entity(is_undead()){
 **Пример использования:**
 ```ts
 if entity(is_vehicle()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_entity_name_equals>
-  <code>entity::name_equals</code>
+  <code>entity.name_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5669,13 +5669,13 @@ if entity(is_vehicle()){
 **Пример использования:**
 ```ts
 if entity(name_equals(["names_or_uuids", "names_or_uuids"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(name_equals(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -5686,7 +5686,7 @@ if entity(name_equals(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
 | names_or_uuids | Список\[Текст\] | Имена или UUID для проверки<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_entity_spawn_reason_equals>
-  <code>entity::spawn_reason_equals</code>
+  <code>entity.spawn_reason_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5697,13 +5697,13 @@ if entity(name_equals(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
 **Пример использования:**
 ```ts
 if entity(spawn_reason_equals("BEEHIVE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if entity(spawn_reason_equals(reason="BEEHIVE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
