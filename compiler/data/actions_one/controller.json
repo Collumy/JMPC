@@ -1,0 +1,30 @@
+{
+    "async_run": {
+        "action": "controller_async_run",
+        "aliases": ["async_run", "async"],
+        "args": []
+    },
+
+    "do_not_run": {
+        "action": "controller_do_not_run",
+        "aliases": ["do_not_run", "skip"],
+        "args": []
+    },
+
+    "exception": {
+        "action": "controller_exception",
+        "aliases": ["exception", "catch_error", "catch"],
+        "args": [
+            {"id": "variable", "type": "variable"}
+        ]
+    },
+
+    "measure_time": {
+        "action": "controller_measure_time",
+        "aliases": ["measure_time", "time", "measure"],
+        "args": [
+            {"id": "variable", "type": "variable"},
+            {"id": "duration", "type": "enum", "values": ["MICROSECONDS", "MILLISECONDS", "NANOSECONDS"]}
+        ]
+    }
+}

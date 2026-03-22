@@ -1,0 +1,40 @@
+{
+    "continue": {
+        "action": "control_skip_iteration",
+        "aliases": ["continue"]
+    },
+    "break": {
+        "action": "control_stop_repeat",
+        "aliases": ["break"]
+    },
+    "return": {
+        "action": "control_return_function",
+        "aliases": ["return"]
+    },
+    "exit": {
+        "action": "control_end_thread",
+        "aliases": ["exit", "stop"]
+    },
+    "wait": {
+        "action": "control_wait",
+        "aliases": ["wait", "sleep"],
+        "args": [
+            {"id": "duration", "type": "number"},
+            {"id": "time_unit", "type": "enum", "values": ["TICKS", "SECONDS", "MINUTES"]}
+        ]
+    },
+    "error": {
+        "action": "control_call_exception",
+        "aliases": ["error"],
+        "args": [
+            {"id": "id", "type": "text"},
+            {"id": "message", "type": "text"},
+            {"id": "type", "type": "enum", "values": ["ERROR", "FATAL", "WARNING"]}
+        ]
+    },
+
+    "cancel": {
+        "action": "game_cancel_event",
+        "aliases": ["cancel"]
+    }
+}

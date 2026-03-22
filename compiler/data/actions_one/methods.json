@@ -1,0 +1,493 @@
+{
+    "list": {
+        "append_value": {
+            "aliases": ["append", "add"],
+            "action": "set_variable_append_value",
+            "to_self": true,
+            "args": [
+                {"id": "values", "type": "variadic"},
+                {"id": "variable", "type": "result"}
+            ]
+        },
+
+        "append_list": {
+            "aliases": ["merge", "extend"],
+            "action": "set_variable_append_list",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list_1", "type": "object"},
+                {"id": "list_2", "type": "arg"}
+            ]
+        },
+
+        "set_value": {
+            "aliases": ["set"],
+            "action": "set_variable_set_list_value",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"},
+                {"id": "number", "type": "arg"},
+                {"id": "value", "type": "arg"}
+            ]
+        },
+
+        "insert": {
+            "aliases": ["insert", "ins"],
+            "action": "set_variable_insert_list_value",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"},
+                {"id": "number", "type": "arg"},
+                {"id": "value", "type": "arg"}
+            ]
+        },
+
+        "get_random": {
+            "aliases": ["get_random", "random", "rand"],
+            "action": "set_variable_get_list_random_value",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"}
+            ]
+        },
+
+        "get_value": {
+            "aliases": ["get", "value"],
+            "action": "set_variable_get_list_value",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"},
+                {"id": "number", "type": "arg"},
+                {"id": "default_value", "type": "optional"}
+            ]
+        },
+
+        "index_of": {
+            "aliases": ["index"],
+            "action": "set_variable_get_list_index_of_value",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"},
+                {"id": "value", "type": "arg"},
+                {"id": "search_mode", "type": "enum",
+                 "values": ["FIRST", "LAST"], "optional": true}
+            ]
+        },
+
+        "remove_value": {
+            "aliases": ["delete_values", "del_values", "del_val"],
+            "action": "set_variable_remove_list_value",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"},
+                {"id": "value", "type": "arg"},
+                {"id": "remove_mode", "type": "enum",
+                 "values": ["FIRST", "LAST", "ALL"], "optional": true, "default": "ALL"}
+            ]
+        },
+
+        "remove_at_index": {
+            "aliases": ["delete_index", "del_index", "del_ind"],
+            "action": "set_variable_remove_list_value_at_index",
+            "args": [
+                {"id": "removed_value", "type": "result"},
+                {"id": "variable", "type": "object"},
+                {"id": "list", "type": "object"},
+                {"id": "index", "type": "arg"}
+            ]
+        },
+
+        "remove_duplicates": {
+            "aliases": ["delete_repeats", "del_repeats", "del_rep"],
+            "action": "set_variable_remove_list_duplicates",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"}
+            ]
+        },
+
+        "trim": {
+            "aliases": ["cut", "slice"],
+            "action": "set_variable_trim_list",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"},
+                {"id": "start", "type": "optional"},
+                {"id": "end", "type": "optional"}
+            ]
+        },
+
+        "reverse": {
+            "aliases": ["reverse", "rev"],
+            "action": "set_variable_reverse_list",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"}
+            ]
+        },
+
+        "sort": {
+            "aliases": ["sort"],
+            "action": "set_variable_sort_any_list",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"},
+                {"id": "sort_mode", "type": "enum",
+                 "values": ["ASCENDING", "DESCENDING"], "optional": true, "default": "ASCENDING"}
+            ]
+        },
+
+        "randomize": {
+            "aliases": ["randomize"],
+            "action": "set_variable_randomize_list_order",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"}
+            ]
+        },
+
+        "smooth": {
+            "aliases": ["smooth","flatten"],
+            "action": "set_variable_flatten_list",
+            "args": [
+                {"id": "deep", "type": "enum", "values": ["TRUE", "FALSE"], "optional": true},
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"}
+            ]
+        }
+    },
+
+
+
+
+
+
+
+
+
+
+
+    "map": {
+        "by_list": {
+            "aliases": ["list", "by_list", "from_lists"],
+            "action": "set_variable_create_map",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "keys", "type": "arg"},
+                {"id": "values", "type": "arg"}
+            ]
+        },
+
+        "from_values": {
+            "aliases": ["from_values", "create"],
+            "action": "set_variable_create_map_from_values",
+            "args": [
+                {"id": "keys", "type": "arg"},
+                {"id": "values", "type": "arg"},
+                {"id": "variable", "type": "result"}
+            ]
+        },
+
+        "merge": {
+            "aliases": ["merge", "extend", "append"],
+            "action": "set_variable_append_map",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"},
+                {"id": "other_map", "type": "arg"}
+            ]
+        },
+
+        "set": {
+            "aliases": ["set", "set_value"],
+            "action": "set_variable_set_map_value",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"},
+                {"id": "key", "type": "variadic"},
+                {"id": "value", "type": "variadic"}
+            ]
+        },
+
+        "get": {
+            "aliases": ["get", "value"],
+            "action": "set_variable_get_map_value",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"},
+                {"id": "key", "type": "arg"},
+                {"id": "default_value", "type": "optional"}
+            ]
+        },
+
+        "index": {
+            "aliases": ["index", "get_by_index"],
+            "action": "set_variable_get_map_value_by_index",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"},
+                {"id": "index", "type": "arg"},
+                {"id": "default_value", "type": "optional"}
+            ]
+        },
+
+        "size": {
+            "aliases": ["size", "length", "len"],
+            "action": "set_variable_get_map_size",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"}
+            ]
+        },
+
+        "delete": {
+            "aliases": ["delete", "del", "remove"],
+            "action": "set_variable_remove_map_entry",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"},
+                {"id": "key", "type": "arg"},
+                {"id": "values", "type": "optional"},
+                {"id": "removed_value", "type": "optional"}
+            ]
+        },
+
+        "clear": {
+            "aliases": ["clear"],
+            "action": "set_variable_clear_map",
+            "args": [
+                {"id": "map", "type": "object"}
+            ]
+        },
+
+        "keys": {
+            "aliases": ["keys"],
+            "action": "set_variable_get_map_keys",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"}
+            ]
+        },
+
+        "values": {
+            "aliases": ["values"],
+            "action": "set_variable_get_map_values",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"}
+            ]
+        },
+
+        "key_by_value": {
+            "aliases": ["key_by_value", "key_by_val"],
+            "action": "set_variable_get_map_keys_by_value",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"},
+                {"id": "value", "type": "arg"},
+                {"id": "find_mode", "type": "enum", "values": ["FIRST", "LAST", "ALL"], "optional": true},
+                {"id": "default_value", "type": "optional"}
+            ]
+        },
+
+        "key_by_index": {
+            "aliases": ["key_by_index", "key_by_ind"],
+            "action": "set_variable_get_map_key_by_index",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"},
+                {"id": "index", "type": "arg"},
+                {"id": "default_value", "type": "optional"}
+            ]
+        },
+
+        "sort": {
+            "aliases": ["sort"],
+            "action": "set_variable_sort_any_map",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "map", "type": "object"},                
+                {"id": "sort_order", "type": "enum",
+                 "values": ["ASCENDING", "DESCENDING"], "optional": true},
+                {"id": "sort_type", "type": "enum",
+                 "values": ["KEYS", "VALUES"], "optional": true}
+            ]
+        }
+    },
+
+
+
+
+
+
+
+
+
+
+    "text": {
+        "join": {
+            "aliases": ["join", "concat", "merge"],
+            "action": "set_variable_text",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "variadic"},
+                {"id": "merging", "type": "enum",
+                    "values": ["CONCATENATION", "SPACES", "NO_SPACES"], "optional": true}
+            ]
+        },
+
+        "replace": {
+            "aliases": ["replace", "sub"],
+            "action": "set_variable_replace_text",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"},
+                {"id": "replace", "type": "arg"},
+                {"id": "replacement", "type": "arg"},
+                {"id": "first", "type": "enum",
+                    "values": ["FIRST", "ANY"], "optional": true},
+                {"id": "ignore_case", "type": "enum",
+                    "values": ["TRUE", "FALSE"], "optional": true}
+            ]
+        },
+
+        "remove": {
+            "aliases": ["remove", "delete", "del"],
+            "action": "set_variable_remove_text",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"},
+                {"id": "remove", "type": "variadic"},
+                {"id": "regex", "type": "enum",
+                    "values": ["TRUE", "FALSE"], "optional": true, "default": "FALSE"}
+            ]
+        },
+
+        "trim": {
+            "aliases": ["trim", "slice", "substring", "substr"],
+            "action": "set_variable_trim_text",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"},
+                {"id": "start", "type": "optional"},
+                {"id": "end", "type": "optional"}
+            ]
+        },
+
+        "case": {
+            "aliases": ["case", "to_case"],
+            "action": "set_variable_text_case",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"},
+                {"id": "case_type", "type": "enum",
+                    "values": ["UPPER", "LOWER", "PROPER", "INVERT"], "default": "LOWER"}
+            ]
+        },
+
+        "upper": {
+            "aliases": ["upper", "uppercase"],
+            "action": "set_variable_text_case",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"},
+                {"id": "case_type", "type": "enum",
+                    "values": ["UPPER"], "default": "UPPER"}
+            ]
+        },
+
+        "lower": {
+            "aliases": ["lower", "lowercase"],
+            "action": "set_variable_text_case",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"},
+                {"id": "case_type", "type": "enum",
+                    "values": ["LOWER"], "default": "LOWER"}
+            ]
+        },
+
+        "repeat": {
+            "aliases": ["repeat", "multiply"],
+            "action": "set_variable_repeat_text",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"},
+                {"id": "repeat", "type": "arg"}
+            ]
+        },
+
+        "join_list": {
+            "aliases": ["join_list", "implode"],
+            "action": "set_variable_join_text",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "list", "type": "object"},
+                {"id": "separator", "type": "optional"},
+                {"id": "prefix", "type": "optional"},
+                {"id": "postfix", "type": "optional"},
+                {"id": "limit", "type": "optional"},
+                {"id": "truncated", "type": "optional"}
+            ]
+        },
+
+        "clear_colors": {
+            "aliases": ["clear_colors", "strip_colors", "no_colors"],
+            "action": "set_variable_clear_color_codes",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"}
+            ]
+        },
+
+        "char_at": {
+            "aliases": ["char_at", "char", "get_char"],
+            "action": "set_variable_get_char_at",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"},
+                {"id": "index", "type": "arg"}
+            ]
+        },
+
+        "char_code": {
+            "aliases": ["char_code", "ord", "ascii"],
+            "action": "set_variable_char_to_number",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "char", "type": "object"}
+            ]
+        },
+
+        "from_char_code": {
+            "aliases": ["from_char_code", "chr", "from_ascii"],
+            "action": "set_variable_to_char",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "number", "type": "arg"}
+            ]
+        },
+
+        "length": {
+            "aliases": ["length", "len", "size"],
+            "action": "set_variable_text_length",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"}
+            ]
+        },
+
+        "split": {
+            "aliases": ["split", "explode"],
+            "action": "set_variable_split_text",
+            "args": [
+                {"id": "variable", "type": "result"},
+                {"id": "text", "type": "object"},
+                {"id": "delimiter", "type": "arg"}
+            ]
+        }
+    }
+
+
+
+}           

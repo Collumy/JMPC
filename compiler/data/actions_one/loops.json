@@ -1,0 +1,98 @@
+{
+    "range": {
+        "aliases": ["range"],
+        "action": "repeat_multi_times",
+        "args": [
+            {"id": "variable", "type": "result"},
+            {"id": "amount", "type": "number"}
+        ]
+    },
+    "diapasone": {
+        "aliases": ["diapasone", "diap"],
+        "action": "repeat_on_range",
+        "args": [
+            {"id": "variable", "type": "result"},
+            {"id": "start", "type": "number"},
+            {"id": "end", "type": "number"},
+            {"id": "interval", "type": "number"}
+        ]
+    },
+    "list": {
+        "aliases": ["list", "l", "mas"],
+        "action": "repeat_for_each_in_list",
+        "args": [
+            {"id": "index_variable", "type": "result"},
+            {"id": "value_variable", "type": "result"},
+            {"id": "list", "type": "object"}
+        ]
+    },
+
+    "map": {
+        "aliases": ["map", "dict", "d"],
+        "action": "repeat_for_each_map_entry",
+        "args": [
+            {"id": "key_variable", "type": "result"},
+            {"id": "value_variable", "type": "result"},
+            {"id": "map", "type": "object"}
+        ]
+    },
+
+    "grid": {
+        "aliases": ["grid", "locs", "region"],
+        "action": "repeat_on_grid",
+        "args": [
+            {"id": "variable", "type": "result"},
+            {"id": "start", "type": "location"},
+            {"id": "end", "type": "location"}
+        ]
+    },
+
+    "adjacent": {
+        "aliases": ["adjacent", "neighbors", "nearby"],
+        "action": "repeat_adjacently",
+        "args": [
+            {"id": "variable", "type": "result"},
+            {"id": "origin", "type": "object"},
+            {"id": "change_rotation", "type": "enum", "values": ["TRUE", "FALSE"]},
+            {"id": "include_self", "type": "enum", "values": ["TRUE", "FALSE"]},
+            {"id": "pattern", "type": "enum", "values": ["CARDINAL","SQUARE", "ADJACENT", "CUBE"]}
+        ]
+    },
+
+    "path": {
+        "aliases": ["path"],
+        "action": "repeat_on_path",
+        "args": [
+            {"id": "locations", "type": "list"},
+            {"id": "variable", "type": "result"},
+            {"id": "step", "type": "number"},
+            {"id": "rotation", "type": "enum", "values": ["TRUE", "FALSE"]}
+        ]
+    },
+
+    "circle": {
+        "aliases": ["circle"],
+        "action": "repeat_on_circle",
+        "args": [
+            {"id": "variable", "type": "result"},
+            {"id": "center", "type": "location"},
+            {"id": "radius", "type": "number"},
+            {"id": "circle_points", "type": "number"},
+            {"id": "perpendicular_to_plane", "type": "vector"},
+            {"id": "start_angle", "type": "number"},
+            {"id": "angle_unit", "type": "enum", "values": ["RADIANS", "DEGREES"]}
+        ]
+    },
+
+    "sphere": {
+        "aliases": ["sphere"],
+        "action": "repeat_on_sphere",
+        "args": [
+            {"id": "variable", "type": "result"},
+            {"id": "center", "type": "location"},
+            {"id": "radius", "type": "number"},
+            {"id": "points", "type": "number"},
+            {"id": "rotate_location", "type": "enum", "values": ["NO_CHANGES", "INWARDS", "OUTWARDS"]}
+        ]
+    }
+}
