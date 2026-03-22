@@ -8,7 +8,7 @@
 ```ts
 controller.async():
     wait(5)
-    player::message("Асинхронное сообщение!")
+    player.message("Асинхронное сообщение!")
 ```
 
 ---
@@ -37,7 +37,7 @@ controller.skip():
 ```ts
 controller.catch(err):
     n: num--
-player::message("Ошибка: ${err}")
+player.message("Ошибка: ${err}")
 ```
 
 ---
