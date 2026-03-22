@@ -3,7 +3,7 @@
 </h2>
 
 <h3 id=game_block_growth>
-  <code>world::block_growth</code>
+  <code>world.block_growth</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -13,11 +13,11 @@
 
 **Пример использования:**
 ```ts
-world::block_growth(location(0,0,0,0,0), 1, "PERCENTAGE");
+world.block_growth(location(0,0,0,0,0), 1, "PERCENTAGE");
 
 //Или в сухую по ключам
 
-world::block_growth(location=location(0,0,0,0,0), growth_stage=1, growth_type="PERCENTAGE");
+world.block_growth(location=location(0,0,0,0,0), growth_stage=1, growth_type="PERCENTAGE");
 ```
 
 **Аргументы:**
@@ -29,7 +29,7 @@ world::block_growth(location=location(0,0,0,0,0), growth_stage=1, growth_type="P
 | growth_type  | Маркер<br/>**PERCENTAGE** - Процент роста<br/>**STAGE_NUMBER** - Номер стадии роста | Тип роста            |
 
 <h3 id=game_bloom_skulk_catalyst>
-  <code>world::bloom_skulk_catalyst</code>
+  <code>world.bloom_skulk_catalyst</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -41,11 +41,11 @@ world::block_growth(location=location(0,0,0,0,0), growth_stage=1, growth_type="P
 
 **Пример использования:**
 ```ts
-world::bloom_skulk_catalyst(location(0,0,0,0,0), location(0,0,0,0,0), 1);
+world.bloom_skulk_catalyst(location(0,0,0,0,0), location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-world::bloom_skulk_catalyst(location=location(0,0,0,0,0), bloom_location=location(0,0,0,0,0), charge=1);
+world.bloom_skulk_catalyst(location=location(0,0,0,0,0), bloom_location=location(0,0,0,0,0), charge=1);
 ```
 
 **Аргументы:**
@@ -57,7 +57,7 @@ world::bloom_skulk_catalyst(location=location(0,0,0,0,0), bloom_location=locatio
 | charge         | Число          | Сила заражения                         |
 
 <h3 id=game_bone_meal_block>
-  <code>world::bone_meal_block</code>
+  <code>world.bone_meal_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -67,11 +67,11 @@ world::bloom_skulk_catalyst(location=location(0,0,0,0,0), bloom_location=locatio
 
 **Пример использования:**
 ```ts
-world::bone_meal_block(location(0,0,0,0,0), 1);
+world.bone_meal_block(location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-world::bone_meal_block(location=location(0,0,0,0,0), count=1);
+world.bone_meal_block(location=location(0,0,0,0,0), count=1);
 ```
 
 **Аргументы:**
@@ -82,7 +82,7 @@ world::bone_meal_block(location=location(0,0,0,0,0), count=1);
 | count    | Число          | Количество попыток удобрить |
 
 <h3 id=game_break_block>
-  <code>world::break_block</code>
+  <code>world.break_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -92,11 +92,11 @@ world::bone_meal_block(location=location(0,0,0,0,0), count=1);
 
 **Пример использования:**
 ```ts
-world::break_block([location(0,0,0,0,0), location(0,0,0,0,0)], item("stick"), "FALSE");
+world.break_block([location(0,0,0,0,0), location(0,0,0,0,0)], item("stick"), "FALSE");
 
 //Или в сухую по ключам
 
-world::break_block(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], tool=item("stick"), drop_exp="FALSE");
+world.break_block(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], tool=item("stick"), drop_exp="FALSE");
 ```
 
 **Аргументы:**
@@ -108,7 +108,7 @@ world::break_block(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], tool=it
 | drop_exp  | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Выпадение опыта                                                    |
 
 <h3 id=game_cancel_event>
-  <code>world::cancel_event</code>
+  <code>world.cancel_event</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -118,11 +118,11 @@ world::break_block(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], tool=it
 
 **Пример использования:**
 ```ts
-world::cancel_event();
+world.cancel_event();
 ```
 
 <h3 id=game_clear_container>
-  <code>world::clear_container</code>
+  <code>world.clear_container</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -134,11 +134,11 @@ world::cancel_event();
 
 **Пример использования:**
 ```ts
-world::clear_container(location(0,0,0,0,0));
+world.clear_container(location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-world::clear_container(location=location(0,0,0,0,0));
+world.clear_container(location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -148,7 +148,7 @@ world::clear_container(location=location(0,0,0,0,0));
 | location | Местоположение | Местоположение контейнера |
 
 <h3 id=game_clear_container_items>
-  <code>world::clear_container_items</code>
+  <code>world.clear_container_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -160,11 +160,11 @@ world::clear_container(location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-world::clear_container_items([item("stick"), item("stick")], location(0,0,0,0,0));
+world.clear_container_items([item("stick"), item("stick")], location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-world::clear_container_items(items=[item("stick"), item("stick")], location=location(0,0,0,0,0));
+world.clear_container_items(items=[item("stick"), item("stick")], location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -175,7 +175,7 @@ world::clear_container_items(items=[item("stick"), item("stick")], location=loca
 | location | Местоположение    | Местоположение контейнера                             |
 
 <h3 id=game_clear_exploded_blocks>
-  <code>world::clear_exploded_blocks</code>
+  <code>world.clear_exploded_blocks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -188,11 +188,11 @@ world::clear_container_items(items=[item("stick"), item("stick")], location=loca
 
 **Пример использования:**
 ```ts
-world::clear_exploded_blocks([location(0,0,0,0,0), location(0,0,0,0,0)]);
+world.clear_exploded_blocks([location(0,0,0,0,0), location(0,0,0,0,0)]);
 
 //Или в сухую по ключам
 
-world::clear_exploded_blocks(location=[location(0,0,0,0,0), location(0,0,0,0,0)]);
+world.clear_exploded_blocks(location=[location(0,0,0,0,0), location(0,0,0,0,0)]);
 ```
 
 **Аргументы:**
@@ -202,7 +202,7 @@ world::clear_exploded_blocks(location=[location(0,0,0,0,0), location(0,0,0,0,0)]
 | location | Список\[Местоположение\] | Местоположения блоков<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=game_clear_region>
-  <code>world::clear_region</code>
+  <code>world.clear_region</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -212,11 +212,11 @@ world::clear_exploded_blocks(location=[location(0,0,0,0,0), location(0,0,0,0,0)]
 
 **Пример использования:**
 ```ts
-world::clear_region(location(0,0,0,0,0), location(0,0,0,0,0));
+world.clear_region(location(0,0,0,0,0), location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-world::clear_region(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0));
+world.clear_region(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -227,7 +227,7 @@ world::clear_region(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0));
 | pos_2 | Местоположение | Противоположный угол региона |
 
 <h3 id=game_clear_scoreboard_scores>
-  <code>world::clear_scoreboard_scores</code>
+  <code>world.clear_scoreboard_scores</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -237,11 +237,11 @@ world::clear_region(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-world::clear_scoreboard_scores("id");
+world.clear_scoreboard_scores("id");
 
 //Или в сухую по ключам
 
-world::clear_scoreboard_scores(id="id");
+world.clear_scoreboard_scores(id="id");
 ```
 
 **Аргументы:**
@@ -251,7 +251,7 @@ world::clear_scoreboard_scores(id="id");
 | id | Текст | ID скорборда |
 
 <h3 id=game_clone_region>
-  <code>world::clone_region</code>
+  <code>world.clone_region</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -261,11 +261,11 @@ world::clear_scoreboard_scores(id="id");
 
 **Пример использования:**
 ```ts
-world::clone_region(location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), "FALSE", "FALSE");
+world.clone_region(location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), "FALSE", "FALSE");
 
 //Или в сухую по ключам
 
-world::clone_region(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0), target_pos=location(0,0,0,0,0), paste_pos=location(0,0,0,0,0), ignore_air="FALSE", copy_entity="FALSE");
+world.clone_region(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0), target_pos=location(0,0,0,0,0), paste_pos=location(0,0,0,0,0), ignore_air="FALSE", copy_entity="FALSE");
 ```
 
 **Аргументы:**
@@ -280,7 +280,7 @@ world::clone_region(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0), target
 | copy_entity | Маркер<br/>**FALSE** - Не клонировать<br/>**TRUE** - Клонировать   | Клонировать существ          |
 
 <h3 id=game_create_explosion>
-  <code>world::create_explosion</code>
+  <code>world.create_explosion</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -290,11 +290,11 @@ world::clone_region(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0), target
 
 **Пример использования:**
 ```ts
-world::create_explosion(location(0,0,0,0,0), 1, "name_or_uuid", "FALSE", "FALSE");
+world.create_explosion(location(0,0,0,0,0), 1, "name_or_uuid", "FALSE", "FALSE");
 
 //Или в сухую по ключам
 
-world::create_explosion(location=location(0,0,0,0,0), power=1, name_or_uuid="name_or_uuid", fire="FALSE", break_blocks="FALSE");
+world.create_explosion(location=location(0,0,0,0,0), power=1, name_or_uuid="name_or_uuid", fire="FALSE", break_blocks="FALSE");
 ```
 
 **Аргументы:**
@@ -308,7 +308,7 @@ world::create_explosion(location=location(0,0,0,0,0), power=1, name_or_uuid="nam
 | break_blocks | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Разрушение блоков             |
 
 <h3 id=game_create_scoreboard>
-  <code>world::create_scoreboard</code>
+  <code>world.create_scoreboard</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -318,11 +318,11 @@ world::create_explosion(location=location(0,0,0,0,0), power=1, name_or_uuid="nam
 
 **Пример использования:**
 ```ts
-world::create_scoreboard("id", "display_name");
+world.create_scoreboard("id", "display_name");
 
 //Или в сухую по ключам
 
-world::create_scoreboard(id="id", display_name="display_name");
+world.create_scoreboard(id="id", display_name="display_name");
 ```
 
 **Аргументы:**
@@ -333,7 +333,7 @@ world::create_scoreboard(id="id", display_name="display_name");
 | display_name | Текст | Заголовок    |
 
 <h3 id=game_dummy>
-  <code>world::dummy</code>
+  <code>world.dummy</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -343,11 +343,11 @@ world::create_scoreboard(id="id", display_name="display_name");
 
 **Пример использования:**
 ```ts
-world::dummy();
+world.dummy();
 ```
 
 <h3 id=game_fill_container>
-  <code>world::fill_container</code>
+  <code>world.fill_container</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -359,11 +359,11 @@ world::dummy();
 
 **Пример использования:**
 ```ts
-world::fill_container([item("stick"), item("stick")], location(0,0,0,0,0));
+world.fill_container([item("stick"), item("stick")], location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-world::fill_container(items=[item("stick"), item("stick")], location=location(0,0,0,0,0));
+world.fill_container(items=[item("stick"), item("stick")], location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -374,7 +374,7 @@ world::fill_container(items=[item("stick"), item("stick")], location=location(0,
 | location | Местоположение    | Местоположение контейнера                                            |
 
 <h3 id=game_generate_tree>
-  <code>world::generate_tree</code>
+  <code>world.generate_tree</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -384,11 +384,11 @@ world::fill_container(items=[item("stick"), item("stick")], location=location(0,
 
 **Пример использования:**
 ```ts
-world::generate_tree(location(0,0,0,0,0), "ACACIA");
+world.generate_tree(location(0,0,0,0,0), "ACACIA");
 
 //Или в сухую по ключам
 
-world::generate_tree(location=location(0,0,0,0,0), tree_type="ACACIA");
+world.generate_tree(location=location(0,0,0,0,0), tree_type="ACACIA");
 ```
 
 **Аргументы:**
@@ -399,7 +399,7 @@ world::generate_tree(location=location(0,0,0,0,0), tree_type="ACACIA");
 | tree_type | Маркер<br/>**ACACIA** - Акация<br/>**AZALEA** - Азалия<br/>**BIG_TREE** - Большое дерево<br/>**BIRCH** - Обычная берёза<br/>**BROWN_MUSHROOM** - Коричневый гриб<br/>**CHERRY** - Вишня<br/>**CHORUS_PLANT** - Дерево хоруса<br/>**COCOA_TREE** - Дерево джунглей с какао-бобами<br/>**CRIMSON_FUNGUS** - Багровый гриб<br/>**DARK_OAK** - Тёмный дуб<br/>**JUNGLE** - Дерево джунглей<br/>**JUNGLE_BUSH** - Куст джунглей<br/>**MANGROVE** - Мангровое дерево<br/>**MEGA_PINE** - Огромная сосна<br/>**MEGA_REDWOOD** - Огромная секвойя<br/>**REDWOOD** - Обычная ель<br/>**RED_MUSHROOM** - Красный гриб<br/>**SMALL_JUNGLE** - Маленькое дерево джунглей<br/>**SWAMP** - Болотное дерево<br/>**TALL_BIRCH** - Высокая берёза<br/>**TALL_MANGROVE** - Высокое мангровое дерево<br/>**TALL_REDWOOD** - Высокая ель<br/>**TREE** - Обычное дерево<br/>**WARPED_FUNGUS** - Искажённый гриб | Тип дерева            |
 
 <h3 id=game_hide_event_message>
-  <code>world::hide_event_message</code>
+  <code>world.hide_event_message</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -413,11 +413,11 @@ world::generate_tree(location=location(0,0,0,0,0), tree_type="ACACIA");
 
 **Пример использования:**
 ```ts
-world::hide_event_message("FALSE");
+world.hide_event_message("FALSE");
 
 //Или в сухую по ключам
 
-world::hide_event_message(hide="FALSE");
+world.hide_event_message(hide="FALSE");
 ```
 
 **Аргументы:**
@@ -427,7 +427,7 @@ world::hide_event_message(hide="FALSE");
 | hide | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Убрать сообщение |
 
 <h3 id=game_launch_firework>
-  <code>world::launch_firework</code>
+  <code>world.launch_firework</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -437,11 +437,11 @@ world::hide_event_message(hide="FALSE");
 
 **Пример использования:**
 ```ts
-world::launch_firework(item("stick"), location(0,0,0,0,0), "DIRECTIONAL", "FALSE");
+world.launch_firework(item("stick"), location(0,0,0,0,0), "DIRECTIONAL", "FALSE");
 
 //Или в сухую по ключам
 
-world::launch_firework(firework=item("stick"), location=location(0,0,0,0,0), movement="DIRECTIONAL", instant="FALSE");
+world.launch_firework(firework=item("stick"), location=location(0,0,0,0,0), movement="DIRECTIONAL", instant="FALSE");
 ```
 
 **Аргументы:**
@@ -454,7 +454,7 @@ world::launch_firework(firework=item("stick"), location=location(0,0,0,0,0), mov
 | instant  | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да                      | Мгновенный взрыв       |
 
 <h3 id=game_launch_projectile>
-  <code>world::launch_projectile</code>
+  <code>world.launch_projectile</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -464,11 +464,11 @@ world::launch_firework(firework=item("stick"), location=location(0,0,0,0,0), mov
 
 **Пример использования:**
 ```ts
-world::launch_projectile(item("stick"), location(0,0,0,0,0), 1, 2, "custom_name", particle("fire"));
+world.launch_projectile(item("stick"), location(0,0,0,0,0), 1, 2, "custom_name", particle("fire"));
 
 //Или в сухую по ключам
 
-world::launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0), speed=1, inaccuracy=2, custom_name="custom_name", trail=particle("fire"));
+world.launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0), speed=1, inaccuracy=2, custom_name="custom_name", trail=particle("fire"));
 ```
 
 **Аргументы:**
@@ -483,7 +483,7 @@ world::launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0),
 | trail       | Эффект частиц  | След, который будет оставаться за снарядом       |
 
 <h3 id=game_random_tick_block>
-  <code>world::random_tick_block</code>
+  <code>world.random_tick_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -493,11 +493,11 @@ world::launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0),
 
 **Пример использования:**
 ```ts
-world::random_tick_block(location(0,0,0,0,0), 1);
+world.random_tick_block(location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-world::random_tick_block(location=location(0,0,0,0,0), times=1);
+world.random_tick_block(location=location(0,0,0,0,0), times=1);
 ```
 
 **Аргументы:**
@@ -508,7 +508,7 @@ world::random_tick_block(location=location(0,0,0,0,0), times=1);
 | times    | Число          | Количество тиков |
 
 <h3 id=game_remove_container_items>
-  <code>world::remove_container_items</code>
+  <code>world.remove_container_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -520,11 +520,11 @@ world::random_tick_block(location=location(0,0,0,0,0), times=1);
 
 **Пример использования:**
 ```ts
-world::remove_container_items([item("stick"), item("stick")], location(0,0,0,0,0));
+world.remove_container_items([item("stick"), item("stick")], location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-world::remove_container_items(items=[item("stick"), item("stick")], location=location(0,0,0,0,0));
+world.remove_container_items(items=[item("stick"), item("stick")], location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -535,7 +535,7 @@ world::remove_container_items(items=[item("stick"), item("stick")], location=loc
 | location | Местоположение    | Местоположение контейнера                             |
 
 <h3 id=game_remove_scoreboard>
-  <code>world::remove_scoreboard</code>
+  <code>world.remove_scoreboard</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -545,11 +545,11 @@ world::remove_container_items(items=[item("stick"), item("stick")], location=loc
 
 **Пример использования:**
 ```ts
-world::remove_scoreboard("id");
+world.remove_scoreboard("id");
 
 //Или в сухую по ключам
 
-world::remove_scoreboard(id="id");
+world.remove_scoreboard(id="id");
 ```
 
 **Аргументы:**
@@ -559,7 +559,7 @@ world::remove_scoreboard(id="id");
 | id | Текст | ID скорборда |
 
 <h3 id=game_remove_scoreboard_score_by_name>
-  <code>world::remove_scoreboard_score_by_name</code>
+  <code>world.remove_scoreboard_score_by_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -569,11 +569,11 @@ world::remove_scoreboard(id="id");
 
 **Пример использования:**
 ```ts
-world::remove_scoreboard_score_by_name("id", "text");
+world.remove_scoreboard_score_by_name("id", "text");
 
 //Или в сухую по ключам
 
-world::remove_scoreboard_score_by_name(id="id", text="text");
+world.remove_scoreboard_score_by_name(id="id", text="text");
 ```
 
 **Аргументы:**
@@ -584,7 +584,7 @@ world::remove_scoreboard_score_by_name(id="id", text="text");
 | text | Текст | ID линии     |
 
 <h3 id=game_remove_scoreboard_score_by_score>
-  <code>world::remove_scoreboard_score_by_score</code>
+  <code>world.remove_scoreboard_score_by_score</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -594,11 +594,11 @@ world::remove_scoreboard_score_by_name(id="id", text="text");
 
 **Пример использования:**
 ```ts
-world::remove_scoreboard_score_by_score("id", 1);
+world.remove_scoreboard_score_by_score("id", 1);
 
 //Или в сухую по ключам
 
-world::remove_scoreboard_score_by_score(id="id", score=1);
+world.remove_scoreboard_score_by_score(id="id", score=1);
 ```
 
 **Аргументы:**
@@ -609,7 +609,7 @@ world::remove_scoreboard_score_by_score(id="id", score=1);
 | score | Число | Счёт значения для удаления |
 
 <h3 id=game_remove_tile_block_custom_tag>
-  <code>world::remove_tile_block_custom_tag</code>
+  <code>world.remove_tile_block_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -621,11 +621,11 @@ world::remove_scoreboard_score_by_score(id="id", score=1);
 
 **Пример использования:**
 ```ts
-world::remove_tile_block_custom_tag(location(0,0,0,0,0), "tag_name");
+world.remove_tile_block_custom_tag(location(0,0,0,0,0), "tag_name");
 
 //Или в сухую по ключам
 
-world::remove_tile_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_name");
+world.remove_tile_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_name");
 ```
 
 **Аргументы:**
@@ -636,7 +636,7 @@ world::remove_tile_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_
 | tag_name | Текст          | Имя кастомного тега           |
 
 <h3 id=game_replace_blocks_in_region>
-  <code>world::replace_blocks_in_region</code>
+  <code>world.replace_blocks_in_region</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -646,11 +646,11 @@ world::remove_tile_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_
 
 **Пример использования:**
 ```ts
-world::replace_blocks_in_region(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], location(0,0,0,0,0), location(0,0,0,0,0), "minecraft:oak_log[axis=x]");
+world.replace_blocks_in_region(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], location(0,0,0,0,0), location(0,0,0,0,0), "minecraft:oak_log[axis=x]");
 
 //Или в сухую по ключам
 
-world::replace_blocks_in_region(old_block=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0), new_block="minecraft:oak_log[axis=x]");
+world.replace_blocks_in_region(old_block=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0), new_block="minecraft:oak_log[axis=x]");
 ```
 
 **Аргументы:**
@@ -663,7 +663,7 @@ world::replace_blocks_in_region(old_block=["minecraft:oak_log[axis=x]", "minecra
 | new_block | Блок           | Новый блок                                                    |
 
 <h3 id=game_replace_container_items>
-  <code>world::replace_container_items</code>
+  <code>world.replace_container_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -675,11 +675,11 @@ world::replace_blocks_in_region(old_block=["minecraft:oak_log[axis=x]", "minecra
 
 **Пример использования:**
 ```ts
-world::replace_container_items([item("stick"), item("stick")], location(0,0,0,0,0), item("stick"), 1);
+world.replace_container_items([item("stick"), item("stick")], location(0,0,0,0,0), item("stick"), 1);
 
 //Или в сухую по ключам
 
-world::replace_container_items(items=[item("stick"), item("stick")], location=location(0,0,0,0,0), replace=item("stick"), count=1);
+world.replace_container_items(items=[item("stick"), item("stick")], location=location(0,0,0,0,0), replace=item("stick"), count=1);
 ```
 
 **Аргументы:**
@@ -692,7 +692,7 @@ world::replace_container_items(items=[item("stick"), item("stick")], location=lo
 | count    | Число             | Количество предметов для замены                                  |
 
 <h3 id=game_send_web_request>
-  <code>world::send_web_request</code>
+  <code>world.send_web_request</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -702,11 +702,11 @@ world::replace_container_items(items=[item("stick"), item("stick")], location=lo
 
 **Пример использования:**
 ```ts
-world::send_web_request("url", "content_body", {"headers":`headers`}, "DELETE", "APPLICATION_JSON");
+world.send_web_request("url", "content_body", {"headers":`headers`}, "DELETE", "APPLICATION_JSON");
 
 //Или в сухую по ключам
 
-world::send_web_request(url="url", content_body="content_body", headers={"headers":`headers`}, request_type="DELETE", content_type="APPLICATION_JSON");
+world.send_web_request(url="url", content_body="content_body", headers={"headers":`headers`}, request_type="DELETE", content_type="APPLICATION_JSON");
 ```
 
 **Аргументы:**
@@ -720,7 +720,7 @@ world::send_web_request(url="url", content_body="content_body", headers={"header
 | content_type | Маркер<br/>**APPLICATION_JSON** - JSON (application/json)<br/>**TEXT_PLAIN** - Обычный текст (text/plain)                        | Медиа тип запроса |
 
 <h3 id=game_set_age>
-  <code>world::set_age</code>
+  <code>world.set_age</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -732,11 +732,11 @@ world::send_web_request(url="url", content_body="content_body", headers={"header
 
 **Пример использования:**
 ```ts
-world::set_age(location(0,0,0,0,0), 1);
+world.set_age(location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-world::set_age(location=location(0,0,0,0,0), tick=1);
+world.set_age(location=location(0,0,0,0,0), tick=1);
 ```
 
 **Аргументы:**
@@ -747,7 +747,7 @@ world::set_age(location=location(0,0,0,0,0), tick=1);
 | tick     | Число          | Тики                 |
 
 <h3 id=game_set_block>
-  <code>world::set_block</code>
+  <code>world.set_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -757,11 +757,11 @@ world::set_age(location=location(0,0,0,0,0), tick=1);
 
 **Пример использования:**
 ```ts
-world::set_block([location(0,0,0,0,0), location(0,0,0,0,0)], "minecraft:oak_log[axis=x]", "FALSE");
+world.set_block([location(0,0,0,0,0), location(0,0,0,0,0)], "minecraft:oak_log[axis=x]", "FALSE");
 
 //Или в сухую по ключам
 
-world::set_block(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], block="minecraft:oak_log[axis=x]", update_blocks="FALSE");
+world.set_block(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], block="minecraft:oak_log[axis=x]", update_blocks="FALSE");
 ```
 
 **Аргументы:**
@@ -773,7 +773,7 @@ world::set_block(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], block="mi
 | update_blocks | Маркер<br/>**FALSE** - Не обновлять<br/>**TRUE** - Обновлять | Обновлять блоки вокруг                                                      |
 
 <h3 id=game_set_block_analogue_power>
-  <code>world::set_block_analogue_power</code>
+  <code>world.set_block_analogue_power</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -785,11 +785,11 @@ world::set_block(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], block="mi
 
 **Пример использования:**
 ```ts
-world::set_block_analogue_power(location(0,0,0,0,0), 1);
+world.set_block_analogue_power(location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-world::set_block_analogue_power(location=location(0,0,0,0,0), power_level=1);
+world.set_block_analogue_power(location=location(0,0,0,0,0), power_level=1);
 ```
 
 **Аргументы:**
@@ -800,7 +800,7 @@ world::set_block_analogue_power(location=location(0,0,0,0,0), power_level=1);
 | power_level | Число          | Новая сила сигнала   |
 
 <h3 id=game_set_block_custom_tag>
-  <code>world::set_block_custom_tag</code>
+  <code>world.set_block_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -812,11 +812,11 @@ world::set_block_analogue_power(location=location(0,0,0,0,0), power_level=1);
 
 **Пример использования:**
 ```ts
-world::set_block_custom_tag(location(0,0,0,0,0), "tag_name", "tag_value");
+world.set_block_custom_tag(location(0,0,0,0,0), "tag_name", "tag_value");
 
 //Или в сухую по ключам
 
-world::set_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_name", tag_value="tag_value");
+world.set_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_name", tag_value="tag_value");
 ```
 
 **Аргументы:**
@@ -828,7 +828,7 @@ world::set_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_name", t
 | tag_value | Текст          | creative_plus.action.game_set_block_custom_tag.argument.tag_value.name |
 
 <h3 id=game_set_block_data>
-  <code>world::set_block_data</code>
+  <code>world.set_block_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -838,11 +838,11 @@ world::set_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_name", t
 
 **Пример использования:**
 ```ts
-world::set_block_data(location(0,0,0,0,0), "block_data");
+world.set_block_data(location(0,0,0,0,0), "block_data");
 
 //Или в сухую по ключам
 
-world::set_block_data(location=location(0,0,0,0,0), block_data="block_data");
+world.set_block_data(location=location(0,0,0,0,0), block_data="block_data");
 ```
 
 **Аргументы:**
@@ -853,7 +853,7 @@ world::set_block_data(location=location(0,0,0,0,0), block_data="block_data");
 | block_data | Текст          | Новые параметры блока |
 
 <h3 id=game_set_block_drops_enabled>
-  <code>world::set_block_drops_enabled</code>
+  <code>world.set_block_drops_enabled</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -863,11 +863,11 @@ world::set_block_data(location=location(0,0,0,0,0), block_data="block_data");
 
 **Пример использования:**
 ```ts
-world::set_block_drops_enabled("FALSE");
+world.set_block_drops_enabled("FALSE");
 
 //Или в сухую по ключам
 
-world::set_block_drops_enabled(enable="FALSE");
+world.set_block_drops_enabled(enable="FALSE");
 ```
 
 **Аргументы:**
@@ -877,7 +877,7 @@ world::set_block_drops_enabled(enable="FALSE");
 | enable | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Выпадение блоков |
 
 <h3 id=game_set_block_powered>
-  <code>world::set_block_powered</code>
+  <code>world.set_block_powered</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -889,11 +889,11 @@ world::set_block_drops_enabled(enable="FALSE");
 
 **Пример использования:**
 ```ts
-world::set_block_powered(location(0,0,0,0,0), "FALSE");
+world.set_block_powered(location(0,0,0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-world::set_block_powered(location=location(0,0,0,0,0), powered="FALSE");
+world.set_block_powered(location=location(0,0,0,0,0), powered="FALSE");
 ```
 
 **Аргументы:**
@@ -904,7 +904,7 @@ world::set_block_powered(location=location(0,0,0,0,0), powered="FALSE");
 | powered  | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Активация            |
 
 <h3 id=game_set_block_single_data>
-  <code>world::set_block_single_data</code>
+  <code>world.set_block_single_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -914,11 +914,11 @@ world::set_block_powered(location=location(0,0,0,0,0), powered="FALSE");
 
 **Пример использования:**
 ```ts
-world::set_block_single_data(location(0,0,0,0,0), "data", "value");
+world.set_block_single_data(location(0,0,0,0,0), "data", "value");
 
 //Или в сухую по ключам
 
-world::set_block_single_data(location=location(0,0,0,0,0), data="data", value="value");
+world.set_block_single_data(location=location(0,0,0,0,0), data="data", value="value");
 ```
 
 **Аргументы:**
@@ -930,7 +930,7 @@ world::set_block_single_data(location=location(0,0,0,0,0), data="data", value="v
 | value    | Текст          | Новое значение       |
 
 <h3 id=game_set_brushable_block_item>
-  <code>world::set_brushable_block_item</code>
+  <code>world.set_brushable_block_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -943,11 +943,11 @@ world::set_block_single_data(location=location(0,0,0,0,0), data="data", value="v
 
 **Пример использования:**
 ```ts
-world::set_brushable_block_item(location(0,0,0,0,0), item("stick"));
+world.set_brushable_block_item(location(0,0,0,0,0), item("stick"));
 
 //Или в сухую по ключам
 
-world::set_brushable_block_item(location=location(0,0,0,0,0), item=item("stick"));
+world.set_brushable_block_item(location=location(0,0,0,0,0), item=item("stick"));
 ```
 
 **Аргументы:**
@@ -958,7 +958,7 @@ world::set_brushable_block_item(location=location(0,0,0,0,0), item=item("stick")
 | item     | Предмет        | Предмет              |
 
 <h3 id=game_set_campfire_item>
-  <code>world::set_campfire_item</code>
+  <code>world.set_campfire_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -970,11 +970,11 @@ world::set_brushable_block_item(location=location(0,0,0,0,0), item=item("stick")
 
 **Пример использования:**
 ```ts
-world::set_campfire_item(location(0,0,0,0,0), item("stick"), 1, "FIRST");
+world.set_campfire_item(location(0,0,0,0,0), item("stick"), 1, "FIRST");
 
 //Или в сухую по ключам
 
-world::set_campfire_item(location=location(0,0,0,0,0), item=item("stick"), cooking_time=1, slot="FIRST");
+world.set_campfire_item(location=location(0,0,0,0,0), item=item("stick"), cooking_time=1, slot="FIRST");
 ```
 
 **Аргументы:**
@@ -987,7 +987,7 @@ world::set_campfire_item(location=location(0,0,0,0,0), item=item("stick"), cooki
 | slot         | Маркер<br/>**FIRST** - Первый<br/>**FOURTH** - Четвёртый<br/>**SECOND** - Второй<br/>**THIRD** - Третий | Слот                  |
 
 <h3 id=game_set_container>
-  <code>world::set_container</code>
+  <code>world.set_container</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -999,11 +999,11 @@ world::set_campfire_item(location=location(0,0,0,0,0), item=item("stick"), cooki
 
 **Пример использования:**
 ```ts
-world::set_container([item("stick"), item("stick")], [location(0,0,0,0,0), location(0,0,0,0,0)]);
+world.set_container([item("stick"), item("stick")], [location(0,0,0,0,0), location(0,0,0,0,0)]);
 
 //Или в сухую по ключам
 
-world::set_container(items=[item("stick"), item("stick")], location=[location(0,0,0,0,0), location(0,0,0,0,0)]);
+world.set_container(items=[item("stick"), item("stick")], location=[location(0,0,0,0,0), location(0,0,0,0,0)]);
 ```
 
 **Аргументы:**
@@ -1014,7 +1014,7 @@ world::set_container(items=[item("stick"), item("stick")], location=[location(0,
 | location | Список\[Местоположение\] | Местоположение контейнера<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=game_set_container_lock>
-  <code>world::set_container_lock</code>
+  <code>world.set_container_lock</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1026,11 +1026,11 @@ world::set_container(items=[item("stick"), item("stick")], location=[location(0,
 
 **Пример использования:**
 ```ts
-world::set_container_lock(location(0,0,0,0,0), "container_key");
+world.set_container_lock(location(0,0,0,0,0), "container_key");
 
 //Или в сухую по ключам
 
-world::set_container_lock(location=location(0,0,0,0,0), container_key="container_key");
+world.set_container_lock(location=location(0,0,0,0,0), container_key="container_key");
 ```
 
 **Аргументы:**
@@ -1041,7 +1041,7 @@ world::set_container_lock(location=location(0,0,0,0,0), container_key="container
 | container_key | Текст          | Имя ключа контейнера      |
 
 <h3 id=game_set_container_name>
-  <code>world::set_container_name</code>
+  <code>world.set_container_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1053,11 +1053,11 @@ world::set_container_lock(location=location(0,0,0,0,0), container_key="container
 
 **Пример использования:**
 ```ts
-world::set_container_name(location(0,0,0,0,0), "name");
+world.set_container_name(location(0,0,0,0,0), "name");
 
 //Или в сухую по ключам
 
-world::set_container_name(location=location(0,0,0,0,0), name="name");
+world.set_container_name(location=location(0,0,0,0,0), name="name");
 ```
 
 **Аргументы:**
@@ -1068,7 +1068,7 @@ world::set_container_name(location=location(0,0,0,0,0), name="name");
 | name     | Текст          | Имя контейнера            |
 
 <h3 id=game_set_creaking_heart_natural>
-  <code>world::set_creaking_heart_natural</code>
+  <code>world.set_creaking_heart_natural</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1082,11 +1082,11 @@ world::set_container_name(location=location(0,0,0,0,0), name="name");
 
 **Пример использования:**
 ```ts
-world::set_creaking_heart_natural(location(0,0,0,0,0), "TRUE");
+world.set_creaking_heart_natural(location(0,0,0,0,0), "TRUE");
 
 //Или в сухую по ключам
 
-world::set_creaking_heart_natural(location=location(0,0,0,0,0), natural="TRUE");
+world.set_creaking_heart_natural(location=location(0,0,0,0,0), natural="TRUE");
 ```
 
 **Аргументы:**
@@ -1097,7 +1097,7 @@ world::set_creaking_heart_natural(location=location(0,0,0,0,0), natural="TRUE");
 | natural  | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет | Натуральность  |
 
 <h3 id=game_set_creaking_heart_state>
-  <code>world::set_creaking_heart_state</code>
+  <code>world.set_creaking_heart_state</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1109,11 +1109,11 @@ world::set_creaking_heart_natural(location=location(0,0,0,0,0), natural="TRUE");
 
 **Пример использования:**
 ```ts
-world::set_creaking_heart_state(location(0,0,0,0,0), "UPROOTED");
+world.set_creaking_heart_state(location(0,0,0,0,0), "UPROOTED");
 
 //Или в сухую по ключам
 
-world::set_creaking_heart_state(location=location(0,0,0,0,0), heart_state="UPROOTED");
+world.set_creaking_heart_state(location=location(0,0,0,0,0), heart_state="UPROOTED");
 ```
 
 **Аргументы:**
@@ -1124,7 +1124,7 @@ world::set_creaking_heart_state(location=location(0,0,0,0,0), heart_state="UPROO
 | heart_state | Маркер<br/>**UPROOTED** - Неактивная<br/>**DORMANT** - Спящая<br/>**AWAKE** - Активная | Состояние      |
 
 <h3 id=game_set_decorate_pot_sherd>
-  <code>world::set_decorate_pot_sherd</code>
+  <code>world.set_decorate_pot_sherd</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1136,11 +1136,11 @@ world::set_creaking_heart_state(location=location(0,0,0,0,0), heart_state="UPROO
 
 **Пример использования:**
 ```ts
-world::set_decorate_pot_sherd(location(0,0,0,0,0), item("stick"), "BACK");
+world.set_decorate_pot_sherd(location(0,0,0,0,0), item("stick"), "BACK");
 
 //Или в сухую по ключам
 
-world::set_decorate_pot_sherd(location=location(0,0,0,0,0), item=item("stick"), side="BACK");
+world.set_decorate_pot_sherd(location=location(0,0,0,0,0), item=item("stick"), side="BACK");
 ```
 
 **Аргументы:**
@@ -1152,7 +1152,7 @@ world::set_decorate_pot_sherd(location=location(0,0,0,0,0), item=item("stick"), 
 | side     | Маркер<br/>**BACK** - Задняя сторона<br/>**FRONT** - Передняя сторона<br/>**LEFT** - Левая сторона<br/>**RIGHT** - Правая сторона | Сторона вазы          |
 
 <h3 id=game_set_dried_ghast_hydration>
-  <code>world::set_dried_ghast_hydration</code>
+  <code>world.set_dried_ghast_hydration</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1164,11 +1164,11 @@ world::set_decorate_pot_sherd(location=location(0,0,0,0,0), item=item("stick"), 
 
 **Пример использования:**
 ```ts
-world::set_dried_ghast_hydration(location(0,0,0,0,0), 1);
+world.set_dried_ghast_hydration(location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-world::set_dried_ghast_hydration(location=location(0,0,0,0,0), hydration=1);
+world.set_dried_ghast_hydration(location=location(0,0,0,0,0), hydration=1);
 ```
 
 **Аргументы:**
@@ -1179,7 +1179,7 @@ world::set_dried_ghast_hydration(location=location(0,0,0,0,0), hydration=1);
 | hydration | Число          | Влажность      |
 
 <h3 id=game_set_event_anvil_repair_cost>
-  <code>world::set_event_anvil_repair_cost</code>
+  <code>world.set_event_anvil_repair_cost</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1191,11 +1191,11 @@ world::set_dried_ghast_hydration(location=location(0,0,0,0,0), hydration=1);
 
 **Пример использования:**
 ```ts
-world::set_event_anvil_repair_cost(1, "REPAIR_COST", "TRUE");
+world.set_event_anvil_repair_cost(1, "REPAIR_COST", "TRUE");
 
 //Или в сухую по ключам
 
-world::set_event_anvil_repair_cost(repair_cost=1, repair_cost_type="REPAIR_COST", bypass_cost="TRUE");
+world.set_event_anvil_repair_cost(repair_cost=1, repair_cost_type="REPAIR_COST", bypass_cost="TRUE");
 ```
 
 **Аргументы:**
@@ -1207,7 +1207,7 @@ world::set_event_anvil_repair_cost(repair_cost=1, repair_cost_type="REPAIR_COST"
 | bypass_cost      | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет                                                                                                                      | Игнорирование стоимости |
 
 <h3 id=game_set_event_combust_duration>
-  <code>world::set_event_combust_duration</code>
+  <code>world.set_event_combust_duration</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1220,11 +1220,11 @@ world::set_event_anvil_repair_cost(repair_cost=1, repair_cost_type="REPAIR_COST"
 
 **Пример использования:**
 ```ts
-world::set_event_combust_duration(1);
+world.set_event_combust_duration(1);
 
 //Или в сухую по ключам
 
-world::set_event_combust_duration(duration=1);
+world.set_event_combust_duration(duration=1);
 ```
 
 **Аргументы:**
@@ -1234,7 +1234,7 @@ world::set_event_combust_duration(duration=1);
 | duration | Число | Время горения |
 
 <h3 id=game_set_event_damage>
-  <code>world::set_event_damage</code>
+  <code>world.set_event_damage</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1246,11 +1246,11 @@ world::set_event_combust_duration(duration=1);
 
 **Пример использования:**
 ```ts
-world::set_event_damage(1);
+world.set_event_damage(1);
 
 //Или в сухую по ключам
 
-world::set_event_damage(damage=1);
+world.set_event_damage(damage=1);
 ```
 
 **Аргументы:**
@@ -1260,7 +1260,7 @@ world::set_event_damage(damage=1);
 | damage | Число | Количество урона |
 
 <h3 id=game_set_event_death_screen_message>
-  <code>world::set_event_death_screen_message</code>
+  <code>world.set_event_death_screen_message</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1275,11 +1275,11 @@ world::set_event_damage(damage=1);
 
 **Пример использования:**
 ```ts
-world::set_event_death_screen_message("message");
+world.set_event_death_screen_message("message");
 
 //Или в сухую по ключам
 
-world::set_event_death_screen_message(message="message");
+world.set_event_death_screen_message(message="message");
 ```
 
 **Аргументы:**
@@ -1289,7 +1289,7 @@ world::set_event_death_screen_message(message="message");
 | message | Текст | Сообщение |
 
 <h3 id=game_set_event_enchantment_offers>
-  <code>world::set_event_enchantment_offers</code>
+  <code>world.set_event_enchantment_offers</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1301,11 +1301,11 @@ world::set_event_death_screen_message(message="message");
 
 **Пример использования:**
 ```ts
-world::set_event_enchantment_offers(["enchantments", "enchantments"], ["levels", "levels"], ["costs", "costs"]);
+world.set_event_enchantment_offers(["enchantments", "enchantments"], ["levels", "levels"], ["costs", "costs"]);
 
 //Или в сухую по ключам
 
-world::set_event_enchantment_offers(enchantments=["enchantments", "enchantments"], levels=["levels", "levels"], costs=["costs", "costs"]);
+world.set_event_enchantment_offers(enchantments=["enchantments", "enchantments"], levels=["levels", "levels"], costs=["costs", "costs"]);
 ```
 
 **Аргументы:**
@@ -1317,7 +1317,7 @@ world::set_event_enchantment_offers(enchantments=["enchantments", "enchantments"
 | costs        | Список\[Текст\] | Стоимость зачарований<br/>Аргумент поддерживает разложение списков    |
 
 <h3 id=game_set_event_exhaustion>
-  <code>world::set_event_exhaustion</code>
+  <code>world.set_event_exhaustion</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1329,11 +1329,11 @@ world::set_event_enchantment_offers(enchantments=["enchantments", "enchantments"
 
 **Пример использования:**
 ```ts
-world::set_event_exhaustion(1);
+world.set_event_exhaustion(1);
 
 //Или в сухую по ключам
 
-world::set_event_exhaustion(exhaustion=1);
+world.set_event_exhaustion(exhaustion=1);
 ```
 
 **Аргументы:**
@@ -1343,7 +1343,7 @@ world::set_event_exhaustion(exhaustion=1);
 | exhaustion | Число | Количество истощения |
 
 <h3 id=game_set_event_experience>
-  <code>world::set_event_experience</code>
+  <code>world.set_event_experience</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1357,11 +1357,11 @@ world::set_event_exhaustion(exhaustion=1);
 
 **Пример использования:**
 ```ts
-world::set_event_experience(1);
+world.set_event_experience(1);
 
 //Или в сухую по ключам
 
-world::set_event_experience(experience=1);
+world.set_event_experience(experience=1);
 ```
 
 **Аргументы:**
@@ -1371,7 +1371,7 @@ world::set_event_experience(experience=1);
 | experience | Число | Количество опыта |
 
 <h3 id=game_set_event_gamemode>
-  <code>world::set_event_gamemode</code>
+  <code>world.set_event_gamemode</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1383,11 +1383,11 @@ world::set_event_experience(experience=1);
 
 **Пример использования:**
 ```ts
-world::set_event_gamemode("CREATIVE");
+world.set_event_gamemode("CREATIVE");
 
 //Или в сухую по ключам
 
-world::set_event_gamemode(gamemode="CREATIVE");
+world.set_event_gamemode(gamemode="CREATIVE");
 ```
 
 **Аргументы:**
@@ -1397,7 +1397,7 @@ world::set_event_gamemode(gamemode="CREATIVE");
 | gamemode | Маркер<br/>**CREATIVE** - Творческий<br/>**SURVIVAL** - Выживание<br/>**ADVENTURE** - Приключение<br/>**SPECTATOR** - Наблюдатель | Режим игры |
 
 <h3 id=game_set_event_heal>
-  <code>world::set_event_heal</code>
+  <code>world.set_event_heal</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1410,11 +1410,11 @@ world::set_event_gamemode(gamemode="CREATIVE");
 
 **Пример использования:**
 ```ts
-world::set_event_heal(1);
+world.set_event_heal(1);
 
 //Или в сухую по ключам
 
-world::set_event_heal(heal=1);
+world.set_event_heal(heal=1);
 ```
 
 **Аргументы:**
@@ -1424,7 +1424,7 @@ world::set_event_heal(heal=1);
 | heal | Число | Количество лечения |
 
 <h3 id=game_set_event_item>
-  <code>world::set_event_item</code>
+  <code>world.set_event_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1448,11 +1448,11 @@ world::set_event_heal(heal=1);
 
 **Пример использования:**
 ```ts
-world::set_event_item(item("stick"));
+world.set_event_item(item("stick"));
 
 //Или в сухую по ключам
 
-world::set_event_item(item=item("stick"));
+world.set_event_item(item=item("stick"));
 ```
 
 **Аргументы:**
@@ -1462,7 +1462,7 @@ world::set_event_item(item=item("stick"));
 | item | Предмет | Новый предмет события |
 
 <h3 id=game_set_event_item_cooldown>
-  <code>world::set_event_item_cooldown</code>
+  <code>world.set_event_item_cooldown</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1475,11 +1475,11 @@ world::set_event_item(item=item("stick"));
 
 **Пример использования:**
 ```ts
-world::set_event_item_cooldown(1);
+world.set_event_item_cooldown(1);
 
 //Или в сухую по ключам
 
-world::set_event_item_cooldown(cooldown=1);
+world.set_event_item_cooldown(cooldown=1);
 ```
 
 **Аргументы:**
@@ -1489,7 +1489,7 @@ world::set_event_item_cooldown(cooldown=1);
 | cooldown | Число | Задержка в тиках |
 
 <h3 id=game_set_event_items>
-  <code>world::set_event_items</code>
+  <code>world.set_event_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1501,11 +1501,11 @@ world::set_event_item_cooldown(cooldown=1);
 
 **Пример использования:**
 ```ts
-world::set_event_items([item("stick"), item("stick")]);
+world.set_event_items([item("stick"), item("stick")]);
 
 //Или в сухую по ключам
 
-world::set_event_items(items=[item("stick"), item("stick")]);
+world.set_event_items(items=[item("stick"), item("stick")]);
 ```
 
 **Аргументы:**
@@ -1515,7 +1515,7 @@ world::set_event_items(items=[item("stick"), item("stick")]);
 | items | Список\[Предмет\] | Предметы для установки<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=game_set_event_knockback_vector>
-  <code>world::set_event_knockback_vector</code>
+  <code>world.set_event_knockback_vector</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1528,11 +1528,11 @@ world::set_event_items(items=[item("stick"), item("stick")]);
 
 **Пример использования:**
 ```ts
-world::set_event_knockback_vector(vector(0,0,0));
+world.set_event_knockback_vector(vector(0,0,0));
 
 //Или в сухую по ключам
 
-world::set_event_knockback_vector(knockback=vector(0,0,0));
+world.set_event_knockback_vector(knockback=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -1542,7 +1542,7 @@ world::set_event_knockback_vector(knockback=vector(0,0,0));
 | knockback | Вектор | Вектор отталкивания |
 
 <h3 id=game_set_event_move_allowed>
-  <code>world::set_event_move_allowed</code>
+  <code>world.set_event_move_allowed</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1554,11 +1554,11 @@ world::set_event_knockback_vector(knockback=vector(0,0,0));
 
 **Пример использования:**
 ```ts
-world::set_event_move_allowed("FALSE");
+world.set_event_move_allowed("FALSE");
 
 //Или в сухую по ключам
 
-world::set_event_move_allowed(allowed="FALSE");
+world.set_event_move_allowed(allowed="FALSE");
 ```
 
 **Аргументы:**
@@ -1568,7 +1568,7 @@ world::set_event_move_allowed(allowed="FALSE");
 | allowed | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Разрешить передвижение |
 
 <h3 id=game_set_event_projectile>
-  <code>world::set_event_projectile</code>
+  <code>world.set_event_projectile</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1578,11 +1578,11 @@ world::set_event_move_allowed(allowed="FALSE");
 
 **Пример использования:**
 ```ts
-world::set_event_projectile(item("stick"), "name");
+world.set_event_projectile(item("stick"), "name");
 
 //Или в сухую по ключам
 
-world::set_event_projectile(projectile=item("stick"), name="name");
+world.set_event_projectile(projectile=item("stick"), name="name");
 ```
 
 **Аргументы:**
@@ -1593,7 +1593,7 @@ world::set_event_projectile(projectile=item("stick"), name="name");
 | name       | Текст   | Отображаемое имя снаряда |
 
 <h3 id=game_set_event_sound>
-  <code>world::set_event_sound</code>
+  <code>world.set_event_sound</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1603,11 +1603,11 @@ world::set_event_projectile(projectile=item("stick"), name="name");
 
 **Пример использования:**
 ```ts
-world::set_event_sound(sound("entity.zombie.hurt"));
+world.set_event_sound(sound("entity.zombie.hurt"));
 
 //Или в сухую по ключам
 
-world::set_event_sound(sound=sound("entity.zombie.hurt"));
+world.set_event_sound(sound=sound("entity.zombie.hurt"));
 ```
 
 **Аргументы:**
@@ -1617,7 +1617,7 @@ world::set_event_sound(sound=sound("entity.zombie.hurt"));
 | sound | Звук | Проигрываемый звук |
 
 <h3 id=game_set_event_source_slot>
-  <code>world::set_event_source_slot</code>
+  <code>world.set_event_source_slot</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1629,11 +1629,11 @@ world::set_event_sound(sound=sound("entity.zombie.hurt"));
 
 **Пример использования:**
 ```ts
-world::set_event_source_slot(1);
+world.set_event_source_slot(1);
 
 //Или в сухую по ключам
 
-world::set_event_source_slot(source_slot=1);
+world.set_event_source_slot(source_slot=1);
 ```
 
 **Аргументы:**
@@ -1643,7 +1643,7 @@ world::set_event_source_slot(source_slot=1);
 | source_slot | Число | Слот для установки |
 
 <h3 id=game_set_event_target_slot>
-  <code>world::set_event_target_slot</code>
+  <code>world.set_event_target_slot</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1655,11 +1655,11 @@ world::set_event_source_slot(source_slot=1);
 
 **Пример использования:**
 ```ts
-world::set_event_target_slot(1);
+world.set_event_target_slot(1);
 
 //Или в сухую по ключам
 
-world::set_event_target_slot(target=1);
+world.set_event_target_slot(target=1);
 ```
 
 **Аргументы:**
@@ -1669,7 +1669,7 @@ world::set_event_target_slot(target=1);
 | target | Число | Слот для установки |
 
 <h3 id=game_set_event_uery_info>
-  <code>world::set_event_uery_info</code>
+  <code>world.set_event_uery_info</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1684,11 +1684,11 @@ world::set_event_target_slot(target=1);
 
 **Пример использования:**
 ```ts
-world::set_event_uery_info("information");
+world.set_event_uery_info("information");
 
 //Или в сухую по ключам
 
-world::set_event_uery_info(information="information");
+world.set_event_uery_info(information="information");
 ```
 
 **Аргументы:**
@@ -1698,7 +1698,7 @@ world::set_event_uery_info(information="information");
 | information | Текст | Дополнительные теги |
 
 <h3 id=game_set_event_velocity>
-  <code>world::set_event_velocity</code>
+  <code>world.set_event_velocity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1710,11 +1710,11 @@ world::set_event_uery_info(information="information");
 
 **Пример использования:**
 ```ts
-world::set_event_velocity(vector(0,0,0));
+world.set_event_velocity(vector(0,0,0));
 
 //Или в сухую по ключам
 
-world::set_event_velocity(velocity=vector(0,0,0));
+world.set_event_velocity(velocity=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -1724,7 +1724,7 @@ world::set_event_velocity(velocity=vector(0,0,0));
 | velocity | Вектор | Вектор скорости |
 
 <h3 id=game_set_furnace_cook_time>
-  <code>world::set_furnace_cook_time</code>
+  <code>world.set_furnace_cook_time</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1738,11 +1738,11 @@ world::set_event_velocity(velocity=vector(0,0,0));
 
 **Пример использования:**
 ```ts
-world::set_furnace_cook_time(location(0,0,0,0,0), 1);
+world.set_furnace_cook_time(location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-world::set_furnace_cook_time(location=location(0,0,0,0,0), time=1);
+world.set_furnace_cook_time(location=location(0,0,0,0,0), time=1);
 ```
 
 **Аргументы:**
@@ -1753,7 +1753,7 @@ world::set_furnace_cook_time(location=location(0,0,0,0,0), time=1);
 | time     | Число          | Время готовки       |
 
 <h3 id=game_set_item_in_container_slot>
-  <code>world::set_item_in_container_slot</code>
+  <code>world.set_item_in_container_slot</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1765,11 +1765,11 @@ world::set_furnace_cook_time(location=location(0,0,0,0,0), time=1);
 
 **Пример использования:**
 ```ts
-world::set_item_in_container_slot(location(0,0,0,0,0), item("stick"), 1);
+world.set_item_in_container_slot(location(0,0,0,0,0), item("stick"), 1);
 
 //Или в сухую по ключам
 
-world::set_item_in_container_slot(location=location(0,0,0,0,0), item=item("stick"), slot=1);
+world.set_item_in_container_slot(location=location(0,0,0,0,0), item=item("stick"), slot=1);
 ```
 
 **Аргументы:**
@@ -1781,7 +1781,7 @@ world::set_item_in_container_slot(location=location(0,0,0,0,0), item=item("stick
 | slot     | Число          | Номер слота               |
 
 <h3 id=game_set_lectern_book>
-  <code>world::set_lectern_book</code>
+  <code>world.set_lectern_book</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1793,11 +1793,11 @@ world::set_item_in_container_slot(location=location(0,0,0,0,0), item=item("stick
 
 **Пример использования:**
 ```ts
-world::set_lectern_book(location(0,0,0,0,0), item("stick"), 1);
+world.set_lectern_book(location(0,0,0,0,0), item("stick"), 1);
 
 //Или в сухую по ключам
 
-world::set_lectern_book(location=location(0,0,0,0,0), item=item("stick"), page=1);
+world.set_lectern_book(location=location(0,0,0,0,0), item=item("stick"), page=1);
 ```
 
 **Аргументы:**
@@ -1809,7 +1809,7 @@ world::set_lectern_book(location=location(0,0,0,0,0), item=item("stick"), page=1
 | page     | Число          | Страница               |
 
 <h3 id=game_set_player_head>
-  <code>world::set_player_head</code>
+  <code>world.set_player_head</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1821,11 +1821,11 @@ world::set_lectern_book(location=location(0,0,0,0,0), item=item("stick"), page=1
 
 **Пример использования:**
 ```ts
-world::set_player_head(location(0,0,0,0,0), "name_or_uuid", "NAME_OR_UUID");
+world.set_player_head(location(0,0,0,0,0), "name_or_uuid", "NAME_OR_UUID");
 
 //Или в сухую по ключам
 
-world::set_player_head(location=location(0,0,0,0,0), name_or_uuid="name_or_uuid", receive_type="NAME_OR_UUID");
+world.set_player_head(location=location(0,0,0,0,0), name_or_uuid="name_or_uuid", receive_type="NAME_OR_UUID");
 ```
 
 **Аргументы:**
@@ -1837,7 +1837,7 @@ world::set_player_head(location=location(0,0,0,0,0), name_or_uuid="name_or_uuid"
 | receive_type | Маркер<br/>**NAME_OR_UUID** - Имя или UUID игрока<br/>**VALUE** - Параметр "value" скина | Тип значения          |
 
 <h3 id=game_set_region>
-  <code>world::set_region</code>
+  <code>world.set_region</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1847,11 +1847,11 @@ world::set_player_head(location=location(0,0,0,0,0), name_or_uuid="name_or_uuid"
 
 **Пример использования:**
 ```ts
-world::set_region("minecraft:oak_log[axis=x]", location(0,0,0,0,0), location(0,0,0,0,0));
+world.set_region("minecraft:oak_log[axis=x]", location(0,0,0,0,0), location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-world::set_region(block="minecraft:oak_log[axis=x]", pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0));
+world.set_region(block="minecraft:oak_log[axis=x]", pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -1863,7 +1863,7 @@ world::set_region(block="minecraft:oak_log[axis=x]", pos_1=location(0,0,0,0,0), 
 | pos_2 | Местоположение | Противоположный угол региона |
 
 <h3 id=game_set_scoreboard_line>
-  <code>world::set_scoreboard_line</code>
+  <code>world.set_scoreboard_line</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1873,7 +1873,7 @@ world::set_region(block="minecraft:oak_log[axis=x]", pos_1=location(0,0,0,0,0), 
 
 **Пример использования:**
 ```ts
-world::set_scoreboard_line("id", "line", "display", 1, "format_content", "BLANK");
+world.set_scoreboard_line("id", "line", "display", 1, "format_content", "BLANK");
 
 //Или от объекта
 
@@ -1881,7 +1881,7 @@ world::set_scoreboard_line("id", "line", "display", 1, "format_content", "BLANK"
 
 //Или в сухую по ключам
 
-world::set_scoreboard_line(id="id", line="line", display="display", score=1, format_content="format_content", format="BLANK");
+world.set_scoreboard_line(id="id", line="line", display="display", score=1, format_content="format_content", format="BLANK");
 ```
 
 **Аргументы:**
@@ -1896,7 +1896,7 @@ world::set_scoreboard_line(id="id", line="line", display="display", score=1, for
 | format         | Маркер<br/>**BLANK** - Пустое<br/>**FIXED** - Текстовое<br/>**RESET** - Обычное<br/>**STYLED** - Стиль | Тип формата        |
 
 <h3 id=game_set_scoreboard_line_display>
-  <code>world::set_scoreboard_line_display</code>
+  <code>world.set_scoreboard_line_display</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1906,7 +1906,7 @@ world::set_scoreboard_line(id="id", line="line", display="display", score=1, for
 
 **Пример использования:**
 ```ts
-world::set_scoreboard_line_display("id", "line", "display");
+world.set_scoreboard_line_display("id", "line", "display");
 
 //Или от объекта
 
@@ -1914,7 +1914,7 @@ world::set_scoreboard_line_display("id", "line", "display");
 
 //Или в сухую по ключам
 
-world::set_scoreboard_line_display(id="id", line="line", display="display");
+world.set_scoreboard_line_display(id="id", line="line", display="display");
 ```
 
 **Аргументы:**
@@ -1926,7 +1926,7 @@ world::set_scoreboard_line_display(id="id", line="line", display="display");
 | display | Текст | Отображаемый текст |
 
 <h3 id=game_set_scoreboard_line_format>
-  <code>world::set_scoreboard_line_format</code>
+  <code>world.set_scoreboard_line_format</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1936,7 +1936,7 @@ world::set_scoreboard_line_display(id="id", line="line", display="display");
 
 **Пример использования:**
 ```ts
-world::set_scoreboard_line_format("id", "line", "format_content", "BLANK");
+world.set_scoreboard_line_format("id", "line", "format_content", "BLANK");
 
 //Или от объекта
 
@@ -1944,7 +1944,7 @@ world::set_scoreboard_line_format("id", "line", "format_content", "BLANK");
 
 //Или в сухую по ключам
 
-world::set_scoreboard_line_format(id="id", line="line", format_content="format_content", format="BLANK");
+world.set_scoreboard_line_format(id="id", line="line", format_content="format_content", format="BLANK");
 ```
 
 **Аргументы:**
@@ -1957,7 +1957,7 @@ world::set_scoreboard_line_format(id="id", line="line", format_content="format_c
 | format         | Маркер<br/>**BLANK** - Пустое<br/>**FIXED** - Текстовое<br/>**RESET** - Обычное<br/>**STYLED** - Стиль | Тип формата   |
 
 <h3 id=game_set_scoreboard_number_format>
-  <code>world::set_scoreboard_number_format</code>
+  <code>world.set_scoreboard_number_format</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1967,7 +1967,7 @@ world::set_scoreboard_line_format(id="id", line="line", format_content="format_c
 
 **Пример использования:**
 ```ts
-world::set_scoreboard_number_format("id", "format_content", "BLANK");
+world.set_scoreboard_number_format("id", "format_content", "BLANK");
 
 //Или от объекта
 
@@ -1975,7 +1975,7 @@ world::set_scoreboard_number_format("id", "format_content", "BLANK");
 
 //Или в сухую по ключам
 
-world::set_scoreboard_number_format(id="id", format_content="format_content", format="BLANK");
+world.set_scoreboard_number_format(id="id", format_content="format_content", format="BLANK");
 ```
 
 **Аргументы:**
@@ -1987,7 +1987,7 @@ world::set_scoreboard_number_format(id="id", format_content="format_content", fo
 | format         | Маркер<br/>**BLANK** - Пустое<br/>**FIXED** - Текстовое<br/>**RESET** - Обычное<br/>**STYLED** - Стиль | Тип формата   |
 
 <h3 id=game_set_scoreboard_score>
-  <code>world::set_scoreboard_score</code>
+  <code>world.set_scoreboard_score</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1997,11 +1997,11 @@ world::set_scoreboard_number_format(id="id", format_content="format_content", fo
 
 **Пример использования:**
 ```ts
-world::set_scoreboard_score("id", "text", 1);
+world.set_scoreboard_score("id", "text", 1);
 
 //Или в сухую по ключам
 
-world::set_scoreboard_score(id="id", text="text", score=1);
+world.set_scoreboard_score(id="id", text="text", score=1);
 ```
 
 **Аргументы:**
@@ -2013,7 +2013,7 @@ world::set_scoreboard_score(id="id", text="text", score=1);
 | score | Число | Счёт         |
 
 <h3 id=game_set_scoreboard_title>
-  <code>world::set_scoreboard_title</code>
+  <code>world.set_scoreboard_title</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2023,11 +2023,11 @@ world::set_scoreboard_score(id="id", text="text", score=1);
 
 **Пример использования:**
 ```ts
-world::set_scoreboard_title("id", "title");
+world.set_scoreboard_title("id", "title");
 
 //Или в сухую по ключам
 
-world::set_scoreboard_title(id="id", title="title");
+world.set_scoreboard_title(id="id", title="title");
 ```
 
 **Аргументы:**
@@ -2038,7 +2038,7 @@ world::set_scoreboard_title(id="id", title="title");
 | title | Текст | Новый заголовок |
 
 <h3 id=game_set_sculk_shrieker_can_summon>
-  <code>world::set_sculk_shrieker_can_summon</code>
+  <code>world.set_sculk_shrieker_can_summon</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2050,11 +2050,11 @@ world::set_scoreboard_title(id="id", title="title");
 
 **Пример использования:**
 ```ts
-world::set_sculk_shrieker_can_summon(location(0,0,0,0,0), "FALSE");
+world.set_sculk_shrieker_can_summon(location(0,0,0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-world::set_sculk_shrieker_can_summon(location=location(0,0,0,0,0), can_summon="FALSE");
+world.set_sculk_shrieker_can_summon(location=location(0,0,0,0,0), can_summon="FALSE");
 ```
 
 **Аргументы:**
@@ -2065,7 +2065,7 @@ world::set_sculk_shrieker_can_summon(location=location(0,0,0,0,0), can_summon="F
 | can_summon | Маркер<br/>**FALSE** - Не может призывать<br/>**TRUE** - Может призывать | Возможность призыва          |
 
 <h3 id=game_set_sculk_shrieker_shrieking>
-  <code>world::set_sculk_shrieker_shrieking</code>
+  <code>world.set_sculk_shrieker_shrieking</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2077,11 +2077,11 @@ world::set_sculk_shrieker_can_summon(location=location(0,0,0,0,0), can_summon="F
 
 **Пример использования:**
 ```ts
-world::set_sculk_shrieker_shrieking(location(0,0,0,0,0), "FALSE");
+world.set_sculk_shrieker_shrieking(location(0,0,0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-world::set_sculk_shrieker_shrieking(location=location(0,0,0,0,0), shrieking="FALSE");
+world.set_sculk_shrieker_shrieking(location=location(0,0,0,0,0), shrieking="FALSE");
 ```
 
 **Аргументы:**
@@ -2092,7 +2092,7 @@ world::set_sculk_shrieker_shrieking(location=location(0,0,0,0,0), shrieking="FAL
 | shrieking | Маркер<br/>**FALSE** - Не кричащий<br/>**TRUE** - Кричащий | Состояние                    |
 
 <h3 id=game_set_sculk_shrieker_warning_level>
-  <code>world::set_sculk_shrieker_warning_level</code>
+  <code>world.set_sculk_shrieker_warning_level</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2104,11 +2104,11 @@ world::set_sculk_shrieker_shrieking(location=location(0,0,0,0,0), shrieking="FAL
 
 **Пример использования:**
 ```ts
-world::set_sculk_shrieker_warning_level(location(0,0,0,0,0), 1);
+world.set_sculk_shrieker_warning_level(location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-world::set_sculk_shrieker_warning_level(location=location(0,0,0,0,0), warning_level=1);
+world.set_sculk_shrieker_warning_level(location=location(0,0,0,0,0), warning_level=1);
 ```
 
 **Аргументы:**
@@ -2119,7 +2119,7 @@ world::set_sculk_shrieker_warning_level(location=location(0,0,0,0,0), warning_le
 | warning_level | Число          | Уровень опасности            |
 
 <h3 id=game_set_sign_text>
-  <code>world::set_sign_text</code>
+  <code>world.set_sign_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2131,11 +2131,11 @@ world::set_sculk_shrieker_warning_level(location=location(0,0,0,0,0), warning_le
 
 **Пример использования:**
 ```ts
-world::set_sign_text(location(0,0,0,0,0), "text", 1, "ALL");
+world.set_sign_text(location(0,0,0,0,0), "text", 1, "ALL");
 
 //Или в сухую по ключам
 
-world::set_sign_text(location=location(0,0,0,0,0), text="text", line=1, side="ALL");
+world.set_sign_text(location=location(0,0,0,0,0), text="text", line=1, side="ALL");
 ```
 
 **Аргументы:**
@@ -2148,7 +2148,7 @@ world::set_sign_text(location=location(0,0,0,0,0), text="text", line=1, side="AL
 | side     | Маркер<br/>**ALL** - Все<br/>**BACK** - Задняя<br/>**FRONT** - Передняя | Сторона таблички        |
 
 <h3 id=game_set_sign_text_color>
-  <code>world::set_sign_text_color</code>
+  <code>world.set_sign_text_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2160,11 +2160,11 @@ world::set_sign_text(location=location(0,0,0,0,0), text="text", line=1, side="AL
 
 **Пример использования:**
 ```ts
-world::set_sign_text_color(location(0,0,0,0,0), "ALL", "BLACK", "FALSE");
+world.set_sign_text_color(location(0,0,0,0,0), "ALL", "BLACK", "FALSE");
 
 //Или в сухую по ключам
 
-world::set_sign_text_color(location=location(0,0,0,0,0), side="ALL", sign_text_color="BLACK", glowing="FALSE");
+world.set_sign_text_color(location=location(0,0,0,0,0), side="ALL", sign_text_color="BLACK", glowing="FALSE");
 ```
 
 **Аргументы:**
@@ -2177,7 +2177,7 @@ world::set_sign_text_color(location=location(0,0,0,0,0), side="ALL", sign_text_c
 | glowing         | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить                                                                                                                                                                                                                                                                                                                                                                 | Свечение текста         |
 
 <h3 id=game_set_sign_waxed>
-  <code>world::set_sign_waxed</code>
+  <code>world.set_sign_waxed</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2189,11 +2189,11 @@ world::set_sign_text_color(location=location(0,0,0,0,0), side="ALL", sign_text_c
 
 **Пример использования:**
 ```ts
-world::set_sign_waxed(location(0,0,0,0,0), "FALSE");
+world.set_sign_waxed(location(0,0,0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-world::set_sign_waxed(location=location(0,0,0,0,0), waxed="FALSE");
+world.set_sign_waxed(location=location(0,0,0,0,0), waxed="FALSE");
 ```
 
 **Аргументы:**
@@ -2204,7 +2204,7 @@ world::set_sign_waxed(location=location(0,0,0,0,0), waxed="FALSE");
 | waxed    | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Вощённость              |
 
 <h3 id=game_set_spawner_entity>
-  <code>world::set_spawner_entity</code>
+  <code>world.set_spawner_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2216,7 +2216,7 @@ world::set_sign_waxed(location=location(0,0,0,0,0), waxed="FALSE");
 
 **Пример использования:**
 ```ts
-world::set_spawner_entity(location(0,0,0,0,0), item("stick"));
+world.set_spawner_entity(location(0,0,0,0,0), item("stick"));
 
 //Или от объекта
 
@@ -2224,7 +2224,7 @@ location(0,0,0,0,0).set_spawner_entity(item("stick"));
 
 //Или в сухую по ключам
 
-world::set_spawner_entity(location=location(0,0,0,0,0), entity=item("stick"));
+world.set_spawner_entity(location=location(0,0,0,0,0), entity=item("stick"));
 ```
 
 **Аргументы:**
@@ -2235,7 +2235,7 @@ world::set_spawner_entity(location=location(0,0,0,0,0), entity=item("stick"));
 | entity   | Предмет        | Яйцо призыва сущности   |
 
 <h3 id=game_set_tile_block_custom_tag>
-  <code>world::set_tile_block_custom_tag</code>
+  <code>world.set_tile_block_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2247,11 +2247,11 @@ world::set_spawner_entity(location=location(0,0,0,0,0), entity=item("stick"));
 
 **Пример использования:**
 ```ts
-world::set_tile_block_custom_tag(location(0,0,0,0,0), "tag_name", "tag_value");
+world.set_tile_block_custom_tag(location(0,0,0,0,0), "tag_name", "tag_value");
 
 //Или в сухую по ключам
 
-world::set_tile_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_name", tag_value="tag_value");
+world.set_tile_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_name", tag_value="tag_value");
 ```
 
 **Аргументы:**
@@ -2263,7 +2263,7 @@ world::set_tile_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_nam
 | tag_value | Текст          | Значение кастомного тега      |
 
 <h3 id=game_set_vault_displayed_item>
-  <code>world::set_vault_displayed_item</code>
+  <code>world.set_vault_displayed_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2277,11 +2277,11 @@ world::set_tile_block_custom_tag(location=location(0,0,0,0,0), tag_name="tag_nam
 
 **Пример использования:**
 ```ts
-world::set_vault_displayed_item(location(0,0,0,0,0), item("stick"));
+world.set_vault_displayed_item(location(0,0,0,0,0), item("stick"));
 
 //Или в сухую по ключам
 
-world::set_vault_displayed_item(location=location(0,0,0,0,0), item=item("stick"));
+world.set_vault_displayed_item(location=location(0,0,0,0,0), item=item("stick"));
 ```
 
 **Аргументы:**
@@ -2292,7 +2292,7 @@ world::set_vault_displayed_item(location=location(0,0,0,0,0), item=item("stick")
 | item     | Предмет        | Отображаемый предмет        |
 
 <h3 id=game_set_vault_next_state_update_time>
-  <code>world::set_vault_next_state_update_time</code>
+  <code>world.set_vault_next_state_update_time</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2307,11 +2307,11 @@ world::set_vault_displayed_item(location=location(0,0,0,0,0), item=item("stick")
 
 **Пример использования:**
 ```ts
-world::set_vault_next_state_update_time(location(0,0,0,0,0), 1);
+world.set_vault_next_state_update_time(location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-world::set_vault_next_state_update_time(location=location(0,0,0,0,0), time=1);
+world.set_vault_next_state_update_time(location=location(0,0,0,0,0), time=1);
 ```
 
 **Аргументы:**
@@ -2322,7 +2322,7 @@ world::set_vault_next_state_update_time(location=location(0,0,0,0,0), time=1);
 | time     | Число          | Время                       |
 
 <h3 id=game_set_world_difficulty>
-  <code>world::set_world_difficulty</code>
+  <code>world.set_world_difficulty</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2332,11 +2332,11 @@ world::set_vault_next_state_update_time(location=location(0,0,0,0,0), time=1);
 
 **Пример использования:**
 ```ts
-world::set_world_difficulty("EASY");
+world.set_world_difficulty("EASY");
 
 //Или в сухую по ключам
 
-world::set_world_difficulty(difficulty="EASY");
+world.set_world_difficulty(difficulty="EASY");
 ```
 
 **Аргументы:**
@@ -2346,7 +2346,7 @@ world::set_world_difficulty(difficulty="EASY");
 | difficulty | Маркер<br/>**EASY** - Лёгкая<br/>**HARD** - Сложная<br/>**NORMAL** - Нормальная<br/>**PEACEFUL** - Мирная | Сложность |
 
 <h3 id=game_set_world_gamerule>
-  <code>world::set_gamerule</code>
+  <code>world.set_gamerule</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2358,11 +2358,11 @@ world::set_world_difficulty(difficulty="EASY");
 
 **Пример использования:**
 ```ts
-world::set_gamerule("DISABLE_RAIDS", "value");
+world.set_gamerule("DISABLE_RAIDS", "value");
 
 //Или в сухую по ключам
 
-world::set_gamerule(gamerule="DISABLE_RAIDS", value="value");
+world.set_gamerule(gamerule="DISABLE_RAIDS", value="value");
 ```
 
 **Аргументы:**
@@ -2373,7 +2373,7 @@ world::set_gamerule(gamerule="DISABLE_RAIDS", value="value");
 | value    | Текст                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Значение        |
 
 <h3 id=game_set_world_simulation_distance>
-  <code>world::set_world_simulation_distance</code>
+  <code>world.set_world_simulation_distance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2383,11 +2383,11 @@ world::set_gamerule(gamerule="DISABLE_RAIDS", value="value");
 
 **Пример использования:**
 ```ts
-world::set_world_simulation_distance(1);
+world.set_world_simulation_distance(1);
 
 //Или в сухую по ключам
 
-world::set_world_simulation_distance(distance=1);
+world.set_world_simulation_distance(distance=1);
 ```
 
 **Аргументы:**
@@ -2397,7 +2397,7 @@ world::set_world_simulation_distance(distance=1);
 | distance | Число | Дистанция симуляции в чанках (2-32) |
 
 <h3 id=game_set_world_time>
-  <code>world::set_world_time</code>
+  <code>world.set_world_time</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2407,11 +2407,11 @@ world::set_world_simulation_distance(distance=1);
 
 **Пример использования:**
 ```ts
-world::set_world_time(1);
+world.set_world_time(1);
 
 //Или в сухую по ключам
 
-world::set_world_time(time=1);
+world.set_world_time(time=1);
 ```
 
 **Аргументы:**
@@ -2421,7 +2421,7 @@ world::set_world_time(time=1);
 | time | Число | Время в тиках |
 
 <h3 id=game_set_world_weather>
-  <code>world::set_world_weather</code>
+  <code>world.set_world_weather</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2433,11 +2433,11 @@ world::set_world_time(time=1);
 
 **Пример использования:**
 ```ts
-world::set_world_weather(1, "CLEAR");
+world.set_world_weather(1, "CLEAR");
 
 //Или в сухую по ключам
 
-world::set_world_weather(weather_duration=1, weather_type="CLEAR");
+world.set_world_weather(weather_duration=1, weather_type="CLEAR");
 ```
 
 **Аргументы:**
@@ -2448,7 +2448,7 @@ world::set_world_weather(weather_duration=1, weather_type="CLEAR");
 | weather_type     | Маркер<br/>**CLEAR** - Ясная<br/>**RAINING** - Дождливая<br/>**THUNDER** - Гроза | Тип погоды   |
 
 <h3 id=game_spawn_armor_stand>
-  <code>world::spawn_armor_stand</code>
+  <code>world.spawn_armor_stand</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2458,11 +2458,11 @@ world::set_world_weather(weather_duration=1, weather_type="CLEAR");
 
 **Пример использования:**
 ```ts
-world::spawn_armor_stand(item("stick"), item("stick"), item("stick"), item("stick"), item("stick"), item("stick"), location(0,0,0,0,0), "custom_name", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE");
+world.spawn_armor_stand(item("stick"), item("stick"), item("stick"), item("stick"), item("stick"), item("stick"), location(0,0,0,0,0), "custom_name", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE");
 
 //Или в сухую по ключам
 
-world::spawn_armor_stand(helmet=item("stick"), chestplate=item("stick"), leggings=item("stick"), boots=item("stick"), right_hand=item("stick"), left_hand=item("stick"), location=location(0,0,0,0,0), custom_name="custom_name", gravity="FALSE", marker="FALSE", small="FALSE", show_arms="FALSE", base_plate="FALSE", invisible="FALSE");
+world.spawn_armor_stand(helmet=item("stick"), chestplate=item("stick"), leggings=item("stick"), boots=item("stick"), right_hand=item("stick"), left_hand=item("stick"), location=location(0,0,0,0,0), custom_name="custom_name", gravity="FALSE", marker="FALSE", small="FALSE", show_arms="FALSE", base_plate="FALSE", invisible="FALSE");
 ```
 
 **Аргументы:**
@@ -2485,7 +2485,7 @@ world::spawn_armor_stand(helmet=item("stick"), chestplate=item("stick"), legging
 | invisible   | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Невидимость           |
 
 <h3 id=game_spawn_block_display>
-  <code>world::spawn_block_display</code>
+  <code>world.spawn_block_display</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2495,11 +2495,11 @@ world::spawn_armor_stand(helmet=item("stick"), chestplate=item("stick"), legging
 
 **Пример использования:**
 ```ts
-world::spawn_block_display(location(0,0,0,0,0), "custom_name", "minecraft:oak_log[axis=x]");
+world.spawn_block_display(location(0,0,0,0,0), "custom_name", "minecraft:oak_log[axis=x]");
 
 //Или в сухую по ключам
 
-world::spawn_block_display(spawn_location=location(0,0,0,0,0), custom_name="custom_name", block="minecraft:oak_log[axis=x]");
+world.spawn_block_display(spawn_location=location(0,0,0,0,0), custom_name="custom_name", block="minecraft:oak_log[axis=x]");
 ```
 
 **Аргументы:**
@@ -2511,7 +2511,7 @@ world::spawn_block_display(spawn_location=location(0,0,0,0,0), custom_name="cust
 | block          | Блок           | Отображаемый блок |
 
 <h3 id=game_spawn_effect_cloud>
-  <code>world::spawn_effect_cloud</code>
+  <code>world.spawn_effect_cloud</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2521,11 +2521,11 @@ world::spawn_block_display(spawn_location=location(0,0,0,0,0), custom_name="cust
 
 **Пример использования:**
 ```ts
-world::spawn_effect_cloud(location(0,0,0,0,0), 1, 2, [potion("slow_falling"), potion("slow_falling")], particle("fire"), "custom_name");
+world.spawn_effect_cloud(location(0,0,0,0,0), 1, 2, [potion("slow_falling"), potion("slow_falling")], particle("fire"), "custom_name");
 
 //Или в сухую по ключам
 
-world::spawn_effect_cloud(location=location(0,0,0,0,0), duration=1, radius=2, effects=[potion("slow_falling"), potion("slow_falling")], particle=particle("fire"), custom_name="custom_name");
+world.spawn_effect_cloud(location=location(0,0,0,0,0), duration=1, radius=2, effects=[potion("slow_falling"), potion("slow_falling")], particle=particle("fire"), custom_name="custom_name");
 ```
 
 **Аргументы:**
@@ -2540,7 +2540,7 @@ world::spawn_effect_cloud(location=location(0,0,0,0,0), duration=1, radius=2, ef
 | custom_name | Текст           | Имя                                                        |
 
 <h3 id=game_spawn_end_crystal>
-  <code>world::spawn_end_crystal</code>
+  <code>world.spawn_end_crystal</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2550,11 +2550,11 @@ world::spawn_effect_cloud(location=location(0,0,0,0,0), duration=1, radius=2, ef
 
 **Пример использования:**
 ```ts
-world::spawn_end_crystal(location(0,0,0,0,0), "custom_name", "FALSE");
+world.spawn_end_crystal(location(0,0,0,0,0), "custom_name", "FALSE");
 
 //Или в сухую по ключам
 
-world::spawn_end_crystal(location=location(0,0,0,0,0), custom_name="custom_name", show_bottom="FALSE");
+world.spawn_end_crystal(location=location(0,0,0,0,0), custom_name="custom_name", show_bottom="FALSE");
 ```
 
 **Аргументы:**
@@ -2566,7 +2566,7 @@ world::spawn_end_crystal(location=location(0,0,0,0,0), custom_name="custom_name"
 | show_bottom | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Создание фундамента |
 
 <h3 id=game_spawn_evoker_fangs>
-  <code>world::spawn_evoker_fangs</code>
+  <code>world.spawn_evoker_fangs</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2576,11 +2576,11 @@ world::spawn_end_crystal(location=location(0,0,0,0,0), custom_name="custom_name"
 
 **Пример использования:**
 ```ts
-world::spawn_evoker_fangs(location(0,0,0,0,0), "custom_name");
+world.spawn_evoker_fangs(location(0,0,0,0,0), "custom_name");
 
 //Или в сухую по ключам
 
-world::spawn_evoker_fangs(location=location(0,0,0,0,0), custom_name="custom_name");
+world.spawn_evoker_fangs(location=location(0,0,0,0,0), custom_name="custom_name");
 ```
 
 **Аргументы:**
@@ -2591,7 +2591,7 @@ world::spawn_evoker_fangs(location=location(0,0,0,0,0), custom_name="custom_name
 | custom_name | Текст          | Имя            |
 
 <h3 id=game_spawn_experience_orb>
-  <code>world::spawn_experience_orb</code>
+  <code>world.spawn_experience_orb</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2601,11 +2601,11 @@ world::spawn_evoker_fangs(location=location(0,0,0,0,0), custom_name="custom_name
 
 **Пример использования:**
 ```ts
-world::spawn_experience_orb(location(0,0,0,0,0), 1, "custom_name");
+world.spawn_experience_orb(location(0,0,0,0,0), 1, "custom_name");
 
 //Или в сухую по ключам
 
-world::spawn_experience_orb(location=location(0,0,0,0,0), experience_amount=1, custom_name="custom_name");
+world.spawn_experience_orb(location=location(0,0,0,0,0), experience_amount=1, custom_name="custom_name");
 ```
 
 **Аргументы:**
@@ -2617,7 +2617,7 @@ world::spawn_experience_orb(location=location(0,0,0,0,0), experience_amount=1, c
 | custom_name       | Текст          | Имя              |
 
 <h3 id=game_spawn_eye_of_ender>
-  <code>world::spawn_eye_of_ender</code>
+  <code>world.spawn_eye_of_ender</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2627,11 +2627,11 @@ world::spawn_experience_orb(location=location(0,0,0,0,0), experience_amount=1, c
 
 **Пример использования:**
 ```ts
-world::spawn_eye_of_ender(location(0,0,0,0,0), location(0,0,0,0,0), 1, "custom_name", "DROP");
+world.spawn_eye_of_ender(location(0,0,0,0,0), location(0,0,0,0,0), 1, "custom_name", "DROP");
 
 //Или в сухую по ключам
 
-world::spawn_eye_of_ender(location=location(0,0,0,0,0), destination=location(0,0,0,0,0), lifespan=1, custom_name="custom_name", end_of_lifespan="DROP");
+world.spawn_eye_of_ender(location=location(0,0,0,0,0), destination=location(0,0,0,0,0), lifespan=1, custom_name="custom_name", end_of_lifespan="DROP");
 ```
 
 **Аргументы:**
@@ -2645,7 +2645,7 @@ world::spawn_eye_of_ender(location=location(0,0,0,0,0), destination=location(0,0
 | end_of_lifespan | Маркер<br/>**DROP** - Выпасть предметом<br/>**RANDOM** - Случайно<br/>**SHATTER** - Расколоться | По окончанию       |
 
 <h3 id=game_spawn_falling_block>
-  <code>world::spawn_falling_block</code>
+  <code>world.spawn_falling_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2655,11 +2655,11 @@ world::spawn_eye_of_ender(location=location(0,0,0,0,0), destination=location(0,0
 
 **Пример использования:**
 ```ts
-world::spawn_falling_block("minecraft:oak_log[axis=x]", location(0,0,0,0,0), "name", "FALSE");
+world.spawn_falling_block("minecraft:oak_log[axis=x]", location(0,0,0,0,0), "name", "FALSE");
 
 //Или в сухую по ключам
 
-world::spawn_falling_block(block="minecraft:oak_log[axis=x]", location=location(0,0,0,0,0), name="name", should_expire="FALSE");
+world.spawn_falling_block(block="minecraft:oak_log[axis=x]", location=location(0,0,0,0,0), name="name", should_expire="FALSE");
 ```
 
 **Аргументы:**
@@ -2672,7 +2672,7 @@ world::spawn_falling_block(block="minecraft:oak_log[axis=x]", location=location(
 | should_expire | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Должен исчезать   |
 
 <h3 id=game_spawn_interaction_entity>
-  <code>world::spawn_interaction_entity</code>
+  <code>world.spawn_interaction_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2684,11 +2684,11 @@ world::spawn_falling_block(block="minecraft:oak_log[axis=x]", location=location(
 
 **Пример использования:**
 ```ts
-world::spawn_interaction_entity(location(0,0,0,0,0), "custom_name", 1, 2, "FALSE");
+world.spawn_interaction_entity(location(0,0,0,0,0), "custom_name", 1, 2, "FALSE");
 
 //Или в сухую по ключам
 
-world::spawn_interaction_entity(location=location(0,0,0,0,0), custom_name="custom_name", width=1, height=2, responsive="FALSE");
+world.spawn_interaction_entity(location=location(0,0,0,0,0), custom_name="custom_name", width=1, height=2, responsive="FALSE");
 ```
 
 **Аргументы:**
@@ -2702,7 +2702,7 @@ world::spawn_interaction_entity(location=location(0,0,0,0,0), custom_name="custo
 | responsive  | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Отзывчивость          |
 
 <h3 id=game_spawn_item>
-  <code>world::spawn_item</code>
+  <code>world.spawn_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2712,11 +2712,11 @@ world::spawn_interaction_entity(location=location(0,0,0,0,0), custom_name="custo
 
 **Пример использования:**
 ```ts
-world::spawn_item(location(0,0,0,0,0), item("stick"), "custom_name", "FALSE", "FALSE", "FALSE");
+world.spawn_item(location(0,0,0,0,0), item("stick"), "custom_name", "FALSE", "FALSE", "FALSE");
 
 //Или в сухую по ключам
 
-world::spawn_item(location=location(0,0,0,0,0), item=item("stick"), custom_name="custom_name", can_mob_pickup="FALSE", can_player_pickup="FALSE", apply_motion="FALSE");
+world.spawn_item(location=location(0,0,0,0,0), item=item("stick"), custom_name="custom_name", can_mob_pickup="FALSE", can_player_pickup="FALSE", apply_motion="FALSE");
 ```
 
 **Аргументы:**
@@ -2731,7 +2731,7 @@ world::spawn_item(location=location(0,0,0,0,0), item=item("stick"), custom_name=
 | apply_motion      | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Задать движение предмета при создании |
 
 <h3 id=game_spawn_item_display>
-  <code>world::spawn_item_display</code>
+  <code>world.spawn_item_display</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2741,11 +2741,11 @@ world::spawn_item(location=location(0,0,0,0,0), item=item("stick"), custom_name=
 
 **Пример использования:**
 ```ts
-world::spawn_item_display(location(0,0,0,0,0), "custom_name", item("stick"));
+world.spawn_item_display(location(0,0,0,0,0), "custom_name", item("stick"));
 
 //Или в сухую по ключам
 
-world::spawn_item_display(spawn_location=location(0,0,0,0,0), custom_name="custom_name", displayed_item=item("stick"));
+world.spawn_item_display(spawn_location=location(0,0,0,0,0), custom_name="custom_name", displayed_item=item("stick"));
 ```
 
 **Аргументы:**
@@ -2757,7 +2757,7 @@ world::spawn_item_display(spawn_location=location(0,0,0,0,0), custom_name="custo
 | displayed_item | Предмет        | Отображаемый предмет |
 
 <h3 id=game_spawn_item_frame>
-  <code>world::spawn_item_frame</code>
+  <code>world.spawn_item_frame</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2767,11 +2767,11 @@ world::spawn_item_display(spawn_location=location(0,0,0,0,0), custom_name="custo
 
 **Пример использования:**
 ```ts
-world::spawn_item_frame(location(0,0,0,0,0), item("stick"), "NONE", "NORTH", "TRUE", "TRUE", "TRUE");
+world.spawn_item_frame(location(0,0,0,0,0), item("stick"), "NONE", "NORTH", "TRUE", "TRUE", "TRUE");
 
 //Или в сухую по ключам
 
-world::spawn_item_frame(spawn_location=location(0,0,0,0,0), item=item("stick"), rotation="NONE", block_face="NORTH", glowing="TRUE", visible="TRUE", fixed="TRUE");
+world.spawn_item_frame(spawn_location=location(0,0,0,0,0), item=item("stick"), rotation="NONE", block_face="NORTH", glowing="TRUE", visible="TRUE", fixed="TRUE");
 ```
 
 **Аргументы:**
@@ -2787,7 +2787,7 @@ world::spawn_item_frame(spawn_location=location(0,0,0,0,0), item=item("stick"), 
 | fixed          | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет                                                                                                                                                                                                                                            | Защита содержимого |
 
 <h3 id=game_spawn_lightning_bolt>
-  <code>world::spawn_lightning_bolt</code>
+  <code>world.spawn_lightning_bolt</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2797,11 +2797,11 @@ world::spawn_item_frame(spawn_location=location(0,0,0,0,0), item=item("stick"), 
 
 **Пример использования:**
 ```ts
-world::spawn_lightning_bolt(location(0,0,0,0,0));
+world.spawn_lightning_bolt(location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-world::spawn_lightning_bolt(location=location(0,0,0,0,0));
+world.spawn_lightning_bolt(location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -2811,7 +2811,7 @@ world::spawn_lightning_bolt(location=location(0,0,0,0,0));
 | location | Местоположение | Место создания |
 
 <h3 id=game_spawn_mob>
-  <code>world::spawn_mob</code>
+  <code>world.spawn_mob</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2821,11 +2821,11 @@ world::spawn_lightning_bolt(location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-world::spawn_mob(item("stick"), location(0,0,0,0,0), 1, "custom_name", [potion("slow_falling"), potion("slow_falling")], item("stick"), item("stick"), item("stick"), item("stick"), item("stick"), item("stick"), "FALSE");
+world.spawn_mob(item("stick"), location(0,0,0,0,0), 1, "custom_name", [potion("slow_falling"), potion("slow_falling")], item("stick"), item("stick"), item("stick"), item("stick"), item("stick"), item("stick"), "FALSE");
 
 //Или в сухую по ключам
 
-world::spawn_mob(mob=item("stick"), location=location(0,0,0,0,0), health=1, custom_name="custom_name", potion_effects=[potion("slow_falling"), potion("slow_falling")], main_hand=item("stick"), helmet=item("stick"), chestplate=item("stick"), leggings=item("stick"), boots=item("stick"), off_hand=item("stick"), natural_equipment="FALSE");
+world.spawn_mob(mob=item("stick"), location=location(0,0,0,0,0), health=1, custom_name="custom_name", potion_effects=[potion("slow_falling"), potion("slow_falling")], main_hand=item("stick"), helmet=item("stick"), chestplate=item("stick"), leggings=item("stick"), boots=item("stick"), off_hand=item("stick"), natural_equipment="FALSE");
 ```
 
 **Аргументы:**
@@ -2846,7 +2846,7 @@ world::spawn_mob(mob=item("stick"), location=location(0,0,0,0,0), health=1, cust
 | natural_equipment | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Стандартное снаряжение                               |
 
 <h3 id=game_spawn_painting>
-  <code>world::spawn_painting</code>
+  <code>world.spawn_painting</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2856,11 +2856,11 @@ world::spawn_mob(mob=item("stick"), location=location(0,0,0,0,0), health=1, cust
 
 **Пример использования:**
 ```ts
-world::spawn_painting(location(0,0,0,0,0), "art", "NORTH");
+world.spawn_painting(location(0,0,0,0,0), "art", "NORTH");
 
 //Или в сухую по ключам
 
-world::spawn_painting(spawn_location=location(0,0,0,0,0), art="art", block_face="NORTH");
+world.spawn_painting(spawn_location=location(0,0,0,0,0), art="art", block_face="NORTH");
 ```
 
 **Аргументы:**
@@ -2872,7 +2872,7 @@ world::spawn_painting(spawn_location=location(0,0,0,0,0), art="art", block_face=
 | block_face     | Маркер<br/>**NORTH** - Север<br/>**EAST** - Восток<br/>**SOUTH** - Юг<br/>**WEST** - Запад | Сторона блока    |
 
 <h3 id=game_spawn_primed_tnt>
-  <code>world::spawn_primed_tnt</code>
+  <code>world.spawn_primed_tnt</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2882,11 +2882,11 @@ world::spawn_painting(spawn_location=location(0,0,0,0,0), art="art", block_face=
 
 **Пример использования:**
 ```ts
-world::spawn_primed_tnt(location(0,0,0,0,0), 1, 2, "custom_name", "minecraft:oak_log[axis=x]");
+world.spawn_primed_tnt(location(0,0,0,0,0), 1, 2, "custom_name", "minecraft:oak_log[axis=x]");
 
 //Или в сухую по ключам
 
-world::spawn_primed_tnt(location=location(0,0,0,0,0), tnt_power=1, fuse_duration=2, custom_name="custom_name", block="minecraft:oak_log[axis=x]");
+world.spawn_primed_tnt(location=location(0,0,0,0,0), tnt_power=1, fuse_duration=2, custom_name="custom_name", block="minecraft:oak_log[axis=x]");
 ```
 
 **Аргументы:**
@@ -2900,7 +2900,7 @@ world::spawn_primed_tnt(location=location(0,0,0,0,0), tnt_power=1, fuse_duration
 | block         | Блок           | Блок для маскировки           |
 
 <h3 id=game_spawn_shulker_bullet>
-  <code>world::spawn_shulker_bullet</code>
+  <code>world.spawn_shulker_bullet</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2910,11 +2910,11 @@ world::spawn_primed_tnt(location=location(0,0,0,0,0), tnt_power=1, fuse_duration
 
 **Пример использования:**
 ```ts
-world::spawn_shulker_bullet(location(0,0,0,0,0), "custom_name");
+world.spawn_shulker_bullet(location(0,0,0,0,0), "custom_name");
 
 //Или в сухую по ключам
 
-world::spawn_shulker_bullet(location=location(0,0,0,0,0), custom_name="custom_name");
+world.spawn_shulker_bullet(location=location(0,0,0,0,0), custom_name="custom_name");
 ```
 
 **Аргументы:**
@@ -2925,7 +2925,7 @@ world::spawn_shulker_bullet(location=location(0,0,0,0,0), custom_name="custom_na
 | custom_name | Текст          | Имя            |
 
 <h3 id=game_spawn_text_display>
-  <code>world::spawn_text_display</code>
+  <code>world.spawn_text_display</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2935,11 +2935,11 @@ world::spawn_shulker_bullet(location=location(0,0,0,0,0), custom_name="custom_na
 
 **Пример использования:**
 ```ts
-world::spawn_text_display(location(0,0,0,0,0), "custom_name", ["displayed_text", "displayed_text"], "CONCATENATION");
+world.spawn_text_display(location(0,0,0,0,0), "custom_name", ["displayed_text", "displayed_text"], "CONCATENATION");
 
 //Или в сухую по ключам
 
-world::spawn_text_display(spawn_location=location(0,0,0,0,0), custom_name="custom_name", displayed_text=["displayed_text", "displayed_text"], merging_mode="CONCATENATION");
+world.spawn_text_display(spawn_location=location(0,0,0,0,0), custom_name="custom_name", displayed_text=["displayed_text", "displayed_text"], merging_mode="CONCATENATION");
 ```
 
 **Аргументы:**
@@ -2952,7 +2952,7 @@ world::spawn_text_display(spawn_location=location(0,0,0,0,0), custom_name="custo
 | merging_mode   | Маркер<br/>**CONCATENATION** - Объединение<br/>**SEPARATE_LINES** - Разделение на строки<br/>**SPACES** - Разделение пробелом | Объединение текста                                              |
 
 <h3 id=game_spawn_vehicle>
-  <code>world::spawn_vehicle</code>
+  <code>world.spawn_vehicle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2962,11 +2962,11 @@ world::spawn_text_display(spawn_location=location(0,0,0,0,0), custom_name="custo
 
 **Пример использования:**
 ```ts
-world::spawn_vehicle(item("stick"), location(0,0,0,0,0), "custom_name");
+world.spawn_vehicle(item("stick"), location(0,0,0,0,0), "custom_name");
 
 //Или в сухую по ключам
 
-world::spawn_vehicle(vehicle=item("stick"), location=location(0,0,0,0,0), custom_name="custom_name");
+world.spawn_vehicle(vehicle=item("stick"), location=location(0,0,0,0,0), custom_name="custom_name");
 ```
 
 **Аргументы:**
@@ -2978,7 +2978,7 @@ world::spawn_vehicle(vehicle=item("stick"), location=location(0,0,0,0,0), custom
 | custom_name | Текст          | Имя            |
 
 <h3 id=game_uncancel_event>
-  <code>world::uncancel_event</code>
+  <code>world.uncancel_event</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2988,11 +2988,11 @@ world::spawn_vehicle(vehicle=item("stick"), location=location(0,0,0,0,0), custom
 
 **Пример использования:**
 ```ts
-world::uncancel_event();
+world.uncancel_event();
 ```
 
 <h3 id=game_update_block>
-  <code>world::update_block</code>
+  <code>world.update_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3002,11 +3002,11 @@ world::uncancel_event();
 
 **Пример использования:**
 ```ts
-world::update_block(location(0,0,0,0,0));
+world.update_block(location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-world::update_block(location=location(0,0,0,0,0));
+world.update_block(location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -3016,7 +3016,7 @@ world::update_block(location=location(0,0,0,0,0));
 | location | Местоположение | Местоположение |
 
 <h3 id=if_game_block_equals>
-  <code>world::block_equals</code>
+  <code>world.block_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3027,13 +3027,13 @@ world::update_block(location=location(0,0,0,0,0));
 **Пример использования:**
 ```ts
 if world(block_equals(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(block_equals(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], location=location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3045,7 +3045,7 @@ if world(block_equals(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[ax
 | location | Местоположение | Местоположение блока                                                |
 
 <h3 id=if_game_block_powered>
-  <code>world::block_powered</code>
+  <code>world.block_powered</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3056,13 +3056,13 @@ if world(block_equals(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[ax
 **Пример использования:**
 ```ts
 if world(block_powered([location(0,0,0,0,0), location(0,0,0,0,0)], "DIRECT")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(block_powered(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], power_mode="DIRECT")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3074,7 +3074,7 @@ if world(block_powered(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], pow
 | power_mode | Маркер<br/>**DIRECT** - Прямое запитывание<br/>**INDIRECT** - Непрямое запитывание | Вид запитывания редстоуном                                        |
 
 <h3 id=if_game_chunk_is_loaded>
-  <code>world::chunk_is_loaded</code>
+  <code>world.chunk_is_loaded</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3085,13 +3085,13 @@ if world(block_powered(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], pow
 **Пример использования:**
 ```ts
 if world(chunk_is_loaded(location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(chunk_is_loaded(location=location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3102,7 +3102,7 @@ if world(chunk_is_loaded(location=location(0,0,0,0,0))){
 | location | Местоположение | Местоположение чанка |
 
 <h3 id=if_game_container_has>
-  <code>world::container_has</code>
+  <code>world.container_has</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3113,13 +3113,13 @@ if world(chunk_is_loaded(location=location(0,0,0,0,0))){
 **Пример использования:**
 ```ts
 if world(container_has([item("stick"), item("stick")], location(0,0,0,0,0), "ALL", "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(container_has(items=[item("stick"), item("stick")], location=location(0,0,0,0,0), check_mode="ALL", comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3133,7 +3133,7 @@ if world(container_has(items=[item("stick"), item("stick")], location=location(0
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать только количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения                                                    |
 
 <h3 id=if_game_container_has_room_for_item>
-  <code>world::container_has_room_for_item</code>
+  <code>world.container_has_room_for_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3144,13 +3144,13 @@ if world(container_has(items=[item("stick"), item("stick")], location=location(0
 **Пример использования:**
 ```ts
 if world(container_has_room_for_item([item("stick"), item("stick")], location(0,0,0,0,0), "ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(container_has_room_for_item(items=[item("stick"), item("stick")], location=location(0,0,0,0,0), check_mode="ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3163,7 +3163,7 @@ if world(container_has_room_for_item(items=[item("stick"), item("stick")], locat
 | check_mode | Маркер<br/>**ALL** - Все предметы<br/>**ANY** - Любые предметы | Вид сравнения                                                      |
 
 <h3 id=if_game_damage_cause_equals>
-  <code>world::damage_cause_equals</code>
+  <code>world.damage_cause_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3174,13 +3174,13 @@ if world(container_has_room_for_item(items=[item("stick"), item("stick")], locat
 **Пример использования:**
 ```ts
 if world(damage_cause_equals("BLOCK_EXPLOSION")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(damage_cause_equals(cause="BLOCK_EXPLOSION")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3191,7 +3191,7 @@ if world(damage_cause_equals(cause="BLOCK_EXPLOSION")){
 | cause | Маркер<br/>**BLOCK_EXPLOSION** - Взрыв блока<br/>**CAMPFIRE** - Костёр<br/>**CONTACT** - Контакт<br/>**CRAMMING** - Толпёжка<br/>**CUSTOM** - Кастомный<br/>**DRAGON_BREATH** - Дыхание дракона<br/>**DROWNING** - Утопление<br/>**DRYOUT** - Высыхание<br/>**ENTITY_ATTACK** - Атака сущности<br/>**ENTITY_EXPLOSION** - Взрыв сущности<br/>**ENTITY_SWEEP_ATTACK** - Обширная атака сущности<br/>**FALL** - Падение<br/>**FALLING_BLOCK** - Падающий блок<br/>**FIRE** - Прямой огонь<br/>**FIRE_TICK** - Горение<br/>**FLY_INTO_WALL** - Кинетическая энергия<br/>**FREEZE** - Замерзание<br/>**HOT_FLOOR** - Магма<br/>**KILL** - Команда<br/>**LAVA** - Лава<br/>**LIGHTNING** - Молния<br/>**MAGIC** - Магия<br/>**MELTING** - Таяние<br/>**POISON** - Отравление<br/>**PROJECTILE** - Снаряд<br/>**SONIC_BOOM** - Взрывная волна<br/>**STARVATION** - Голод<br/>**SUFFOCATION** - Удушение<br/>**SUICIDE** - Суицид (грех)<br/>**THORNS** - Шипы<br/>**VOID** - Бездна<br/>**WITHER** - Иссушение<br/>**WORLD_BORDER** - Граница мира | Источник урона |
 
 <h3 id=if_game_dummy>
-  <code>world::is_dummy</code>
+  <code>world.is_dummy</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3202,12 +3202,12 @@ if world(damage_cause_equals(cause="BLOCK_EXPLOSION")){
 **Пример использования:**
 ```ts
 if world(is_dummy()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_game_event_attack_is_critical>
-  <code>world::event_attack_is_critical</code>
+  <code>world.event_attack_is_critical</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3218,12 +3218,12 @@ if world(is_dummy()){
 **Пример использования:**
 ```ts
 if world(event_attack_is_critical()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_game_event_block_equals>
-  <code>world::event_block_equals</code>
+  <code>world.event_block_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3234,13 +3234,13 @@ if world(event_attack_is_critical()){
 **Пример использования:**
 ```ts
 if world(event_block_equals(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], [location(0,0,0,0,0), location(0,0,0,0,0)])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(event_block_equals(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], locations=[location(0,0,0,0,0), location(0,0,0,0,0)])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3252,7 +3252,7 @@ if world(event_block_equals(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_
 | locations | Список\[Местоположение\] | Местоположения блоков для проверки<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_game_event_has_input>
-  <code>world::event_has_input</code>
+  <code>world.event_has_input</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3267,13 +3267,13 @@ if world(event_block_equals(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_
 **Пример использования:**
 ```ts
 if world(event_has_input("FORWARD")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(event_has_input(input_type="FORWARD")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3284,7 +3284,7 @@ if world(event_has_input(input_type="FORWARD")){
 | input_type | Маркер<br/>**FORWARD** - Вперёд<br/>**BACKWARDS** - Назад<br/>**LEFT** - Влево<br/>**RIGHT** - Вправо<br/>**JUMP** - Прыжок<br/>**SNEAK** - Приседание<br/>**SPRINT** - Бег | Клавиша передвижения |
 
 <h3 id=if_game_event_is_canceled>
-  <code>world::event_is_canceled</code>
+  <code>world.event_is_canceled</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3295,12 +3295,12 @@ if world(event_has_input(input_type="FORWARD")){
 **Пример использования:**
 ```ts
 if world(event_is_canceled()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_game_event_item_equals>
-  <code>world::event_item_equals</code>
+  <code>world.event_item_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3311,13 +3311,13 @@ if world(event_is_canceled()){
 **Пример использования:**
 ```ts
 if world(event_item_equals([item("stick"), item("stick")], "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(event_item_equals(items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3329,7 +3329,7 @@ if world(event_item_equals(items=[item("stick"), item("stick")], comparison_mode
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать только количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения                                                    |
 
 <h3 id=if_game_has_player>
-  <code>world::has_player</code>
+  <code>world.has_player</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3340,13 +3340,13 @@ if world(event_item_equals(items=[item("stick"), item("stick")], comparison_mode
 **Пример использования:**
 ```ts
 if world(has_player(["names_or_uuids", "names_or_uuids"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(has_player(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3357,7 +3357,7 @@ if world(has_player(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
 | names_or_uuids | Список\[Текст\] | Ник игрока или UUID<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_game_heal_cause_equals>
-  <code>world::heal_cause_equals</code>
+  <code>world.heal_cause_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3368,13 +3368,13 @@ if world(has_player(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
 **Пример использования:**
 ```ts
 if world(heal_cause_equals("CUSTOM")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(heal_cause_equals(heal_cause="CUSTOM")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3385,7 +3385,7 @@ if world(heal_cause_equals(heal_cause="CUSTOM")){
 | heal_cause | Маркер<br/>**CUSTOM** - Кастомный<br/>**EATING** - От употребления пищи<br/>**ENDER_CRYSTAL** - От кристалла Энда<br/>**MAGIC** - От зелья или заклинания<br/>**MAGIC_REGEN** - Со временем от зелья или заклинания<br/>**REGEN** - Исцеление в Мирном режиме<br/>**SATIATED** - Исцеление при утолённом голоде<br/>**WITHER** - От эффекта Иссушение<br/>**WITHER_SPAWN** - При появлении Иссушителя | Источник исцеления |
 
 <h3 id=if_game_ignite_cause_equals>
-  <code>world::ignite_cause_equals</code>
+  <code>world.ignite_cause_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3396,13 +3396,13 @@ if world(heal_cause_equals(heal_cause="CUSTOM")){
 **Пример использования:**
 ```ts
 if world(ignite_cause_equals("ARROW")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(ignite_cause_equals(cause="ARROW")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3413,7 +3413,7 @@ if world(ignite_cause_equals(cause="ARROW")){
 | cause | Маркер<br/>**ARROW** - Стрела<br/>**ENDER_CRYSTAL** - Кристалл Энда<br/>**EXPLOSION** - Взрыв<br/>**FALL** - Падение<br/>**FIREBALL** - Огненный заряд<br/>**FLINT_AND_STEEL** - Зажигалка<br/>**LAVA** - Лава<br/>**LIGHTNING** - Молния<br/>**SPREAD** - Распространение огня<br/>**SUFFOCATION** - Удушение | Источник огня |
 
 <h3 id=if_game_instrument_equals>
-  <code>world::instrument_equals</code>
+  <code>world.instrument_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3424,13 +3424,13 @@ if world(ignite_cause_equals(cause="ARROW")){
 **Пример использования:**
 ```ts
 if world(instrument_equals("BANJO")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(instrument_equals(instrument="BANJO")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3441,7 +3441,7 @@ if world(instrument_equals(instrument="BANJO")){
 | instrument | Маркер<br/>**BANJO** - Банджо<br/>**BASS_DRUM** - Бас-барабан<br/>**BASS_GUITAR** - Бас-гитара<br/>**BELL** - Колокол<br/>**BIT** - Бит<br/>**CHIME** - Чаймс<br/>**COW_BELL** - Ковбелл<br/>**CREEPER** - Крипер<br/>**CUSTOM_HEAD** - Кастомная голова<br/>**DIDGERIDOO** - Диджериду<br/>**DRAGON** - Эндер-дракон<br/>**FLUTE** - Флейта<br/>**GUITAR** - Гитара<br/>**IRON_XYLOPHONE** - Железный ксилофон<br/>**PIANO** - Пианино<br/>**PIGLIN** - Пиглин<br/>**PLING** - Плинг<br/>**SKELETON** - Скелет<br/>**SNARE_DRUM** - Малый барабан<br/>**STICKS** - Клаве<br/>**WITHER_SKELETON** - Визер-скелет<br/>**XYLOPHONE** - Ксилофон<br/>**ZOMBIE** - Зомби | Инструмент |
 
 <h3 id=if_game_location_in_block>
-  <code>world::location_in_block</code>
+  <code>world.location_in_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3452,13 +3452,13 @@ if world(instrument_equals(instrument="BANJO")){
 **Пример использования:**
 ```ts
 if world(location_in_block(location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(location_in_block(location=location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -3469,7 +3469,7 @@ if world(location_in_block(location=location(0,0,0,0,0))){
 | location | Местоположение | Местоположение для проверки |
 
 <h3 id=if_game_sign_contains>
-  <code>world::sign_contains</code>
+  <code>world.sign_contains</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3480,13 +3480,13 @@ if world(location_in_block(location=location(0,0,0,0,0))){
 **Пример использования:**
 ```ts
 if world(sign_contains(location(0,0,0,0,0), ["texts", "texts"], "ANY", "ALL", "ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if world(sign_contains(location=location(0,0,0,0,0), texts=["texts", "texts"], check_side="ANY", check_mode="ALL", lines="ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
