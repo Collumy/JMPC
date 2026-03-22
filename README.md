@@ -151,10 +151,13 @@ save`varName` = 5
 ## Плейсхолдеры
 
 Плейсхолдеры позволяют выполнять вычисления и подстановки прямо внутри текста и имён переменных.  
-Они записываются в виде:
 
 ```ts
+// Они записываются в виде:
 ${выражение}$
+
+// Или
+$Выражение
 ```
 
 Например:
@@ -197,11 +200,11 @@ a = num("5 + 3 * 2")   // → %math(5+3*2)
 Примеры:
 
 ```ts
-player.message("Coins: ${ g`coins` }$")
+player.message("Coins: $g`coins`")
 
 player.message("Первый элемент: ${ s`items`[0] }$")
 
-player.message("Размер списка: $< len(l`inventory`) >")
+player.message("Размер списка: $len(l`inventory`)")
 ```
 
 [📓 Все плейсхолдеры](./documentation/values/placeholders.md)
@@ -423,19 +426,19 @@ d: list.sort()
 ### Условия
 
 ```ts
-if player(is_flying()):
+if player.is_flying():
     player.message("Игрок летает!")
 
 
 //или инвертируйте условие
 
-if player(not is_flying()):  // можно указать как not, так и ! для отрицания
+if not player.is_flying():  // можно указать как not, так и ! для отрицания
     player.message("Игрок летает!")
 
 
 //Другой способ
 
-if player(is_flying()):
+if player.is_flying():
     player.message("Игрок летает!")
 else:
    player.message("Игрок не летает!")
@@ -443,11 +446,11 @@ else:
 
 //Используй elif и else if
 
-if player(is_flying()):
+if player.is_flying():
     player.message("Игрок летает!")
-else if player(is_sneaking()):
+else if player.is_sneaking():
     player.message("Игрок крадётся!")
-elif player(is_sprinting()):
+elif player.is_sprinting():
     player.message("Игрок бежит!")
 else:
     player.message("Игрок ничего не делает")
