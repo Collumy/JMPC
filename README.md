@@ -507,7 +507,8 @@ controller.catch(var): // поймать ошибку
 controller.measure():  // измерить время выполнения
 
 select.player_by_name()                                // выбрать игрока по имени
-select.player_by_conditional(player(is_sneaking()))    // выбрать игрока если игрок крадётся
+select.player_by_conditional(player.is_sneaking())     // выбрать игрока если игрок крадётся
+select.player(player.is_sneaking())                    // то же самое, что и верхнее
 ```
 
 [📓 Контроль действий](./documentation/actions/code_control.md)
