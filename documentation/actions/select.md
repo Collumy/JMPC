@@ -1,5 +1,10 @@
 # Селектор
 
+Начиная с v1.2.0 можно не писать _by_conditional, например
+add_player_by_conditional -> add_player()
+
+---
+
 <h3 id=select_add_all_entities>
   <code>select.add_all_entities</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
