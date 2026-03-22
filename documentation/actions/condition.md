@@ -20,7 +20,7 @@ else:
 
 ## Использование
 
-Заместо `if(player::is_flying())` как в jmcc, здесь нужно писать `if player(is_flying())`.
+Заместо `if(player::is_flying())` как в jmcc, здесь нужно писать `if player.is_flying() либо if player(is_flying())`.
 То есть просто выносите player, entity, world, variable за скобку.
 Если же вы ничего не укажите: `if ()`, то это активирует режим кастомных условий:
 
@@ -36,14 +36,18 @@ event player_join:
     // строковые проверки
     if text.contains("hello"):             
     if (username.startswith("Mr","Mrs","Dr")): 
-    if (filename.endswith(".txt",".log")):   
+    if (filename.endswith(".txt",".log")):  
+
+    // Если есть в списке/словаре
+    if l`player`, l`player2` in list(g`myList`)
+    if l`player`, in dict(g`myDict`)
 ```
 
 ## Отрицание
 
-Поставьте `not` или `!` сразу после открывающей скобки:
+Поставьте `not` или `!` сразу после if:
 
 ```ts
-if (not player(is_sneaking())):
-if (!player(is_flying())):
+if not player.is_sneaking():
+if !player(is_flying())):
 ```
