@@ -3,7 +3,7 @@
 </h2>
 
 <h3 id=if_variable_block_is_minecraft_tagged>
-  <code>variable::block_is_minecraft_tagged</code>
+  <code>variable.block_is_minecraft_tagged</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -16,13 +16,13 @@
 **Пример использования:**
 ```ts
 if variable(block_is_minecraft_tagged("minecraft:oak_log[axis=x]", "namespace")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(block_is_minecraft_tagged(block="minecraft:oak_log[axis=x]", namespace="namespace")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -34,7 +34,7 @@ if variable(block_is_minecraft_tagged(block="minecraft:oak_log[axis=x]", namespa
 | namespace | Текст | Minecraft-тег     |
 
 <h3 id=if_variable_block_is_solid>
-  <code>variable::block_is_solid</code>
+  <code>variable.block_is_solid</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -45,19 +45,19 @@ if variable(block_is_minecraft_tagged(block="minecraft:oak_log[axis=x]", namespa
 **Пример использования:**
 ```ts
 if variable(block_is_solid("minecraft:oak_log[axis=x]")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if("minecraft:oak_log[axis=x]".block_is_solid()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(block_is_solid(block="minecraft:oak_log[axis=x]")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -68,7 +68,7 @@ if variable(block_is_solid(block="minecraft:oak_log[axis=x]")){
 | block | Блок | Блок для проверки |
 
 <h3 id=if_variable_dummy>
-  <code>variable::is_dummy</code>
+  <code>variable.is_dummy</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -79,12 +79,12 @@ if variable(block_is_solid(block="minecraft:oak_log[axis=x]")){
 **Пример использования:**
 ```ts
 if variable(is_dummy()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_variable_equals>
-  <code>variable::equals</code>
+  <code>variable.equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -95,19 +95,19 @@ if variable(is_dummy()){
 **Пример использования:**
 ```ts
 if variable(equals("any value", ["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if("any value".equals(["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(equals(value="any value", compare=["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -119,7 +119,7 @@ if variable(equals(value="any value", compare=["any value", "any value"])){
 | compare | Список\[Любое значение\] | Сравниваемые значения<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_variable_exists>
-  <code>variable::exists</code>
+  <code>variable.exists</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -130,19 +130,19 @@ if variable(equals(value="any value", compare=["any value", "any value"])){
 **Пример использования:**
 ```ts
 if variable(exists(`variable`)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if(`variable`.exists()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(exists(variable=`variable`)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -153,7 +153,7 @@ if variable(exists(variable=`variable`)){
 | variable | Переменная | Переменная для проверки |
 
 <h3 id=if_variable_greater>
-  <code>variable::greater</code>
+  <code>variable.greater</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -164,19 +164,19 @@ if variable(exists(variable=`variable`)){
 **Пример использования:**
 ```ts
 if variable(greater(1, 2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if((1).greater(2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(greater(value=1, compare=2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -188,7 +188,7 @@ if variable(greater(value=1, compare=2)){
 | compare | Число | Сравниваемое значение   |
 
 <h3 id=if_variable_greater_or_equals>
-  <code>variable::greater_or_equals</code>
+  <code>variable.greater_or_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -199,19 +199,19 @@ if variable(greater(value=1, compare=2)){
 **Пример использования:**
 ```ts
 if variable(greater_or_equals(1, 2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if((1).greater_or_equals(2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(greater_or_equals(value=1, compare=2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -223,7 +223,7 @@ if variable(greater_or_equals(value=1, compare=2)){
 | compare | Число | Сравниваемое значение   |
 
 <h3 id=if_variable_in_range>
-  <code>variable::in_range</code>
+  <code>variable.in_range</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -237,19 +237,19 @@ if variable(greater_or_equals(value=1, compare=2)){
 **Пример использования:**
 ```ts
 if variable(in_range("any value", "any value", "any value")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if("any value".in_range("any value", "any value")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(in_range(value="any value", min="any value", max="any value")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -262,7 +262,7 @@ if variable(in_range(value="any value", min="any value", max="any value")){
 | max   | Любое значение | Максимальное значение   |
 
 <h3 id=if_variable_is_type>
-  <code>variable::is_type</code>
+  <code>variable.is_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -273,19 +273,19 @@ if variable(in_range(value="any value", min="any value", max="any value")){
 **Пример использования:**
 ```ts
 if variable(is_type("any value", "ARRAY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if("any value".is_type("ARRAY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(is_type(value="any value", variable_type="ARRAY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -297,7 +297,7 @@ if variable(is_type(value="any value", variable_type="ARRAY")){
 | variable_type | Маркер<br/>**ARRAY** - Список<br/>**ITEM** - Предмет<br/>**LOCATION** - Местоположение<br/>**MAP** - Словарь<br/>**NUMBER** - Число<br/>**PARTICLE** - Частица<br/>**POTION** - Зелье<br/>**SOUND** - Звук<br/>**TEXT** - Текст<br/>**VECTOR** - Вектор | Тип переменной          |
 
 <h3 id=if_variable_item_equals>
-  <code>variable::item_equals</code>
+  <code>variable.item_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -308,19 +308,19 @@ if variable(is_type(value="any value", variable_type="ARRAY")){
 **Пример использования:**
 ```ts
 if variable(item_equals(item("stick"), [item("stick"), item("stick")], "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if(item("stick").item_equals([item("stick"), item("stick")], "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(item_equals(value=item("stick"), compare=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -333,7 +333,7 @@ if variable(item_equals(value=item("stick"), compare=[item("stick"), item("stick
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения                                                    |
 
 <h3 id=if_variable_item_has_enchantment>
-  <code>variable::item_has_enchantment</code>
+  <code>variable.item_has_enchantment</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -344,19 +344,19 @@ if variable(item_equals(value=item("stick"), compare=[item("stick"), item("stick
 **Пример использования:**
 ```ts
 if variable(item_has_enchantment(item("stick"), "enchant", 1)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if(item("stick").item_has_enchantment("enchant", 1)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(item_has_enchantment(item=item("stick"), enchant="enchant", level=1)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -369,7 +369,7 @@ if variable(item_has_enchantment(item=item("stick"), enchant="enchant", level=1)
 | level   | Число   | Уровень               |
 
 <h3 id=if_variable_item_has_tag>
-  <code>variable::item_has_tag</code>
+  <code>variable.item_has_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -380,19 +380,19 @@ if variable(item_has_enchantment(item=item("stick"), enchant="enchant", level=1)
 **Пример использования:**
 ```ts
 if variable(item_has_tag(item("stick"), "tag", ["value", "value"], "CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if(item("stick").item_has_tag("tag", ["value", "value"], "CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(item_has_tag(item=item("stick"), tag="tag", value=["value", "value"], compare_type="CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -406,7 +406,7 @@ if variable(item_has_tag(item=item("stick"), tag="tag", value=["value", "value"]
 | compare_type | Маркер<br/>**CONTAINS** - Содержит<br/>**ENDS_WITH** - Заканчивается на<br/>**EQUALS** - Точное соответствие<br/>**STARTS_WITH** - Начинается на | Тип сравнения                                              |
 
 <h3 id=if_variable_item_is_block>
-  <code>variable::item_is_block</code>
+  <code>variable.item_is_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -417,19 +417,19 @@ if variable(item_has_tag(item=item("stick"), tag="tag", value=["value", "value"]
 **Пример использования:**
 ```ts
 if variable(item_is_block(item("stick"))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if(item("stick").item_is_block()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(item_is_block(item=item("stick"))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -440,7 +440,7 @@ if variable(item_is_block(item=item("stick"))){
 | item | Предмет | Предмет для проверки |
 
 <h3 id=if_variable_item_is_minecraft_tagged>
-  <code>variable::item_is_minecraft_tagged</code>
+  <code>variable.item_is_minecraft_tagged</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -453,13 +453,13 @@ if variable(item_is_block(item=item("stick"))){
 **Пример использования:**
 ```ts
 if variable(item_is_minecraft_tagged(item("stick"), "namespace")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(item_is_minecraft_tagged(item=item("stick"), namespace="namespace")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -471,7 +471,7 @@ if variable(item_is_minecraft_tagged(item=item("stick"), namespace="namespace"))
 | namespace | Текст   | Minecraft-тег        |
 
 <h3 id=if_variable_less>
-  <code>variable::less</code>
+  <code>variable.less</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -482,19 +482,19 @@ if variable(item_is_minecraft_tagged(item=item("stick"), namespace="namespace"))
 **Пример использования:**
 ```ts
 if variable(less(1, 2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if((1).less(2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(less(value=1, compare=2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -506,7 +506,7 @@ if variable(less(value=1, compare=2)){
 | compare | Число | Сравниваемое значение   |
 
 <h3 id=if_variable_less_or_equals>
-  <code>variable::less_or_equals</code>
+  <code>variable.less_or_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -517,19 +517,19 @@ if variable(less(value=1, compare=2)){
 **Пример использования:**
 ```ts
 if variable(less_or_equals(1, 2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if((1).less_or_equals(2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(less_or_equals(value=1, compare=2)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -541,7 +541,7 @@ if variable(less_or_equals(value=1, compare=2)){
 | compare | Число | Сравниваемое значение   |
 
 <h3 id=if_variable_list_contains_value>
-  <code>variable::list_contains_value</code>
+  <code>variable.list_contains_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -552,19 +552,19 @@ if variable(less_or_equals(value=1, compare=2)){
 **Пример использования:**
 ```ts
 if variable(list_contains_value([`list`, `list`], ["any value", "any value"], "ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if([`list`, `list`].list_contains_value(["any value", "any value"], "ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(list_contains_value(list=[`list`, `list`], values=["any value", "any value"], check_mode="ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -577,7 +577,7 @@ if variable(list_contains_value(list=[`list`, `list`], values=["any value", "any
 | check_mode | Маркер<br/>**ALL** - Все значения<br/>**ANY** - Любое значение | Режим проверки                                                     |
 
 <h3 id=if_variable_list_is_empty>
-  <code>variable::list_is_empty</code>
+  <code>variable.list_is_empty</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -595,19 +595,19 @@ if variable(list_contains_value(list=[`list`, `list`], values=["any value", "any
 **Пример использования:**
 ```ts
 if variable(list_is_empty("any value")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if("any value".list_is_empty()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(list_is_empty(list="any value")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -618,7 +618,7 @@ if variable(list_is_empty(list="any value")){
 | list | Любое значение | Значение для проверки |
 
 <h3 id=if_variable_list_value_equals>
-  <code>variable::list_value_equals</code>
+  <code>variable.list_value_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -629,19 +629,19 @@ if variable(list_is_empty(list="any value")){
 **Пример использования:**
 ```ts
 if variable(list_value_equals([`list`, `list`], 1, ["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if([`list`, `list`].list_value_equals(1, ["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(list_value_equals(list=[`list`, `list`], index=1, values=["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -654,7 +654,7 @@ if variable(list_value_equals(list=[`list`, `list`], index=1, values=["any value
 | values | Список\[Любое значение\] | Сравниваемые значения<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_variable_location_in_range>
-  <code>variable::location_in_range</code>
+  <code>variable.location_in_range</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -665,19 +665,19 @@ if variable(list_value_equals(list=[`list`, `list`], index=1, values=["any value
 **Пример использования:**
 ```ts
 if variable(location_in_range(location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), "BLOCK")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if(location(0,0,0,0,0).location_in_range(location(0,0,0,0,0), location(0,0,0,0,0), "BLOCK")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(location_in_range(value=location(0,0,0,0,0), min=location(0,0,0,0,0), max=location(0,0,0,0,0), border_handling="BLOCK")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -691,7 +691,7 @@ if variable(location_in_range(value=location(0,0,0,0,0), min=location(0,0,0,0,0)
 | border_handling | Маркер<br/>**BLOCK** - Округление до координат блока<br/>**EXACT** - Точные координаты<br/>**FULL_BLOCK_RANGE** - Округление до мин. и макс. угла блоков | Режим проверки              |
 
 <h3 id=if_variable_location_is_near>
-  <code>variable::location_is_near</code>
+  <code>variable.location_is_near</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -702,19 +702,19 @@ if variable(location_in_range(value=location(0,0,0,0,0), min=location(0,0,0,0,0)
 **Пример использования:**
 ```ts
 if variable(location_is_near(location(0,0,0,0,0), 1, [location(0,0,0,0,0), location(0,0,0,0,0)], "CIRCLE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if(location(0,0,0,0,0).location_is_near(1, [location(0,0,0,0,0), location(0,0,0,0,0)], "CIRCLE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(location_is_near(location=location(0,0,0,0,0), radius=1, check=[location(0,0,0,0,0), location(0,0,0,0,0)], shape="CIRCLE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -728,7 +728,7 @@ if variable(location_is_near(location=location(0,0,0,0,0), radius=1, check=[loca
 | shape    | Маркер<br/>**CIRCLE** - Круг<br/>**CUBE** - Куб<br/>**SPHERE** - Сфера<br/>**SQUARE** - Квадрат | Фигура                                                                    |
 
 <h3 id=if_variable_map_has_key>
-  <code>variable::map_has_key</code>
+  <code>variable.map_has_key</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -739,19 +739,19 @@ if variable(location_is_near(location=location(0,0,0,0,0), radius=1, check=[loca
 **Пример использования:**
 ```ts
 if variable(map_has_key({"map":`map`}, ["any value", "any value"], "ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if({"map":`map`}.map_has_key(["any value", "any value"], "ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(map_has_key(map={"map":`map`}, key=["any value", "any value"], check_mode="ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -764,7 +764,7 @@ if variable(map_has_key(map={"map":`map`}, key=["any value", "any value"], check
 | check_mode | Маркер<br/>**ALL** - Все указанные ключи<br/>**ANY** - Любой из указанных ключей | Тип проверки                                      |
 
 <h3 id=if_variable_map_value_equals>
-  <code>variable::map_value_equals</code>
+  <code>variable.map_value_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -775,19 +775,19 @@ if variable(map_has_key(map={"map":`map`}, key=["any value", "any value"], check
 **Пример использования:**
 ```ts
 if variable(map_value_equals({"map":`map`}, "any value", ["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if({"map":`map`}.map_value_equals("any value", ["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(map_value_equals(map={"map":`map`}, key="any value", values=["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -800,7 +800,7 @@ if variable(map_value_equals(map={"map":`map`}, key="any value", values=["any va
 | values | Список\[Любое значение\] | Сравниваемые значения<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_variable_not_equals>
-  <code>variable::not_equals</code>
+  <code>variable.not_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -811,19 +811,19 @@ if variable(map_value_equals(map={"map":`map`}, key="any value", values=["any va
 **Пример использования:**
 ```ts
 if variable(not_equals("any value", ["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if("any value".not_equals(["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(not_equals(value="any value", compare=["any value", "any value"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -835,7 +835,7 @@ if variable(not_equals(value="any value", compare=["any value", "any value"])){
 | compare | Список\[Любое значение\] | Сравниваемые значения<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_variable_number_in_range>
-  <code>variable::number_in_range</code>
+  <code>variable.number_in_range</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -846,13 +846,13 @@ if variable(not_equals(value="any value", compare=["any value", "any value"])){
 **Пример использования:**
 ```ts
 if variable(number_in_range(1, 2, 3, "NOT_INCLUDE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(number_in_range(value=1, min=2, max=3, including="NOT_INCLUDE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -866,7 +866,7 @@ if variable(number_in_range(value=1, min=2, max=3, including="NOT_INCLUDE")){
 | including | Маркер<br/>**NOT_INCLUDE** - Не учитывать "от" и "до"<br/>**INCLUDE_FIRST** - Учитывать "от"<br/>**INCLUDE_LAST** - Учитывать "до"<br/>**INCLUDE_ALL** - Учитывать "от" и "до" | Тип границ диапазона |
 
 <h3 id=if_variable_range_intersects_range>
-  <code>variable::range_intersects_range</code>
+  <code>variable.range_intersects_range</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -877,13 +877,13 @@ if variable(number_in_range(value=1, min=2, max=3, including="NOT_INCLUDE")){
 **Пример использования:**
 ```ts
 if variable(range_intersects_range(location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), "CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(range_intersects_range(min1=location(0,0,0,0,0), max1=location(0,0,0,0,0), min2=location(0,0,0,0,0), max2=location(0,0,0,0,0), check_type="CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -898,7 +898,7 @@ if variable(range_intersects_range(min1=location(0,0,0,0,0), max1=location(0,0,0
 | check_type | Маркер<br/>**CONTAINS** - Содержит<br/>**OVERLAPS** - Пересекается | Тип проверки                |
 
 <h3 id=if_variable_text_contains>
-  <code>variable::text_contains</code>
+  <code>variable.text_contains</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -909,19 +909,19 @@ if variable(range_intersects_range(min1=location(0,0,0,0,0), max1=location(0,0,0
 **Пример использования:**
 ```ts
 if variable(text_contains("value", ["compare", "compare"], "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if("value".text_contains(["compare", "compare"], "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(text_contains(value="value", compare=["compare", "compare"], ignore_case="FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -934,7 +934,7 @@ if variable(text_contains(value="value", compare=["compare", "compare"], ignore_
 | ignore_case | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Игнорировать регистр                                            |
 
 <h3 id=if_variable_text_ends_with>
-  <code>variable::text_ends_with</code>
+  <code>variable.text_ends_with</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -945,19 +945,19 @@ if variable(text_contains(value="value", compare=["compare", "compare"], ignore_
 **Пример использования:**
 ```ts
 if variable(text_ends_with("value", ["compare", "compare"], "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if("value".text_ends_with(["compare", "compare"], "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(text_ends_with(value="value", compare=["compare", "compare"], ignore_case="FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -970,7 +970,7 @@ if variable(text_ends_with(value="value", compare=["compare", "compare"], ignore
 | ignore_case | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Игнорировать регистр                                             |
 
 <h3 id=if_variable_text_matches>
-  <code>variable::text_matches</code>
+  <code>variable.text_matches</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -981,19 +981,19 @@ if variable(text_ends_with(value="value", compare=["compare", "compare"], ignore
 **Пример использования:**
 ```ts
 if variable(text_matches("match", ["values", "values"], "FALSE", "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if("match".text_matches(["values", "values"], "FALSE", "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(text_matches(match="match", values=["values", "values"], regular_expressions="FALSE", ignore_case="FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -1007,7 +1007,7 @@ if variable(text_matches(match="match", values=["values", "values"], regular_exp
 | ignore_case         | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да                     | Игнорировать регистр                                                           |
 
 <h3 id=if_variable_text_starts_with>
-  <code>variable::text_starts_with</code>
+  <code>variable.text_starts_with</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1018,19 +1018,19 @@ if variable(text_matches(match="match", values=["values", "values"], regular_exp
 **Пример использования:**
 ```ts
 if variable(text_starts_with("value", ["compare", "compare"], "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или от объекта
 
 if("value".text_starts_with(["compare", "compare"], "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if variable(text_starts_with(value="value", compare=["compare", "compare"], ignore_case="FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -1043,7 +1043,7 @@ if variable(text_starts_with(value="value", compare=["compare", "compare"], igno
 | ignore_case | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Игнорировать регистр                                             |
 
 <h3 id=set_variable_absolute>
-  <code>variable::absolute</code>
+  <code>variable.absolute</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1053,7 +1053,7 @@ if variable(text_starts_with(value="value", compare=["compare", "compare"], igno
 
 **Пример использования:**
 ```ts
-`variable` = variable::absolute(1);
+`variable` = variable.absolute(1);
 
 //Или от объекта
 
@@ -1061,11 +1061,11 @@ if variable(text_starts_with(value="value", compare=["compare", "compare"], igno
 
 //Или в сухую позиционно
 
-variable::absolute(`variable`, 1);
+variable.absolute(`variable`, 1);
 
 //Или в сухую по ключам
 
-variable::absolute(variable=`variable`, number=1);
+variable.absolute(variable=`variable`, number=1);
 ```
 
 **Аргументы:**
@@ -1076,7 +1076,7 @@ variable::absolute(variable=`variable`, number=1);
 | number   | Число               | Число в модуле            |
 
 <h3 id=set_variable_add>
-  <code>variable::add</code>
+  <code>variable.add</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1086,15 +1086,15 @@ variable::absolute(variable=`variable`, number=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::add([1, 2]);
+`variable` = variable.add([1, 2]);
 
 //Или в сухую позиционно
 
-variable::add(`variable`, [1, 2]);
+variable.add(`variable`, [1, 2]);
 
 //Или в сухую по ключам
 
-variable::add(variable=`variable`, value=[1, 2]);
+variable.add(variable=`variable`, value=[1, 2]);
 ```
 
 **Аргументы:**
@@ -1105,7 +1105,7 @@ variable::add(variable=`variable`, value=[1, 2]);
 | value    | Список\[Число\]     | Числа для суммирования<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_add_item_enchantment>
-  <code>variable::add_item_enchantment</code>
+  <code>variable.add_item_enchantment</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1115,7 +1115,7 @@ variable::add(variable=`variable`, value=[1, 2]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::add_item_enchantment(item("stick"), "enchantment", 1);
+`variable` = variable.add_item_enchantment(item("stick"), "enchantment", 1);
 
 //Или от объекта
 
@@ -1123,11 +1123,11 @@ variable::add(variable=`variable`, value=[1, 2]);
 
 //Или в сухую позиционно
 
-variable::add_item_enchantment(`variable`, item("stick"), "enchantment", 1);
+variable.add_item_enchantment(`variable`, item("stick"), "enchantment", 1);
 
 //Или в сухую по ключам
 
-variable::add_item_enchantment(variable=`variable`, item=item("stick"), enchantment="enchantment", level=1);
+variable.add_item_enchantment(variable=`variable`, item=item("stick"), enchantment="enchantment", level=1);
 ```
 
 **Аргументы:**
@@ -1140,7 +1140,7 @@ variable::add_item_enchantment(variable=`variable`, item=item("stick"), enchantm
 | level       | Число                 | Уровень зачарования       |
 
 <h3 id=set_variable_add_item_potion_effects>
-  <code>variable::add_item_potion_effects</code>
+  <code>variable.add_item_potion_effects</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1150,7 +1150,7 @@ variable::add_item_enchantment(variable=`variable`, item=item("stick"), enchantm
 
 **Пример использования:**
 ```ts
-`variable` = variable::add_item_potion_effects([potion("slow_falling"), potion("slow_falling")], item("stick"), "FALSE", "FALSE", "AMBIENT");
+`variable` = variable.add_item_potion_effects([potion("slow_falling"), potion("slow_falling")], item("stick"), "FALSE", "FALSE", "AMBIENT");
 
 //Или от объекта
 
@@ -1158,11 +1158,11 @@ variable::add_item_enchantment(variable=`variable`, item=item("stick"), enchantm
 
 //Или в сухую позиционно
 
-variable::add_item_potion_effects(`variable`, [potion("slow_falling"), potion("slow_falling")], item("stick"), "FALSE", "FALSE", "AMBIENT");
+variable.add_item_potion_effects(`variable`, [potion("slow_falling"), potion("slow_falling")], item("stick"), "FALSE", "FALSE", "AMBIENT");
 
 //Или в сухую по ключам
 
-variable::add_item_potion_effects(variable=`variable`, potions=[potion("slow_falling"), potion("slow_falling")], item=item("stick"), overwrite="FALSE", show_icon="FALSE", particle_mode="AMBIENT");
+variable.add_item_potion_effects(variable=`variable`, potions=[potion("slow_falling"), potion("slow_falling")], item=item("stick"), overwrite="FALSE", show_icon="FALSE", particle_mode="AMBIENT");
 ```
 
 **Аргументы:**
@@ -1177,7 +1177,7 @@ variable::add_item_potion_effects(variable=`variable`, potions=[potion("slow_fal
 | particle_mode | Маркер<br/>**AMBIENT** - Прозрачными<br/>**NONE** - Нет<br/>**REGULAR** - Да | Показывать частицы                                         |
 
 <h3 id=set_variable_add_vectors>
-  <code>variable::add_vectors</code>
+  <code>variable.add_vectors</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1187,15 +1187,15 @@ variable::add_item_potion_effects(variable=`variable`, potions=[potion("slow_fal
 
 **Пример использования:**
 ```ts
-`variable` = variable::add_vectors([vector(0,0,0), vector(0,0,0)]);
+`variable` = variable.add_vectors([vector(0,0,0), vector(0,0,0)]);
 
 //Или в сухую позиционно
 
-variable::add_vectors(`variable`, [vector(0,0,0), vector(0,0,0)]);
+variable.add_vectors(`variable`, [vector(0,0,0), vector(0,0,0)]);
 
 //Или в сухую по ключам
 
-variable::add_vectors(variable=`variable`, vectors=[vector(0,0,0), vector(0,0,0)]);
+variable.add_vectors(variable=`variable`, vectors=[vector(0,0,0), vector(0,0,0)]);
 ```
 
 **Аргументы:**
@@ -1206,7 +1206,7 @@ variable::add_vectors(variable=`variable`, vectors=[vector(0,0,0), vector(0,0,0)
 | vectors  | Список\[Вектор\]     | Вектора для суммирования<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_align_location>
-  <code>variable::align_location</code>
+  <code>variable.align_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1216,7 +1216,7 @@ variable::add_vectors(variable=`variable`, vectors=[vector(0,0,0), vector(0,0,0)
 
 **Пример использования:**
 ```ts
-`variable` = variable::align_location(location(0,0,0,0,0), "KEEP", "ALL", "BLOCK_CENTER");
+`variable` = variable.align_location(location(0,0,0,0,0), "KEEP", "ALL", "BLOCK_CENTER");
 
 //Или от объекта
 
@@ -1224,11 +1224,11 @@ variable::add_vectors(variable=`variable`, vectors=[vector(0,0,0), vector(0,0,0)
 
 //Или в сухую позиционно
 
-variable::align_location(`variable`, location(0,0,0,0,0), "KEEP", "ALL", "BLOCK_CENTER");
+variable.align_location(`variable`, location(0,0,0,0,0), "KEEP", "ALL", "BLOCK_CENTER");
 
 //Или в сухую по ключам
 
-variable::align_location(variable=`variable`, location=location(0,0,0,0,0), rotation_mode="KEEP", coordinates_mode="ALL", align_mode="BLOCK_CENTER");
+variable.align_location(variable=`variable`, location=location(0,0,0,0,0), rotation_mode="KEEP", coordinates_mode="ALL", align_mode="BLOCK_CENTER");
 ```
 
 **Аргументы:**
@@ -1242,7 +1242,7 @@ variable::align_location(variable=`variable`, location=location(0,0,0,0,0), rota
 | align_mode       | Маркер<br/>**BLOCK_CENTER** - К центру блока<br/>**CORNER** - К углу блока                  | Режим округления          |
 
 <h3 id=set_variable_align_to_axis_vector>
-  <code>variable::align_to_axis_vector</code>
+  <code>variable.align_to_axis_vector</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1252,7 +1252,7 @@ variable::align_location(variable=`variable`, location=location(0,0,0,0,0), rota
 
 **Пример использования:**
 ```ts
-`variable` = variable::align_to_axis_vector(vector(0,0,0), "FALSE");
+`variable` = variable.align_to_axis_vector(vector(0,0,0), "FALSE");
 
 //Или от объекта
 
@@ -1260,11 +1260,11 @@ variable::align_location(variable=`variable`, location=location(0,0,0,0,0), rota
 
 //Или в сухую позиционно
 
-variable::align_to_axis_vector(`variable`, vector(0,0,0), "FALSE");
+variable.align_to_axis_vector(`variable`, vector(0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-variable::align_to_axis_vector(variable=`variable`, vector=vector(0,0,0), normalize="FALSE");
+variable.align_to_axis_vector(variable=`variable`, vector=vector(0,0,0), normalize="FALSE");
 ```
 
 **Аргументы:**
@@ -1276,7 +1276,7 @@ variable::align_to_axis_vector(variable=`variable`, vector=vector(0,0,0), normal
 | normalize | Маркер<br/>**FALSE** - Исходной длины<br/>**TRUE** - Нормализованный | Тип выдаваемого вектора   |
 
 <h3 id=set_variable_append_component>
-  <code>variable::append_component</code>
+  <code>variable.append_component</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1286,15 +1286,15 @@ variable::align_to_axis_vector(variable=`variable`, vector=vector(0,0,0), normal
 
 **Пример использования:**
 ```ts
-`variable` = variable::append_component(["components", "components"], "CONCATENATION");
+`variable` = variable.append_component(["components", "components"], "CONCATENATION");
 
 //Или в сухую позиционно
 
-variable::append_component(`variable`, ["components", "components"], "CONCATENATION");
+variable.append_component(`variable`, ["components", "components"], "CONCATENATION");
 
 //Или в сухую по ключам
 
-variable::append_component(variable=`variable`, components=["components", "components"], merging="CONCATENATION");
+variable.append_component(variable=`variable`, components=["components", "components"], merging="CONCATENATION");
 ```
 
 **Аргументы:**
@@ -1306,7 +1306,7 @@ variable::append_component(variable=`variable`, components=["components", "compo
 | merging    | Маркер<br/>**CONCATENATION** - Объединение<br/>**SEPARATE_LINES** - Разделение на строки<br/>**SPACES** - Разделение пробелом | Объединение текста                                                              |
 
 <h3 id=set_variable_append_list>
-  <code>variable::append_list</code>
+  <code>variable.append_list</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1316,7 +1316,7 @@ variable::append_component(variable=`variable`, components=["components", "compo
 
 **Пример использования:**
 ```ts
-`variable` = variable::append_list([`list_1`, `list_1`], [`list_2`, `list_2`]);
+`variable` = variable.append_list([`list_1`, `list_1`], [`list_2`, `list_2`]);
 
 //Или от объекта
 
@@ -1324,11 +1324,11 @@ variable::append_component(variable=`variable`, components=["components", "compo
 
 //Или в сухую позиционно
 
-variable::append_list(`variable`, [`list_1`, `list_1`], [`list_2`, `list_2`]);
+variable.append_list(`variable`, [`list_1`, `list_1`], [`list_2`, `list_2`]);
 
 //Или в сухую по ключам
 
-variable::append_list(variable=`variable`, list_1=[`list_1`, `list_1`], list_2=[`list_2`, `list_2`]);
+variable.append_list(variable=`variable`, list_1=[`list_1`, `list_1`], list_2=[`list_2`, `list_2`]);
 ```
 
 **Аргументы:**
@@ -1340,7 +1340,7 @@ variable::append_list(variable=`variable`, list_1=[`list_1`, `list_1`], list_2=[
 | list_2   | Список               | Второй список             |
 
 <h3 id=set_variable_append_map>
-  <code>variable::append_map</code>
+  <code>variable.append_map</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1350,7 +1350,7 @@ variable::append_list(variable=`variable`, list_1=[`list_1`, `list_1`], list_2=[
 
 **Пример использования:**
 ```ts
-`variable` = variable::append_map({"map":`map`}, {"other_map":`other_map`});
+`variable` = variable.append_map({"map":`map`}, {"other_map":`other_map`});
 
 //Или от объекта
 
@@ -1358,11 +1358,11 @@ variable::append_list(variable=`variable`, list_1=[`list_1`, `list_1`], list_2=[
 
 //Или в сухую позиционно
 
-variable::append_map(`variable`, {"map":`map`}, {"other_map":`other_map`});
+variable.append_map(`variable`, {"map":`map`}, {"other_map":`other_map`});
 
 //Или в сухую по ключам
 
-variable::append_map(variable=`variable`, map={"map":`map`}, other_map={"other_map":`other_map`});
+variable.append_map(variable=`variable`, map={"map":`map`}, other_map={"other_map":`other_map`});
 ```
 
 **Аргументы:**
@@ -1374,7 +1374,7 @@ variable::append_map(variable=`variable`, map={"map":`map`}, other_map={"other_m
 | other_map | Словарь               | Второй словарь            |
 
 <h3 id=set_variable_append_value>
-  <code>variable::append_value</code>
+  <code>variable.append_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1384,7 +1384,7 @@ variable::append_map(variable=`variable`, map={"map":`map`}, other_map={"other_m
 
 **Пример использования:**
 ```ts
-variable::append_value(`variable`, ["any value", "any value"]);
+variable.append_value(`variable`, ["any value", "any value"]);
 
 //Или от объекта
 
@@ -1392,7 +1392,7 @@ variable::append_value(`variable`, ["any value", "any value"]);
 
 //Или в сухую по ключам
 
-variable::append_value(variable=`variable`, values=["any value", "any value"]);
+variable.append_value(variable=`variable`, values=["any value", "any value"]);
 ```
 
 **Аргументы:**
@@ -1403,7 +1403,7 @@ variable::append_value(variable=`variable`, values=["any value", "any value"]);
 | values   | Список\[Любое значение\] | Значения |
 
 <h3 id=set_variable_atan2>
-  <code>variable::atan2</code>
+  <code>variable.atan2</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1413,15 +1413,15 @@ variable::append_value(variable=`variable`, values=["any value", "any value"]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::atan2(1, 2);
+`variable` = variable.atan2(1, 2);
 
 //Или в сухую позиционно
 
-variable::atan2(`variable`, 1, 2);
+variable.atan2(`variable`, 1, 2);
 
 //Или в сухую по ключам
 
-variable::atan2(variable=`variable`, y=1, x=2);
+variable.atan2(variable=`variable`, y=1, x=2);
 ```
 
 **Аргументы:**
@@ -1433,7 +1433,7 @@ variable::atan2(variable=`variable`, y=1, x=2);
 | x        | Число               | Второе число (x)          |
 
 <h3 id=set_variable_average>
-  <code>variable::average</code>
+  <code>variable.average</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1443,15 +1443,15 @@ variable::atan2(variable=`variable`, y=1, x=2);
 
 **Пример использования:**
 ```ts
-`variable` = variable::average([1, 2], "ARITHMETIC");
+`variable` = variable.average([1, 2], "ARITHMETIC");
 
 //Или в сухую позиционно
 
-variable::average(`variable`, [1, 2], "ARITHMETIC");
+variable.average(`variable`, [1, 2], "ARITHMETIC");
 
 //Или в сухую по ключам
 
-variable::average(variable=`variable`, value=[1, 2], type="ARITHMETIC");
+variable.average(variable=`variable`, value=[1, 2], type="ARITHMETIC");
 ```
 
 **Аргументы:**
@@ -1463,7 +1463,7 @@ variable::average(variable=`variable`, value=[1, 2], type="ARITHMETIC");
 | type     | Маркер<br/>**ARITHMETIC** - Среднее арифметическое<br/>**GEOMETRIC** - Среднее геометрическое<br/>**HARMONIC** - Среднее гармоническое<br/>**QUADRATIC** - Среднее квадратическое | Тип значения                                                              |
 
 <h3 id=set_variable_bitwise_operation>
-  <code>variable::bitwise_operation</code>
+  <code>variable.bitwise_operation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1473,15 +1473,15 @@ variable::average(variable=`variable`, value=[1, 2], type="ARITHMETIC");
 
 **Пример использования:**
 ```ts
-`variable` = variable::bitwise_operation(1, 2, "AND");
+`variable` = variable.bitwise_operation(1, 2, "AND");
 
 //Или в сухую позиционно
 
-variable::bitwise_operation(`variable`, 1, 2, "AND");
+variable.bitwise_operation(`variable`, 1, 2, "AND");
 
 //Или в сухую по ключам
 
-variable::bitwise_operation(variable=`variable`, operand1=1, operand2=2, operator="AND");
+variable.bitwise_operation(variable=`variable`, operand1=1, operand2=2, operator="AND");
 ```
 
 **Аргументы:**
@@ -1494,7 +1494,7 @@ variable::bitwise_operation(variable=`variable`, operand1=1, operand2=2, operato
 | operator | Маркер<br/>**AND** - И (and)<br/>**LEFT_ROTATE** - Левое вращение (left_rotate)<br/>**LEFT_SHIFT** - Сдвиг влево (left_shift)<br/>**NOT** - НЕ (not)<br/>**OR** - ИЛИ (or)<br/>**RIGHT_ROTATE** - Правое вращение (right_rotate)<br/>**RIGHT_SHIFT** - Сдвиг вправо (right_shift)<br/>**UNSIGNED_RIGHT_SHIFT** - Беззнаковый сдвиг вправо (unsigned_right_shift)<br/>**XOR** - Исключающее ИЛИ (xor) | Тип операции              |
 
 <h3 id=set_variable_bytes_to_text>
-  <code>variable::bytes_to_text</code>
+  <code>variable.bytes_to_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1504,15 +1504,15 @@ variable::bitwise_operation(variable=`variable`, operand1=1, operand2=2, operato
 
 **Пример использования:**
 ```ts
-`variable` = variable::bytes_to_text([1, 2], "UTF_16");
+`variable` = variable.bytes_to_text([1, 2], "UTF_16");
 
 //Или в сухую позиционно
 
-variable::bytes_to_text(`variable`, [1, 2], "UTF_16");
+variable.bytes_to_text(`variable`, [1, 2], "UTF_16");
 
 //Или в сухую по ключам
 
-variable::bytes_to_text(variable=`variable`, bytes=[1, 2], charset="UTF_16");
+variable.bytes_to_text(variable=`variable`, bytes=[1, 2], charset="UTF_16");
 ```
 
 **Аргументы:**
@@ -1524,7 +1524,7 @@ variable::bytes_to_text(variable=`variable`, bytes=[1, 2], charset="UTF_16");
 | charset  | Маркер<br/>**UTF_16** - UTF-16<br/>**UTF_8** - UTF-8<br/>**ASCII** - ASCII | Кодировка                                                             |
 
 <h3 id=set_variable_center_location>
-  <code>variable::center_location</code>
+  <code>variable.center_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1534,15 +1534,15 @@ variable::bytes_to_text(variable=`variable`, bytes=[1, 2], charset="UTF_16");
 
 **Пример использования:**
 ```ts
-`variable` = variable::center_location([location(0,0,0,0,0), location(0,0,0,0,0)]);
+`variable` = variable.center_location([location(0,0,0,0,0), location(0,0,0,0,0)]);
 
 //Или в сухую позиционно
 
-variable::center_location(`variable`, [location(0,0,0,0,0), location(0,0,0,0,0)]);
+variable.center_location(`variable`, [location(0,0,0,0,0), location(0,0,0,0,0)]);
 
 //Или в сухую по ключам
 
-variable::center_location(variable=`variable`, locations=[location(0,0,0,0,0), location(0,0,0,0,0)]);
+variable.center_location(variable=`variable`, locations=[location(0,0,0,0,0), location(0,0,0,0,0)]);
 ```
 
 **Аргументы:**
@@ -1553,7 +1553,7 @@ variable::center_location(variable=`variable`, locations=[location(0,0,0,0,0), l
 | locations | Список\[Местоположение\]     | Местоположения для установки<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_change_component_parsing>
-  <code>variable::change_component_parsing</code>
+  <code>variable.change_component_parsing</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1563,7 +1563,7 @@ variable::center_location(variable=`variable`, locations=[location(0,0,0,0,0), l
 
 **Пример использования:**
 ```ts
-`variable` = variable::change_component_parsing("component", "JSON");
+`variable` = variable.change_component_parsing("component", "JSON");
 
 //Или от объекта
 
@@ -1571,11 +1571,11 @@ variable::center_location(variable=`variable`, locations=[location(0,0,0,0,0), l
 
 //Или в сухую позиционно
 
-variable::change_component_parsing(`variable`, "component", "JSON");
+variable.change_component_parsing(`variable`, "component", "JSON");
 
 //Или в сухую по ключам
 
-variable::change_component_parsing(variable=`variable`, component="component", parsing="JSON");
+variable.change_component_parsing(variable=`variable`, component="component", parsing="JSON");
 ```
 
 **Аргументы:**
@@ -1587,7 +1587,7 @@ variable::change_component_parsing(variable=`variable`, component="component", p
 | parsing   | Маркер<br/>**JSON** - JSON<br/>**LEGACY** - Цветной (&)<br/>**MINIMESSAGE** - Стилизуемый<br/>**PLAIN** - Обычный | Тип стилизуемого текста   |
 
 <h3 id=set_variable_char_to_number>
-  <code>variable::char_to_number</code>
+  <code>variable.char_to_number</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1597,7 +1597,7 @@ variable::change_component_parsing(variable=`variable`, component="component", p
 
 **Пример использования:**
 ```ts
-`variable` = variable::char_to_number("char");
+`variable` = variable.char_to_number("char");
 
 //Или от объекта
 
@@ -1605,11 +1605,11 @@ variable::change_component_parsing(variable=`variable`, component="component", p
 
 //Или в сухую позиционно
 
-variable::char_to_number(`variable`, "char");
+variable.char_to_number(`variable`, "char");
 
 //Или в сухую по ключам
 
-variable::char_to_number(variable=`variable`, char="char");
+variable.char_to_number(variable=`variable`, char="char");
 ```
 
 **Аргументы:**
@@ -1620,7 +1620,7 @@ variable::char_to_number(variable=`variable`, char="char");
 | char     | Текст               | Символ для получения числа |
 
 <h3 id=set_variable_chunk_text>
-  <code>variable::chunk_text</code>
+  <code>variable.chunk_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1630,7 +1630,7 @@ variable::char_to_number(variable=`variable`, char="char");
 
 **Пример использования:**
 ```ts
-`variable` = variable::chunk_text("text", 1);
+`variable` = variable.chunk_text("text", 1);
 
 //Или от объекта
 
@@ -1638,11 +1638,11 @@ variable::char_to_number(variable=`variable`, char="char");
 
 //Или в сухую позиционно
 
-variable::chunk_text(`variable`, "text", 1);
+variable.chunk_text(`variable`, "text", 1);
 
 //Или в сухую по ключам
 
-variable::chunk_text(variable=`variable`, text="text", size=1);
+variable.chunk_text(variable=`variable`, text="text", size=1);
 ```
 
 **Аргументы:**
@@ -1654,7 +1654,7 @@ variable::chunk_text(variable=`variable`, text="text", size=1);
 | size     | Число                | Размер фрагмента          |
 
 <h3 id=set_variable_clamp>
-  <code>variable::clamp</code>
+  <code>variable.clamp</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1664,7 +1664,7 @@ variable::chunk_text(variable=`variable`, text="text", size=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::clamp(1, 2, 3);
+`variable` = variable.clamp(1, 2, 3);
 
 //Или от объекта
 
@@ -1672,11 +1672,11 @@ variable::chunk_text(variable=`variable`, text="text", size=1);
 
 //Или в сухую позиционно
 
-variable::clamp(`variable`, 1, 2, 3);
+variable.clamp(`variable`, 1, 2, 3);
 
 //Или в сухую по ключам
 
-variable::clamp(variable=`variable`, number=1, min=2, max=3);
+variable.clamp(variable=`variable`, number=1, min=2, max=3);
 ```
 
 **Аргументы:**
@@ -1689,7 +1689,7 @@ variable::clamp(variable=`variable`, number=1, min=2, max=3);
 | max      | Число               | Максимальное значение     |
 
 <h3 id=set_variable_clamp_location>
-  <code>variable::clamp_location</code>
+  <code>variable.clamp_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1699,7 +1699,7 @@ variable::clamp(variable=`variable`, number=1, min=2, max=3);
 
 **Пример использования:**
 ```ts
-`variable` = variable::clamp_location(location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), "XYZ");
+`variable` = variable.clamp_location(location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), "XYZ");
 
 //Или от объекта
 
@@ -1707,11 +1707,11 @@ variable::clamp(variable=`variable`, number=1, min=2, max=3);
 
 //Или в сухую позиционно
 
-variable::clamp_location(`variable`, location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), "XYZ");
+variable.clamp_location(`variable`, location(0,0,0,0,0), location(0,0,0,0,0), location(0,0,0,0,0), "XYZ");
 
 //Или в сухую по ключам
 
-variable::clamp_location(variable=`variable`, location=location(0,0,0,0,0), corner_1=location(0,0,0,0,0), corner_2=location(0,0,0,0,0), coordinates_mode="XYZ");
+variable.clamp_location(variable=`variable`, location=location(0,0,0,0,0), corner_1=location(0,0,0,0,0), corner_2=location(0,0,0,0,0), coordinates_mode="XYZ");
 ```
 
 **Аргументы:**
@@ -1725,7 +1725,7 @@ variable::clamp_location(variable=`variable`, location=location(0,0,0,0,0), corn
 | coordinates_mode | Маркер<br/>**XYZ** - Все координаты<br/>**XZ** - Координаты X и Z<br/>**Y** - Координата Y | Тип координат             |
 
 <h3 id=set_variable_clear_color_codes>
-  <code>variable::clear_color_codes</code>
+  <code>variable.clear_color_codes</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1735,7 +1735,7 @@ variable::clamp_location(variable=`variable`, location=location(0,0,0,0,0), corn
 
 **Пример использования:**
 ```ts
-`variable` = variable::clear_color_codes("text");
+`variable` = variable.clear_color_codes("text");
 
 //Или от объекта
 
@@ -1743,11 +1743,11 @@ variable::clamp_location(variable=`variable`, location=location(0,0,0,0,0), corn
 
 //Или в сухую позиционно
 
-variable::clear_color_codes(`variable`, "text");
+variable.clear_color_codes(`variable`, "text");
 
 //Или в сухую по ключам
 
-variable::clear_color_codes(variable=`variable`, text="text");
+variable.clear_color_codes(variable=`variable`, text="text");
 ```
 
 **Аргументы:**
@@ -1758,7 +1758,7 @@ variable::clear_color_codes(variable=`variable`, text="text");
 | text     | Текст               | Текст для изменения       |
 
 <h3 id=set_variable_clear_map>
-  <code>variable::clear_map</code>
+  <code>variable.clear_map</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1768,7 +1768,7 @@ variable::clear_color_codes(variable=`variable`, text="text");
 
 **Пример использования:**
 ```ts
-variable::clear_map(`map`);
+variable.clear_map(`map`);
 
 //Или от объекта
 
@@ -1776,7 +1776,7 @@ variable::clear_map(`map`);
 
 //Или в сухую по ключам
 
-variable::clear_map(map=`map`);
+variable.clear_map(map=`map`);
 ```
 
 **Аргументы:**
@@ -1786,7 +1786,7 @@ variable::clear_map(map=`map`);
 | map | Переменная | Словарь для очистки |
 
 <h3 id=set_variable_code_bytes>
-  <code>variable::code_bytes</code>
+  <code>variable.code_bytes</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1796,15 +1796,15 @@ variable::clear_map(map=`map`);
 
 **Пример использования:**
 ```ts
-`variable` = variable::code_bytes([1, 2], "BASE64_ENCODE");
+`variable` = variable.code_bytes([1, 2], "BASE64_ENCODE");
 
 //Или в сухую позиционно
 
-variable::code_bytes(`variable`, [1, 2], "BASE64_ENCODE");
+variable.code_bytes(`variable`, [1, 2], "BASE64_ENCODE");
 
 //Или в сухую по ключам
 
-variable::code_bytes(variable=`variable`, input=[1, 2], codec="BASE64_ENCODE");
+variable.code_bytes(variable=`variable`, input=[1, 2], codec="BASE64_ENCODE");
 ```
 
 **Аргументы:**
@@ -1816,7 +1816,7 @@ variable::code_bytes(variable=`variable`, input=[1, 2], codec="BASE64_ENCODE");
 | codec    | Маркер<br/>**BASE64_ENCODE** - Кодирование в Base64<br/>**BASE64_DECODE** - Раскодирование из Base64<br/>**ZLIB_COMPRESS** - Сжатие в zlib<br/>**ZLIB_DECOMPRESS** - Разжатие из zlib | Метод                                                       |
 
 <h3 id=set_variable_compact_component>
-  <code>variable::compact_component</code>
+  <code>variable.compact_component</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1826,7 +1826,7 @@ variable::code_bytes(variable=`variable`, input=[1, 2], codec="BASE64_ENCODE");
 
 **Пример использования:**
 ```ts
-`variable` = variable::compact_component("component");
+`variable` = variable.compact_component("component");
 
 //Или от объекта
 
@@ -1834,11 +1834,11 @@ variable::code_bytes(variable=`variable`, input=[1, 2], codec="BASE64_ENCODE");
 
 //Или в сухую позиционно
 
-variable::compact_component(`variable`, "component");
+variable.compact_component(`variable`, "component");
 
 //Или в сухую по ключам
 
-variable::compact_component(variable=`variable`, component="component");
+variable.compact_component(variable=`variable`, component="component");
 ```
 
 **Аргументы:**
@@ -1849,7 +1849,7 @@ variable::compact_component(variable=`variable`, component="component");
 | component | Текст               | Сжимаемый стилизуемый текст |
 
 <h3 id=set_variable_component_of_children>
-  <code>variable::component_of_children</code>
+  <code>variable.component_of_children</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1859,15 +1859,15 @@ variable::compact_component(variable=`variable`, component="component");
 
 **Пример использования:**
 ```ts
-`variable` = variable::component_of_children(["components", "components"]);
+`variable` = variable.component_of_children(["components", "components"]);
 
 //Или в сухую позиционно
 
-variable::component_of_children(`variable`, ["components", "components"]);
+variable.component_of_children(`variable`, ["components", "components"]);
 
 //Или в сухую по ключам
 
-variable::component_of_children(variable=`variable`, components=["components", "components"]);
+variable.component_of_children(variable=`variable`, components=["components", "components"]);
 ```
 
 **Аргументы:**
@@ -1878,7 +1878,7 @@ variable::component_of_children(variable=`variable`, components=["components", "
 | components | Список\[Текст\]     | Стилизуемые тексты<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_convert_number_to_text>
-  <code>variable::convert_number_to_text</code>
+  <code>variable.convert_number_to_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1891,7 +1891,7 @@ variable::component_of_children(variable=`variable`, components=["components", "
 
 **Пример использования:**
 ```ts
-`variable` = variable::convert_number_to_text(1, 2);
+`variable` = variable.convert_number_to_text(1, 2);
 
 //Или от объекта
 
@@ -1899,11 +1899,11 @@ variable::component_of_children(variable=`variable`, components=["components", "
 
 //Или в сухую позиционно
 
-variable::convert_number_to_text(`variable`, 1, 2);
+variable.convert_number_to_text(`variable`, 1, 2);
 
 //Или в сухую по ключам
 
-variable::convert_number_to_text(variable=`variable`, number=1, radix=2);
+variable.convert_number_to_text(variable=`variable`, number=1, radix=2);
 ```
 
 **Аргументы:**
@@ -1915,7 +1915,7 @@ variable::convert_number_to_text(variable=`variable`, number=1, radix=2);
 | radix    | Число               | Основание системы счисления |
 
 <h3 id=set_variable_convert_text_to_number>
-  <code>variable::convert_text_to_number</code>
+  <code>variable.convert_text_to_number</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1925,7 +1925,7 @@ variable::convert_number_to_text(variable=`variable`, number=1, radix=2);
 
 **Пример использования:**
 ```ts
-`variable` = variable::convert_text_to_number("text", 1);
+`variable` = variable.convert_text_to_number("text", 1);
 
 //Или от объекта
 
@@ -1933,11 +1933,11 @@ variable::convert_number_to_text(variable=`variable`, number=1, radix=2);
 
 //Или в сухую позиционно
 
-variable::convert_text_to_number(`variable`, "text", 1);
+variable.convert_text_to_number(`variable`, "text", 1);
 
 //Или в сухую по ключам
 
-variable::convert_text_to_number(variable=`variable`, text="text", radix=1);
+variable.convert_text_to_number(variable=`variable`, text="text", radix=1);
 ```
 
 **Аргументы:**
@@ -1949,7 +1949,7 @@ variable::convert_text_to_number(variable=`variable`, text="text", radix=1);
 | radix    | Число               | Основание системы счисления |
 
 <h3 id=set_variable_cosine>
-  <code>variable::cosine</code>
+  <code>variable.cosine</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1959,7 +1959,7 @@ variable::convert_text_to_number(variable=`variable`, text="text", radix=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::cosine(1, "ARCCOSINE", "DEGREES");
+`variable` = variable.cosine(1, "ARCCOSINE", "DEGREES");
 
 //Или от объекта
 
@@ -1967,11 +1967,11 @@ variable::convert_text_to_number(variable=`variable`, text="text", radix=1);
 
 //Или в сухую позиционно
 
-variable::cosine(`variable`, 1, "ARCCOSINE", "DEGREES");
+variable.cosine(`variable`, 1, "ARCCOSINE", "DEGREES");
 
 //Или в сухую по ключам
 
-variable::cosine(variable=`variable`, number=1, variant="ARCCOSINE", input="DEGREES");
+variable.cosine(variable=`variable`, number=1, variant="ARCCOSINE", input="DEGREES");
 ```
 
 **Аргументы:**
@@ -1984,7 +1984,7 @@ variable::cosine(variable=`variable`, number=1, variant="ARCCOSINE", input="DEGR
 | input    | Маркер<br/>**DEGREES** - Градусы<br/>**RADIANS** - Радианы                                                                                                                   | Тип угла                     |
 
 <h3 id=set_variable_cotangent>
-  <code>variable::cotangent</code>
+  <code>variable.cotangent</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1994,18 +1994,18 @@ variable::cosine(variable=`variable`, number=1, variant="ARCCOSINE", input="DEGR
 
 **Пример использования:**
 ```ts
-`variable` = variable::cotangent(1, "ARCCOTANGENT", "DEGREES");
+`variable` = variable.cotangent(1, "ARCCOTANGENT", "DEGREES");
 
 //Или от объекта
 `variable` = (1).cotangent("ARCCOTANGENT", "DEGREES");
 
 //Или в сухую позиционно
 
-variable::cotangent(`variable`, 1, "ARCCOTANGENT", "DEGREES");
+variable.cotangent(`variable`, 1, "ARCCOTANGENT", "DEGREES");
 
 //Или в сухую по ключам
 
-variable::cotangent(variable=`variable`, number=1, variant="ARCCOTANGENT", input="DEGREES");
+variable.cotangent(variable=`variable`, number=1, variant="ARCCOTANGENT", input="DEGREES");
 ```
 
 **Аргументы:**
@@ -2018,7 +2018,7 @@ variable::cotangent(variable=`variable`, number=1, variant="ARCCOTANGENT", input
 | input    | Маркер<br/>**DEGREES** - Градусы<br/>**RADIANS** - Радианы                                                                                                                                       | Тип угла                       |
 
 <h3 id=set_variable_create_keybind_component>
-  <code>variable::create_keybind_component</code>
+  <code>variable.create_keybind_component</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2028,15 +2028,15 @@ variable::cotangent(variable=`variable`, number=1, variant="ARCCOTANGENT", input
 
 **Пример использования:**
 ```ts
-`variable` = variable::create_keybind_component("key");
+`variable` = variable.create_keybind_component("key");
 
 //Или в сухую позиционно
 
-variable::create_keybind_component(`variable`, "key");
+variable.create_keybind_component(`variable`, "key");
 
 //Или в сухую по ключам
 
-variable::create_keybind_component(variable=`variable`, key="key");
+variable.create_keybind_component(variable=`variable`, key="key");
 ```
 
 **Аргументы:**
@@ -2047,7 +2047,7 @@ variable::create_keybind_component(variable=`variable`, key="key");
 | key      | Текст               | Ключ клавиши              |
 
 <h3 id=set_variable_create_list>
-  <code>variable::create_list</code>
+  <code>variable.create_list</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2059,15 +2059,15 @@ variable::create_keybind_component(variable=`variable`, key="key");
 
 **Пример использования:**
 ```ts
-`variable` = variable::create_list(["any value", "any value"]);
+`variable` = variable.create_list(["any value", "any value"]);
 
 //Или в сухую позиционно
 
-variable::create_list(`variable`, ["any value", "any value"]);
+variable.create_list(`variable`, ["any value", "any value"]);
 
 //Или в сухую по ключам
 
-variable::create_list(variable=`variable`, values=["any value", "any value"]);
+variable.create_list(variable=`variable`, values=["any value", "any value"]);
 ```
 
 **Аргументы:**
@@ -2078,7 +2078,7 @@ variable::create_list(variable=`variable`, values=["any value", "any value"]);
 | values   | Список\[Любое значение\] | Значения                  |
 
 <h3 id=set_variable_create_map>
-  <code>variable::create_map</code>
+  <code>variable.create_map</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2090,15 +2090,15 @@ variable::create_list(variable=`variable`, values=["any value", "any value"]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::create_map([`keys`, `keys`], [`values`, `values`]);
+`variable` = variable.create_map([`keys`, `keys`], [`values`, `values`]);
 
 //Или в сухую позиционно
 
-variable::create_map(`variable`, [`keys`, `keys`], [`values`, `values`]);
+variable.create_map(`variable`, [`keys`, `keys`], [`values`, `values`]);
 
 //Или в сухую по ключам
 
-variable::create_map(variable=`variable`, keys=[`keys`, `keys`], values=[`values`, `values`]);
+variable.create_map(variable=`variable`, keys=[`keys`, `keys`], values=[`values`, `values`]);
 ```
 
 **Аргументы:**
@@ -2110,7 +2110,7 @@ variable::create_map(variable=`variable`, keys=[`keys`, `keys`], values=[`values
 | values   | Список                | Список значений           |
 
 <h3 id=set_variable_create_map_from_values>
-  <code>variable::create_map_from_values</code>
+  <code>variable.create_map_from_values</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2122,15 +2122,15 @@ variable::create_map(variable=`variable`, keys=[`keys`, `keys`], values=[`values
 
 **Пример использования:**
 ```ts
-`variable` = variable::create_map_from_values(["any value", "any value"], ["any value", "any value"]);
+`variable` = variable.create_map_from_values(["any value", "any value"], ["any value", "any value"]);
 
 //Или в сухую позиционно
 
-variable::create_map_from_values(`variable`, ["any value", "any value"], ["any value", "any value"]);
+variable.create_map_from_values(`variable`, ["any value", "any value"], ["any value", "any value"]);
 
 //Или в сухую по ключам
 
-variable::create_map_from_values(variable=`variable`, keys=["any value", "any value"], values=["any value", "any value"]);
+variable.create_map_from_values(variable=`variable`, keys=["any value", "any value"], values=["any value", "any value"]);
 ```
 
 **Аргументы:**
@@ -2142,7 +2142,7 @@ variable::create_map_from_values(variable=`variable`, keys=["any value", "any va
 | values   | Список\[Любое значение\] | Значения<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_create_translatable_component>
-  <code>variable::create_translatable_component</code>
+  <code>variable.create_translatable_component</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2154,15 +2154,15 @@ variable::create_map_from_values(variable=`variable`, keys=["any value", "any va
 
 **Пример использования:**
 ```ts
-`variable` = variable::create_translatable_component("key", "fallback", ["args", "args"]);
+`variable` = variable.create_translatable_component("key", "fallback", ["args", "args"]);
 
 //Или в сухую позиционно
 
-variable::create_translatable_component(`variable`, "key", "fallback", ["args", "args"]);
+variable.create_translatable_component(`variable`, "key", "fallback", ["args", "args"]);
 
 //Или в сухую по ключам
 
-variable::create_translatable_component(variable=`variable`, key="key", fallback="fallback", args=["args", "args"]);
+variable.create_translatable_component(variable=`variable`, key="key", fallback="fallback", args=["args", "args"]);
 ```
 
 **Аргументы:**
@@ -2175,7 +2175,7 @@ variable::create_translatable_component(variable=`variable`, key="key", fallback
 | args     | Список\[Текст\]     | Аргументы для вставки<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_decrement>
-  <code>variable::decrement</code>
+  <code>variable.decrement</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2185,7 +2185,7 @@ variable::create_translatable_component(variable=`variable`, key="key", fallback
 
 **Пример использования:**
 ```ts
-variable::decrement(`variable`, 1);
+variable.decrement(`variable`, 1);
 
 //Или от объекта
 
@@ -2193,7 +2193,7 @@ variable::decrement(`variable`, 1);
 
 //Или в сухую по ключам
 
-variable::decrement(variable=`variable`, number=1);
+variable.decrement(variable=`variable`, number=1);
 ```
 
 **Аргументы:**
@@ -2204,7 +2204,7 @@ variable::decrement(variable=`variable`, number=1);
 | number   | Число      | Число для отнимания       |
 
 <h3 id=set_variable_divide>
-  <code>variable::divide</code>
+  <code>variable.divide</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2214,15 +2214,15 @@ variable::decrement(variable=`variable`, number=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::divide([1, 2], "CEIL");
+`variable` = variable.divide([1, 2], "CEIL");
 
 //Или в сухую позиционно
 
-variable::divide(`variable`, [1, 2], "CEIL");
+variable.divide(`variable`, [1, 2], "CEIL");
 
 //Или в сухую по ключам
 
-variable::divide(variable=`variable`, value=[1, 2], division_mode="CEIL");
+variable.divide(variable=`variable`, value=[1, 2], division_mode="CEIL");
 ```
 
 **Аргументы:**
@@ -2234,7 +2234,7 @@ variable::divide(variable=`variable`, value=[1, 2], division_mode="CEIL");
 | division_mode | Маркер<br/>**CEIL** - Округлить до большего<br/>**DEFAULT** - Без округления<br/>**FLOOR** - Округлить до меньшего<br/>**ROUND_TO_INT** - Обычное округление | Режим деления                                                  |
 
 <h3 id=set_variable_divide_vector>
-  <code>variable::divide_vector</code>
+  <code>variable.divide_vector</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2244,15 +2244,15 @@ variable::divide(variable=`variable`, value=[1, 2], division_mode="CEIL");
 
 **Пример использования:**
 ```ts
-`variable` = variable::divide_vector(vector(0,0,0), vector(0,0,0));
+`variable` = variable.divide_vector(vector(0,0,0), vector(0,0,0));
 
 //Или в сухую позиционно
 
-variable::divide_vector(`variable`, vector(0,0,0), vector(0,0,0));
+variable.divide_vector(`variable`, vector(0,0,0), vector(0,0,0));
 
 //Или в сухую по ключам
 
-variable::divide_vector(variable=`variable`, vector=vector(0,0,0), divider=vector(0,0,0));
+variable.divide_vector(variable=`variable`, vector=vector(0,0,0), divider=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -2264,7 +2264,7 @@ variable::divide_vector(variable=`variable`, vector=vector(0,0,0), divider=vecto
 | divider  | Вектор               | Вектор-делитель           |
 
 <h3 id=set_variable_dummy>
-  <code>variable::dummy</code>
+  <code>variable.dummy</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2274,11 +2274,11 @@ variable::divide_vector(variable=`variable`, vector=vector(0,0,0), divider=vecto
 
 **Пример использования:**
 ```ts
-variable::dummy();
+variable.dummy();
 ```
 
 <h3 id=set_variable_edit_item_custom_model_data>
-  <code>variable::edit_item_custom_model_data</code>
+  <code>variable.edit_item_custom_model_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2288,7 +2288,7 @@ variable::dummy();
 
 **Пример использования:**
 ```ts
-`variable` = variable::edit_item_custom_model_data(item("stick"), ["any value", "any value"], "FLOATS", "SET");
+`variable` = variable.edit_item_custom_model_data(item("stick"), ["any value", "any value"], "FLOATS", "SET");
 
 //Или от объекта
 
@@ -2296,11 +2296,11 @@ variable::dummy();
 
 //Или в сухую позиционно
 
-variable::edit_item_custom_model_data(`variable`, item("stick"), ["any value", "any value"], "FLOATS", "SET");
+variable.edit_item_custom_model_data(`variable`, item("stick"), ["any value", "any value"], "FLOATS", "SET");
 
 //Или в сухую по ключам
 
-variable::edit_item_custom_model_data(variable=`variable`, item=item("stick"), data=["any value", "any value"], value_type="FLOATS", setup_mode="SET");
+variable.edit_item_custom_model_data(variable=`variable`, item=item("stick"), data=["any value", "any value"], value_type="FLOATS", setup_mode="SET");
 ```
 
 **Аргументы:**
@@ -2314,7 +2314,7 @@ variable::edit_item_custom_model_data(variable=`variable`, item=item("stick"), d
 | setup_mode | Маркер<br/>**SET** - Установка<br/>**ADD** - Добавление<br/>**REMOVE_ALL** - Удалить все<br/>**REMOVE_FIRST** - Удалить первую запись<br/>**REMOVE_LAST** - Удалить последнюю запись     | Действие                                            |
 
 <h3 id=set_variable_face_location>
-  <code>variable::face_location</code>
+  <code>variable.face_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2324,7 +2324,7 @@ variable::edit_item_custom_model_data(variable=`variable`, item=item("stick"), d
 
 **Пример использования:**
 ```ts
-`variable` = variable::face_location(location(0,0,0,0,0), location(0,0,0,0,0));
+`variable` = variable.face_location(location(0,0,0,0,0), location(0,0,0,0,0));
 
 //Или от объекта
 
@@ -2332,11 +2332,11 @@ variable::edit_item_custom_model_data(variable=`variable`, item=item("stick"), d
 
 //Или в сухую позиционно
 
-variable::face_location(`variable`, location(0,0,0,0,0), location(0,0,0,0,0));
+variable.face_location(`variable`, location(0,0,0,0,0), location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::face_location(variable=`variable`, location=location(0,0,0,0,0), target=location(0,0,0,0,0));
+variable.face_location(variable=`variable`, location=location(0,0,0,0,0), target=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -2348,7 +2348,7 @@ variable::face_location(variable=`variable`, location=location(0,0,0,0,0), targe
 | target   | Местоположение               | Целевое местоположение       |
 
 <h3 id=set_variable_find_nearest_location>
-  <code>variable::find_nearest_location</code>
+  <code>variable.find_nearest_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2358,7 +2358,7 @@ variable::face_location(variable=`variable`, location=location(0,0,0,0,0), targe
 
 **Пример использования:**
 ```ts
-`variable` = variable::find_nearest_location(location(0,0,0,0,0), [location(0,0,0,0,0), location(0,0,0,0,0)], "XYZ");
+`variable` = variable.find_nearest_location(location(0,0,0,0,0), [location(0,0,0,0,0), location(0,0,0,0,0)], "XYZ");
 
 //Или от объекта
 
@@ -2366,11 +2366,11 @@ variable::face_location(variable=`variable`, location=location(0,0,0,0,0), targe
 
 //Или в сухую позиционно
 
-variable::find_nearest_location(`variable`, location(0,0,0,0,0), [location(0,0,0,0,0), location(0,0,0,0,0)], "XYZ");
+variable.find_nearest_location(`variable`, location(0,0,0,0,0), [location(0,0,0,0,0), location(0,0,0,0,0)], "XYZ");
 
 //Или в сухую по ключам
 
-variable::find_nearest_location(variable=`variable`, location=location(0,0,0,0,0), locations=[location(0,0,0,0,0), location(0,0,0,0,0)], distance_type="XYZ");
+variable.find_nearest_location(variable=`variable`, location=location(0,0,0,0,0), locations=[location(0,0,0,0,0), location(0,0,0,0,0)], distance_type="XYZ");
 ```
 
 **Аргументы:**
@@ -2383,7 +2383,7 @@ variable::find_nearest_location(variable=`variable`, location=location(0,0,0,0,0
 | distance_type | Маркер<br/>**XYZ** - В объёме<br/>**XZ** - В плоскости<br/>**Y** - По высоте | Тип расстояния                                                         |
 
 <h3 id=set_variable_find_nearest_number>
-  <code>variable::find_nearest_number</code>
+  <code>variable.find_nearest_number</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2393,7 +2393,7 @@ variable::find_nearest_location(variable=`variable`, location=location(0,0,0,0,0
 
 **Пример использования:**
 ```ts
-`variable` = variable::find_nearest_number(1, [2, 3]);
+`variable` = variable.find_nearest_number(1, [2, 3]);
 
 //Или от объекта
 
@@ -2401,11 +2401,11 @@ variable::find_nearest_location(variable=`variable`, location=location(0,0,0,0,0
 
 //Или в сухую позиционно
 
-variable::find_nearest_number(`variable`, 1, [2, 3]);
+variable.find_nearest_number(`variable`, 1, [2, 3]);
 
 //Или в сухую по ключам
 
-variable::find_nearest_number(variable=`variable`, number=1, numbers=[2, 3]);
+variable.find_nearest_number(variable=`variable`, number=1, numbers=[2, 3]);
 ```
 
 **Аргументы:**
@@ -2417,7 +2417,7 @@ variable::find_nearest_number(variable=`variable`, number=1, numbers=[2, 3]);
 | numbers  | Список\[Число\]     | Числа для поиска<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_flatten_list>
-  <code>variable::flatten_list</code>
+  <code>variable.flatten_list</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2427,7 +2427,7 @@ variable::find_nearest_number(variable=`variable`, number=1, numbers=[2, 3]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::flatten_list([`list`, `list`], "FALSE");
+`variable` = variable.flatten_list([`list`, `list`], "FALSE");
 
 //Или от объекта
 
@@ -2435,11 +2435,11 @@ variable::find_nearest_number(variable=`variable`, number=1, numbers=[2, 3]);
 
 //Или в сухую позиционно
 
-variable::flatten_list(`variable`, [`list`, `list`], "FALSE");
+variable.flatten_list(`variable`, [`list`, `list`], "FALSE");
 
 //Или в сухую по ключам
 
-variable::flatten_list(variable=`variable`, list=[`list`, `list`], deep="FALSE");
+variable.flatten_list(variable=`variable`, list=[`list`, `list`], deep="FALSE");
 ```
 
 **Аргументы:**
@@ -2451,7 +2451,7 @@ variable::flatten_list(variable=`variable`, list=[`list`, `list`], deep="FALSE")
 | deep     | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Глубокое сглаживание      |
 
 <h3 id=set_variable_format_timestamp>
-  <code>variable::format_timestamp</code>
+  <code>variable.format_timestamp</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2461,7 +2461,7 @@ variable::flatten_list(variable=`variable`, list=[`list`, `list`], deep="FALSE")
 
 **Пример использования:**
 ```ts
-`variable` = variable::format_timestamp(1, "pattern", "zone_id", "locale", "CUSTOM");
+`variable` = variable.format_timestamp(1, "pattern", "zone_id", "locale", "CUSTOM");
 
 //Или от объекта
 
@@ -2469,11 +2469,11 @@ variable::flatten_list(variable=`variable`, list=[`list`, `list`], deep="FALSE")
 
 //Или в сухую позиционно
 
-variable::format_timestamp(`variable`, 1, "pattern", "zone_id", "locale", "CUSTOM");
+variable.format_timestamp(`variable`, 1, "pattern", "zone_id", "locale", "CUSTOM");
 
 //Или в сухую по ключам
 
-variable::format_timestamp(variable=`variable`, time=1, pattern="pattern", zone_id="zone_id", locale="locale", format="CUSTOM");
+variable.format_timestamp(variable=`variable`, time=1, pattern="pattern", zone_id="zone_id", locale="locale", format="CUSTOM");
 ```
 
 **Аргументы:**
@@ -2488,7 +2488,7 @@ variable::format_timestamp(variable=`variable`, time=1, pattern="pattern", zone_
 | format   | Маркер<br/>**CUSTOM** - Настраиваемое<br/>**DD_MM_YYYY** - 01\/01\/1970 (dd_mm_yyyy)<br/>**DD_MM_YYYY_HH_MM_S** - 01\/01\/1970 00\:00\:00 (dd_mm_yyyy_hh_mm_s)<br/>**EEEE** - Thursday (eeee)<br/>**EEE_D_MMMM** - Thu, 01 January (eee_d_mmmm)<br/>**EEE_MMMM_D** - Thu, January 01 (eee_mmmm_d)<br/>**HH_MM_SS** - 00\:00\:00 (hh_mm_ss)<br/>**H_H_M_M_S_S** - 00h00m00s (h_h_m_m_s_s)<br/>**H_MM_A** - 00\:00 AM (h_mm_a)<br/>**S_S** - 00.00 (s_s)<br/>**YYYY_MM_DD** - 1970\/01\/01 (yyyy_mm_dd)<br/>**YYYY_MM_DD_HH_MM_S** - 1970\/01\/01 00\:00\:00 (yyyy_mm_dd_hh_mm_s) | Формат времени                    |
 
 <h3 id=set_variable_gamma_function>
-  <code>variable::gamma_function</code>
+  <code>variable.gamma_function</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2501,7 +2501,7 @@ variable::format_timestamp(variable=`variable`, time=1, pattern="pattern", zone_
 
 **Пример использования:**
 ```ts
-`variable` = variable::gamma_function(1);
+`variable` = variable.gamma_function(1);
 
 //Или от объекта
 
@@ -2509,11 +2509,11 @@ variable::format_timestamp(variable=`variable`, time=1, pattern="pattern", zone_
 
 //Или в сухую позиционно
 
-variable::gamma_function(`variable`, 1);
+variable.gamma_function(`variable`, 1);
 
 //Или в сухую по ключам
 
-variable::gamma_function(variable=`variable`, number=1);
+variable.gamma_function(variable=`variable`, number=1);
 ```
 
 **Аргументы:**
@@ -2524,7 +2524,7 @@ variable::gamma_function(variable=`variable`, number=1);
 | number   | Число               | Число                     |
 
 <h3 id=set_variable_gaussian_distribution>
-  <code>variable::gaussian_distribution</code>
+  <code>variable.gaussian_distribution</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2534,15 +2534,15 @@ variable::gamma_function(variable=`variable`, number=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::gaussian_distribution(1, 2, "FOLDER_NORMAL");
+`variable` = variable.gaussian_distribution(1, 2, "FOLDER_NORMAL");
 
 //Или в сухую позиционно
 
-variable::gaussian_distribution(`variable`, 1, 2, "FOLDER_NORMAL");
+variable.gaussian_distribution(`variable`, 1, 2, "FOLDER_NORMAL");
 
 //Или в сухую по ключам
 
-variable::gaussian_distribution(variable=`variable`, deviant=1, mean=2, distribution="FOLDER_NORMAL");
+variable.gaussian_distribution(variable=`variable`, deviant=1, mean=2, distribution="FOLDER_NORMAL");
 ```
 
 **Аргументы:**
@@ -2555,7 +2555,7 @@ variable::gaussian_distribution(variable=`variable`, deviant=1, mean=2, distribu
 | distribution | Маркер<br/>**FOLDER_NORMAL** - Отклонение в сторону >= μ<br/>**NORMAL** - Полное отклонение | Тип σ отклонения                    |
 
 <h3 id=set_variable_get_all_block_data>
-  <code>variable::get_all_block_data</code>
+  <code>variable.get_all_block_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2565,7 +2565,7 @@ variable::gaussian_distribution(variable=`variable`, deviant=1, mean=2, distribu
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_all_block_data(location(0,0,0,0,0), "FALSE");
+`variable` = variable.get_all_block_data(location(0,0,0,0,0), "FALSE");
 
 //Или от объекта
 
@@ -2573,11 +2573,11 @@ variable::gaussian_distribution(variable=`variable`, deviant=1, mean=2, distribu
 
 //Или в сухую позиционно
 
-variable::get_all_block_data(`variable`, location(0,0,0,0,0), "FALSE");
+variable.get_all_block_data(`variable`, location(0,0,0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-variable::get_all_block_data(variable=`variable`, location=location(0,0,0,0,0), hide_unspecified="FALSE");
+variable.get_all_block_data(variable=`variable`, location=location(0,0,0,0,0), hide_unspecified="FALSE");
 ```
 
 **Аргументы:**
@@ -2589,7 +2589,7 @@ variable::get_all_block_data(variable=`variable`, location=location(0,0,0,0,0), 
 | hide_unspecified | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Скрытие неустановленных значений |
 
 <h3 id=set_variable_get_all_coordinates>
-  <code>variable::get_all_coordinates</code>
+  <code>variable.get_all_coordinates</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2599,7 +2599,7 @@ variable::get_all_block_data(variable=`variable`, location=location(0,0,0,0,0), 
 
 **Пример использования:**
 ```ts
-`x`, `y`, `z`, `yaw`, `pitch` = variable::get_all_coordinates(location(0,0,0,0,0));
+`x`, `y`, `z`, `yaw`, `pitch` = variable.get_all_coordinates(location(0,0,0,0,0));
 
 //Или от объекта
 
@@ -2607,11 +2607,11 @@ variable::get_all_block_data(variable=`variable`, location=location(0,0,0,0,0), 
 
 //Или в сухую позиционно
 
-variable::get_all_coordinates(`x`, `y`, `z`, `yaw`, `pitch`, location(0,0,0,0,0));
+variable.get_all_coordinates(`x`, `y`, `z`, `yaw`, `pitch`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_all_coordinates(x=`x`, y=`y`, z=`z`, yaw=`yaw`, pitch=`pitch`, location=location(0,0,0,0,0));
+variable.get_all_coordinates(x=`x`, y=`y`, z=`z`, yaw=`yaw`, pitch=`pitch`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -2626,7 +2626,7 @@ variable::get_all_coordinates(x=`x`, y=`y`, z=`z`, yaw=`yaw`, pitch=`pitch`, loc
 | location | Местоположение      | Местоположение для получения |
 
 <h3 id=set_variable_get_angle_between_vectors>
-  <code>variable::get_angle_between_vectors</code>
+  <code>variable.get_angle_between_vectors</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2636,15 +2636,15 @@ variable::get_all_coordinates(x=`x`, y=`y`, z=`z`, yaw=`yaw`, pitch=`pitch`, loc
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_angle_between_vectors(vector(0,0,0), vector(0,0,0), "DEGREES");
+`variable` = variable.get_angle_between_vectors(vector(0,0,0), vector(0,0,0), "DEGREES");
 
 //Или в сухую позиционно
 
-variable::get_angle_between_vectors(`variable`, vector(0,0,0), vector(0,0,0), "DEGREES");
+variable.get_angle_between_vectors(`variable`, vector(0,0,0), vector(0,0,0), "DEGREES");
 
 //Или в сухую по ключам
 
-variable::get_angle_between_vectors(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0), angle_units="DEGREES");
+variable.get_angle_between_vectors(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0), angle_units="DEGREES");
 ```
 
 **Аргументы:**
@@ -2657,7 +2657,7 @@ variable::get_angle_between_vectors(variable=`variable`, vector_1=vector(0,0,0),
 | angle_units | Маркер<br/>**DEGREES** - Градусы<br/>**RADIANS** - Радианы | Тип угла                  |
 
 <h3 id=set_variable_get_block_custom_tag>
-  <code>variable::get_block_custom_tag</code>
+  <code>variable.get_block_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2669,15 +2669,15 @@ variable::get_angle_between_vectors(variable=`variable`, vector_1=vector(0,0,0),
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_block_custom_tag(location(0,0,0,0,0), "tag_name", "tag_value", "any value");
+`variable` = variable.get_block_custom_tag(location(0,0,0,0,0), "tag_name", "tag_value", "any value");
 
 //Или в сухую позиционно
 
-variable::get_block_custom_tag(`variable`, location(0,0,0,0,0), "tag_name", "tag_value", "any value");
+variable.get_block_custom_tag(`variable`, location(0,0,0,0,0), "tag_name", "tag_value", "any value");
 
 //Или в сухую по ключам
 
-variable::get_block_custom_tag(variable=`variable`, location=location(0,0,0,0,0), tag_name="tag_name", tag_value="tag_value", default_value="any value");
+variable.get_block_custom_tag(variable=`variable`, location=location(0,0,0,0,0), tag_name="tag_name", tag_value="tag_value", default_value="any value");
 ```
 
 **Аргументы:**
@@ -2691,7 +2691,7 @@ variable::get_block_custom_tag(variable=`variable`, location=location(0,0,0,0,0)
 | default_value | Любое значение               | creative_plus.action.set_variable_get_block_custom_tag.argument.default_value.name |
 
 <h3 id=set_variable_get_block_data>
-  <code>variable::get_block_data</code>
+  <code>variable.get_block_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2703,7 +2703,7 @@ variable::get_block_custom_tag(variable=`variable`, location=location(0,0,0,0,0)
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_block_data(location(0,0,0,0,0), "tag_name");
+`variable` = variable.get_block_data(location(0,0,0,0,0), "tag_name");
 
 //Или от объекта
 
@@ -2711,11 +2711,11 @@ variable::get_block_custom_tag(variable=`variable`, location=location(0,0,0,0,0)
 
 //Или в сухую позиционно
 
-variable::get_block_data(`variable`, location(0,0,0,0,0), "tag_name");
+variable.get_block_data(`variable`, location(0,0,0,0,0), "tag_name");
 
 //Или в сухую по ключам
 
-variable::get_block_data(variable=`variable`, location=location(0,0,0,0,0), tag_name="tag_name");
+variable.get_block_data(variable=`variable`, location=location(0,0,0,0,0), tag_name="tag_name");
 ```
 
 **Аргументы:**
@@ -2727,7 +2727,7 @@ variable::get_block_data(variable=`variable`, location=location(0,0,0,0,0), tag_
 | tag_name | Текст               | Название тега             |
 
 <h3 id=set_variable_get_block_growth>
-  <code>variable::get_block_growth</code>
+  <code>variable.get_block_growth</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2737,7 +2737,7 @@ variable::get_block_data(variable=`variable`, location=location(0,0,0,0,0), tag_
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_block_growth(location(0,0,0,0,0), "GROWTH_PERCENTAGE");
+`variable` = variable.get_block_growth(location(0,0,0,0,0), "GROWTH_PERCENTAGE");
 
 //Или от объекта
 
@@ -2745,11 +2745,11 @@ variable::get_block_data(variable=`variable`, location=location(0,0,0,0,0), tag_
 
 //Или в сухую позиционно
 
-variable::get_block_growth(`variable`, location(0,0,0,0,0), "GROWTH_PERCENTAGE");
+variable.get_block_growth(`variable`, location(0,0,0,0,0), "GROWTH_PERCENTAGE");
 
 //Или в сухую по ключам
 
-variable::get_block_growth(variable=`variable`, location=location(0,0,0,0,0), growth_unit="GROWTH_PERCENTAGE");
+variable.get_block_growth(variable=`variable`, location=location(0,0,0,0,0), growth_unit="GROWTH_PERCENTAGE");
 ```
 
 **Аргументы:**
@@ -2761,7 +2761,7 @@ variable::get_block_growth(variable=`variable`, location=location(0,0,0,0,0), gr
 | growth_unit | Маркер<br/>**GROWTH_PERCENTAGE** - Процент роста<br/>**GROWTH_STAGE** - Стадия роста | Единица измерения         |
 
 <h3 id=set_variable_get_block_material>
-  <code>variable::get_block_material</code>
+  <code>variable.get_block_material</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2771,7 +2771,7 @@ variable::get_block_growth(variable=`variable`, location=location(0,0,0,0,0), gr
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_block_material(location(0,0,0,0,0), "ID");
+`variable` = variable.get_block_material(location(0,0,0,0,0), "ID");
 
 //Или от объекта
 
@@ -2779,11 +2779,11 @@ variable::get_block_growth(variable=`variable`, location=location(0,0,0,0,0), gr
 
 //Или в сухую позиционно
 
-variable::get_block_material(`variable`, location(0,0,0,0,0), "ID");
+variable.get_block_material(`variable`, location(0,0,0,0,0), "ID");
 
 //Или в сухую по ключам
 
-variable::get_block_material(variable=`variable`, location=location(0,0,0,0,0), value_type="ID");
+variable.get_block_material(variable=`variable`, location=location(0,0,0,0,0), value_type="ID");
 ```
 
 **Аргументы:**
@@ -2795,7 +2795,7 @@ variable::get_block_material(variable=`variable`, location=location(0,0,0,0,0), 
 | value_type | Маркер<br/>**ID** - ID блока<br/>**ID_WITH_DATA** - ID и данные блока<br/>**ITEM** - Как предмет<br/>**NAME** - Имя блока | Тип значения              |
 
 <h3 id=set_variable_get_block_material_property>
-  <code>variable::get_block_material_property</code>
+  <code>variable.get_block_material_property</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2805,7 +2805,7 @@ variable::get_block_material(variable=`variable`, location=location(0,0,0,0,0), 
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_block_material_property("minecraft:oak_log[axis=x]", "BLAST_RESISTANCE");
+`variable` = variable.get_block_material_property("minecraft:oak_log[axis=x]", "BLAST_RESISTANCE");
 
 //Или от объекта
 
@@ -2813,11 +2813,11 @@ variable::get_block_material(variable=`variable`, location=location(0,0,0,0,0), 
 
 //Или в сухую позиционно
 
-variable::get_block_material_property(`variable`, "minecraft:oak_log[axis=x]", "BLAST_RESISTANCE");
+variable.get_block_material_property(`variable`, "minecraft:oak_log[axis=x]", "BLAST_RESISTANCE");
 
 //Или в сухую по ключам
 
-variable::get_block_material_property(variable=`variable`, block="minecraft:oak_log[axis=x]", property="BLAST_RESISTANCE");
+variable.get_block_material_property(variable=`variable`, block="minecraft:oak_log[axis=x]", property="BLAST_RESISTANCE");
 ```
 
 **Аргументы:**
@@ -2829,7 +2829,7 @@ variable::get_block_material_property(variable=`variable`, block="minecraft:oak_
 | property | Маркер<br/>**BLAST_RESISTANCE** - Устойчивость к взрыву<br/>**HARDNESS** - Прочность<br/>**SLIPPERINESS** - Скользкость | Свойство                  |
 
 <h3 id=set_variable_get_block_power>
-  <code>variable::get_block_power</code>
+  <code>variable.get_block_power</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2839,7 +2839,7 @@ variable::get_block_material_property(variable=`variable`, block="minecraft:oak_
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_block_power(location(0,0,0,0,0));
+`variable` = variable.get_block_power(location(0,0,0,0,0));
 
 //Или от объекта
 
@@ -2847,11 +2847,11 @@ variable::get_block_material_property(variable=`variable`, block="minecraft:oak_
 
 //Или в сухую позиционно
 
-variable::get_block_power(`variable`, location(0,0,0,0,0));
+variable.get_block_power(`variable`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_block_power(variable=`variable`, location=location(0,0,0,0,0));
+variable.get_block_power(variable=`variable`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -2862,7 +2862,7 @@ variable::get_block_power(variable=`variable`, location=location(0,0,0,0,0));
 | location | Местоположение      | Местоположение блока      |
 
 <h3 id=set_variable_get_block_sound>
-  <code>variable::get_block_sound</code>
+  <code>variable.get_block_sound</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2872,7 +2872,7 @@ variable::get_block_power(variable=`variable`, location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_block_sound("minecraft:oak_log[axis=x]", "BREAK");
+`variable` = variable.get_block_sound("minecraft:oak_log[axis=x]", "BREAK");
 
 //Или от объекта
 
@@ -2880,11 +2880,11 @@ variable::get_block_power(variable=`variable`, location=location(0,0,0,0,0));
 
 //Или в сухую позиционно
 
-variable::get_block_sound(`variable`, "minecraft:oak_log[axis=x]", "BREAK");
+variable.get_block_sound(`variable`, "minecraft:oak_log[axis=x]", "BREAK");
 
 //Или в сухую по ключам
 
-variable::get_block_sound(variable=`variable`, block="minecraft:oak_log[axis=x]", source="BREAK");
+variable.get_block_sound(variable=`variable`, block="minecraft:oak_log[axis=x]", source="BREAK");
 ```
 
 **Аргументы:**
@@ -2896,7 +2896,7 @@ variable::get_block_sound(variable=`variable`, block="minecraft:oak_log[axis=x]"
 | source   | Маркер<br/>**BREAK** - Ломание<br/>**PLACE** - Установка<br/>**HIT** - Процесс ломания<br/>**FALL** - Падение на блок<br/>**STEP** - Передвижение по блоку | Источник звука            |
 
 <h3 id=set_variable_get_blocks_by_tag>
-  <code>variable::get_blocks_by_tag</code>
+  <code>variable.get_blocks_by_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2906,15 +2906,15 @@ variable::get_block_sound(variable=`variable`, block="minecraft:oak_log[axis=x]"
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_blocks_by_tag("namespace", "ID");
+`variable` = variable.get_blocks_by_tag("namespace", "ID");
 
 //Или в сухую позиционно
 
-variable::get_blocks_by_tag(`variable`, "namespace", "ID");
+variable.get_blocks_by_tag(`variable`, "namespace", "ID");
 
 //Или в сухую по ключам
 
-variable::get_blocks_by_tag(variable=`variable`, namespace="namespace", result_type="ID");
+variable.get_blocks_by_tag(variable=`variable`, namespace="namespace", result_type="ID");
 ```
 
 **Аргументы:**
@@ -2926,7 +2926,7 @@ variable::get_blocks_by_tag(variable=`variable`, namespace="namespace", result_t
 | result_type | Маркер<br/>**ID** - ID блока<br/>**TRANSLATION_KEY** - Переводимое название блока<br/>**ITEM** - Предмет блока | Тип результата            |
 
 <h3 id=set_variable_get_book_text>
-  <code>variable::get_book_text</code>
+  <code>variable.get_book_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2936,7 +2936,7 @@ variable::get_blocks_by_tag(variable=`variable`, namespace="namespace", result_t
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_book_text(item("stick"), 1);
+`variable` = variable.get_book_text(item("stick"), 1);
 
 //Или от объекта
 
@@ -2944,11 +2944,11 @@ variable::get_blocks_by_tag(variable=`variable`, namespace="namespace", result_t
 
 //Или в сухую позиционно
 
-variable::get_book_text(`variable`, item("stick"), 1);
+variable.get_book_text(`variable`, item("stick"), 1);
 
 //Или в сухую по ключам
 
-variable::get_book_text(variable=`variable`, book=item("stick"), page=1);
+variable.get_book_text(variable=`variable`, book=item("stick"), page=1);
 ```
 
 **Аргументы:**
@@ -2960,7 +2960,7 @@ variable::get_book_text(variable=`variable`, book=item("stick"), page=1);
 | page     | Число               | Номер страницы               |
 
 <h3 id=set_variable_get_brushable_block_item>
-  <code>variable::get_brushable_block_item</code>
+  <code>variable.get_brushable_block_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2970,7 +2970,7 @@ variable::get_book_text(variable=`variable`, book=item("stick"), page=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_brushable_block_item(location(0,0,0,0,0));
+`variable` = variable.get_brushable_block_item(location(0,0,0,0,0));
 
 //Или от объекта
 
@@ -2978,11 +2978,11 @@ variable::get_book_text(variable=`variable`, book=item("stick"), page=1);
 
 //Или в сухую позиционно
 
-variable::get_brushable_block_item(`variable`, location(0,0,0,0,0));
+variable.get_brushable_block_item(`variable`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_brushable_block_item(variable=`variable`, location=location(0,0,0,0,0));
+variable.get_brushable_block_item(variable=`variable`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -2993,7 +2993,7 @@ variable::get_brushable_block_item(variable=`variable`, location=location(0,0,0,
 | location | Местоположение        | Местоположение блока      |
 
 <h3 id=set_variable_get_bundle_items>
-  <code>variable::get_bundle_items</code>
+  <code>variable.get_bundle_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 **Имя:** Получить содержимое мешка\
@@ -3002,7 +3002,7 @@ variable::get_brushable_block_item(variable=`variable`, location=location(0,0,0,
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_bundle_items(item("stick"));
+`variable` = variable.get_bundle_items(item("stick"));
 
 //Или от объекта
 
@@ -3010,11 +3010,11 @@ variable::get_brushable_block_item(variable=`variable`, location=location(0,0,0,
 
 //Или в сухую позиционно
 
-variable::get_bundle_items(`variable`, item("stick"));
+variable.get_bundle_items(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_bundle_items(variable=`variable`, bundle=item("stick"));
+variable.get_bundle_items(variable=`variable`, bundle=item("stick"));
 ```
 
 **Аргументы:**
@@ -3025,7 +3025,7 @@ variable::get_bundle_items(variable=`variable`, bundle=item("stick"));
 | bundle   | Предмет              | Мешок                     |
 
 <h3 id=set_variable_get_char_at>
-  <code>variable::get_char_at</code>
+  <code>variable.get_char_at</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3035,7 +3035,7 @@ variable::get_bundle_items(variable=`variable`, bundle=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_char_at("text", 1);
+`variable` = variable.get_char_at("text", 1);
 
 //Или от объекта
 
@@ -3043,11 +3043,11 @@ variable::get_bundle_items(variable=`variable`, bundle=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_char_at(`variable`, "text", 1);
+variable.get_char_at(`variable`, "text", 1);
 
 //Или в сухую по ключам
 
-variable::get_char_at(variable=`variable`, text="text", index=1);
+variable.get_char_at(variable=`variable`, text="text", index=1);
 ```
 
 **Аргументы:**
@@ -3059,7 +3059,7 @@ variable::get_char_at(variable=`variable`, text="text", index=1);
 | index    | Число               | Индекс                      |
 
 <h3 id=set_variable_get_color_channels>
-  <code>variable::get_color_channels</code>
+  <code>variable.get_color_channels</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3069,7 +3069,7 @@ variable::get_char_at(variable=`variable`, text="text", index=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_color_channels("color", "HSB");
+`variable` = variable.get_color_channels("color", "HSB");
 
 //Или от объекта
 
@@ -3077,11 +3077,11 @@ variable::get_char_at(variable=`variable`, text="text", index=1);
 
 //Или в сухую позиционно
 
-variable::get_color_channels(`variable`, "color", "HSB");
+variable.get_color_channels(`variable`, "color", "HSB");
 
 //Или в сухую по ключам
 
-variable::get_color_channels(variable=`variable`, color="color", color_channels="HSB");
+variable.get_color_channels(variable=`variable`, color="color", color_channels="HSB");
 ```
 
 **Аргументы:**
@@ -3093,7 +3093,7 @@ variable::get_color_channels(variable=`variable`, color="color", color_channels=
 | color_channels | Маркер<br/>**HSB** - HSB<br/>**HSL** - HSL<br/>**RGB** - RGB | Цветовой канал              |
 
 <h3 id=set_variable_get_compass_lodestone>
-  <code>variable::get_compass_lodestone</code>
+  <code>variable.get_compass_lodestone</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3103,7 +3103,7 @@ variable::get_color_channels(variable=`variable`, color="color", color_channels=
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_compass_lodestone(item("stick"));
+`variable` = variable.get_compass_lodestone(item("stick"));
 
 //Или от объекта
 
@@ -3111,11 +3111,11 @@ variable::get_color_channels(variable=`variable`, color="color", color_channels=
 
 //Или в сухую позиционно
 
-variable::get_compass_lodestone(`variable`, item("stick"));
+variable.get_compass_lodestone(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_compass_lodestone(variable=`variable`, item=item("stick"));
+variable.get_compass_lodestone(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3126,7 +3126,7 @@ variable::get_compass_lodestone(variable=`variable`, item=item("stick"));
 | item     | Предмет                      | Намагниченный компас      |
 
 <h3 id=set_variable_get_component_children>
-  <code>variable::get_component_children</code>
+  <code>variable.get_component_children</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3136,7 +3136,7 @@ variable::get_compass_lodestone(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_component_children("component");
+`variable` = variable.get_component_children("component");
 
 //Или от объекта
 
@@ -3144,11 +3144,11 @@ variable::get_compass_lodestone(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_component_children(`variable`, "component");
+variable.get_component_children(`variable`, "component");
 
 //Или в сухую по ключам
 
-variable::get_component_children(variable=`variable`, component="component");
+variable.get_component_children(variable=`variable`, component="component");
 ```
 
 **Аргументы:**
@@ -3159,7 +3159,7 @@ variable::get_component_children(variable=`variable`, component="component");
 | component | Текст                | Стилизуемый текст         |
 
 <h3 id=set_variable_get_component_decorations>
-  <code>variable::get_component_decorations</code>
+  <code>variable.get_component_decorations</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3169,7 +3169,7 @@ variable::get_component_children(variable=`variable`, component="component");
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_component_decorations("component");
+`variable` = variable.get_component_decorations("component");
 
 //Или от объекта
 
@@ -3177,11 +3177,11 @@ variable::get_component_children(variable=`variable`, component="component");
 
 //Или в сухую позиционно
 
-variable::get_component_decorations(`variable`, "component");
+variable.get_component_decorations(`variable`, "component");
 
 //Или в сухую по ключам
 
-variable::get_component_decorations(variable=`variable`, component="component");
+variable.get_component_decorations(variable=`variable`, component="component");
 ```
 
 **Аргументы:**
@@ -3192,7 +3192,7 @@ variable::get_component_decorations(variable=`variable`, component="component");
 | component | Текст                | Стилизуемый текст         |
 
 <h3 id=set_variable_get_component_hex_color>
-  <code>variable::get_component_hex_color</code>
+  <code>variable.get_component_hex_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3202,7 +3202,7 @@ variable::get_component_decorations(variable=`variable`, component="component");
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_component_hex_color("component");
+`variable` = variable.get_component_hex_color("component");
 
 //Или от объекта
 
@@ -3210,11 +3210,11 @@ variable::get_component_decorations(variable=`variable`, component="component");
 
 //Или в сухую позиционно
 
-variable::get_component_hex_color(`variable`, "component");
+variable.get_component_hex_color(`variable`, "component");
 
 //Или в сухую по ключам
 
-variable::get_component_hex_color(variable=`variable`, component="component");
+variable.get_component_hex_color(variable=`variable`, component="component");
 ```
 
 **Аргументы:**
@@ -3225,7 +3225,7 @@ variable::get_component_hex_color(variable=`variable`, component="component");
 | component | Текст               | Стилизуемый текст         |
 
 <h3 id=set_variable_get_component_parsing>
-  <code>variable::get_component_parsing</code>
+  <code>variable.get_component_parsing</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3235,7 +3235,7 @@ variable::get_component_hex_color(variable=`variable`, component="component");
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_component_parsing("component");
+`variable` = variable.get_component_parsing("component");
 
 //Или от объекта
 
@@ -3243,11 +3243,11 @@ variable::get_component_hex_color(variable=`variable`, component="component");
 
 //Или в сухую позиционно
 
-variable::get_component_parsing(`variable`, "component");
+variable.get_component_parsing(`variable`, "component");
 
 //Или в сухую по ключам
 
-variable::get_component_parsing(variable=`variable`, component="component");
+variable.get_component_parsing(variable=`variable`, component="component");
 ```
 
 **Аргументы:**
@@ -3258,7 +3258,7 @@ variable::get_component_parsing(variable=`variable`, component="component");
 | component | Текст               | Исходный стилизуемый текст |
 
 <h3 id=set_variable_get_container_contents>
-  <code>variable::get_container_contents</code>
+  <code>variable.get_container_contents</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3268,7 +3268,7 @@ variable::get_component_parsing(variable=`variable`, component="component");
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_container_contents(location(0,0,0,0,0), "FALSE");
+`variable` = variable.get_container_contents(location(0,0,0,0,0), "FALSE");
 
 //Или от объекта
 
@@ -3276,11 +3276,11 @@ variable::get_component_parsing(variable=`variable`, component="component");
 
 //Или в сухую позиционно
 
-variable::get_container_contents(`variable`, location(0,0,0,0,0), "FALSE");
+variable.get_container_contents(`variable`, location(0,0,0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-variable::get_container_contents(variable=`variable`, location=location(0,0,0,0,0), ignore_empty_slots="FALSE");
+variable.get_container_contents(variable=`variable`, location=location(0,0,0,0,0), ignore_empty_slots="FALSE");
 ```
 
 **Аргументы:**
@@ -3292,7 +3292,7 @@ variable::get_container_contents(variable=`variable`, location=location(0,0,0,0,
 | ignore_empty_slots | Маркер<br/>**FALSE** - Не игнорировать<br/>**TRUE** - Игнорировать | Игнорирование пустых слотов |
 
 <h3 id=set_variable_get_container_lock>
-  <code>variable::get_container_lock</code>
+  <code>variable.get_container_lock</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3302,7 +3302,7 @@ variable::get_container_contents(variable=`variable`, location=location(0,0,0,0,
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_container_lock(location(0,0,0,0,0));
+`variable` = variable.get_container_lock(location(0,0,0,0,0));
 
 //Или от объекта
 
@@ -3310,11 +3310,11 @@ variable::get_container_contents(variable=`variable`, location=location(0,0,0,0,
 
 //Или в сухую позиционно
 
-variable::get_container_lock(`variable`, location(0,0,0,0,0));
+variable.get_container_lock(`variable`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_container_lock(variable=`variable`, location=location(0,0,0,0,0));
+variable.get_container_lock(variable=`variable`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -3325,7 +3325,7 @@ variable::get_container_lock(variable=`variable`, location=location(0,0,0,0,0));
 | location | Местоположение      | Местоположение блока      |
 
 <h3 id=set_variable_get_container_name>
-  <code>variable::get_container_name</code>
+  <code>variable.get_container_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3335,7 +3335,7 @@ variable::get_container_lock(variable=`variable`, location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_container_name(location(0,0,0,0,0));
+`variable` = variable.get_container_name(location(0,0,0,0,0));
 
 //Или от объекта
 
@@ -3343,11 +3343,11 @@ variable::get_container_lock(variable=`variable`, location=location(0,0,0,0,0));
 
 //Или в сухую позиционно
 
-variable::get_container_name(`variable`, location(0,0,0,0,0));
+variable.get_container_name(`variable`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_container_name(variable=`variable`, location=location(0,0,0,0,0));
+variable.get_container_name(variable=`variable`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -3358,7 +3358,7 @@ variable::get_container_name(variable=`variable`, location=location(0,0,0,0,0));
 | location | Местоположение      | Местоположение контейнера |
 
 <h3 id=set_variable_get_coordinate>
-  <code>variable::get_coordinate</code>
+  <code>variable.get_coordinate</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3368,7 +3368,7 @@ variable::get_container_name(variable=`variable`, location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_coordinate(location(0,0,0,0,0), "PITCH");
+`variable` = variable.get_coordinate(location(0,0,0,0,0), "PITCH");
 
 //Или от объекта
 
@@ -3376,11 +3376,11 @@ variable::get_container_name(variable=`variable`, location=location(0,0,0,0,0));
 
 //Или в сухую позиционно
 
-variable::get_coordinate(`variable`, location(0,0,0,0,0), "PITCH");
+variable.get_coordinate(`variable`, location(0,0,0,0,0), "PITCH");
 
 //Или в сухую по ключам
 
-variable::get_coordinate(variable=`variable`, location=location(0,0,0,0,0), type="PITCH");
+variable.get_coordinate(variable=`variable`, location=location(0,0,0,0,0), type="PITCH");
 ```
 
 **Аргументы:**
@@ -3392,7 +3392,7 @@ variable::get_coordinate(variable=`variable`, location=location(0,0,0,0,0), type
 | type     | Маркер<br/>**PITCH** - Вертикальный поворот<br/>**X** - Ось X<br/>**Y** - Ось Y<br/>**YAW** - Горизонтальный поворот<br/>**Z** - Ось Z | Тип координаты                        |
 
 <h3 id=set_variable_get_decorate_pot_sherd>
-  <code>variable::get_decorate_pot_sherd</code>
+  <code>variable.get_decorate_pot_sherd</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3402,7 +3402,7 @@ variable::get_coordinate(variable=`variable`, location=location(0,0,0,0,0), type
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_decorate_pot_sherd(location(0,0,0,0,0), "BACK");
+`variable` = variable.get_decorate_pot_sherd(location(0,0,0,0,0), "BACK");
 
 //Или от объекта
 
@@ -3410,11 +3410,11 @@ variable::get_coordinate(variable=`variable`, location=location(0,0,0,0,0), type
 
 //Или в сухую позиционно
 
-variable::get_decorate_pot_sherd(`variable`, location(0,0,0,0,0), "BACK");
+variable.get_decorate_pot_sherd(`variable`, location(0,0,0,0,0), "BACK");
 
 //Или в сухую по ключам
 
-variable::get_decorate_pot_sherd(variable=`variable`, location=location(0,0,0,0,0), side="BACK");
+variable.get_decorate_pot_sherd(variable=`variable`, location=location(0,0,0,0,0), side="BACK");
 ```
 
 **Аргументы:**
@@ -3426,7 +3426,7 @@ variable::get_decorate_pot_sherd(variable=`variable`, location=location(0,0,0,0,
 | side     | Маркер<br/>**BACK** - Задняя сторона<br/>**FRONT** - Передняя сторона<br/>**LEFT** - Левая сторона<br/>**RIGHT** - Правая сторона | Сторона вазы              |
 
 <h3 id=set_variable_get_entity_types_by_tag>
-  <code>variable::get_entity_types_by_tag</code>
+  <code>variable.get_entity_types_by_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3436,15 +3436,15 @@ variable::get_decorate_pot_sherd(variable=`variable`, location=location(0,0,0,0,
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_entity_types_by_tag("namespace", "ID");
+`variable` = variable.get_entity_types_by_tag("namespace", "ID");
 
 //Или в сухую позиционно
 
-variable::get_entity_types_by_tag(`variable`, "namespace", "ID");
+variable.get_entity_types_by_tag(`variable`, "namespace", "ID");
 
 //Или в сухую по ключам
 
-variable::get_entity_types_by_tag(variable=`variable`, namespace="namespace", result_type="ID");
+variable.get_entity_types_by_tag(variable=`variable`, namespace="namespace", result_type="ID");
 ```
 
 **Аргументы:**
@@ -3456,7 +3456,7 @@ variable::get_entity_types_by_tag(variable=`variable`, namespace="namespace", re
 | result_type | Маркер<br/>**ID** - ID сущности<br/>**TRANSLATION_KEY** - Переводимое название сущности | Тип результата            |
 
 <h3 id=set_variable_get_index_of_subtext>
-  <code>variable::get_index_of_subtext</code>
+  <code>variable.get_index_of_subtext</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3466,7 +3466,7 @@ variable::get_entity_types_by_tag(variable=`variable`, namespace="namespace", re
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_index_of_subtext("text", "subtext", 1, "FIRST");
+`variable` = variable.get_index_of_subtext("text", "subtext", 1, "FIRST");
 
 //Или от объекта
 
@@ -3474,11 +3474,11 @@ variable::get_entity_types_by_tag(variable=`variable`, namespace="namespace", re
 
 //Или в сухую позиционно
 
-variable::get_index_of_subtext(`variable`, "text", "subtext", 1, "FIRST");
+variable.get_index_of_subtext(`variable`, "text", "subtext", 1, "FIRST");
 
 //Или в сухую по ключам
 
-variable::get_index_of_subtext(variable=`variable`, text="text", subtext="subtext", start_index=1, search_mode="FIRST");
+variable.get_index_of_subtext(variable=`variable`, text="text", subtext="subtext", start_index=1, search_mode="FIRST");
 ```
 
 **Аргументы:**
@@ -3492,7 +3492,7 @@ variable::get_index_of_subtext(variable=`variable`, text="text", subtext="subtex
 | search_mode | Маркер<br/>**FIRST** - С начала (получить первый индекс)<br/>**LAST** - С конца (получить последний индекс) | Режим поиска                |
 
 <h3 id=set_variable_get_item_amount>
-  <code>variable::get_item_amount</code>
+  <code>variable.get_item_amount</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3502,7 +3502,7 @@ variable::get_index_of_subtext(variable=`variable`, text="text", subtext="subtex
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_amount(item("stick"));
+`variable` = variable.get_item_amount(item("stick"));
 
 //Или от объекта
 
@@ -3510,11 +3510,11 @@ variable::get_index_of_subtext(variable=`variable`, text="text", subtext="subtex
 
 //Или в сухую позиционно
 
-variable::get_item_amount(`variable`, item("stick"));
+variable.get_item_amount(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_amount(variable=`variable`, item=item("stick"));
+variable.get_item_amount(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3525,7 +3525,7 @@ variable::get_item_amount(variable=`variable`, item=item("stick"));
 | item     | Предмет             | Предмет                   |
 
 <h3 id=set_variable_get_item_attribute>
-  <code>variable::get_item_attribute</code>
+  <code>variable.get_item_attribute</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3535,7 +3535,7 @@ variable::get_item_amount(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_attribute(item("stick"), "name", "ARMOR", "ALL", "ADD_NUMBER");
+`variable` = variable.get_item_attribute(item("stick"), "name", "ARMOR", "ALL", "ADD_NUMBER");
 
 //Или от объекта
 
@@ -3543,11 +3543,11 @@ variable::get_item_amount(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_attribute(`variable`, item("stick"), "name", "ARMOR", "ALL", "ADD_NUMBER");
+variable.get_item_attribute(`variable`, item("stick"), "name", "ARMOR", "ALL", "ADD_NUMBER");
 
 //Или в сухую по ключам
 
-variable::get_item_attribute(variable=`variable`, item=item("stick"), name="name", attribute="ARMOR", slot="ALL", operation="ADD_NUMBER");
+variable.get_item_attribute(variable=`variable`, item=item("stick"), name="name", attribute="ARMOR", slot="ALL", operation="ADD_NUMBER");
 ```
 
 **Аргументы:**
@@ -3562,7 +3562,7 @@ variable::get_item_attribute(variable=`variable`, item=item("stick"), name="name
 | operation | Маркер<br/>**ADD_NUMBER** - Количество (amount)<br/>**ADD_SCALAR** - Процент (percentage)<br/>**MULTIPLY_SCALAR_1** - Произведение (multiplicative)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Операция атрибута         |
 
 <h3 id=set_variable_get_item_break_sound>
-  <code>variable::get_item_break_sound</code>
+  <code>variable.get_item_break_sound</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3572,7 +3572,7 @@ variable::get_item_attribute(variable=`variable`, item=item("stick"), name="name
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_break_sound(item("stick"));
+`variable` = variable.get_item_break_sound(item("stick"));
 
 //Или от объекта
 
@@ -3580,11 +3580,11 @@ variable::get_item_attribute(variable=`variable`, item=item("stick"), name="name
 
 //Или в сухую позиционно
 
-variable::get_item_break_sound(`variable`, item("stick"));
+variable.get_item_break_sound(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_break_sound(variable=`variable`, item=item("stick"));
+variable.get_item_break_sound(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3595,7 +3595,7 @@ variable::get_item_break_sound(variable=`variable`, item=item("stick"));
 | item     | Предмет             | Предмет                   |
 
 <h3 id=set_variable_get_item_color>
-  <code>variable::get_item_color</code>
+  <code>variable.get_item_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3610,7 +3610,7 @@ variable::get_item_break_sound(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_color(item("stick"));
+`variable` = variable.get_item_color(item("stick"));
 
 //Или от объекта
 
@@ -3618,11 +3618,11 @@ variable::get_item_break_sound(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_color(`variable`, item("stick"));
+variable.get_item_color(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_color(variable=`variable`, item=item("stick"));
+variable.get_item_color(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3633,7 +3633,7 @@ variable::get_item_color(variable=`variable`, item=item("stick"));
 | item     | Предмет             | Предмет                   |
 
 <h3 id=set_variable_get_item_component>
-  <code>variable::get_item_component</code>
+  <code>variable.get_item_component</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3643,7 +3643,7 @@ variable::get_item_color(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_component(item("stick"), "component");
+`variable` = variable.get_item_component(item("stick"), "component");
 
 //Или от объекта
 
@@ -3651,11 +3651,11 @@ variable::get_item_color(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_component(`variable`, item("stick"), "component");
+variable.get_item_component(`variable`, item("stick"), "component");
 
 //Или в сухую по ключам
 
-variable::get_item_component(variable=`variable`, item=item("stick"), component="component");
+variable.get_item_component(variable=`variable`, item=item("stick"), component="component");
 ```
 
 **Аргументы:**
@@ -3667,7 +3667,7 @@ variable::get_item_component(variable=`variable`, item=item("stick"), component=
 | component | Текст                        | Ключ компонента           |
 
 <h3 id=set_variable_get_item_custom_model_data>
-  <code>variable::get_item_custom_model_data</code>
+  <code>variable.get_item_custom_model_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3679,7 +3679,7 @@ variable::get_item_component(variable=`variable`, item=item("stick"), component=
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_custom_model_data(item("stick"));
+`variable` = variable.get_item_custom_model_data(item("stick"));
 
 //Или от объекта
 
@@ -3687,11 +3687,11 @@ variable::get_item_component(variable=`variable`, item=item("stick"), component=
 
 //Или в сухую позиционно
 
-variable::get_item_custom_model_data(`variable`, item("stick"));
+variable.get_item_custom_model_data(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_custom_model_data(variable=`variable`, item=item("stick"));
+variable.get_item_custom_model_data(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3702,7 +3702,7 @@ variable::get_item_custom_model_data(variable=`variable`, item=item("stick"));
 | item     | Предмет             | Предмет                   |
 
 <h3 id=set_variable_get_item_custom_tag>
-  <code>variable::get_item_custom_tag</code>
+  <code>variable.get_item_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3712,7 +3712,7 @@ variable::get_item_custom_model_data(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_custom_tag(item("stick"), "tag_name", "any value");
+`variable` = variable.get_item_custom_tag(item("stick"), "tag_name", "any value");
 
 //Или от объекта
 
@@ -3720,11 +3720,11 @@ variable::get_item_custom_model_data(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_custom_tag(`variable`, item("stick"), "tag_name", "any value");
+variable.get_item_custom_tag(`variable`, item("stick"), "tag_name", "any value");
 
 //Или в сухую по ключам
 
-variable::get_item_custom_tag(variable=`variable`, item=item("stick"), tag_name="tag_name", default_value="any value");
+variable.get_item_custom_tag(variable=`variable`, item=item("stick"), tag_name="tag_name", default_value="any value");
 ```
 
 **Аргументы:**
@@ -3737,7 +3737,7 @@ variable::get_item_custom_tag(variable=`variable`, item=item("stick"), tag_name=
 | default_value | Любое значение               | Значение по умолчанию     |
 
 <h3 id=set_variable_get_item_custom_tags>
-  <code>variable::get_item_custom_tags</code>
+  <code>variable.get_item_custom_tags</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3747,7 +3747,7 @@ variable::get_item_custom_tag(variable=`variable`, item=item("stick"), tag_name=
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_custom_tags(item("stick"));
+`variable` = variable.get_item_custom_tags(item("stick"));
 
 //Или от объекта
 
@@ -3755,11 +3755,11 @@ variable::get_item_custom_tag(variable=`variable`, item=item("stick"), tag_name=
 
 //Или в сухую позиционно
 
-variable::get_item_custom_tags(`variable`, item("stick"));
+variable.get_item_custom_tags(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_custom_tags(variable=`variable`, item=item("stick"));
+variable.get_item_custom_tags(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3770,7 +3770,7 @@ variable::get_item_custom_tags(variable=`variable`, item=item("stick"));
 | item     | Предмет               | Предмет                   |
 
 <h3 id=set_variable_get_item_destroyable_blocks>
-  <code>variable::get_item_destroyable_blocks</code>
+  <code>variable.get_item_destroyable_blocks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3780,7 +3780,7 @@ variable::get_item_custom_tags(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_destroyable_blocks(item("stick"));
+`variable` = variable.get_item_destroyable_blocks(item("stick"));
 
 //Или от объекта
 
@@ -3788,11 +3788,11 @@ variable::get_item_custom_tags(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_destroyable_blocks(`variable`, item("stick"));
+variable.get_item_destroyable_blocks(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_destroyable_blocks(variable=`variable`, item=item("stick"));
+variable.get_item_destroyable_blocks(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3803,7 +3803,7 @@ variable::get_item_destroyable_blocks(variable=`variable`, item=item("stick"));
 | item     | Предмет              | Предмет                   |
 
 <h3 id=set_variable_get_item_durability>
-  <code>variable::get_item_durability</code>
+  <code>variable.get_item_durability</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3813,7 +3813,7 @@ variable::get_item_destroyable_blocks(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_durability(item("stick"), "DAMAGE");
+`variable` = variable.get_item_durability(item("stick"), "DAMAGE");
 
 //Или от объекта
 
@@ -3821,11 +3821,11 @@ variable::get_item_destroyable_blocks(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_durability(`variable`, item("stick"), "DAMAGE");
+variable.get_item_durability(`variable`, item("stick"), "DAMAGE");
 
 //Или в сухую по ключам
 
-variable::get_item_durability(variable=`variable`, item=item("stick"), durability_type="DAMAGE");
+variable.get_item_durability(variable=`variable`, item=item("stick"), durability_type="DAMAGE");
 ```
 
 **Аргументы:**
@@ -3837,7 +3837,7 @@ variable::get_item_durability(variable=`variable`, item=item("stick"), durabilit
 | durability_type | Маркер<br/>**DAMAGE** - Текущая прочность<br/>**DAMAGE_PERCENTAGE** - Текущий процент прочности<br/>**MAXIMUM** - Максимальная прочность<br/>**REMAINING** - Остаточная прочность<br/>**REMAINING_PERCENTAGE** - Остаточный процент прочности | Тип прочности             |
 
 <h3 id=set_variable_get_item_effective_name>
-  <code>variable::get_item_effective_name</code>
+  <code>variable.get_item_effective_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3849,7 +3849,7 @@ variable::get_item_durability(variable=`variable`, item=item("stick"), durabilit
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_effective_name(item("stick"));
+`variable` = variable.get_item_effective_name(item("stick"));
 
 //Или от объекта
 
@@ -3857,11 +3857,11 @@ variable::get_item_durability(variable=`variable`, item=item("stick"), durabilit
 
 //Или в сухую позиционно
 
-variable::get_item_effective_name(`variable`, item("stick"));
+variable.get_item_effective_name(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_effective_name(variable=`variable`, item=item("stick"));
+variable.get_item_effective_name(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3872,7 +3872,7 @@ variable::get_item_effective_name(variable=`variable`, item=item("stick"));
 | item     | Предмет             | Предмет                   |
 
 <h3 id=set_variable_get_item_enchantments>
-  <code>variable::get_item_enchantments</code>
+  <code>variable.get_item_enchantments</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3882,7 +3882,7 @@ variable::get_item_effective_name(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_enchantments(item("stick"));
+`variable` = variable.get_item_enchantments(item("stick"));
 
 //Или от объекта
 
@@ -3890,11 +3890,11 @@ variable::get_item_effective_name(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_enchantments(`variable`, item("stick"));
+variable.get_item_enchantments(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_enchantments(variable=`variable`, item=item("stick"));
+variable.get_item_enchantments(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3905,7 +3905,7 @@ variable::get_item_enchantments(variable=`variable`, item=item("stick"));
 | item     | Предмет               | Предмет                   |
 
 <h3 id=set_variable_get_item_food_properties>
-  <code>variable::get_item_food_properties</code>
+  <code>variable.get_item_food_properties</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3915,7 +3915,7 @@ variable::get_item_enchantments(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_food_properties(item("stick"), "");
+`variable` = variable.get_item_food_properties(item("stick"), "");
 
 //Или от объекта
 
@@ -3923,11 +3923,11 @@ variable::get_item_enchantments(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_food_properties(`variable`, item("stick"), "");
+variable.get_item_food_properties(`variable`, item("stick"), "");
 
 //Или в сухую по ключам
 
-variable::get_item_food_properties(variable=`variable`, item=item("stick"), property="");
+variable.get_item_food_properties(variable=`variable`, item=item("stick"), property="");
 ```
 
 **Аргументы:**
@@ -3939,7 +3939,7 @@ variable::get_item_food_properties(variable=`variable`, item=item("stick"), prop
 | property | Маркер<br/>**** - creative_plus.action.set_variable_get_item_food_properties.argument.property.enum..name | Значение                  |
 
 <h3 id=set_variable_get_item_lore>
-  <code>variable::get_item_lore</code>
+  <code>variable.get_item_lore</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3949,7 +3949,7 @@ variable::get_item_food_properties(variable=`variable`, item=item("stick"), prop
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_lore(item("stick"));
+`variable` = variable.get_item_lore(item("stick"));
 
 //Или от объекта
 
@@ -3957,11 +3957,11 @@ variable::get_item_food_properties(variable=`variable`, item=item("stick"), prop
 
 //Или в сухую позиционно
 
-variable::get_item_lore(`variable`, item("stick"));
+variable.get_item_lore(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_lore(variable=`variable`, item=item("stick"));
+variable.get_item_lore(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3972,7 +3972,7 @@ variable::get_item_lore(variable=`variable`, item=item("stick"));
 | item     | Предмет              | Предмет                   |
 
 <h3 id=set_variable_get_item_lore_line>
-  <code>variable::get_item_lore_line</code>
+  <code>variable.get_item_lore_line</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3982,7 +3982,7 @@ variable::get_item_lore(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_lore_line(item("stick"), 1);
+`variable` = variable.get_item_lore_line(item("stick"), 1);
 
 //Или от объекта
 
@@ -3990,11 +3990,11 @@ variable::get_item_lore(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_lore_line(`variable`, item("stick"), 1);
+variable.get_item_lore_line(`variable`, item("stick"), 1);
 
 //Или в сухую по ключам
 
-variable::get_item_lore_line(variable=`variable`, item=item("stick"), line=1);
+variable.get_item_lore_line(variable=`variable`, item=item("stick"), line=1);
 ```
 
 **Аргументы:**
@@ -4006,7 +4006,7 @@ variable::get_item_lore_line(variable=`variable`, item=item("stick"), line=1);
 | line     | Число               | Номер строки              |
 
 <h3 id=set_variable_get_item_max_stack_size>
-  <code>variable::get_item_max_stack_size</code>
+  <code>variable.get_item_max_stack_size</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4016,7 +4016,7 @@ variable::get_item_lore_line(variable=`variable`, item=item("stick"), line=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_max_stack_size(item("stick"));
+`variable` = variable.get_item_max_stack_size(item("stick"));
 
 //Или от объекта
 
@@ -4024,11 +4024,11 @@ variable::get_item_lore_line(variable=`variable`, item=item("stick"), line=1);
 
 //Или в сухую позиционно
 
-variable::get_item_max_stack_size(`variable`, item("stick"));
+variable.get_item_max_stack_size(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_max_stack_size(variable=`variable`, item=item("stick"));
+variable.get_item_max_stack_size(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -4039,7 +4039,7 @@ variable::get_item_max_stack_size(variable=`variable`, item=item("stick"));
 | item     | Предмет             | Предмет                   |
 
 <h3 id=set_variable_get_item_model_data>
-  <code>variable::get_item_model_data</code>
+  <code>variable.get_item_model_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4049,7 +4049,7 @@ variable::get_item_max_stack_size(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_model_data(item("stick"));
+`variable` = variable.get_item_model_data(item("stick"));
 
 //Или от объекта
 
@@ -4057,11 +4057,11 @@ variable::get_item_max_stack_size(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_model_data(`variable`, item("stick"));
+variable.get_item_model_data(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_model_data(variable=`variable`, item=item("stick"));
+variable.get_item_model_data(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -4072,7 +4072,7 @@ variable::get_item_model_data(variable=`variable`, item=item("stick"));
 | item     | Предмет             | Предмет                   |
 
 <h3 id=set_variable_get_item_name>
-  <code>variable::get_item_name</code>
+  <code>variable.get_item_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4082,7 +4082,7 @@ variable::get_item_model_data(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_name(item("stick"));
+`variable` = variable.get_item_name(item("stick"));
 
 //Или от объекта
 
@@ -4090,11 +4090,11 @@ variable::get_item_model_data(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_name(`variable`, item("stick"));
+variable.get_item_name(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_name(variable=`variable`, item=item("stick"));
+variable.get_item_name(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -4105,7 +4105,7 @@ variable::get_item_name(variable=`variable`, item=item("stick"));
 | item     | Предмет             | Предмет                   |
 
 <h3 id=set_variable_get_item_nbt_tags>
-  <code>variable::get_item_nbt_tags</code>
+  <code>variable.get_item_nbt_tags</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4115,7 +4115,7 @@ variable::get_item_name(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_nbt_tags(item("stick"), "ALL");
+`variable` = variable.get_item_nbt_tags(item("stick"), "ALL");
 
 //Или от объекта
 
@@ -4123,11 +4123,11 @@ variable::get_item_name(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_nbt_tags(`variable`, item("stick"), "ALL");
+variable.get_item_nbt_tags(`variable`, item("stick"), "ALL");
 
 //Или в сухую по ключам
 
-variable::get_item_nbt_tags(variable=`variable`, item=item("stick"), fetch_mode="ALL");
+variable.get_item_nbt_tags(variable=`variable`, item=item("stick"), fetch_mode="ALL");
 ```
 
 **Аргументы:**
@@ -4139,7 +4139,7 @@ variable::get_item_nbt_tags(variable=`variable`, item=item("stick"), fetch_mode=
 | fetch_mode | Маркер<br/>**ALL** - Все<br/>**CUSTOM_DATA** - Кастомные теги | Тип данных                |
 
 <h3 id=set_variable_get_item_placeable_blocks>
-  <code>variable::get_item_placeable_blocks</code>
+  <code>variable.get_item_placeable_blocks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4149,7 +4149,7 @@ variable::get_item_nbt_tags(variable=`variable`, item=item("stick"), fetch_mode=
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_placeable_blocks(item("stick"));
+`variable` = variable.get_item_placeable_blocks(item("stick"));
 
 //Или от объекта
 
@@ -4157,11 +4157,11 @@ variable::get_item_nbt_tags(variable=`variable`, item=item("stick"), fetch_mode=
 
 //Или в сухую позиционно
 
-variable::get_item_placeable_blocks(`variable`, item("stick"));
+variable.get_item_placeable_blocks(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_placeable_blocks(variable=`variable`, item=item("stick"));
+variable.get_item_placeable_blocks(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -4172,7 +4172,7 @@ variable::get_item_placeable_blocks(variable=`variable`, item=item("stick"));
 | item     | Предмет              | Предмет                   |
 
 <h3 id=set_variable_get_item_potion_effects>
-  <code>variable::get_item_potion_effects</code>
+  <code>variable.get_item_potion_effects</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4182,7 +4182,7 @@ variable::get_item_placeable_blocks(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_potion_effects(item("stick"));
+`variable` = variable.get_item_potion_effects(item("stick"));
 
 //Или от объекта
 
@@ -4190,11 +4190,11 @@ variable::get_item_placeable_blocks(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_potion_effects(`variable`, item("stick"));
+variable.get_item_potion_effects(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_potion_effects(variable=`variable`, item=item("stick"));
+variable.get_item_potion_effects(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -4205,7 +4205,7 @@ variable::get_item_potion_effects(variable=`variable`, item=item("stick"));
 | item     | Предмет              | Предмет                   |
 
 <h3 id=set_variable_get_item_rarity>
-  <code>variable::get_item_rarity</code>
+  <code>variable.get_item_rarity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4215,7 +4215,7 @@ variable::get_item_potion_effects(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_rarity(item("stick"));
+`variable` = variable.get_item_rarity(item("stick"));
 
 //Или от объекта
 
@@ -4223,11 +4223,11 @@ variable::get_item_potion_effects(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_rarity(`variable`, item("stick"));
+variable.get_item_rarity(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_rarity(variable=`variable`, item=item("stick"));
+variable.get_item_rarity(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -4238,7 +4238,7 @@ variable::get_item_rarity(variable=`variable`, item=item("stick"));
 | item     | Предмет             | Предмет                   |
 
 <h3 id=set_variable_get_item_tooltip_style>
-  <code>variable::get_item_tooltip_style</code>
+  <code>variable.get_item_tooltip_style</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4248,7 +4248,7 @@ variable::get_item_rarity(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_tooltip_style(item("stick"));
+`variable` = variable.get_item_tooltip_style(item("stick"));
 
 //Или от объекта
 
@@ -4256,11 +4256,11 @@ variable::get_item_rarity(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_tooltip_style(`variable`, item("stick"));
+variable.get_item_tooltip_style(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_tooltip_style(variable=`variable`, item=item("stick"));
+variable.get_item_tooltip_style(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -4271,7 +4271,7 @@ variable::get_item_tooltip_style(variable=`variable`, item=item("stick"));
 | item     | Предмет             | Предмет                   |
 
 <h3 id=set_variable_get_item_type>
-  <code>variable::get_item_type</code>
+  <code>variable.get_item_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4281,7 +4281,7 @@ variable::get_item_tooltip_style(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_type(item("stick"), "ID");
+`variable` = variable.get_item_type(item("stick"), "ID");
 
 //Или от объекта
 
@@ -4289,11 +4289,11 @@ variable::get_item_tooltip_style(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_type(`variable`, item("stick"), "ID");
+variable.get_item_type(`variable`, item("stick"), "ID");
 
 //Или в сухую по ключам
 
-variable::get_item_type(variable=`variable`, type=item("stick"), value="ID");
+variable.get_item_type(variable=`variable`, type=item("stick"), value="ID");
 ```
 
 **Аргументы:**
@@ -4305,7 +4305,7 @@ variable::get_item_type(variable=`variable`, type=item("stick"), value="ID");
 | value    | Маркер<br/>**ID** - ID предмета<br/>**ITEM** - Предмет<br/>**NAME** - Имя предмета | Текстовое представление   |
 
 <h3 id=set_variable_get_item_use_remainder>
-  <code>variable::get_item_use_remainder</code>
+  <code>variable.get_item_use_remainder</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4315,7 +4315,7 @@ variable::get_item_type(variable=`variable`, type=item("stick"), value="ID");
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_use_remainder(item("stick"));
+`variable` = variable.get_item_use_remainder(item("stick"));
 
 //Или от объекта
 
@@ -4323,11 +4323,11 @@ variable::get_item_type(variable=`variable`, type=item("stick"), value="ID");
 
 //Или в сухую позиционно
 
-variable::get_item_use_remainder(`variable`, item("stick"));
+variable.get_item_use_remainder(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::get_item_use_remainder(variable=`variable`, item=item("stick"));
+variable.get_item_use_remainder(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -4338,7 +4338,7 @@ variable::get_item_use_remainder(variable=`variable`, item=item("stick"));
 | item     | Предмет               | Предмет                   |
 
 <h3 id=set_variable_get_item_weapon>
-  <code>variable::get_item_weapon</code>
+  <code>variable.get_item_weapon</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4348,7 +4348,7 @@ variable::get_item_use_remainder(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_item_weapon(item("stick"), "ITEM_DAMAGE_PER_ATTACK");
+`variable` = variable.get_item_weapon(item("stick"), "ITEM_DAMAGE_PER_ATTACK");
 
 //Или от объекта
 
@@ -4356,11 +4356,11 @@ variable::get_item_use_remainder(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::get_item_weapon(`variable`, item("stick"), "ITEM_DAMAGE_PER_ATTACK");
+variable.get_item_weapon(`variable`, item("stick"), "ITEM_DAMAGE_PER_ATTACK");
 
 //Или в сухую по ключам
 
-variable::get_item_weapon(variable=`variable`, item=item("stick"), property="ITEM_DAMAGE_PER_ATTACK");
+variable.get_item_weapon(variable=`variable`, item=item("stick"), property="ITEM_DAMAGE_PER_ATTACK");
 ```
 
 **Аргументы:**
@@ -4372,7 +4372,7 @@ variable::get_item_weapon(variable=`variable`, item=item("stick"), property="ITE
 | property | Маркер<br/>**ITEM_DAMAGE_PER_ATTACK** - Урон от атаки<br/>**DISABLE_BLOCKING** - Задержка щита после удара | Значение                  |
 
 <h3 id=set_variable_get_items_by_tag>
-  <code>variable::get_items_by_tag</code>
+  <code>variable.get_items_by_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4382,15 +4382,15 @@ variable::get_item_weapon(variable=`variable`, item=item("stick"), property="ITE
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_items_by_tag("namespace", "ID");
+`variable` = variable.get_items_by_tag("namespace", "ID");
 
 //Или в сухую позиционно
 
-variable::get_items_by_tag(`variable`, "namespace", "ID");
+variable.get_items_by_tag(`variable`, "namespace", "ID");
 
 //Или в сухую по ключам
 
-variable::get_items_by_tag(variable=`variable`, namespace="namespace", result_type="ID");
+variable.get_items_by_tag(variable=`variable`, namespace="namespace", result_type="ID");
 ```
 
 **Аргументы:**
@@ -4402,7 +4402,7 @@ variable::get_items_by_tag(variable=`variable`, namespace="namespace", result_ty
 | result_type | Маркер<br/>**ID** - ID предмета<br/>**TRANSLATION_KEY** - Переводимое название предмета<br/>**ITEM** - Предмет | Тип результата            |
 
 <h3 id=set_variable_get_lectern_book>
-  <code>variable::get_lectern_book</code>
+  <code>variable.get_lectern_book</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4412,7 +4412,7 @@ variable::get_items_by_tag(variable=`variable`, namespace="namespace", result_ty
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_lectern_book(location(0,0,0,0,0));
+`variable` = variable.get_lectern_book(location(0,0,0,0,0));
 
 //Или от объекта
 
@@ -4420,11 +4420,11 @@ variable::get_items_by_tag(variable=`variable`, namespace="namespace", result_ty
 
 //Или в сухую позиционно
 
-variable::get_lectern_book(`variable`, location(0,0,0,0,0));
+variable.get_lectern_book(`variable`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_lectern_book(variable=`variable`, location=location(0,0,0,0,0));
+variable.get_lectern_book(variable=`variable`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -4435,7 +4435,7 @@ variable::get_lectern_book(variable=`variable`, location=location(0,0,0,0,0));
 | location | Местоположение        | Местоположение блока      |
 
 <h3 id=set_variable_get_lectern_page>
-  <code>variable::get_lectern_page</code>
+  <code>variable.get_lectern_page</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4445,7 +4445,7 @@ variable::get_lectern_book(variable=`variable`, location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_lectern_page(location(0,0,0,0,0));
+`variable` = variable.get_lectern_page(location(0,0,0,0,0));
 
 //Или от объекта
 
@@ -4453,11 +4453,11 @@ variable::get_lectern_book(variable=`variable`, location=location(0,0,0,0,0));
 
 //Или в сухую позиционно
 
-variable::get_lectern_page(`variable`, location(0,0,0,0,0));
+variable.get_lectern_page(`variable`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_lectern_page(variable=`variable`, location=location(0,0,0,0,0));
+variable.get_lectern_page(variable=`variable`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -4468,7 +4468,7 @@ variable::get_lectern_page(variable=`variable`, location=location(0,0,0,0,0));
 | location | Местоположение      | Местоположение блока      |
 
 <h3 id=set_variable_get_light_level>
-  <code>variable::get_light_level</code>
+  <code>variable.get_light_level</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4478,7 +4478,7 @@ variable::get_lectern_page(variable=`variable`, location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_light_level(location(0,0,0,0,0), "BLOCKS");
+`variable` = variable.get_light_level(location(0,0,0,0,0), "BLOCKS");
 
 //Или от объекта
 
@@ -4486,11 +4486,11 @@ variable::get_lectern_page(variable=`variable`, location=location(0,0,0,0,0));
 
 //Или в сухую позиционно
 
-variable::get_light_level(`variable`, location(0,0,0,0,0), "BLOCKS");
+variable.get_light_level(`variable`, location(0,0,0,0,0), "BLOCKS");
 
 //Или в сухую по ключам
 
-variable::get_light_level(variable=`variable`, location=location(0,0,0,0,0), value_type="BLOCKS");
+variable.get_light_level(variable=`variable`, location=location(0,0,0,0,0), value_type="BLOCKS");
 ```
 
 **Аргументы:**
@@ -4502,7 +4502,7 @@ variable::get_light_level(variable=`variable`, location=location(0,0,0,0,0), val
 | value_type | Маркер<br/>**BLOCKS** - Свет от блоков<br/>**SKY** - Свет от неба<br/>**TOTAL** - Полное освещение | Тип освещения                     |
 
 <h3 id=set_variable_get_list_index_of_value>
-  <code>variable::get_list_index_of_value</code>
+  <code>variable.get_list_index_of_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4512,7 +4512,7 @@ variable::get_light_level(variable=`variable`, location=location(0,0,0,0,0), val
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_list_index_of_value([`list`, `list`], "any value", "FIRST");
+`variable` = variable.get_list_index_of_value([`list`, `list`], "any value", "FIRST");
 
 //Или от объекта
 
@@ -4520,11 +4520,11 @@ variable::get_light_level(variable=`variable`, location=location(0,0,0,0,0), val
 
 //Или в сухую позиционно
 
-variable::get_list_index_of_value(`variable`, [`list`, `list`], "any value", "FIRST");
+variable.get_list_index_of_value(`variable`, [`list`, `list`], "any value", "FIRST");
 
 //Или в сухую по ключам
 
-variable::get_list_index_of_value(variable=`variable`, list=[`list`, `list`], value="any value", search_mode="FIRST");
+variable.get_list_index_of_value(variable=`variable`, list=[`list`, `list`], value="any value", search_mode="FIRST");
 ```
 
 **Аргументы:**
@@ -4537,7 +4537,7 @@ variable::get_list_index_of_value(variable=`variable`, list=[`list`, `list`], va
 | search_mode | Маркер<br/>**FIRST** - С начала (получить первый индекс)<br/>**LAST** - С конца (получить последний индекс) | Режим поиска              |
 
 <h3 id=set_variable_get_list_length>
-  <code>variable::get_list_length</code>
+  <code>variable.get_list_length</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4547,7 +4547,7 @@ variable::get_list_index_of_value(variable=`variable`, list=[`list`, `list`], va
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_list_length([`list`, `list`]);
+`variable` = variable.get_list_length([`list`, `list`]);
 
 //Или от объекта
 
@@ -4555,11 +4555,11 @@ variable::get_list_index_of_value(variable=`variable`, list=[`list`, `list`], va
 
 //Или в сухую позиционно
 
-variable::get_list_length(`variable`, [`list`, `list`]);
+variable.get_list_length(`variable`, [`list`, `list`]);
 
 //Или в сухую по ключам
 
-variable::get_list_length(variable=`variable`, list=[`list`, `list`]);
+variable.get_list_length(variable=`variable`, list=[`list`, `list`]);
 ```
 
 **Аргументы:**
@@ -4570,7 +4570,7 @@ variable::get_list_length(variable=`variable`, list=[`list`, `list`]);
 | list     | Список              | Список                    |
 
 <h3 id=set_variable_get_list_random_value>
-  <code>variable::get_list_random_value</code>
+  <code>variable.get_list_random_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4580,7 +4580,7 @@ variable::get_list_length(variable=`variable`, list=[`list`, `list`]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_list_random_value([`list`, `list`]);
+`variable` = variable.get_list_random_value([`list`, `list`]);
 
 //Или от объекта
 
@@ -4588,11 +4588,11 @@ variable::get_list_length(variable=`variable`, list=[`list`, `list`]);
 
 //Или в сухую позиционно
 
-variable::get_list_random_value(`variable`, [`list`, `list`]);
+variable.get_list_random_value(`variable`, [`list`, `list`]);
 
 //Или в сухую по ключам
 
-variable::get_list_random_value(variable=`variable`, list=[`list`, `list`]);
+variable.get_list_random_value(variable=`variable`, list=[`list`, `list`]);
 ```
 
 **Аргументы:**
@@ -4603,7 +4603,7 @@ variable::get_list_random_value(variable=`variable`, list=[`list`, `list`]);
 | list     | Список                       | Список                    |
 
 <h3 id=set_variable_get_list_value>
-  <code>variable::get_list_value</code>
+  <code>variable.get_list_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4613,7 +4613,7 @@ variable::get_list_random_value(variable=`variable`, list=[`list`, `list`]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_list_value([`list`, `list`], 1, "any value");
+`variable` = variable.get_list_value([`list`, `list`], 1, "any value");
 
 //Или от объекта
 
@@ -4621,11 +4621,11 @@ variable::get_list_random_value(variable=`variable`, list=[`list`, `list`]);
 
 //Или в сухую позиционно
 
-variable::get_list_value(`variable`, [`list`, `list`], 1, "any value");
+variable.get_list_value(`variable`, [`list`, `list`], 1, "any value");
 
 //Или в сухую по ключам
 
-variable::get_list_value(variable=`variable`, list=[`list`, `list`], number=1, default_value="any value");
+variable.get_list_value(variable=`variable`, list=[`list`, `list`], number=1, default_value="any value");
 ```
 
 **Аргументы:**
@@ -4638,7 +4638,7 @@ variable::get_list_value(variable=`variable`, list=[`list`, `list`], number=1, d
 | default_value | Любое значение               | Значение по умолчанию     |
 
 <h3 id=set_variable_get_list_variables>
-  <code>variable::get_list_variables</code>
+  <code>variable.get_list_variables</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4648,15 +4648,15 @@ variable::get_list_value(variable=`variable`, list=[`list`, `list`], number=1, d
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_list_variables(["names", "names"], "GAME", "EQUALS", "TRUE");
+`variable` = variable.get_list_variables(["names", "names"], "GAME", "EQUALS", "TRUE");
 
 //Или в сухую позиционно
 
-variable::get_list_variables(`variable`, ["names", "names"], "GAME", "EQUALS", "TRUE");
+variable.get_list_variables(`variable`, ["names", "names"], "GAME", "EQUALS", "TRUE");
 
 //Или в сухую по ключам
 
-variable::get_list_variables(variable=`variable`, names=["names", "names"], scope="GAME", match="EQUALS", ignore_case="TRUE");
+variable.get_list_variables(variable=`variable`, names=["names", "names"], scope="GAME", match="EQUALS", ignore_case="TRUE");
 ```
 
 **Аргументы:**
@@ -4670,7 +4670,7 @@ variable::get_list_variables(variable=`variable`, names=["names", "names"], scop
 | ignore_case | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет                                                                                                                                                 | Игнорировать регистр                                          |
 
 <h3 id=set_variable_get_location_direction>
-  <code>variable::get_location_direction</code>
+  <code>variable.get_location_direction</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4680,7 +4680,7 @@ variable::get_list_variables(variable=`variable`, names=["names", "names"], scop
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_location_direction(location(0,0,0,0,0));
+`variable` = variable.get_location_direction(location(0,0,0,0,0));
 
 //Или от объекта
 
@@ -4688,11 +4688,11 @@ variable::get_list_variables(variable=`variable`, names=["names", "names"], scop
 
 //Или в сухую позиционно
 
-variable::get_location_direction(`variable`, location(0,0,0,0,0));
+variable.get_location_direction(`variable`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_location_direction(variable=`variable`, location=location(0,0,0,0,0));
+variable.get_location_direction(variable=`variable`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -4703,7 +4703,7 @@ variable::get_location_direction(variable=`variable`, location=location(0,0,0,0,
 | location | Местоположение       | Местоположение для получения |
 
 <h3 id=set_variable_get_map_key_by_index>
-  <code>variable::get_map_key_by_index</code>
+  <code>variable.get_map_key_by_index</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4713,7 +4713,7 @@ variable::get_location_direction(variable=`variable`, location=location(0,0,0,0,
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_map_key_by_index({"map":`map`}, 1, "any value");
+`variable` = variable.get_map_key_by_index({"map":`map`}, 1, "any value");
 
 //Или от объекта
 
@@ -4721,11 +4721,11 @@ variable::get_location_direction(variable=`variable`, location=location(0,0,0,0,
 
 //Или в сухую позиционно
 
-variable::get_map_key_by_index(`variable`, {"map":`map`}, 1, "any value");
+variable.get_map_key_by_index(`variable`, {"map":`map`}, 1, "any value");
 
 //Или в сухую по ключам
 
-variable::get_map_key_by_index(variable=`variable`, map={"map":`map`}, index=1, default_value="any value");
+variable.get_map_key_by_index(variable=`variable`, map={"map":`map`}, index=1, default_value="any value");
 ```
 
 **Аргументы:**
@@ -4738,7 +4738,7 @@ variable::get_map_key_by_index(variable=`variable`, map={"map":`map`}, index=1, 
 | default_value | Любое значение               | Значение по умолчанию       |
 
 <h3 id=set_variable_get_map_keys>
-  <code>variable::get_map_keys</code>
+  <code>variable.get_map_keys</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4748,7 +4748,7 @@ variable::get_map_key_by_index(variable=`variable`, map={"map":`map`}, index=1, 
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_map_keys({"map":`map`});
+`variable` = variable.get_map_keys({"map":`map`});
 
 //Или от объекта
 
@@ -4756,11 +4756,11 @@ variable::get_map_key_by_index(variable=`variable`, map={"map":`map`}, index=1, 
 
 //Или в сухую позиционно
 
-variable::get_map_keys(`variable`, {"map":`map`});
+variable.get_map_keys(`variable`, {"map":`map`});
 
 //Или в сухую по ключам
 
-variable::get_map_keys(variable=`variable`, map={"map":`map`});
+variable.get_map_keys(variable=`variable`, map={"map":`map`});
 ```
 
 **Аргументы:**
@@ -4771,7 +4771,7 @@ variable::get_map_keys(variable=`variable`, map={"map":`map`});
 | map      | Словарь              | Словарь для получения значения |
 
 <h3 id=set_variable_get_map_keys_by_value>
-  <code>variable::get_map_keys_by_value</code>
+  <code>variable.get_map_keys_by_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4781,7 +4781,7 @@ variable::get_map_keys(variable=`variable`, map={"map":`map`});
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_map_keys_by_value({"map":`map`}, "any value", "any value", "ALL");
+`variable` = variable.get_map_keys_by_value({"map":`map`}, "any value", "any value", "ALL");
 
 //Или от объекта
 
@@ -4789,11 +4789,11 @@ variable::get_map_keys(variable=`variable`, map={"map":`map`});
 
 //Или в сухую позиционно
 
-variable::get_map_keys_by_value(`variable`, {"map":`map`}, "any value", "any value", "ALL");
+variable.get_map_keys_by_value(`variable`, {"map":`map`}, "any value", "any value", "ALL");
 
 //Или в сухую по ключам
 
-variable::get_map_keys_by_value(variable=`variable`, map={"map":`map`}, value="any value", default_value="any value", find_mode="ALL");
+variable.get_map_keys_by_value(variable=`variable`, map={"map":`map`}, value="any value", default_value="any value", find_mode="ALL");
 ```
 
 **Аргументы:**
@@ -4807,7 +4807,7 @@ variable::get_map_keys_by_value(variable=`variable`, map={"map":`map`}, value="a
 | find_mode     | Маркер<br/>**ALL** - Все (получает все ключи)<br/>**FIRST** - С начала (получает первый ключ)<br/>**LAST** - С конца (получает последний ключ) | Режим поиска              |
 
 <h3 id=set_variable_get_map_size>
-  <code>variable::get_map_size</code>
+  <code>variable.get_map_size</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4817,7 +4817,7 @@ variable::get_map_keys_by_value(variable=`variable`, map={"map":`map`}, value="a
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_map_size({"map":`map`});
+`variable` = variable.get_map_size({"map":`map`});
 
 //Или от объекта
 
@@ -4825,11 +4825,11 @@ variable::get_map_keys_by_value(variable=`variable`, map={"map":`map`}, value="a
 
 //Или в сухую позиционно
 
-variable::get_map_size(`variable`, {"map":`map`});
+variable.get_map_size(`variable`, {"map":`map`});
 
 //Или в сухую по ключам
 
-variable::get_map_size(variable=`variable`, map={"map":`map`});
+variable.get_map_size(variable=`variable`, map={"map":`map`});
 ```
 
 **Аргументы:**
@@ -4840,7 +4840,7 @@ variable::get_map_size(variable=`variable`, map={"map":`map`});
 | map      | Словарь             | Словарь                   |
 
 <h3 id=set_variable_get_map_value>
-  <code>variable::get_map_value</code>
+  <code>variable.get_map_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4850,7 +4850,7 @@ variable::get_map_size(variable=`variable`, map={"map":`map`});
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_map_value({"map":`map`}, "any value", "any value");
+`variable` = variable.get_map_value({"map":`map`}, "any value", "any value");
 
 //Или от объекта
 
@@ -4858,11 +4858,11 @@ variable::get_map_size(variable=`variable`, map={"map":`map`});
 
 //Или в сухую позиционно
 
-variable::get_map_value(`variable`, {"map":`map`}, "any value", "any value");
+variable.get_map_value(`variable`, {"map":`map`}, "any value", "any value");
 
 //Или в сухую по ключам
 
-variable::get_map_value(variable=`variable`, map={"map":`map`}, key="any value", default_value="any value");
+variable.get_map_value(variable=`variable`, map={"map":`map`}, key="any value", default_value="any value");
 ```
 
 **Аргументы:**
@@ -4875,7 +4875,7 @@ variable::get_map_value(variable=`variable`, map={"map":`map`}, key="any value",
 | default_value | Любое значение               | Значение по умолчанию     |
 
 <h3 id=set_variable_get_map_value_by_index>
-  <code>variable::get_map_value_by_index</code>
+  <code>variable.get_map_value_by_index</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4885,7 +4885,7 @@ variable::get_map_value(variable=`variable`, map={"map":`map`}, key="any value",
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_map_value_by_index({"map":`map`}, 1, "any value");
+`variable` = variable.get_map_value_by_index({"map":`map`}, 1, "any value");
 
 //Или от объекта
 
@@ -4893,11 +4893,11 @@ variable::get_map_value(variable=`variable`, map={"map":`map`}, key="any value",
 
 //Или в сухую позиционно
 
-variable::get_map_value_by_index(`variable`, {"map":`map`}, 1, "any value");
+variable.get_map_value_by_index(`variable`, {"map":`map`}, 1, "any value");
 
 //Или в сухую по ключам
 
-variable::get_map_value_by_index(variable=`variable`, map={"map":`map`}, index=1, default_value="any value");
+variable.get_map_value_by_index(variable=`variable`, map={"map":`map`}, index=1, default_value="any value");
 ```
 
 **Аргументы:**
@@ -4910,7 +4910,7 @@ variable::get_map_value_by_index(variable=`variable`, map={"map":`map`}, index=1
 | default_value | Любое значение               | Значение по умолчанию          |
 
 <h3 id=set_variable_get_map_values>
-  <code>variable::get_map_values</code>
+  <code>variable.get_map_values</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4920,7 +4920,7 @@ variable::get_map_value_by_index(variable=`variable`, map={"map":`map`}, index=1
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_map_values({"map":`map`});
+`variable` = variable.get_map_values({"map":`map`});
 
 //Или от объекта
 
@@ -4928,11 +4928,11 @@ variable::get_map_value_by_index(variable=`variable`, map={"map":`map`}, index=1
 
 //Или в сухую позиционно
 
-variable::get_map_values(`variable`, {"map":`map`});
+variable.get_map_values(`variable`, {"map":`map`});
 
 //Или в сухую по ключам
 
-variable::get_map_values(variable=`variable`, map={"map":`map`});
+variable.get_map_values(variable=`variable`, map={"map":`map`});
 ```
 
 **Аргументы:**
@@ -4943,7 +4943,7 @@ variable::get_map_values(variable=`variable`, map={"map":`map`});
 | map      | Словарь              | Словарь для получения значения |
 
 <h3 id=set_variable_get_midpoint_between_vectors>
-  <code>variable::get_midpoint_between_vectors</code>
+  <code>variable.get_midpoint_between_vectors</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4953,15 +4953,15 @@ variable::get_map_values(variable=`variable`, map={"map":`map`});
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_midpoint_between_vectors(vector(0,0,0), vector(0,0,0));
+`variable` = variable.get_midpoint_between_vectors(vector(0,0,0), vector(0,0,0));
 
 //Или в сухую позиционно
 
-variable::get_midpoint_between_vectors(`variable`, vector(0,0,0), vector(0,0,0));
+variable.get_midpoint_between_vectors(`variable`, vector(0,0,0), vector(0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_midpoint_between_vectors(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0));
+variable.get_midpoint_between_vectors(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -4973,7 +4973,7 @@ variable::get_midpoint_between_vectors(variable=`variable`, vector_1=vector(0,0,
 | vector_2 | Вектор               | Второй вектор             |
 
 <h3 id=set_variable_get_particle_amount>
-  <code>variable::get_particle_amount</code>
+  <code>variable.get_particle_amount</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4983,7 +4983,7 @@ variable::get_midpoint_between_vectors(variable=`variable`, vector_1=vector(0,0,
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_particle_amount(particle("fire"));
+`variable` = variable.get_particle_amount(particle("fire"));
 
 //Или от объекта
 
@@ -4991,11 +4991,11 @@ variable::get_midpoint_between_vectors(variable=`variable`, vector_1=vector(0,0,
 
 //Или в сухую позиционно
 
-variable::get_particle_amount(`variable`, particle("fire"));
+variable.get_particle_amount(`variable`, particle("fire"));
 
 //Или в сухую по ключам
 
-variable::get_particle_amount(variable=`variable`, particle=particle("fire"));
+variable.get_particle_amount(variable=`variable`, particle=particle("fire"));
 ```
 
 **Аргументы:**
@@ -5006,7 +5006,7 @@ variable::get_particle_amount(variable=`variable`, particle=particle("fire"));
 | particle | Эффект частиц       | Частица для получения значения |
 
 <h3 id=set_variable_get_particle_color>
-  <code>variable::get_particle_color</code>
+  <code>variable.get_particle_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5016,7 +5016,7 @@ variable::get_particle_amount(variable=`variable`, particle=particle("fire"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_particle_color(particle("fire"), "COLOR");
+`variable` = variable.get_particle_color(particle("fire"), "COLOR");
 
 //Или от объекта
 
@@ -5024,11 +5024,11 @@ variable::get_particle_amount(variable=`variable`, particle=particle("fire"));
 
 //Или в сухую позиционно
 
-variable::get_particle_color(`variable`, particle("fire"), "COLOR");
+variable.get_particle_color(`variable`, particle("fire"), "COLOR");
 
 //Или в сухую по ключам
 
-variable::get_particle_color(variable=`variable`, particle=particle("fire"), color_type="COLOR");
+variable.get_particle_color(variable=`variable`, particle=particle("fire"), color_type="COLOR");
 ```
 
 **Аргументы:**
@@ -5040,7 +5040,7 @@ variable::get_particle_color(variable=`variable`, particle=particle("fire"), col
 | color_type | Маркер<br/>**COLOR** - Обычный цвет<br/>**TO_COLOR** - Цвет перехода | Тип цвета                      |
 
 <h3 id=set_variable_get_particle_material>
-  <code>variable::get_particle_material</code>
+  <code>variable.get_particle_material</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5050,7 +5050,7 @@ variable::get_particle_color(variable=`variable`, particle=particle("fire"), col
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_particle_material(particle("fire"));
+`variable` = variable.get_particle_material(particle("fire"));
 
 //Или от объекта
 
@@ -5058,11 +5058,11 @@ variable::get_particle_color(variable=`variable`, particle=particle("fire"), col
 
 //Или в сухую позиционно
 
-variable::get_particle_material(`variable`, particle("fire"));
+variable.get_particle_material(`variable`, particle("fire"));
 
 //Или в сухую по ключам
 
-variable::get_particle_material(variable=`variable`, particle=particle("fire"));
+variable.get_particle_material(variable=`variable`, particle=particle("fire"));
 ```
 
 **Аргументы:**
@@ -5073,7 +5073,7 @@ variable::get_particle_material(variable=`variable`, particle=particle("fire"));
 | particle | Эффект частиц       | Частица для получения значения |
 
 <h3 id=set_variable_get_particle_offset>
-  <code>variable::get_particle_offset</code>
+  <code>variable.get_particle_offset</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5083,7 +5083,7 @@ variable::get_particle_material(variable=`variable`, particle=particle("fire"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_particle_offset(particle("fire"));
+`variable` = variable.get_particle_offset(particle("fire"));
 
 //Или от объекта
 
@@ -5091,11 +5091,11 @@ variable::get_particle_material(variable=`variable`, particle=particle("fire"));
 
 //Или в сухую позиционно
 
-variable::get_particle_offset(`variable`, particle("fire"));
+variable.get_particle_offset(`variable`, particle("fire"));
 
 //Или в сухую по ключам
 
-variable::get_particle_offset(variable=`variable`, particle=particle("fire"));
+variable.get_particle_offset(variable=`variable`, particle=particle("fire"));
 ```
 
 **Аргументы:**
@@ -5106,7 +5106,7 @@ variable::get_particle_offset(variable=`variable`, particle=particle("fire"));
 | particle | Эффект частиц        | Частица для получения значения |
 
 <h3 id=set_variable_get_particle_size>
-  <code>variable::get_particle_size</code>
+  <code>variable.get_particle_size</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5116,7 +5116,7 @@ variable::get_particle_offset(variable=`variable`, particle=particle("fire"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_particle_size(particle("fire"));
+`variable` = variable.get_particle_size(particle("fire"));
 
 //Или от объекта
 
@@ -5124,11 +5124,11 @@ variable::get_particle_offset(variable=`variable`, particle=particle("fire"));
 
 //Или в сухую позиционно
 
-variable::get_particle_size(`variable`, particle("fire"));
+variable.get_particle_size(`variable`, particle("fire"));
 
 //Или в сухую по ключам
 
-variable::get_particle_size(variable=`variable`, particle=particle("fire"));
+variable.get_particle_size(variable=`variable`, particle=particle("fire"));
 ```
 
 **Аргументы:**
@@ -5139,7 +5139,7 @@ variable::get_particle_size(variable=`variable`, particle=particle("fire"));
 | particle | Эффект частиц       | Частица для получения значения |
 
 <h3 id=set_variable_get_particle_spread>
-  <code>variable::get_particle_spread</code>
+  <code>variable.get_particle_spread</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5149,7 +5149,7 @@ variable::get_particle_size(variable=`variable`, particle=particle("fire"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_particle_spread(particle("fire"), "HORIZONTAL");
+`variable` = variable.get_particle_spread(particle("fire"), "HORIZONTAL");
 
 //Или от объекта
 
@@ -5157,11 +5157,11 @@ variable::get_particle_size(variable=`variable`, particle=particle("fire"));
 
 //Или в сухую позиционно
 
-variable::get_particle_spread(`variable`, particle("fire"), "HORIZONTAL");
+variable.get_particle_spread(`variable`, particle("fire"), "HORIZONTAL");
 
 //Или в сухую по ключам
 
-variable::get_particle_spread(variable=`variable`, particle=particle("fire"), type="HORIZONTAL");
+variable.get_particle_spread(variable=`variable`, particle=particle("fire"), type="HORIZONTAL");
 ```
 
 **Аргументы:**
@@ -5173,7 +5173,7 @@ variable::get_particle_spread(variable=`variable`, particle=particle("fire"), ty
 | type     | Маркер<br/>**HORIZONTAL** - Горизонтальная<br/>**VERTICAL** - Вертикальная | Плоскость разброса             |
 
 <h3 id=set_variable_get_particle_type>
-  <code>variable::get_particle_type</code>
+  <code>variable.get_particle_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5183,7 +5183,7 @@ variable::get_particle_spread(variable=`variable`, particle=particle("fire"), ty
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_particle_type(particle("fire"));
+`variable` = variable.get_particle_type(particle("fire"));
 
 //Или от объекта
 
@@ -5191,11 +5191,11 @@ variable::get_particle_spread(variable=`variable`, particle=particle("fire"), ty
 
 //Или в сухую позиционно
 
-variable::get_particle_type(`variable`, particle("fire"));
+variable.get_particle_type(`variable`, particle("fire"));
 
 //Или в сухую по ключам
 
-variable::get_particle_type(variable=`variable`, particle=particle("fire"));
+variable.get_particle_type(variable=`variable`, particle=particle("fire"));
 ```
 
 **Аргументы:**
@@ -5206,7 +5206,7 @@ variable::get_particle_type(variable=`variable`, particle=particle("fire"));
 | particle | Эффект частиц       | Частица для получения значения |
 
 <h3 id=set_variable_get_player_head>
-  <code>variable::get_player_head</code>
+  <code>variable.get_player_head</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5216,15 +5216,15 @@ variable::get_particle_type(variable=`variable`, particle=particle("fire"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_player_head("name_or_uuid", "NAME_OR_UUID");
+`variable` = variable.get_player_head("name_or_uuid", "NAME_OR_UUID");
 
 //Или в сухую позиционно
 
-variable::get_player_head(`variable`, "name_or_uuid", "NAME_OR_UUID");
+variable.get_player_head(`variable`, "name_or_uuid", "NAME_OR_UUID");
 
 //Или в сухую по ключам
 
-variable::get_player_head(variable=`variable`, name_or_uuid="name_or_uuid", receive_type="NAME_OR_UUID");
+variable.get_player_head(variable=`variable`, name_or_uuid="name_or_uuid", receive_type="NAME_OR_UUID");
 ```
 
 **Аргументы:**
@@ -5236,7 +5236,7 @@ variable::get_player_head(variable=`variable`, name_or_uuid="name_or_uuid", rece
 | receive_type | Маркер<br/>**NAME_OR_UUID** - Имя или UUID игрока<br/>**VALUE** - Параметр value скина | Тип значения              |
 
 <h3 id=set_variable_get_player_head_owner>
-  <code>variable::get_player_head_owner</code>
+  <code>variable.get_player_head_owner</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5246,7 +5246,7 @@ variable::get_player_head(variable=`variable`, name_or_uuid="name_or_uuid", rece
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_player_head_owner(item("stick"), "NAME");
+`variable` = variable.get_player_head_owner(item("stick"), "NAME");
 
 //Или от объекта
 
@@ -5254,11 +5254,11 @@ variable::get_player_head(variable=`variable`, name_or_uuid="name_or_uuid", rece
 
 //Или в сухую позиционно
 
-variable::get_player_head_owner(`variable`, item("stick"), "NAME");
+variable.get_player_head_owner(`variable`, item("stick"), "NAME");
 
 //Или в сухую по ключам
 
-variable::get_player_head_owner(variable=`variable`, head=item("stick"), return_value="NAME");
+variable.get_player_head_owner(variable=`variable`, head=item("stick"), return_value="NAME");
 ```
 
 **Аргументы:**
@@ -5270,7 +5270,7 @@ variable::get_player_head_owner(variable=`variable`, head=item("stick"), return_
 | return_value | Маркер<br/>**NAME** - Имя владельца<br/>**UUID** - UUID владельца<br/>**VALUE** - Параметр value скина | Возвращаемое значение     |
 
 <h3 id=set_variable_get_player_head_value>
-  <code>variable::get_player_head_value</code>
+  <code>variable.get_player_head_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5280,7 +5280,7 @@ variable::get_player_head_owner(variable=`variable`, head=item("stick"), return_
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_player_head_value(location(0,0,0,0,0), "NAME");
+`variable` = variable.get_player_head_value(location(0,0,0,0,0), "NAME");
 
 //Или от объекта
 
@@ -5288,11 +5288,11 @@ variable::get_player_head_owner(variable=`variable`, head=item("stick"), return_
 
 //Или в сухую позиционно
 
-variable::get_player_head_value(`variable`, location(0,0,0,0,0), "NAME");
+variable.get_player_head_value(`variable`, location(0,0,0,0,0), "NAME");
 
 //Или в сухую по ключам
 
-variable::get_player_head_value(variable=`variable`, location=location(0,0,0,0,0), return_value="NAME");
+variable.get_player_head_value(variable=`variable`, location=location(0,0,0,0,0), return_value="NAME");
 ```
 
 **Аргументы:**
@@ -5304,7 +5304,7 @@ variable::get_player_head_value(variable=`variable`, location=location(0,0,0,0,0
 | return_value | Маркер<br/>**NAME** - Имя владельца<br/>**UUID** - UUID владельца<br/>**VALUE** - Параметр value скина | Возвращаемое значение     |
 
 <h3 id=set_variable_get_potion_effect_amplifier>
-  <code>variable::get_potion_effect_amplifier</code>
+  <code>variable.get_potion_effect_amplifier</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5314,7 +5314,7 @@ variable::get_player_head_value(variable=`variable`, location=location(0,0,0,0,0
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_potion_effect_amplifier(potion("slow_falling"));
+`variable` = variable.get_potion_effect_amplifier(potion("slow_falling"));
 
 //Или от объекта
 
@@ -5322,11 +5322,11 @@ variable::get_player_head_value(variable=`variable`, location=location(0,0,0,0,0
 
 //Или в сухую позиционно
 
-variable::get_potion_effect_amplifier(`variable`, potion("slow_falling"));
+variable.get_potion_effect_amplifier(`variable`, potion("slow_falling"));
 
 //Или в сухую по ключам
 
-variable::get_potion_effect_amplifier(variable=`variable`, potion=potion("slow_falling"));
+variable.get_potion_effect_amplifier(variable=`variable`, potion=potion("slow_falling"));
 ```
 
 **Аргументы:**
@@ -5337,7 +5337,7 @@ variable::get_potion_effect_amplifier(variable=`variable`, potion=potion("slow_f
 | potion   | Зелье               | Зелье                     |
 
 <h3 id=set_variable_get_potion_effect_duration>
-  <code>variable::get_potion_effect_duration</code>
+  <code>variable.get_potion_effect_duration</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5347,7 +5347,7 @@ variable::get_potion_effect_amplifier(variable=`variable`, potion=potion("slow_f
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_potion_effect_duration(potion("slow_falling"));
+`variable` = variable.get_potion_effect_duration(potion("slow_falling"));
 
 //Или от объекта
 
@@ -5355,11 +5355,11 @@ variable::get_potion_effect_amplifier(variable=`variable`, potion=potion("slow_f
 
 //Или в сухую позиционно
 
-variable::get_potion_effect_duration(`variable`, potion("slow_falling"));
+variable.get_potion_effect_duration(`variable`, potion("slow_falling"));
 
 //Или в сухую по ключам
 
-variable::get_potion_effect_duration(variable=`variable`, potion=potion("slow_falling"));
+variable.get_potion_effect_duration(variable=`variable`, potion=potion("slow_falling"));
 ```
 
 **Аргументы:**
@@ -5370,7 +5370,7 @@ variable::get_potion_effect_duration(variable=`variable`, potion=potion("slow_fa
 | potion   | Зелье               | Зелье                     |
 
 <h3 id=set_variable_get_potion_effect_type>
-  <code>variable::get_potion_effect_type</code>
+  <code>variable.get_potion_effect_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5380,7 +5380,7 @@ variable::get_potion_effect_duration(variable=`variable`, potion=potion("slow_fa
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_potion_effect_type(potion("slow_falling"));
+`variable` = variable.get_potion_effect_type(potion("slow_falling"));
 
 //Или от объекта
 
@@ -5388,11 +5388,11 @@ variable::get_potion_effect_duration(variable=`variable`, potion=potion("slow_fa
 
 //Или в сухую позиционно
 
-variable::get_potion_effect_type(`variable`, potion("slow_falling"));
+variable.get_potion_effect_type(`variable`, potion("slow_falling"));
 
 //Или в сухую по ключам
 
-variable::get_potion_effect_type(variable=`variable`, potion=potion("slow_falling"));
+variable.get_potion_effect_type(variable=`variable`, potion=potion("slow_falling"));
 ```
 
 **Аргументы:**
@@ -5403,7 +5403,7 @@ variable::get_potion_effect_type(variable=`variable`, potion=potion("slow_fallin
 | potion   | Зелье               | Зелье                     |
 
 <h3 id=set_variable_get_sculk_shrieker_warning_level>
-  <code>variable::get_sculk_shrieker_warning_level</code>
+  <code>variable.get_sculk_shrieker_warning_level</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5413,7 +5413,7 @@ variable::get_potion_effect_type(variable=`variable`, potion=potion("slow_fallin
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_sculk_shrieker_warning_level(location(0,0,0,0,0));
+`variable` = variable.get_sculk_shrieker_warning_level(location(0,0,0,0,0));
 
 //Или от объекта
 
@@ -5421,11 +5421,11 @@ variable::get_potion_effect_type(variable=`variable`, potion=potion("slow_fallin
 
 //Или в сухую позиционно
 
-variable::get_sculk_shrieker_warning_level(`variable`, location(0,0,0,0,0));
+variable.get_sculk_shrieker_warning_level(`variable`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_sculk_shrieker_warning_level(variable=`variable`, location=location(0,0,0,0,0));
+variable.get_sculk_shrieker_warning_level(variable=`variable`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -5436,7 +5436,7 @@ variable::get_sculk_shrieker_warning_level(variable=`variable`, location=locatio
 | location | Местоположение      | Местоположение скалк-крикуна |
 
 <h3 id=set_variable_get_sign_text>
-  <code>variable::get_sign_text</code>
+  <code>variable.get_sign_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5446,7 +5446,7 @@ variable::get_sculk_shrieker_warning_level(variable=`variable`, location=locatio
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_sign_text(location(0,0,0,0,0), "ALL", "ALL");
+`variable` = variable.get_sign_text(location(0,0,0,0,0), "ALL", "ALL");
 
 //Или от объекта
 
@@ -5454,11 +5454,11 @@ variable::get_sculk_shrieker_warning_level(variable=`variable`, location=locatio
 
 //Или в сухую позиционно
 
-variable::get_sign_text(`variable`, location(0,0,0,0,0), "ALL", "ALL");
+variable.get_sign_text(`variable`, location(0,0,0,0,0), "ALL", "ALL");
 
 //Или в сухую по ключам
 
-variable::get_sign_text(variable=`variable`, location=location(0,0,0,0,0), check_side="ALL", sign_line="ALL");
+variable.get_sign_text(variable=`variable`, location=location(0,0,0,0,0), check_side="ALL", sign_line="ALL");
 ```
 
 **Аргументы:**
@@ -5471,7 +5471,7 @@ variable::get_sign_text(variable=`variable`, location=location(0,0,0,0,0), check
 | sign_line  | Маркер<br/>**ALL** - Все строки<br/>**FIRST** - Первая строка<br/>**FOURTH** - Четвёртая строка<br/>**SECOND** - Вторая строка<br/>**THIRD** - Третья строка | Номер строки              |
 
 <h3 id=set_variable_get_sound_pitch>
-  <code>variable::get_sound_pitch</code>
+  <code>variable.get_sound_pitch</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5481,7 +5481,7 @@ variable::get_sign_text(variable=`variable`, location=location(0,0,0,0,0), check
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_sound_pitch(sound("entity.zombie.hurt"));
+`variable` = variable.get_sound_pitch(sound("entity.zombie.hurt"));
 
 //Или от объекта
 
@@ -5489,11 +5489,11 @@ variable::get_sign_text(variable=`variable`, location=location(0,0,0,0,0), check
 
 //Или в сухую позиционно
 
-variable::get_sound_pitch(`variable`, sound("entity.zombie.hurt"));
+variable.get_sound_pitch(`variable`, sound("entity.zombie.hurt"));
 
 //Или в сухую по ключам
 
-variable::get_sound_pitch(variable=`variable`, sound=sound("entity.zombie.hurt"));
+variable.get_sound_pitch(variable=`variable`, sound=sound("entity.zombie.hurt"));
 ```
 
 **Аргументы:**
@@ -5504,7 +5504,7 @@ variable::get_sound_pitch(variable=`variable`, sound=sound("entity.zombie.hurt")
 | sound    | Звук                | Звук для получения значения |
 
 <h3 id=set_variable_get_sound_source>
-  <code>variable::get_sound_source</code>
+  <code>variable.get_sound_source</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5514,7 +5514,7 @@ variable::get_sound_pitch(variable=`variable`, sound=sound("entity.zombie.hurt")
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_sound_source(sound("entity.zombie.hurt"));
+`variable` = variable.get_sound_source(sound("entity.zombie.hurt"));
 
 //Или от объекта
 
@@ -5522,11 +5522,11 @@ variable::get_sound_pitch(variable=`variable`, sound=sound("entity.zombie.hurt")
 
 //Или в сухую позиционно
 
-variable::get_sound_source(`variable`, sound("entity.zombie.hurt"));
+variable.get_sound_source(`variable`, sound("entity.zombie.hurt"));
 
 //Или в сухую по ключам
 
-variable::get_sound_source(variable=`variable`, sound=sound("entity.zombie.hurt"));
+variable.get_sound_source(variable=`variable`, sound=sound("entity.zombie.hurt"));
 ```
 
 **Аргументы:**
@@ -5537,7 +5537,7 @@ variable::get_sound_source(variable=`variable`, sound=sound("entity.zombie.hurt"
 | sound    | Звук                | Звук для получения значения |
 
 <h3 id=set_variable_get_sound_type>
-  <code>variable::get_sound_type</code>
+  <code>variable.get_sound_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5547,7 +5547,7 @@ variable::get_sound_source(variable=`variable`, sound=sound("entity.zombie.hurt"
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_sound_type(sound("entity.zombie.hurt"));
+`variable` = variable.get_sound_type(sound("entity.zombie.hurt"));
 
 //Или от объекта
 
@@ -5555,11 +5555,11 @@ variable::get_sound_source(variable=`variable`, sound=sound("entity.zombie.hurt"
 
 //Или в сухую позиционно
 
-variable::get_sound_type(`variable`, sound("entity.zombie.hurt"));
+variable.get_sound_type(`variable`, sound("entity.zombie.hurt"));
 
 //Или в сухую по ключам
 
-variable::get_sound_type(variable=`variable`, sound=sound("entity.zombie.hurt"));
+variable.get_sound_type(variable=`variable`, sound=sound("entity.zombie.hurt"));
 ```
 
 **Аргументы:**
@@ -5570,7 +5570,7 @@ variable::get_sound_type(variable=`variable`, sound=sound("entity.zombie.hurt"))
 | sound    | Звук                | Звук для получения значения |
 
 <h3 id=set_variable_get_sound_variation>
-  <code>variable::get_sound_variation</code>
+  <code>variable.get_sound_variation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5582,7 +5582,7 @@ variable::get_sound_type(variable=`variable`, sound=sound("entity.zombie.hurt"))
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_sound_variation(sound("entity.zombie.hurt"));
+`variable` = variable.get_sound_variation(sound("entity.zombie.hurt"));
 
 //Или от объекта
 
@@ -5590,11 +5590,11 @@ variable::get_sound_type(variable=`variable`, sound=sound("entity.zombie.hurt"))
 
 //Или в сухую позиционно
 
-variable::get_sound_variation(`variable`, sound("entity.zombie.hurt"));
+variable.get_sound_variation(`variable`, sound("entity.zombie.hurt"));
 
 //Или в сухую по ключам
 
-variable::get_sound_variation(variable=`variable`, sound=sound("entity.zombie.hurt"));
+variable.get_sound_variation(variable=`variable`, sound=sound("entity.zombie.hurt"));
 ```
 
 **Аргументы:**
@@ -5605,7 +5605,7 @@ variable::get_sound_variation(variable=`variable`, sound=sound("entity.zombie.hu
 | sound    | Звук                | Звук для получения значения |
 
 <h3 id=set_variable_get_sound_variations>
-  <code>variable::get_sound_variations</code>
+  <code>variable.get_sound_variations</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5615,7 +5615,7 @@ variable::get_sound_variation(variable=`variable`, sound=sound("entity.zombie.hu
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_sound_variations(sound("entity.zombie.hurt"));
+`variable` = variable.get_sound_variations(sound("entity.zombie.hurt"));
 
 //Или от объекта
 
@@ -5623,11 +5623,11 @@ variable::get_sound_variation(variable=`variable`, sound=sound("entity.zombie.hu
 
 //Или в сухую позиционно
 
-variable::get_sound_variations(`variable`, sound("entity.zombie.hurt"));
+variable.get_sound_variations(`variable`, sound("entity.zombie.hurt"));
 
 //Или в сухую по ключам
 
-variable::get_sound_variations(variable=`variable`, sound=sound("entity.zombie.hurt"));
+variable.get_sound_variations(variable=`variable`, sound=sound("entity.zombie.hurt"));
 ```
 
 **Аргументы:**
@@ -5638,7 +5638,7 @@ variable::get_sound_variations(variable=`variable`, sound=sound("entity.zombie.h
 | sound    | Звук                 | Звук для получения значений |
 
 <h3 id=set_variable_get_sound_volume_action>
-  <code>variable::get_sound_volume_action</code>
+  <code>variable.get_sound_volume_action</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5648,7 +5648,7 @@ variable::get_sound_variations(variable=`variable`, sound=sound("entity.zombie.h
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_sound_volume_action(sound("entity.zombie.hurt"));
+`variable` = variable.get_sound_volume_action(sound("entity.zombie.hurt"));
 
 //Или от объекта
 
@@ -5656,11 +5656,11 @@ variable::get_sound_variations(variable=`variable`, sound=sound("entity.zombie.h
 
 //Или в сухую позиционно
 
-variable::get_sound_volume_action(`variable`, sound("entity.zombie.hurt"));
+variable.get_sound_volume_action(`variable`, sound("entity.zombie.hurt"));
 
 //Или в сухую по ключам
 
-variable::get_sound_volume_action(variable=`variable`, sound=sound("entity.zombie.hurt"));
+variable.get_sound_volume_action(variable=`variable`, sound=sound("entity.zombie.hurt"));
 ```
 
 **Аргументы:**
@@ -5671,7 +5671,7 @@ variable::get_sound_volume_action(variable=`variable`, sound=sound("entity.zombi
 | sound    | Звук                | Звук для получения значения |
 
 <h3 id=set_variable_get_template_code>
-  <code>variable::get_template_code</code>
+  <code>variable.get_template_code</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5681,7 +5681,7 @@ variable::get_sound_volume_action(variable=`variable`, sound=sound("entity.zombi
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_template_code(item("stick"), "MAP");
+`variable` = variable.get_template_code(item("stick"), "MAP");
 
 //Или от объекта
 
@@ -5689,11 +5689,11 @@ variable::get_sound_volume_action(variable=`variable`, sound=sound("entity.zombi
 
 //Или в сухую позиционно
 
-variable::get_template_code(`variable`, item("stick"), "MAP");
+variable.get_template_code(`variable`, item("stick"), "MAP");
 
 //Или в сухую по ключам
 
-variable::get_template_code(variable=`variable`, template=item("stick"), return_type="MAP");
+variable.get_template_code(variable=`variable`, template=item("stick"), return_type="MAP");
 ```
 
 **Аргументы:**
@@ -5705,7 +5705,7 @@ variable::get_template_code(variable=`variable`, template=item("stick"), return_
 | return_type | Маркер<br/>**MAP** - Словарь<br/>**TEXT** - Текст JSON | Возвращаемое значение     |
 
 <h3 id=set_variable_get_text_regex_groups>
-  <code>variable::get_text_regex_groups</code>
+  <code>variable.get_text_regex_groups</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5715,7 +5715,7 @@ variable::get_template_code(variable=`variable`, template=item("stick"), return_
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_text_regex_groups("text", "regex", "group", "ALL", "INDEX", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE");
+`variable` = variable.get_text_regex_groups("text", "regex", "group", "ALL", "INDEX", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE");
 
 //Или от объекта
 
@@ -5723,11 +5723,11 @@ variable::get_template_code(variable=`variable`, template=item("stick"), return_
 
 //Или в сухую позиционно
 
-variable::get_text_regex_groups(`variable`, "text", "regex", "group", "ALL", "INDEX", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE");
+variable.get_text_regex_groups(`variable`, "text", "regex", "group", "ALL", "INDEX", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE");
 
 //Или в сухую по ключам
 
-variable::get_text_regex_groups(variable=`variable`, text="text", regex="regex", group="group", match_mode="ALL", get_group_by="INDEX", ignore_case="TRUE", multiline="TRUE", literal="TRUE", unix_lines="TRUE", comments="TRUE", dot_matches_all="TRUE", cannon_eq="TRUE");
+variable.get_text_regex_groups(variable=`variable`, text="text", regex="regex", group="group", match_mode="ALL", get_group_by="INDEX", ignore_case="TRUE", multiline="TRUE", literal="TRUE", unix_lines="TRUE", comments="TRUE", dot_matches_all="TRUE", cannon_eq="TRUE");
 ```
 
 **Аргументы:**
@@ -5749,7 +5749,7 @@ variable::get_text_regex_groups(variable=`variable`, text="text", regex="regex",
 | cannon_eq       | Маркер<br/>**TRUE** - Включено<br/>**FALSE** - Выключено                     | Каноническая эквивалентность (флаг cannon_eq)                  |
 
 <h3 id=set_variable_get_text_similarity>
-  <code>variable::get_text_similarity</code>
+  <code>variable.get_text_similarity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5759,7 +5759,7 @@ variable::get_text_regex_groups(variable=`variable`, text="text", regex="regex",
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_text_similarity("text_1", "text_2", "SIMILARITY");
+`variable` = variable.get_text_similarity("text_1", "text_2", "SIMILARITY");
 
 //Или от объекта
 
@@ -5767,11 +5767,11 @@ variable::get_text_regex_groups(variable=`variable`, text="text", regex="regex",
 
 //Или в сухую позиционно
 
-variable::get_text_similarity(`variable`, "text_1", "text_2", "SIMILARITY");
+variable.get_text_similarity(`variable`, "text_1", "text_2", "SIMILARITY");
 
 //Или в сухую по ключам
 
-variable::get_text_similarity(variable=`variable`, text_1="text_1", text_2="text_2", value_type="SIMILARITY");
+variable.get_text_similarity(variable=`variable`, text_1="text_1", text_2="text_2", value_type="SIMILARITY");
 ```
 
 **Аргументы:**
@@ -5784,7 +5784,7 @@ variable::get_text_similarity(variable=`variable`, text_1="text_1", text_2="text
 | value_type | Маркер<br/>**SIMILARITY** - Процент схожести<br/>**LEVENSHTEIN_DISTANCE** - Расстояние Левенштейна | Тип значения              |
 
 <h3 id=set_variable_get_text_width>
-  <code>variable::get_text_width</code>
+  <code>variable.get_text_width</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5796,7 +5796,7 @@ variable::get_text_similarity(variable=`variable`, text_1="text_1", text_2="text
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_text_width("text");
+`variable` = variable.get_text_width("text");
 
 //Или от объекта
 
@@ -5804,11 +5804,11 @@ variable::get_text_similarity(variable=`variable`, text_1="text_1", text_2="text
 
 //Или в сухую позиционно
 
-variable::get_text_width(`variable`, "text");
+variable.get_text_width(`variable`, "text");
 
 //Или в сухую по ключам
 
-variable::get_text_width(variable=`variable`, text="text");
+variable.get_text_width(variable=`variable`, text="text");
 ```
 
 **Аргументы:**
@@ -5819,7 +5819,7 @@ variable::get_text_width(variable=`variable`, text="text");
 | text     | Текст               | Исходный текст            |
 
 <h3 id=set_variable_get_tile_block_custom_tag>
-  <code>variable::get_tile_block_custom_tag</code>
+  <code>variable.get_tile_block_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5831,15 +5831,15 @@ variable::get_text_width(variable=`variable`, text="text");
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_tile_block_custom_tag(location(0,0,0,0,0), "tag_name", "any value");
+`variable` = variable.get_tile_block_custom_tag(location(0,0,0,0,0), "tag_name", "any value");
 
 //Или в сухую позиционно
 
-variable::get_tile_block_custom_tag(`variable`, location(0,0,0,0,0), "tag_name", "any value");
+variable.get_tile_block_custom_tag(`variable`, location(0,0,0,0,0), "tag_name", "any value");
 
 //Или в сухую по ключам
 
-variable::get_tile_block_custom_tag(variable=`variable`, location=location(0,0,0,0,0), tag_name="tag_name", default_value="any value");
+variable.get_tile_block_custom_tag(variable=`variable`, location=location(0,0,0,0,0), tag_name="tag_name", default_value="any value");
 ```
 
 **Аргументы:**
@@ -5852,7 +5852,7 @@ variable::get_tile_block_custom_tag(variable=`variable`, location=location(0,0,0
 | default_value | Любое значение      | Значение по умолчанию         |
 
 <h3 id=set_variable_get_tile_block_nbt>
-  <code>variable::get_tile_block_nbt</code>
+  <code>variable.get_tile_block_nbt</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5862,15 +5862,15 @@ variable::get_tile_block_custom_tag(variable=`variable`, location=location(0,0,0
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_tile_block_nbt(location(0,0,0,0,0), "path", "ANY_VALUE");
+`variable` = variable.get_tile_block_nbt(location(0,0,0,0,0), "path", "ANY_VALUE");
 
 //Или в сухую позиционно
 
-variable::get_tile_block_nbt(`variable`, location(0,0,0,0,0), "path", "ANY_VALUE");
+variable.get_tile_block_nbt(`variable`, location(0,0,0,0,0), "path", "ANY_VALUE");
 
 //Или в сухую по ключам
 
-variable::get_tile_block_nbt(variable=`variable`, location=location(0,0,0,0,0), path="path", value_type="ANY_VALUE");
+variable.get_tile_block_nbt(variable=`variable`, location=location(0,0,0,0,0), path="path", value_type="ANY_VALUE");
 ```
 
 **Аргументы:**
@@ -5883,7 +5883,7 @@ variable::get_tile_block_nbt(variable=`variable`, location=location(0,0,0,0,0), 
 | value_type | Маркер<br/>**ANY_VALUE** - Любое значение<br/>**NBT_STRING** - NBT-строка | Тип данных                    |
 
 <h3 id=set_variable_get_vault_displayed_item>
-  <code>variable::get_vault_displayed_item</code>
+  <code>variable.get_vault_displayed_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5895,15 +5895,15 @@ variable::get_tile_block_nbt(variable=`variable`, location=location(0,0,0,0,0), 
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_vault_displayed_item(location(0,0,0,0,0));
+`variable` = variable.get_vault_displayed_item(location(0,0,0,0,0));
 
 //Или в сухую позиционно
 
-variable::get_vault_displayed_item(`variable`, location(0,0,0,0,0));
+variable.get_vault_displayed_item(`variable`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_vault_displayed_item(variable=`variable`, location=location(0,0,0,0,0));
+variable.get_vault_displayed_item(variable=`variable`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -5914,7 +5914,7 @@ variable::get_vault_displayed_item(variable=`variable`, location=location(0,0,0,
 | location | Местоположение        | Местоположение сокровищницы |
 
 <h3 id=set_variable_get_vault_next_state_update_time>
-  <code>variable::get_vault_next_state_update_time</code>
+  <code>variable.get_vault_next_state_update_time</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5926,15 +5926,15 @@ variable::get_vault_displayed_item(variable=`variable`, location=location(0,0,0,
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_vault_next_state_update_time(location(0,0,0,0,0));
+`variable` = variable.get_vault_next_state_update_time(location(0,0,0,0,0));
 
 //Или в сухую позиционно
 
-variable::get_vault_next_state_update_time(`variable`, location(0,0,0,0,0));
+variable.get_vault_next_state_update_time(`variable`, location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_vault_next_state_update_time(variable=`variable`, location=location(0,0,0,0,0));
+variable.get_vault_next_state_update_time(variable=`variable`, location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -5945,7 +5945,7 @@ variable::get_vault_next_state_update_time(variable=`variable`, location=locatio
 | location | Местоположение      | Местоположение сокровищницы |
 
 <h3 id=set_variable_get_vector_all_components>
-  <code>variable::get_vector_all_components</code>
+  <code>variable.get_vector_all_components</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5955,7 +5955,7 @@ variable::get_vault_next_state_update_time(variable=`variable`, location=locatio
 
 **Пример использования:**
 ```ts
-`x`, `y`, `z` = variable::get_vector_all_components(vector(0,0,0));
+`x`, `y`, `z` = variable.get_vector_all_components(vector(0,0,0));
 
 //Или от объекта
 
@@ -5963,11 +5963,11 @@ variable::get_vault_next_state_update_time(variable=`variable`, location=locatio
 
 //Или в сухую позиционно
 
-variable::get_vector_all_components(`x`, `y`, `z`, vector(0,0,0));
+variable.get_vector_all_components(`x`, `y`, `z`, vector(0,0,0));
 
 //Или в сухую по ключам
 
-variable::get_vector_all_components(x=`x`, y=`y`, z=`z`, vector=vector(0,0,0));
+variable.get_vector_all_components(x=`x`, y=`y`, z=`z`, vector=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -5980,7 +5980,7 @@ variable::get_vector_all_components(x=`x`, y=`y`, z=`z`, vector=vector(0,0,0));
 | vector | Вектор              | Вектор для получения значений |
 
 <h3 id=set_variable_get_vector_between_locations>
-  <code>variable::get_vector_between_locations</code>
+  <code>variable.get_vector_between_locations</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -5990,14 +5990,14 @@ variable::get_vector_all_components(x=`x`, y=`y`, z=`z`, vector=vector(0,0,0));
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_vector_between_locations(location(0,0,0,0,0), location(0,0,0,0,0));
+`variable` = variable.get_vector_between_locations(location(0,0,0,0,0), location(0,0,0,0,0));
 
 //Или в сухую позиционно
 
-variable::get_vector_between_locations(`variable`, location(0,0,0,0,0), location(0,0,0,0,0));
+variable.get_vector_between_locations(`variable`, location(0,0,0,0,0), location(0,0,0,0,0));
 //Или в сухую по ключам
 
-variable::get_vector_between_locations(variable=`variable`, end_location=location(0,0,0,0,0), start_location=location(0,0,0,0,0));
+variable.get_vector_between_locations(variable=`variable`, end_location=location(0,0,0,0,0), start_location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -6009,7 +6009,7 @@ variable::get_vector_between_locations(variable=`variable`, end_location=locatio
 | start_location | Местоположение       | Конечное местоположение   |
 
 <h3 id=set_variable_get_vector_component>
-  <code>variable::get_vector_component</code>
+  <code>variable.get_vector_component</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6019,7 +6019,7 @@ variable::get_vector_between_locations(variable=`variable`, end_location=locatio
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_vector_component(vector(0,0,0), "X");
+`variable` = variable.get_vector_component(vector(0,0,0), "X");
 
 //Или от объекта
 
@@ -6027,11 +6027,11 @@ variable::get_vector_between_locations(variable=`variable`, end_location=locatio
 
 //Или в сухую позиционно
 
-variable::get_vector_component(`variable`, vector(0,0,0), "X");
+variable.get_vector_component(`variable`, vector(0,0,0), "X");
 
 //Или в сухую по ключам
 
-variable::get_vector_component(variable=`variable`, vector=vector(0,0,0), vector_component="X");
+variable.get_vector_component(variable=`variable`, vector=vector(0,0,0), vector_component="X");
 ```
 
 **Аргументы:**
@@ -6043,7 +6043,7 @@ variable::get_vector_component(variable=`variable`, vector=vector(0,0,0), vector
 | vector_component | Маркер<br/>**X** - Координата X<br/>**Y** - Координата Y<br/>**Z** - Координата Z | Тип координаты                |
 
 <h3 id=set_variable_get_vector_from_block_face>
-  <code>variable::get_vector_from_block_face</code>
+  <code>variable.get_vector_from_block_face</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6053,15 +6053,15 @@ variable::get_vector_component(variable=`variable`, vector=vector(0,0,0), vector
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_vector_from_block_face("block_face");
+`variable` = variable.get_vector_from_block_face("block_face");
 
 //Или в сухую позиционно
 
-variable::get_vector_from_block_face(`variable`, "block_face");
+variable.get_vector_from_block_face(`variable`, "block_face");
 
 //Или в сухую по ключам
 
-variable::get_vector_from_block_face(variable=`variable`, block_face="block_face");
+variable.get_vector_from_block_face(variable=`variable`, block_face="block_face");
 ```
 
 **Аргументы:**
@@ -6072,7 +6072,7 @@ variable::get_vector_from_block_face(variable=`variable`, block_face="block_face
 | block_face | Текст                | Кардинальное направление  |
 
 <h3 id=set_variable_get_vector_length>
-  <code>variable::get_vector_length</code>
+  <code>variable.get_vector_length</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6082,7 +6082,7 @@ variable::get_vector_from_block_face(variable=`variable`, block_face="block_face
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_vector_length(vector(0,0,0), "LENGTH");
+`variable` = variable.get_vector_length(vector(0,0,0), "LENGTH");
 
 //Или от объекта
 
@@ -6090,11 +6090,11 @@ variable::get_vector_from_block_face(variable=`variable`, block_face="block_face
 
 //Или в сухую позиционно
 
-variable::get_vector_length(`variable`, vector(0,0,0), "LENGTH");
+variable.get_vector_length(`variable`, vector(0,0,0), "LENGTH");
 
 //Или в сухую по ключам
 
-variable::get_vector_length(variable=`variable`, vector=vector(0,0,0), length_type="LENGTH");
+variable.get_vector_length(variable=`variable`, vector=vector(0,0,0), length_type="LENGTH");
 ```
 
 **Аргументы:**
@@ -6106,7 +6106,7 @@ variable::get_vector_length(variable=`variable`, vector=vector(0,0,0), length_ty
 | length_type | Маркер<br/>**LENGTH** - Реальная длина<br/>**LENGTH_SQUARED** - Длина в квадрате | Тип значения               |
 
 <h3 id=set_variable_hadamard_vector_product>
-  <code>variable::hadamard_vector_product</code>
+  <code>variable.hadamard_vector_product</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6116,7 +6116,7 @@ variable::get_vector_length(variable=`variable`, vector=vector(0,0,0), length_ty
 
 **Пример использования:**
 ```ts
-`variable` = variable::hadamard_vector_product(vector(0,0,0), vector(0,0,0));
+`variable` = variable.hadamard_vector_product(vector(0,0,0), vector(0,0,0));
 
 //Или от объекта
 
@@ -6124,11 +6124,11 @@ variable::get_vector_length(variable=`variable`, vector=vector(0,0,0), length_ty
 
 //Или в сухую позиционно
 
-variable::hadamard_vector_product(`variable`, vector(0,0,0), vector(0,0,0));
+variable.hadamard_vector_product(`variable`, vector(0,0,0), vector(0,0,0));
 
 //Или в сухую по ключам
 
-variable::hadamard_vector_product(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0));
+variable.hadamard_vector_product(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -6140,7 +6140,7 @@ variable::hadamard_vector_product(variable=`variable`, vector_1=vector(0,0,0), v
 | vector_2 | Вектор               | Второй вектор             |
 
 <h3 id=set_variable_hash>
-  <code>variable::get_text_hash</code>
+  <code>variable.get_text_hash</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6150,7 +6150,7 @@ variable::hadamard_vector_product(variable=`variable`, vector_1=vector(0,0,0), v
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_text_hash("text", "MD5");
+`variable` = variable.get_text_hash("text", "MD5");
 
 //Или от объекта
 
@@ -6158,11 +6158,11 @@ variable::hadamard_vector_product(variable=`variable`, vector_1=vector(0,0,0), v
 
 //Или в сухую позиционно
 
-variable::get_text_hash(`variable`, "text", "MD5");
+variable.get_text_hash(`variable`, "text", "MD5");
 
 //Или в сухую по ключам
 
-variable::get_text_hash(variable=`variable`, text="text", algorithm="MD5");
+variable.get_text_hash(variable=`variable`, text="text", algorithm="MD5");
 ```
 
 **Аргументы:**
@@ -6174,7 +6174,7 @@ variable::get_text_hash(variable=`variable`, text="text", algorithm="MD5");
 | algorithm | Маркер<br/>**MD5** - MD5<br/>**SHA1** - SHA-1<br/>**SHA256** - SHA-256 | Aлгоритм                  |
 
 <h3 id=set_variable_hide_item_components>
-  <code>variable::hide_item_components</code>
+  <code>variable.hide_item_components</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6184,7 +6184,7 @@ variable::get_text_hash(variable=`variable`, text="text", algorithm="MD5");
 
 **Пример использования:**
 ```ts
-`variable` = variable::hide_item_components(item("stick"), ["components", "components"], "SET");
+`variable` = variable.hide_item_components(item("stick"), ["components", "components"], "SET");
 
 //Или от объекта
 
@@ -6192,11 +6192,11 @@ variable::get_text_hash(variable=`variable`, text="text", algorithm="MD5");
 
 //Или в сухую позиционно
 
-variable::hide_item_components(`variable`, item("stick"), ["components", "components"], "SET");
+variable.hide_item_components(`variable`, item("stick"), ["components", "components"], "SET");
 
 //Или в сухую по ключам
 
-variable::hide_item_components(variable=`variable`, item=item("stick"), components=["components", "components"], mode="SET");
+variable.hide_item_components(variable=`variable`, item=item("stick"), components=["components", "components"], mode="SET");
 ```
 
 **Аргументы:**
@@ -6209,7 +6209,7 @@ variable::hide_item_components(variable=`variable`, item=item("stick"), componen
 | mode       | Маркер<br/>**SET** - Установка<br/>**ADD** - Добавление<br/>**REMOVE** - Удаление | Режим установки                                                |
 
 <h3 id=set_variable_increment>
-  <code>variable::increment</code>
+  <code>variable.increment</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6219,7 +6219,7 @@ variable::hide_item_components(variable=`variable`, item=item("stick"), componen
 
 **Пример использования:**
 ```ts
-variable::increment(`variable`, 1);
+variable.increment(`variable`, 1);
 
 //Или от объекта
 
@@ -6227,7 +6227,7 @@ variable::increment(`variable`, 1);
 
 //Или в сухую по ключам
 
-variable::increment(variable=`variable`, number=1);
+variable.increment(variable=`variable`, number=1);
 ```
 
 **Аргументы:**
@@ -6238,7 +6238,7 @@ variable::increment(variable=`variable`, number=1);
 | number   | Число      | Число для прибавления     |
 
 <h3 id=set_variable_insert_list_value>
-  <code>variable::insert_list_value</code>
+  <code>variable.insert_list_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6248,7 +6248,7 @@ variable::increment(variable=`variable`, number=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::insert_list_value([`list`, `list`], 1, "any value");
+`variable` = variable.insert_list_value([`list`, `list`], 1, "any value");
 
 //Или от объекта
 
@@ -6256,11 +6256,11 @@ variable::increment(variable=`variable`, number=1);
 
 //Или в сухую позиционно
 
-variable::insert_list_value(`variable`, [`list`, `list`], 1, "any value");
+variable.insert_list_value(`variable`, [`list`, `list`], 1, "any value");
 
 //Или в сухую по ключам
 
-variable::insert_list_value(variable=`variable`, list=[`list`, `list`], number=1, value="any value");
+variable.insert_list_value(variable=`variable`, list=[`list`, `list`], number=1, value="any value");
 ```
 
 **Аргументы:**
@@ -6273,7 +6273,7 @@ variable::insert_list_value(variable=`variable`, list=[`list`, `list`], number=1
 | value    | Любое значение       | Значение                  |
 
 <h3 id=set_variable_join_text>
-  <code>variable::join_text</code>
+  <code>variable.join_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6283,7 +6283,7 @@ variable::insert_list_value(variable=`variable`, list=[`list`, `list`], number=1
 
 **Пример использования:**
 ```ts
-`variable` = variable::join_text([`list`, `list`], "separator", "prefix", "postfix", 1, "truncated");
+`variable` = variable.join_text([`list`, `list`], "separator", "prefix", "postfix", 1, "truncated");
 
 //Или от объекта
 
@@ -6291,11 +6291,11 @@ variable::insert_list_value(variable=`variable`, list=[`list`, `list`], number=1
 
 //Или в сухую позиционно
 
-variable::join_text(`variable`, [`list`, `list`], "separator", "prefix", "postfix", 1, "truncated");
+variable.join_text(`variable`, [`list`, `list`], "separator", "prefix", "postfix", 1, "truncated");
 
 //Или в сухую по ключам
 
-variable::join_text(variable=`variable`, list=[`list`, `list`], separator="separator", prefix="prefix", postfix="postfix", limit=1, truncated="truncated");
+variable.join_text(variable=`variable`, list=[`list`, `list`], separator="separator", prefix="prefix", postfix="postfix", limit=1, truncated="truncated");
 ```
 
 **Аргументы:**
@@ -6311,7 +6311,7 @@ variable::join_text(variable=`variable`, list=[`list`, `list`], separator="separ
 | truncated | Текст               | Текст после лимита (по умолчанию - "...")     |
 
 <h3 id=set_variable_lerp_number>
-  <code>variable::lerp_number</code>
+  <code>variable.lerp_number</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6321,7 +6321,7 @@ variable::join_text(variable=`variable`, list=[`list`, `list`], separator="separ
 
 **Пример использования:**
 ```ts
-`variable` = variable::lerp_number(1, 2, 3);
+`variable` = variable.lerp_number(1, 2, 3);
 
 //Или от объекта
 
@@ -6329,11 +6329,11 @@ variable::join_text(variable=`variable`, list=[`list`, `list`], separator="separ
 
 //Или в сухую позиционно
 
-variable::lerp_number(`variable`, 1, 2, 3);
+variable.lerp_number(`variable`, 1, 2, 3);
 
 //Или в сухую по ключам
 
-variable::lerp_number(variable=`variable`, start=1, stop=2, amount=3);
+variable.lerp_number(variable=`variable`, start=1, stop=2, amount=3);
 ```
 
 **Аргументы:**
@@ -6346,7 +6346,7 @@ variable::lerp_number(variable=`variable`, start=1, stop=2, amount=3);
 | amount   | Число               | Коэффициент (от 0 до 1)   |
 
 <h3 id=set_variable_location_relative>
-  <code>variable::location_relative</code>
+  <code>variable.location_relative</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6356,7 +6356,7 @@ variable::lerp_number(variable=`variable`, start=1, stop=2, amount=3);
 
 **Пример использования:**
 ```ts
-`variable` = variable::location_relative(location(0,0,0,0,0), 1, "DOWN");
+`variable` = variable.location_relative(location(0,0,0,0,0), 1, "DOWN");
 
 //Или от объекта
 
@@ -6364,11 +6364,11 @@ variable::lerp_number(variable=`variable`, start=1, stop=2, amount=3);
 
 //Или в сухую позиционно
 
-variable::location_relative(`variable`, location(0,0,0,0,0), 1, "DOWN");
+variable.location_relative(`variable`, location(0,0,0,0,0), 1, "DOWN");
 
 //Или в сухую по ключам
 
-variable::location_relative(variable=`variable`, location=location(0,0,0,0,0), distance=1, block_face="DOWN");
+variable.location_relative(variable=`variable`, location=location(0,0,0,0,0), distance=1, block_face="DOWN");
 ```
 
 **Аргументы:**
@@ -6381,7 +6381,7 @@ variable::location_relative(variable=`variable`, location=location(0,0,0,0,0), d
 | block_face | Маркер<br/>**DOWN** - Низ<br/>**EAST** - Восток<br/>**EAST_NORTH_EAST** - Восток-север-восток (east_north_east)<br/>**EAST_SOUTH_EAST** - Восток-юг-восток (east_south_east)<br/>**NORTH** - Север<br/>**NORTH_EAST** - Северо-восток<br/>**NORTH_NORTH_EAST** - Север-север-восток (north_north_east)<br/>**NORTH_NORTH_WEST** - Север-север-запад (north_north_west)<br/>**NORTH_WEST** - Северо-запад<br/>**SELF** - Собственная (self)<br/>**SOUTH** - Юг<br/>**SOUTH_EAST** - Юго-восток<br/>**SOUTH_SOUTH_EAST** - Юг-юг-восток (south_south_east)<br/>**SOUTH_SOUTH_WEST** - Юг-юг-запад (south_south_west)<br/>**SOUTH_WEST** - Юго-запад<br/>**UP** - Верх<br/>**WEST** - Запад<br/>**WEST_NORTH_WEST** - Запад-север-запад (west_north_west)<br/>**WEST_SOUTH_WEST** - Запад-юг-запад (west_south_west) | Сторона блока                |
 
 <h3 id=set_variable_locations_distance>
-  <code>variable::locations_distance</code>
+  <code>variable.locations_distance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6391,15 +6391,15 @@ variable::location_relative(variable=`variable`, location=location(0,0,0,0,0), d
 
 **Пример использования:**
 ```ts
-`variable` = variable::locations_distance(location(0,0,0,0,0), location(0,0,0,0,0), "ALTITUDE");
+`variable` = variable.locations_distance(location(0,0,0,0,0), location(0,0,0,0,0), "ALTITUDE");
 
 //Или в сухую позиционно
 
-variable::locations_distance(`variable`, location(0,0,0,0,0), location(0,0,0,0,0), "ALTITUDE");
+variable.locations_distance(`variable`, location(0,0,0,0,0), location(0,0,0,0,0), "ALTITUDE");
 
 //Или в сухую по ключам
 
-variable::locations_distance(variable=`variable`, location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0), type="ALTITUDE");
+variable.locations_distance(variable=`variable`, location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0), type="ALTITUDE");
 ```
 
 **Аргументы:**
@@ -6412,7 +6412,7 @@ variable::locations_distance(variable=`variable`, location_1=location(0,0,0,0,0)
 | type       | Маркер<br/>**ALTITUDE** - По высоте<br/>**SQUARED_2D** - Округленное в 2D<br/>**SQUARED_3D** - Округленное в 3D<br/>**THREE_D** - В объёме<br/>**TWO_D** - В плоскости | Тип расстояния            |
 
 <h3 id=set_variable_log>
-  <code>variable::log</code>
+  <code>variable.log</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6422,7 +6422,7 @@ variable::locations_distance(variable=`variable`, location_1=location(0,0,0,0,0)
 
 **Пример использования:**
 ```ts
-`variable` = variable::log(1, 2);
+`variable` = variable.log(1, 2);
 
 //Или от объекта
 
@@ -6430,11 +6430,11 @@ variable::locations_distance(variable=`variable`, location_1=location(0,0,0,0,0)
 
 //Или в сухую позиционно
 
-variable::log(`variable`, 1, 2);
+variable.log(`variable`, 1, 2);
 
 //Или в сухую по ключам
 
-variable::log(variable=`variable`, number=1, base=2);
+variable.log(variable=`variable`, number=1, base=2);
 ```
 
 **Аргументы:**
@@ -6446,7 +6446,7 @@ variable::log(variable=`variable`, number=1, base=2);
 | base     | Число               | Основание логарифма       |
 
 <h3 id=set_variable_map_range>
-  <code>variable::map_range</code>
+  <code>variable.map_range</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6456,7 +6456,7 @@ variable::log(variable=`variable`, number=1, base=2);
 
 **Пример использования:**
 ```ts
-`variable` = variable::map_range(1, 2, 3, 4, 5);
+`variable` = variable.map_range(1, 2, 3, 4, 5);
 
 //Или от объекта
 
@@ -6464,11 +6464,11 @@ variable::log(variable=`variable`, number=1, base=2);
 
 //Или в сухую позиционно
 
-variable::map_range(`variable`, 1, 2, 3, 4, 5);
+variable.map_range(`variable`, 1, 2, 3, 4, 5);
 
 //Или в сухую по ключам
 
-variable::map_range(variable=`variable`, number=1, from_start=2, from_stop=3, to_start=4, to_stop=5);
+variable.map_range(variable=`variable`, number=1, from_start=2, from_stop=3, to_start=4, to_stop=5);
 ```
 
 **Аргументы:**
@@ -6483,7 +6483,7 @@ variable::map_range(variable=`variable`, number=1, from_start=2, from_stop=3, to
 | to_stop    | Число               | Верхний предел нового диапазона       |
 
 <h3 id=set_variable_mathematical_expectation>
-  <code>variable::mathematical_expectation</code>
+  <code>variable.mathematical_expectation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6493,15 +6493,15 @@ variable::map_range(variable=`variable`, number=1, from_start=2, from_stop=3, to
 
 **Пример использования:**
 ```ts
-`variable` = variable::mathematical_expectation([1, 2], [3, 4]);
+`variable` = variable.mathematical_expectation([1, 2], [3, 4]);
 
 //Или в сухую позиционно
 
-variable::mathematical_expectation(`variable`, [1, 2], [3, 4]);
+variable.mathematical_expectation(`variable`, [1, 2], [3, 4]);
 
 //Или в сухую по ключам
 
-variable::mathematical_expectation(variable=`variable`, values=[1, 2], probabilities=[3, 4]);
+variable.mathematical_expectation(variable=`variable`, values=[1, 2], probabilities=[3, 4]);
 ```
 
 **Аргументы:**
@@ -6513,7 +6513,7 @@ variable::mathematical_expectation(variable=`variable`, values=[1, 2], probabili
 | probabilities | Список\[Число\]     | Вероятности<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_max>
-  <code>variable::max</code>
+  <code>variable.max</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6523,15 +6523,15 @@ variable::mathematical_expectation(variable=`variable`, values=[1, 2], probabili
 
 **Пример использования:**
 ```ts
-`variable` = variable::max([1, 2]);
+`variable` = variable.max([1, 2]);
 
 //Или в сухую позиционно
 
-variable::max(`variable`, [1, 2]);
+variable.max(`variable`, [1, 2]);
 
 //Или в сухую по ключам
 
-variable::max(variable=`variable`, value=[1, 2]);
+variable.max(variable=`variable`, value=[1, 2]);
 ```
 
 **Аргументы:**
@@ -6542,7 +6542,7 @@ variable::max(variable=`variable`, value=[1, 2]);
 | value    | Список\[Число\]     | Числа для выбора<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_median>
-  <code>variable::median</code>
+  <code>variable.median</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6552,15 +6552,15 @@ variable::max(variable=`variable`, value=[1, 2]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::median([1, 2]);
+`variable` = variable.median([1, 2]);
 
 //Или в сухую позиционно
 
-variable::median(`variable`, [1, 2]);
+variable.median(`variable`, [1, 2]);
 
 //Или в сухую по ключам
 
-variable::median(variable=`variable`, value=[1, 2]);
+variable.median(variable=`variable`, value=[1, 2]);
 ```
 
 **Аргументы:**
@@ -6571,7 +6571,7 @@ variable::median(variable=`variable`, value=[1, 2]);
 | value    | Список\[Число\]     | Числа для получения значения<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_min>
-  <code>variable::min</code>
+  <code>variable.min</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6581,15 +6581,15 @@ variable::median(variable=`variable`, value=[1, 2]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::min([1, 2]);
+`variable` = variable.min([1, 2]);
 
 //Или в сухую позиционно
 
-variable::min(`variable`, [1, 2]);
+variable.min(`variable`, [1, 2]);
 
 //Или в сухую по ключам
 
-variable::min(variable=`variable`, value=[1, 2]);
+variable.min(variable=`variable`, value=[1, 2]);
 ```
 
 **Аргументы:**
@@ -6600,7 +6600,7 @@ variable::min(variable=`variable`, value=[1, 2]);
 | value    | Список\[Число\]     | Числа для выбора<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_multiple>
-  <code>variable::set_values</code>
+  <code>variable.set_values</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6610,11 +6610,11 @@ variable::min(variable=`variable`, value=[1, 2]);
 
 **Пример использования:**
 ```ts
-variable::set_values([`variables`, `variables`], ["any value", "any value"]);
+variable.set_values([`variables`, `variables`], ["any value", "any value"]);
 
 //Или в сухую по ключам
 
-variable::set_values(variables=[`variables`, `variables`], values=["any value", "any value"]);
+variable.set_values(variables=[`variables`, `variables`], values=["any value", "any value"]);
 ```
 
 **Аргументы:**
@@ -6625,7 +6625,7 @@ variable::set_values(variables=[`variables`, `variables`], values=["any value", 
 | values    | Список\[Любое значение\] | Значения для присвоения   |
 
 <h3 id=set_variable_multiply>
-  <code>variable::multiply</code>
+  <code>variable.multiply</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6635,15 +6635,15 @@ variable::set_values(variables=[`variables`, `variables`], values=["any value", 
 
 **Пример использования:**
 ```ts
-`variable` = variable::multiply([1, 2]);
+`variable` = variable.multiply([1, 2]);
 
 //Или в сухую позиционно
 
-variable::multiply(`variable`, [1, 2]);
+variable.multiply(`variable`, [1, 2]);
 
 //Или в сухую по ключам
 
-variable::multiply(variable=`variable`, value=[1, 2]);
+variable.multiply(variable=`variable`, value=[1, 2]);
 ```
 
 **Аргументы:**
@@ -6654,7 +6654,7 @@ variable::multiply(variable=`variable`, value=[1, 2]);
 | value    | Список\[Число\]     | Числа для умножения<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_multiply_vector>
-  <code>variable::multiply_vector</code>
+  <code>variable.multiply_vector</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6664,7 +6664,7 @@ variable::multiply(variable=`variable`, value=[1, 2]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::multiply_vector(vector(0,0,0), 1);
+`variable` = variable.multiply_vector(vector(0,0,0), 1);
 
 //Или от объекта
 
@@ -6672,11 +6672,11 @@ variable::multiply(variable=`variable`, value=[1, 2]);
 
 //Или в сухую позиционно
 
-variable::multiply_vector(`variable`, vector(0,0,0), 1);
+variable.multiply_vector(`variable`, vector(0,0,0), 1);
 
 //Или в сухую по ключам
 
-variable::multiply_vector(variable=`variable`, vector=vector(0,0,0), multiplier=1);
+variable.multiply_vector(variable=`variable`, vector=vector(0,0,0), multiplier=1);
 ```
 
 **Аргументы:**
@@ -6688,7 +6688,7 @@ variable::multiply_vector(variable=`variable`, vector=vector(0,0,0), multiplier=
 | multiplier | Число                | Число для умножения       |
 
 <h3 id=set_variable_obtain_item_custom_model_data>
-  <code>variable::obtain_item_custom_model_data</code>
+  <code>variable.obtain_item_custom_model_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6698,7 +6698,7 @@ variable::multiply_vector(variable=`variable`, vector=vector(0,0,0), multiplier=
 
 **Пример использования:**
 ```ts
-`variable` = variable::obtain_item_custom_model_data(item("stick"), "FLOATS");
+`variable` = variable.obtain_item_custom_model_data(item("stick"), "FLOATS");
 
 //Или от объекта
 
@@ -6706,11 +6706,11 @@ variable::multiply_vector(variable=`variable`, vector=vector(0,0,0), multiplier=
 
 //Или в сухую позиционно
 
-variable::obtain_item_custom_model_data(`variable`, item("stick"), "FLOATS");
+variable.obtain_item_custom_model_data(`variable`, item("stick"), "FLOATS");
 
 //Или в сухую по ключам
 
-variable::obtain_item_custom_model_data(variable=`variable`, item=item("stick"), value_type="FLOATS");
+variable.obtain_item_custom_model_data(variable=`variable`, item=item("stick"), value_type="FLOATS");
 ```
 
 **Аргументы:**
@@ -6722,7 +6722,7 @@ variable::obtain_item_custom_model_data(variable=`variable`, item=item("stick"),
 | value_type | Маркер<br/>**FLOATS** - Плавающие значения (floats)<br/>**BOOLEANS** - Булевые значения (booleans)<br/>**STRINGS** - Строчные значения (strings)<br/>**COLORS** - Список цветов (colors) | Тип данных                |
 
 <h3 id=set_variable_parse_json>
-  <code>variable::parse_json</code>
+  <code>variable.parse_json</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6732,15 +6732,15 @@ variable::obtain_item_custom_model_data(variable=`variable`, item=item("stick"),
 
 **Пример использования:**
 ```ts
-`variable` = variable::parse_json("json");
+`variable` = variable.parse_json("json");
 
 //Или в сухую позиционно
 
-variable::parse_json(`variable`, "json");
+variable.parse_json(`variable`, "json");
 
 //Или в сухую по ключам
 
-variable::parse_json(variable=`variable`, json="json");
+variable.parse_json(variable=`variable`, json="json");
 ```
 
 **Аргументы:**
@@ -6751,7 +6751,7 @@ variable::parse_json(variable=`variable`, json="json");
 | json     | Текст               | JSON текст            |
 
 <h3 id=set_variable_parse_to_component>
-  <code>variable::parse_to_component</code>
+  <code>variable.parse_to_component</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6761,7 +6761,7 @@ variable::parse_json(variable=`variable`, json="json");
 
 **Пример использования:**
 ```ts
-`variable` = variable::parse_to_component("text", "JSON");
+`variable` = variable.parse_to_component("text", "JSON");
 
 //Или от объекта
 
@@ -6769,11 +6769,11 @@ variable::parse_json(variable=`variable`, json="json");
 
 //Или в сухую позиционно
 
-variable::parse_to_component(`variable`, "text", "JSON");
+variable.parse_to_component(`variable`, "text", "JSON");
 
 //Или в сухую по ключам
 
-variable::parse_to_component(variable=`variable`, text="text", parsing="JSON");
+variable.parse_to_component(variable=`variable`, text="text", parsing="JSON");
 ```
 
 **Аргументы:**
@@ -6785,7 +6785,7 @@ variable::parse_to_component(variable=`variable`, text="text", parsing="JSON");
 | parsing  | Маркер<br/>**JSON** - JSON<br/>**LEGACY** - Цветной (&)<br/>**MINIMESSAGE** - Стилизуемый<br/>**PLAIN** - Обычный | Тип стилизуемого текста   |
 
 <h3 id=set_variable_perlin_noise_3d>
-  <code>variable::perlin_noise_3d</code>
+  <code>variable.perlin_noise_3d</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6795,15 +6795,15 @@ variable::parse_to_component(variable=`variable`, text="text", parsing="JSON");
 
 **Пример использования:**
 ```ts
-`variable` = variable::perlin_noise_3d(location(0,0,0,0,0), 1, 2, 3, 4, 5, "FULL_RANGE", "FALSE");
+`variable` = variable.perlin_noise_3d(location(0,0,0,0,0), 1, 2, 3, 4, 5, "FULL_RANGE", "FALSE");
 
 //Или в сухую позиционно
 
-variable::perlin_noise_3d(`variable`, location(0,0,0,0,0), 1, 2, 3, 4, 5, "FULL_RANGE", "FALSE");
+variable.perlin_noise_3d(`variable`, location(0,0,0,0,0), 1, 2, 3, 4, 5, "FULL_RANGE", "FALSE");
 
 //Или в сухую по ключам
 
-variable::perlin_noise_3d(variable=`variable`, location=location(0,0,0,0,0), seed=1, loc_frequency=2, octaves=3, frequency=4, amplitude=5, range_mode="FULL_RANGE", normalized="FALSE");
+variable.perlin_noise_3d(variable=`variable`, location=location(0,0,0,0,0), seed=1, loc_frequency=2, octaves=3, frequency=4, amplitude=5, range_mode="FULL_RANGE", normalized="FALSE");
 ```
 
 **Аргументы:**
@@ -6821,7 +6821,7 @@ variable::perlin_noise_3d(variable=`variable`, location=location(0,0,0,0,0), see
 | normalized    | Маркер<br/>**FALSE** - Не нормализировать<br/>**TRUE** - Нормализировать                            | Нормализация значений             |
 
 <h3 id=set_variable_pow>
-  <code>variable::pow</code>
+  <code>variable.pow</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6831,7 +6831,7 @@ variable::perlin_noise_3d(variable=`variable`, location=location(0,0,0,0,0), see
 
 **Пример использования:**
 ```ts
-`variable` = variable::pow(1, 2);
+`variable` = variable.pow(1, 2);
 
 //Или от объекта
 
@@ -6839,11 +6839,11 @@ variable::perlin_noise_3d(variable=`variable`, location=location(0,0,0,0,0), see
 
 //Или в сухую позиционно
 
-variable::pow(`variable`, 1, 2);
+variable.pow(`variable`, 1, 2);
 
 //Или в сухую по ключам
 
-variable::pow(variable=`variable`, base=1, power=2);
+variable.pow(variable=`variable`, base=1, power=2);
 ```
 
 **Аргументы:**
@@ -6855,7 +6855,7 @@ variable::pow(variable=`variable`, base=1, power=2);
 | power    | Число               | Показатель степени        |
 
 <h3 id=set_variable_purge>
-  <code>variable::purge</code>
+  <code>variable.purge</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6865,11 +6865,11 @@ variable::pow(variable=`variable`, base=1, power=2);
 
 **Пример использования:**
 ```ts
-variable::purge(["names", "names"], "GAME", "ENDS_WITH", "FALSE");
+variable.purge(["names", "names"], "GAME", "ENDS_WITH", "FALSE");
 
 //Или в сухую по ключам
 
-variable::purge(names=["names", "names"], scope="GAME", match="ENDS_WITH", ignore_case="FALSE");
+variable.purge(names=["names", "names"], scope="GAME", match="ENDS_WITH", ignore_case="FALSE");
 ```
 
 **Аргументы:**
@@ -6882,7 +6882,7 @@ variable::purge(names=["names", "names"], scope="GAME", match="ENDS_WITH", ignor
 | ignore_case | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено                                                                                                                                                          | Игнорирование регистра                                           |
 
 <h3 id=set_variable_random>
-  <code>variable::random</code>
+  <code>variable.random</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6892,15 +6892,15 @@ variable::purge(names=["names", "names"], scope="GAME", match="ENDS_WITH", ignor
 
 **Пример использования:**
 ```ts
-`variable` = variable::random(["any value", "any value"]);
+`variable` = variable.random(["any value", "any value"]);
 
 //Или в сухую позиционно
 
-variable::random(`variable`, ["any value", "any value"]);
+variable.random(`variable`, ["any value", "any value"]);
 
 //Или в сухую по ключам
 
-variable::random(variable=`variable`, values=["any value", "any value"]);
+variable.random(variable=`variable`, values=["any value", "any value"]);
 ```
 
 **Аргументы:**
@@ -6911,7 +6911,7 @@ variable::random(variable=`variable`, values=["any value", "any value"]);
 | values   | Список\[Любое значение\]     | Значения для выбора<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_random_location>
-  <code>variable::random_location</code>
+  <code>variable.random_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6921,15 +6921,15 @@ variable::random(variable=`variable`, values=["any value", "any value"]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::random_location(location(0,0,0,0,0), location(0,0,0,0,0), "FALSE");
+`variable` = variable.random_location(location(0,0,0,0,0), location(0,0,0,0,0), "FALSE");
 
 //Или в сухую позиционно
 
-variable::random_location(`variable`, location(0,0,0,0,0), location(0,0,0,0,0), "FALSE");
+variable.random_location(`variable`, location(0,0,0,0,0), location(0,0,0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-variable::random_location(variable=`variable`, location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0), integer="FALSE");
+variable.random_location(variable=`variable`, location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0), integer="FALSE");
 ```
 
 **Аргументы:**
@@ -6942,7 +6942,7 @@ variable::random_location(variable=`variable`, location_1=location(0,0,0,0,0), l
 | integer    | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Округление до целых координат |
 
 <h3 id=set_variable_random_number>
-  <code>variable::random_number</code>
+  <code>variable.random_number</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6952,15 +6952,15 @@ variable::random_location(variable=`variable`, location_1=location(0,0,0,0,0), l
 
 **Пример использования:**
 ```ts
-`variable` = variable::random_number(1, 2, "FALSE");
+`variable` = variable.random_number(1, 2, "FALSE");
 
 //Или в сухую позиционно
 
-variable::random_number(`variable`, 1, 2, "FALSE");
+variable.random_number(`variable`, 1, 2, "FALSE");
 
 //Или в сухую по ключам
 
-variable::random_number(variable=`variable`, min=1, max=2, integer="FALSE");
+variable.random_number(variable=`variable`, min=1, max=2, integer="FALSE");
 ```
 
 **Аргументы:**
@@ -6973,7 +6973,7 @@ variable::random_number(variable=`variable`, min=1, max=2, integer="FALSE");
 | integer  | Маркер<br/>**FALSE** - Дробное<br/>**TRUE** - Целое | Тип числа                 |
 
 <h3 id=set_variable_randomize_list_order>
-  <code>variable::randomize_list_order</code>
+  <code>variable.randomize_list_order</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -6983,7 +6983,7 @@ variable::random_number(variable=`variable`, min=1, max=2, integer="FALSE");
 
 **Пример использования:**
 ```ts
-`variable` = variable::randomize_list_order([`list`, `list`]);
+`variable` = variable.randomize_list_order([`list`, `list`]);
 
 //Или от объекта
 
@@ -6991,10 +6991,10 @@ variable::random_number(variable=`variable`, min=1, max=2, integer="FALSE");
 
 //Или в сухую позиционно
 
-variable::randomize_list_order(`variable`, [`list`, `list`]);
+variable.randomize_list_order(`variable`, [`list`, `list`]);
 
 //Или в сухую по ключам
-variable::randomize_list_order(variable=`variable`, list=[`list`, `list`]);
+variable.randomize_list_order(variable=`variable`, list=[`list`, `list`]);
 ```
 
 **Аргументы:**
@@ -7005,7 +7005,7 @@ variable::randomize_list_order(variable=`variable`, list=[`list`, `list`]);
 | list     | Список               | Список                    |
 
 <h3 id=set_variable_ray_trace_result>
-  <code>variable::ray_trace_result</code>
+  <code>variable.ray_trace_result</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7015,15 +7015,15 @@ variable::randomize_list_order(variable=`variable`, list=[`list`, `list`]);
 
 **Пример использования:**
 ```ts
-`variable_for_hit_location`, `variable_for_hit_block_location`, `variable_for_hit_block_face`, `variable_for_hit_entity_uuid` = variable::ray_trace_result(location(0,0,0,0,0), 1, 2, [`entities`, `entities`], "BLOCKS_AND_ENTITIES", "FALSE", "ALWAYS");
+`variable_for_hit_location`, `variable_for_hit_block_location`, `variable_for_hit_block_face`, `variable_for_hit_entity_uuid` = variable.ray_trace_result(location(0,0,0,0,0), 1, 2, [`entities`, `entities`], "BLOCKS_AND_ENTITIES", "FALSE", "ALWAYS");
 
 //Или в сухую позиционно
 
-variable::ray_trace_result(`variable_for_hit_location`, `variable_for_hit_block_location`, `variable_for_hit_block_face`, `variable_for_hit_entity_uuid`, location(0,0,0,0,0), 1, 2, [`entities`, `entities`], "BLOCKS_AND_ENTITIES", "FALSE", "ALWAYS");
+variable.ray_trace_result(`variable_for_hit_location`, `variable_for_hit_block_location`, `variable_for_hit_block_face`, `variable_for_hit_entity_uuid`, location(0,0,0,0,0), 1, 2, [`entities`, `entities`], "BLOCKS_AND_ENTITIES", "FALSE", "ALWAYS");
 
 //Или в сухую по ключам
 
-variable::ray_trace_result(variable_for_hit_location=`variable_for_hit_location`, variable_for_hit_block_location=`variable_for_hit_block_location`, variable_for_hit_block_face=`variable_for_hit_block_face`, variable_for_hit_entity_uuid=`variable_for_hit_entity_uuid`, start=location(0,0,0,0,0), ray_size=1, max_distance=2, entities=[`entities`, `entities`], ray_collision_mode="BLOCKS_AND_ENTITIES", ignore_passable_blocks="FALSE", fluid_collision_mode="ALWAYS");
+variable.ray_trace_result(variable_for_hit_location=`variable_for_hit_location`, variable_for_hit_block_location=`variable_for_hit_block_location`, variable_for_hit_block_face=`variable_for_hit_block_face`, variable_for_hit_entity_uuid=`variable_for_hit_entity_uuid`, start=location(0,0,0,0,0), ray_size=1, max_distance=2, entities=[`entities`, `entities`], ray_collision_mode="BLOCKS_AND_ENTITIES", ignore_passable_blocks="FALSE", fluid_collision_mode="ALWAYS");
 ```
 
 **Аргументы:**
@@ -7043,7 +7043,7 @@ variable::ray_trace_result(variable_for_hit_location=`variable_for_hit_location`
 | fluid_collision_mode            | Маркер<br/>**ALWAYS** - Не игнорировать<br/>**NEVER** - Полностью игнорировать<br/>**SOURCE_ONLY** - Учитывать только источник жидкости        | Игнорировать жидкость                                                            |
 
 <h3 id=set_variable_reflect_vector_product>
-  <code>variable::reflect_vector_product</code>
+  <code>variable.reflect_vector_product</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7053,15 +7053,15 @@ variable::ray_trace_result(variable_for_hit_location=`variable_for_hit_location`
 
 **Пример использования:**
 ```ts
-`variable` = variable::reflect_vector_product(vector(0,0,0), vector(0,0,0), 1);
+`variable` = variable.reflect_vector_product(vector(0,0,0), vector(0,0,0), 1);
 
 //Или в сухую позиционно
 
-variable::reflect_vector_product(`variable`, vector(0,0,0), vector(0,0,0), 1);
+variable.reflect_vector_product(`variable`, vector(0,0,0), vector(0,0,0), 1);
 
 //Или в сухую по ключам
 
-variable::reflect_vector_product(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0), bounce=1);
+variable.reflect_vector_product(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0), bounce=1);
 ```
 
 **Аргументы:**
@@ -7074,7 +7074,7 @@ variable::reflect_vector_product(variable=`variable`, vector_1=vector(0,0,0), ve
 | bounce   | Число                | Домножение итогового вектора на это число (по умолчанию 1.0) |
 
 <h3 id=set_variable_regex_replace_text>
-  <code>variable::regex_replace_text</code>
+  <code>variable.regex_replace_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7084,7 +7084,7 @@ variable::reflect_vector_product(variable=`variable`, vector_1=vector(0,0,0), ve
 
 **Пример использования:**
 ```ts
-`variable` = variable::regex_replace_text("text", "regex", "replacement", "ANY", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE");
+`variable` = variable.regex_replace_text("text", "regex", "replacement", "ANY", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE");
 
 //Или от объекта
 
@@ -7092,11 +7092,11 @@ variable::reflect_vector_product(variable=`variable`, vector_1=vector(0,0,0), ve
 
 //Или в сухую позиционно
 
-variable::regex_replace_text(`variable`, "text", "regex", "replacement", "ANY", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE");
+variable.regex_replace_text(`variable`, "text", "regex", "replacement", "ANY", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE");
 
 //Или в сухую по ключам
 
-variable::regex_replace_text(variable=`variable`, text="text", regex="regex", replacement="replacement", first="ANY", ignore_case="FALSE", multiline="FALSE", literal="FALSE", unix_lines="FALSE", comments="FALSE", dot_matches_all="FALSE", cannon_eq="FALSE");
+variable.regex_replace_text(variable=`variable`, text="text", regex="regex", replacement="replacement", first="ANY", ignore_case="FALSE", multiline="FALSE", literal="FALSE", unix_lines="FALSE", comments="FALSE", dot_matches_all="FALSE", cannon_eq="FALSE");
 ```
 
 **Аргументы:**
@@ -7117,7 +7117,7 @@ variable::regex_replace_text(variable=`variable`, text="text", regex="regex", re
 | cannon_eq       | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено                                       | Каноническая эквивалентность (флаг cannon_eq)                  |
 
 <h3 id=set_variable_remainder>
-  <code>variable::remainder</code>
+  <code>variable.remainder</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7127,7 +7127,7 @@ variable::regex_replace_text(variable=`variable`, text="text", regex="regex", re
 
 **Пример использования:**
 ```ts
-`variable` = variable::remainder(1, 2, "MODULO");
+`variable` = variable.remainder(1, 2, "MODULO");
 
 //Или от объекта
 
@@ -7135,11 +7135,11 @@ variable::regex_replace_text(variable=`variable`, text="text", regex="regex", re
 
 //Или в сухую позиционно
 
-variable::remainder(`variable`, 1, 2, "MODULO");
+variable.remainder(`variable`, 1, 2, "MODULO");
 
 //Или в сухую по ключам
 
-variable::remainder(variable=`variable`, dividend=1, divisor=2, remainder_mode="MODULO");
+variable.remainder(variable=`variable`, dividend=1, divisor=2, remainder_mode="MODULO");
 ```
 
 **Аргументы:**
@@ -7152,7 +7152,7 @@ variable::remainder(variable=`variable`, dividend=1, divisor=2, remainder_mode="
 | remainder_mode | Маркер<br/>**MODULO** - Остаток по модулю (оставляет знак делителя)<br/>**REMAINDER** - Остаток от деления (оставляет знак делимого) | Режим работы              |
 
 <h3 id=set_variable_remove_compass_lodestone>
-  <code>variable::remove_compass_lodestone</code>
+  <code>variable.remove_compass_lodestone</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7162,7 +7162,7 @@ variable::remainder(variable=`variable`, dividend=1, divisor=2, remainder_mode="
 
 **Пример использования:**
 ```ts
-`variable` = variable::remove_compass_lodestone(item("stick"));
+`variable` = variable.remove_compass_lodestone(item("stick"));
 
 //Или от объекта
 
@@ -7170,11 +7170,11 @@ variable::remainder(variable=`variable`, dividend=1, divisor=2, remainder_mode="
 
 //Или в сухую позиционно
 
-variable::remove_compass_lodestone(`variable`, item("stick"));
+variable.remove_compass_lodestone(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::remove_compass_lodestone(variable=`variable`, item=item("stick"));
+variable.remove_compass_lodestone(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -7185,7 +7185,7 @@ variable::remove_compass_lodestone(variable=`variable`, item=item("stick"));
 | item     | Предмет               | Намагниченный компас      |
 
 <h3 id=set_variable_remove_enchantment>
-  <code>variable::remove_enchantment</code>
+  <code>variable.remove_enchantment</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7195,7 +7195,7 @@ variable::remove_compass_lodestone(variable=`variable`, item=item("stick"));
 
 **Пример использования:**
 ```ts
-`variable` = variable::remove_enchantment(item("stick"), "enchantment");
+`variable` = variable.remove_enchantment(item("stick"), "enchantment");
 
 //Или от объекта
 
@@ -7203,11 +7203,11 @@ variable::remove_compass_lodestone(variable=`variable`, item=item("stick"));
 
 //Или в сухую позиционно
 
-variable::remove_enchantment(`variable`, item("stick"), "enchantment");
+variable.remove_enchantment(`variable`, item("stick"), "enchantment");
 
 //Или в сухую по ключам
 
-variable::remove_enchantment(variable=`variable`, item=item("stick"), enchantment="enchantment");
+variable.remove_enchantment(variable=`variable`, item=item("stick"), enchantment="enchantment");
 ```
 
 **Аргументы:**
@@ -7219,7 +7219,7 @@ variable::remove_enchantment(variable=`variable`, item=item("stick"), enchantmen
 | enchantment | Текст                 | ID зачарования            |
 
 <h3 id=set_variable_remove_item_attribute>
-  <code>variable::remove_item_attribute</code>
+  <code>variable.remove_item_attribute</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7229,7 +7229,7 @@ variable::remove_enchantment(variable=`variable`, item=item("stick"), enchantmen
 
 **Пример использования:**
 ```ts
-`variable` = variable::remove_item_attribute(item("stick"), "name_or_uuid", "ARMOR");
+`variable` = variable.remove_item_attribute(item("stick"), "name_or_uuid", "ARMOR");
 
 //Или от объекта
 
@@ -7237,11 +7237,11 @@ variable::remove_enchantment(variable=`variable`, item=item("stick"), enchantmen
 
 //Или в сухую позиционно
 
-variable::remove_item_attribute(`variable`, item("stick"), "name_or_uuid", "ARMOR");
+variable.remove_item_attribute(`variable`, item("stick"), "name_or_uuid", "ARMOR");
 
 //Или в сухую по ключам
 
-variable::remove_item_attribute(variable=`variable`, item=item("stick"), name_or_uuid="name_or_uuid", attribute="ARMOR");
+variable.remove_item_attribute(variable=`variable`, item=item("stick"), name_or_uuid="name_or_uuid", attribute="ARMOR");
 ```
 
 **Аргументы:**
@@ -7254,7 +7254,7 @@ variable::remove_item_attribute(variable=`variable`, item=item("stick"), name_or
 | attribute    | Маркер<br/>**ARMOR** - Броня<br/>**ARMOR_TOUGHNESS** - Плотность защиты<br/>**ATTACK_DAMAGE** - Урон атаки<br/>**ATTACK_KNOCKBACK** - Отталкивание от атаки<br/>**ATTACK_SPEED** - Скорость атаки<br/>**FLYING_SPEED** - Скорость полёта<br/>**FOLLOW_RANGE** - Расстояние следования<br/>**GENERIC_ARMOR** - Очки защиты (generic.armor)<br/>**GENERIC_ARMOR_TOUGHNESS** - Очки плотности защиты (generic.armor_toughness)<br/>**GENERIC_ATTACK_DAMAGE** - Урон атаки (generic.attack_damage)<br/>**GENERIC_ATTACK_KNOCKBACK** - Отталкивание атаки (generic.attack_knockback)<br/>**GENERIC_ATTACK_SPEED** - Скорость атаки (generic.attack_speed)<br/>**GENERIC_BURNING_TIME** - Время горения<br/>**GENERIC_EXPLOSION_KNOCKBACK_RESISTANCE** - Сопротивление отбрасыванию от взрыва<br/>**GENERIC_FALL_DAMAGE_MULTIPLIER** - Множитель урона от падения<br/>**GENERIC_FLYING_SPEED** - Скорость полёта (generic.flying_speed)<br/>**GENERIC_FOLLOW_RANGE** - Расстояние следования (generic.follow_range)<br/>**GENERIC_GRAVITY** - Гравитация<br/>**GENERIC_JUMP_STRENGTH** - Сила прыжка<br/>**GENERIC_KNOCKBACK_RESISTANCE** - Сопротивление отталкиванию (generic.knockback_resistance)<br/>**GENERIC_LUCK** - Удача рыбалки (generic.luck)<br/>**GENERIC_MAX_ABSORPTION** - Максимальное поглощение (generic.max_absorption)<br/>**GENERIC_MAX_HEALTH** - Максимальное здоровье (generic.max_health)<br/>**GENERIC_MOVEMENT_EFFICIENCY** - Скорость передвижения по замедляющим блокам<br/>**GENERIC_MOVEMENT_SPEED** - Скорость передвижения (generic.movement_speed)<br/>**GENERIC_OXYGEN_BONUS** - Воздух под водой<br/>**GENERIC_SAFE_FALL_DISTANCE** - Безопасная высота падения<br/>**GENERIC_SCALE** - Масштаб<br/>**GENERIC_STEP_HEIGHT** - Высота шага<br/>**GENERIC_WATER_MOVEMENT_EFFICIENCY** - Скорость передвижения под водой<br/>**HORSE_JUMP_STRENGTH** - Сила прыжка лошади (horse.jump_strength)<br/>**KNOCKBACK_RESISTANCE** - Сопротивление отталкиванию<br/>**LUCK** - Удача<br/>**MAX_ABSORPTION** - Максимальное поглощение<br/>**MAX_HEALTH** - Максимальное здоровье<br/>**MOVEMENT_SPEED** - Скорость передвижения<br/>**PLAYER_BLOCK_BREAK_SPEED** - Скорость ломания блока<br/>**PLAYER_BLOCK_INTERACTION_RANGE** - Расстояние взаимодействия с блоками<br/>**PLAYER_ENTITY_INTERACTION_RANGE** - Расстояние взаимодействия с сущностями<br/>**PLAYER_MINING_EFFICIENCY** - Скорость копания<br/>**PLAYER_SNEAKING_SPEED** - Скорость передвижения крадясь<br/>**PLAYER_SUBMERGED_MINING_SPEED** - Скорость копания под водой<br/>**PLAYER_SWEEPING_DAMAGE_RATIO** - Коэффициент разящего удара<br/>**ZOMBIE_SPAWN_REINFORCEMENTS** - Шанс подкрепления зомби (zombie.spawn_reinforcements) | Тип атрибута              |
 
 <h3 id=set_variable_remove_item_custom_model_data>
-  <code>variable::remove_item_custom_model_data</code>
+  <code>variable.remove_item_custom_model_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7266,7 +7266,7 @@ variable::remove_item_attribute(variable=`variable`, item=item("stick"), name_or
 
 **Пример использования:**
 ```ts
-`variable` = variable::remove_item_custom_model_data(item("stick"));
+`variable` = variable.remove_item_custom_model_data(item("stick"));
 
 //Или от объекта
 
@@ -7274,11 +7274,11 @@ variable::remove_item_attribute(variable=`variable`, item=item("stick"), name_or
 
 //Или в сухую позиционно
 
-variable::remove_item_custom_model_data(`variable`, item("stick"));
+variable.remove_item_custom_model_data(`variable`, item("stick"));
 
 //Или в сухую по ключам
 
-variable::remove_item_custom_model_data(variable=`variable`, item=item("stick"));
+variable.remove_item_custom_model_data(variable=`variable`, item=item("stick"));
 ```
 
 **Аргументы:**
@@ -7289,7 +7289,7 @@ variable::remove_item_custom_model_data(variable=`variable`, item=item("stick"))
 | item     | Предмет               | Предмет                   |
 
 <h3 id=set_variable_remove_item_custom_tag>
-  <code>variable::remove_item_custom_tag</code>
+  <code>variable.remove_item_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7299,7 +7299,7 @@ variable::remove_item_custom_model_data(variable=`variable`, item=item("stick"))
 
 **Пример использования:**
 ```ts
-`variable` = variable::remove_item_custom_tag(item("stick"), "tag_name");
+`variable` = variable.remove_item_custom_tag(item("stick"), "tag_name");
 
 //Или от объекта
 
@@ -7307,11 +7307,11 @@ variable::remove_item_custom_model_data(variable=`variable`, item=item("stick"))
 
 //Или в сухую позиционно
 
-variable::remove_item_custom_tag(`variable`, item("stick"), "tag_name");
+variable.remove_item_custom_tag(`variable`, item("stick"), "tag_name");
 
 //Или в сухую по ключам
 
-variable::remove_item_custom_tag(variable=`variable`, item=item("stick"), tag_name="tag_name");
+variable.remove_item_custom_tag(variable=`variable`, item=item("stick"), tag_name="tag_name");
 ```
 
 **Аргументы:**
@@ -7323,7 +7323,7 @@ variable::remove_item_custom_tag(variable=`variable`, item=item("stick"), tag_na
 | tag_name | Текст                 | Имя тега                  |
 
 <h3 id=set_variable_remove_item_lore_line>
-  <code>variable::remove_item_lore_line</code>
+  <code>variable.remove_item_lore_line</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7333,7 +7333,7 @@ variable::remove_item_custom_tag(variable=`variable`, item=item("stick"), tag_na
 
 **Пример использования:**
 ```ts
-`variable` = variable::remove_item_lore_line(item("stick"), 1);
+`variable` = variable.remove_item_lore_line(item("stick"), 1);
 
 //Или от объекта
 
@@ -7341,11 +7341,11 @@ variable::remove_item_custom_tag(variable=`variable`, item=item("stick"), tag_na
 
 //Или в сухую позиционно
 
-variable::remove_item_lore_line(`variable`, item("stick"), 1);
+variable.remove_item_lore_line(`variable`, item("stick"), 1);
 
 //Или в сухую по ключам
 
-variable::remove_item_lore_line(variable=`variable`, item=item("stick"), line=1);
+variable.remove_item_lore_line(variable=`variable`, item=item("stick"), line=1);
 ```
 
 **Аргументы:**
@@ -7357,7 +7357,7 @@ variable::remove_item_lore_line(variable=`variable`, item=item("stick"), line=1)
 | line     | Число                 | Номер строки              |
 
 <h3 id=set_variable_remove_item_potion_effects>
-  <code>variable::remove_item_potion_effects</code>
+  <code>variable.remove_item_potion_effects</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7367,7 +7367,7 @@ variable::remove_item_lore_line(variable=`variable`, item=item("stick"), line=1)
 
 **Пример использования:**
 ```ts
-`variable` = variable::remove_item_potion_effects([potion("slow_falling"), potion("slow_falling")], item("stick"));
+`variable` = variable.remove_item_potion_effects([potion("slow_falling"), potion("slow_falling")], item("stick"));
 
 //Или от объекта
 
@@ -7375,11 +7375,11 @@ variable::remove_item_lore_line(variable=`variable`, item=item("stick"), line=1)
 
 //Или в сухую позиционно
 
-variable::remove_item_potion_effects(`variable`, [potion("slow_falling"), potion("slow_falling")], item("stick"));
+variable.remove_item_potion_effects(`variable`, [potion("slow_falling"), potion("slow_falling")], item("stick"));
 
 //Или в сухую по ключам
 
-variable::remove_item_potion_effects(variable=`variable`, effects=[potion("slow_falling"), potion("slow_falling")], item=item("stick"));
+variable.remove_item_potion_effects(variable=`variable`, effects=[potion("slow_falling"), potion("slow_falling")], item=item("stick"));
 ```
 
 **Аргументы:**
@@ -7391,7 +7391,7 @@ variable::remove_item_potion_effects(variable=`variable`, effects=[potion("slow_
 | item     | Предмет               | Предмет                                                    |
 
 <h3 id=set_variable_remove_list_duplicates>
-  <code>variable::remove_list_duplicates</code>
+  <code>variable.remove_list_duplicates</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7401,7 +7401,7 @@ variable::remove_item_potion_effects(variable=`variable`, effects=[potion("slow_
 
 **Пример использования:**
 ```ts
-`variable` = variable::remove_list_duplicates([`list`, `list`]);
+`variable` = variable.remove_list_duplicates([`list`, `list`]);
 
 //Или от объекта
 
@@ -7409,11 +7409,11 @@ variable::remove_item_potion_effects(variable=`variable`, effects=[potion("slow_
 
 //Или в сухую позиционно
 
-variable::remove_list_duplicates(`variable`, [`list`, `list`]);
+variable.remove_list_duplicates(`variable`, [`list`, `list`]);
 
 //Или в сухую по ключам
 
-variable::remove_list_duplicates(variable=`variable`, list=[`list`, `list`]);
+variable.remove_list_duplicates(variable=`variable`, list=[`list`, `list`]);
 ```
 
 **Аргументы:**
@@ -7424,7 +7424,7 @@ variable::remove_list_duplicates(variable=`variable`, list=[`list`, `list`]);
 | list     | Список               | Список                    |
 
 <h3 id=set_variable_remove_list_value>
-  <code>variable::remove_list_value</code>
+  <code>variable.remove_list_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7434,7 +7434,7 @@ variable::remove_list_duplicates(variable=`variable`, list=[`list`, `list`]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::remove_list_value([`list`, `list`], "any value", "ALL");
+`variable` = variable.remove_list_value([`list`, `list`], "any value", "ALL");
 
 //Или от объекта
 
@@ -7442,11 +7442,11 @@ variable::remove_list_duplicates(variable=`variable`, list=[`list`, `list`]);
 
 //Или в сухую позиционно
 
-variable::remove_list_value(`variable`, [`list`, `list`], "any value", "ALL");
+variable.remove_list_value(`variable`, [`list`, `list`], "any value", "ALL");
 
 //Или в сухую по ключам
 
-variable::remove_list_value(variable=`variable`, list=[`list`, `list`], value="any value", remove_mode="ALL");
+variable.remove_list_value(variable=`variable`, list=[`list`, `list`], value="any value", remove_mode="ALL");
 ```
 
 **Аргументы:**
@@ -7459,7 +7459,7 @@ variable::remove_list_value(variable=`variable`, list=[`list`, `list`], value="a
 | remove_mode | Маркер<br/>**ALL** - Все совпадения<br/>**FIRST** - Первое совпадение<br/>**LAST** - Последнее совпадение | Режим удаления            |
 
 <h3 id=set_variable_remove_list_value_at_index>
-  <code>variable::remove_list_value_at_index</code>
+  <code>variable.remove_list_value_at_index</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7469,7 +7469,7 @@ variable::remove_list_value(variable=`variable`, list=[`list`, `list`], value="a
 
 **Пример использования:**
 ```ts
-`variable`, `removed_value` = variable::remove_list_value_at_index([`list`, `list`], 1);
+`variable`, `removed_value` = variable.remove_list_value_at_index([`list`, `list`], 1);
 
 //Или от объекта
 
@@ -7477,11 +7477,11 @@ variable::remove_list_value(variable=`variable`, list=[`list`, `list`], value="a
 
 //Или в сухую позиционно
 
-variable::remove_list_value_at_index(`removed_value`, `variable`, [`list`, `list`], 1);
+variable.remove_list_value_at_index(`removed_value`, `variable`, [`list`, `list`], 1);
 
 //Или в сухую по ключам
 
-variable::remove_list_value_at_index(removed_value=`removed_value`, variable=`variable`, list=[`list`, `list`], index=1);
+variable.remove_list_value_at_index(removed_value=`removed_value`, variable=`variable`, list=[`list`, `list`], index=1);
 ```
 
 **Аргументы:**
@@ -7494,7 +7494,7 @@ variable::remove_list_value_at_index(removed_value=`removed_value`, variable=`va
 | index         | Число                        | Индекс                    |
 
 <h3 id=set_variable_remove_map_entry>
-  <code>variable::remove_map_entry</code>
+  <code>variable.remove_map_entry</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7504,7 +7504,7 @@ variable::remove_list_value_at_index(removed_value=`removed_value`, variable=`va
 
 **Пример использования:**
 ```ts
-`variable`, `removed_value` = variable::remove_map_entry({"map":`map`}, "any value", ["any value", "any value"]);
+`variable`, `removed_value` = variable.remove_map_entry({"map":`map`}, "any value", ["any value", "any value"]);
 
 //Или от объекта
 
@@ -7512,11 +7512,11 @@ variable::remove_list_value_at_index(removed_value=`removed_value`, variable=`va
 
 //Или в сухую позиционно
 
-variable::remove_map_entry(`removed_value`, `variable`, {"map":`map`}, "any value", ["any value", "any value"]);
+variable.remove_map_entry(`removed_value`, `variable`, {"map":`map`}, "any value", ["any value", "any value"]);
 
 //Или в сухую по ключам
 
-variable::remove_map_entry(removed_value=`removed_value`, variable=`variable`, map={"map":`map`}, key="any value", values=["any value", "any value"]);
+variable.remove_map_entry(removed_value=`removed_value`, variable=`variable`, map={"map":`map`}, key="any value", values=["any value", "any value"]);
 ```
 
 **Аргументы:**
@@ -7530,7 +7530,7 @@ variable::remove_map_entry(removed_value=`removed_value`, variable=`variable`, m
 | values        | Список\[Любое значение\]     | Значения<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_remove_text>
-  <code>variable::remove_text</code>
+  <code>variable.remove_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7540,7 +7540,7 @@ variable::remove_map_entry(removed_value=`removed_value`, variable=`variable`, m
 
 **Пример использования:**
 ```ts
-`variable` = variable::remove_text(["remove", "remove"], "text", "FALSE");
+`variable` = variable.remove_text(["remove", "remove"], "text", "FALSE");
 
 //Или от объекта
 
@@ -7548,11 +7548,11 @@ variable::remove_map_entry(removed_value=`removed_value`, variable=`variable`, m
 
 //Или в сухую позиционно
 
-variable::remove_text(`variable`, ["remove", "remove"], "text", "FALSE");
+variable.remove_text(`variable`, ["remove", "remove"], "text", "FALSE");
 
 //Или в сухую по ключам
 
-variable::remove_text(variable=`variable`, remove=["remove", "remove"], text="text", regex="FALSE");
+variable.remove_text(variable=`variable`, remove=["remove", "remove"], text="text", regex="FALSE");
 ```
 
 **Аргументы:**
@@ -7565,7 +7565,7 @@ variable::remove_text(variable=`variable`, remove=["remove", "remove"], text="te
 | regex    | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Регулярные выражения                                            |
 
 <h3 id=set_variable_repeat_text>
-  <code>variable::repeat_text</code>
+  <code>variable.repeat_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7575,7 +7575,7 @@ variable::remove_text(variable=`variable`, remove=["remove", "remove"], text="te
 
 **Пример использования:**
 ```ts
-`variable` = variable::repeat_text("text", 1);
+`variable` = variable.repeat_text("text", 1);
 
 //Или от объекта
 
@@ -7583,11 +7583,11 @@ variable::remove_text(variable=`variable`, remove=["remove", "remove"], text="te
 
 //Или в сухую позиционно
 
-variable::repeat_text(`variable`, "text", 1);
+variable.repeat_text(`variable`, "text", 1);
 
 //Или в сухую по ключам
 
-variable::repeat_text(variable=`variable`, text="text", repeat=1);
+variable.repeat_text(variable=`variable`, text="text", repeat=1);
 ```
 
 **Аргументы:**
@@ -7599,7 +7599,7 @@ variable::repeat_text(variable=`variable`, text="text", repeat=1);
 | repeat   | Число               | Количество повторений     |
 
 <h3 id=set_variable_replace_text>
-  <code>variable::replace_text</code>
+  <code>variable.replace_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7609,7 +7609,7 @@ variable::repeat_text(variable=`variable`, text="text", repeat=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::replace_text("text", "replace", "replacement", "ANY", "FALSE");
+`variable` = variable.replace_text("text", "replace", "replacement", "ANY", "FALSE");
 
 //Или от объекта
 
@@ -7617,11 +7617,11 @@ variable::repeat_text(variable=`variable`, text="text", repeat=1);
 
 //Или в сухую позиционно
 
-variable::replace_text(`variable`, "text", "replace", "replacement", "ANY", "FALSE");
+variable.replace_text(`variable`, "text", "replace", "replacement", "ANY", "FALSE");
 
 //Или в сухую по ключам
 
-variable::replace_text(variable=`variable`, text="text", replace="replace", replacement="replacement", first="ANY", ignore_case="FALSE");
+variable.replace_text(variable=`variable`, text="text", replace="replace", replacement="replacement", first="ANY", ignore_case="FALSE");
 ```
 
 **Аргументы:**
@@ -7636,7 +7636,7 @@ variable::replace_text(variable=`variable`, text="text", replace="replace", repl
 | ignore_case | Маркер<br/>**FALSE** - Не игнорировать<br/>**TRUE** - Игнорировать                             | Игнорировать регистр      |
 
 <h3 id=set_variable_reverse_list>
-  <code>variable::reverse_list</code>
+  <code>variable.reverse_list</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7646,7 +7646,7 @@ variable::replace_text(variable=`variable`, text="text", replace="replace", repl
 
 **Пример использования:**
 ```ts
-`variable` = variable::reverse_list([`list`, `list`]);
+`variable` = variable.reverse_list([`list`, `list`]);
 
 //Или от объекта
 
@@ -7654,11 +7654,11 @@ variable::replace_text(variable=`variable`, text="text", replace="replace", repl
 
 //Или в сухую позиционно
 
-variable::reverse_list(`variable`, [`list`, `list`]);
+variable.reverse_list(`variable`, [`list`, `list`]);
 
 //Или в сухую по ключам
 
-variable::reverse_list(variable=`variable`, list=[`list`, `list`]);
+variable.reverse_list(variable=`variable`, list=[`list`, `list`]);
 ```
 
 **Аргументы:**
@@ -7669,7 +7669,7 @@ variable::reverse_list(variable=`variable`, list=[`list`, `list`]);
 | list     | Список               | Список                    |
 
 <h3 id=set_variable_root>
-  <code>variable::root</code>
+  <code>variable.root</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7679,15 +7679,15 @@ variable::reverse_list(variable=`variable`, list=[`list`, `list`]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::root(1, 2);
+`variable` = variable.root(1, 2);
 
 //Или в сухую позиционно
 
-variable::root(`variable`, 1, 2);
+variable.root(`variable`, 1, 2);
 
 //Или в сухую по ключам
 
-variable::root(variable=`variable`, base=1, root=2);
+variable.root(variable=`variable`, base=1, root=2);
 ```
 
 **Аргументы:**
@@ -7699,7 +7699,7 @@ variable::root(variable=`variable`, base=1, root=2);
 | root     | Число               | Показатель корня          |
 
 <h3 id=set_variable_rotate_vector_around_axis>
-  <code>variable::rotate_vector_around_axis</code>
+  <code>variable.rotate_vector_around_axis</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7709,7 +7709,7 @@ variable::root(variable=`variable`, base=1, root=2);
 
 **Пример использования:**
 ```ts
-`variable` = variable::rotate_vector_around_axis(vector(0,0,0), 1, "X", "DEGREES");
+`variable` = variable.rotate_vector_around_axis(vector(0,0,0), 1, "X", "DEGREES");
 
 //Или от объекта
 
@@ -7717,11 +7717,11 @@ variable::root(variable=`variable`, base=1, root=2);
 
 //Или в сухую позиционно
 
-variable::rotate_vector_around_axis(`variable`, vector(0,0,0), 1, "X", "DEGREES");
+variable.rotate_vector_around_axis(`variable`, vector(0,0,0), 1, "X", "DEGREES");
 
 //Или в сухую по ключам
 
-variable::rotate_vector_around_axis(variable=`variable`, vector=vector(0,0,0), angle=1, axis="X", angle_units="DEGREES");
+variable.rotate_vector_around_axis(variable=`variable`, vector=vector(0,0,0), angle=1, axis="X", angle_units="DEGREES");
 ```
 
 **Аргументы:**
@@ -7735,7 +7735,7 @@ variable::rotate_vector_around_axis(variable=`variable`, vector=vector(0,0,0), a
 | angle_units | Маркер<br/>**DEGREES** - Градусы<br/>**RADIANS** - Радианы                        | Тип угла                  |
 
 <h3 id=set_variable_rotate_vector_around_vector>
-  <code>variable::rotate_vector_around_vector</code>
+  <code>variable.rotate_vector_around_vector</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7745,7 +7745,7 @@ variable::rotate_vector_around_axis(variable=`variable`, vector=vector(0,0,0), a
 
 **Пример использования:**
 ```ts
-`variable` = variable::rotate_vector_around_vector(vector(0,0,0), vector(0,0,0), 1, "DEGREES");
+`variable` = variable.rotate_vector_around_vector(vector(0,0,0), vector(0,0,0), 1, "DEGREES");
 
 //Или от объекта
 
@@ -7753,11 +7753,11 @@ variable::rotate_vector_around_axis(variable=`variable`, vector=vector(0,0,0), a
 
 //Или в сухую позиционно
 
-variable::rotate_vector_around_vector(`variable`, vector(0,0,0), vector(0,0,0), 1, "DEGREES");
+variable.rotate_vector_around_vector(`variable`, vector(0,0,0), vector(0,0,0), 1, "DEGREES");
 
 //Или в сухую по ключам
 
-variable::rotate_vector_around_vector(variable=`variable`, rotating_vector=vector(0,0,0), axis_vector=vector(0,0,0), angle=1, angle_units="DEGREES");
+variable.rotate_vector_around_vector(variable=`variable`, rotating_vector=vector(0,0,0), axis_vector=vector(0,0,0), angle=1, angle_units="DEGREES");
 ```
 
 **Аргументы:**
@@ -7771,7 +7771,7 @@ variable::rotate_vector_around_vector(variable=`variable`, rotating_vector=vecto
 | angle_units     | Маркер<br/>**DEGREES** - Градусы<br/>**RADIANS** - Радианы | Тип угла                  |
 
 <h3 id=set_variable_round>
-  <code>variable::round</code>
+  <code>variable.round</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7781,7 +7781,7 @@ variable::rotate_vector_around_vector(variable=`variable`, rotating_vector=vecto
 
 **Пример использования:**
 ```ts
-`variable` = variable::round(1, 2, "CEIL");
+`variable` = variable.round(1, 2, "CEIL");
 
 //Или от объекта
 
@@ -7789,11 +7789,11 @@ variable::rotate_vector_around_vector(variable=`variable`, rotating_vector=vecto
 
 //Или в сухую позиционно
 
-variable::round(`variable`, 1, 2, "CEIL");
+variable.round(`variable`, 1, 2, "CEIL");
 
 //Или в сухую по ключам
 
-variable::round(variable=`variable`, number=1, precision=2, round_type="CEIL");
+variable.round(variable=`variable`, number=1, precision=2, round_type="CEIL");
 ```
 
 **Аргументы:**
@@ -7806,7 +7806,7 @@ variable::round(variable=`variable`, number=1, precision=2, round_type="CEIL");
 | round_type | Маркер<br/>**CEIL** - Округление до большего<br/>**FLOOR** - Округление до меньшего<br/>**ROUND** - Обычное округление | Способ округления                 |
 
 <h3 id=set_variable_set_all_coordinates>
-  <code>variable::set_all_coordinates</code>
+  <code>variable.set_all_coordinates</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7816,15 +7816,15 @@ variable::round(variable=`variable`, number=1, precision=2, round_type="CEIL");
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_all_coordinates(1, 2, 3, 4, 5);
+`variable` = variable.set_all_coordinates(1, 2, 3, 4, 5);
 
 //Или в сухую позиционно
 
-variable::set_all_coordinates(`variable`, 1, 2, 3, 4, 5);
+variable.set_all_coordinates(`variable`, 1, 2, 3, 4, 5);
 
 //Или в сухую по ключам
 
-variable::set_all_coordinates(variable=`variable`, x=1, y=2, z=3, yaw=4, pitch=5);
+variable.set_all_coordinates(variable=`variable`, x=1, y=2, z=3, yaw=4, pitch=5);
 ```
 
 **Аргументы:**
@@ -7839,7 +7839,7 @@ variable::set_all_coordinates(variable=`variable`, x=1, y=2, z=3, yaw=4, pitch=5
 | pitch    | Число                        | Вертикальный поворот      |
 
 <h3 id=set_variable_set_armor_trim>
-  <code>variable::set_armor_trim</code>
+  <code>variable.set_armor_trim</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7849,7 +7849,7 @@ variable::set_all_coordinates(variable=`variable`, x=1, y=2, z=3, yaw=4, pitch=5
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_armor_trim(item("stick"), item("stick"), item("stick"));
+`variable` = variable.set_armor_trim(item("stick"), item("stick"), item("stick"));
 
 //Или от объекта
 
@@ -7857,11 +7857,11 @@ variable::set_all_coordinates(variable=`variable`, x=1, y=2, z=3, yaw=4, pitch=5
 
 //Или в сухую позиционно
 
-variable::set_armor_trim(`variable`, item("stick"), item("stick"), item("stick"));
+variable.set_armor_trim(`variable`, item("stick"), item("stick"), item("stick"));
 
 //Или в сухую по ключам
 
-variable::set_armor_trim(variable=`variable`, armor=item("stick"), material=item("stick"), pattern=item("stick"));
+variable.set_armor_trim(variable=`variable`, armor=item("stick"), material=item("stick"), pattern=item("stick"));
 ```
 
 **Аргументы:**
@@ -7874,7 +7874,7 @@ variable::set_armor_trim(variable=`variable`, armor=item("stick"), material=item
 | pattern  | Предмет               | Шаблон                    |
 
 <h3 id=set_variable_set_book_page>
-  <code>variable::set_book_page</code>
+  <code>variable.set_book_page</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7884,7 +7884,7 @@ variable::set_armor_trim(variable=`variable`, armor=item("stick"), material=item
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_book_page(item("stick"), "text", 1, "APPEND");
+`variable` = variable.set_book_page(item("stick"), "text", 1, "APPEND");
 
 //Или от объекта
 
@@ -7892,11 +7892,11 @@ variable::set_armor_trim(variable=`variable`, armor=item("stick"), material=item
 
 //Или в сухую позиционно
 
-variable::set_book_page(`variable`, item("stick"), "text", 1, "APPEND");
+variable.set_book_page(`variable`, item("stick"), "text", 1, "APPEND");
 
 //Или в сухую по ключам
 
-variable::set_book_page(variable=`variable`, book=item("stick"), text="text", page=1, mode="APPEND");
+variable.set_book_page(variable=`variable`, book=item("stick"), text="text", page=1, mode="APPEND");
 ```
 
 **Аргументы:**
@@ -7910,7 +7910,7 @@ variable::set_book_page(variable=`variable`, book=item("stick"), text="text", pa
 | mode     | Маркер<br/>**APPEND** - Добавление<br/>**MERGE** - Замена | Режим установки           |
 
 <h3 id=set_variable_set_book_pages>
-  <code>variable::set_book_pages</code>
+  <code>variable.set_book_pages</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7920,7 +7920,7 @@ variable::set_book_page(variable=`variable`, book=item("stick"), text="text", pa
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_book_pages(item("stick"), ["text", "text"]);
+`variable` = variable.set_book_pages(item("stick"), ["text", "text"]);
 
 //Или от объекта
 
@@ -7928,11 +7928,11 @@ variable::set_book_page(variable=`variable`, book=item("stick"), text="text", pa
 
 //Или в сухую позиционно
 
-variable::set_book_pages(`variable`, item("stick"), ["text", "text"]);
+variable.set_book_pages(`variable`, item("stick"), ["text", "text"]);
 
 //Или в сухую по ключам
 
-variable::set_book_pages(variable=`variable`, book=item("stick"), text=["text", "text"]);
+variable.set_book_pages(variable=`variable`, book=item("stick"), text=["text", "text"]);
 ```
 
 **Аргументы:**
@@ -7944,7 +7944,7 @@ variable::set_book_pages(variable=`variable`, book=item("stick"), text=["text", 
 | text     | Список\[Текст\]       | Новый текст<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_set_bundle_items>
-  <code>variable::set_bundle_items</code>
+  <code>variable.set_bundle_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7954,7 +7954,7 @@ variable::set_book_pages(variable=`variable`, book=item("stick"), text=["text", 
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_bundle_items(item("stick"), [item("stick"), item("stick")], "ADD");
+`variable` = variable.set_bundle_items(item("stick"), [item("stick"), item("stick")], "ADD");
 
 //Или от объекта
 
@@ -7962,11 +7962,11 @@ variable::set_book_pages(variable=`variable`, book=item("stick"), text=["text", 
 
 //Или в сухую позиционно
 
-variable::set_bundle_items(`variable`, item("stick"), [item("stick"), item("stick")], "ADD");
+variable.set_bundle_items(`variable`, item("stick"), [item("stick"), item("stick")], "ADD");
 
 //Или в сухую по ключам
 
-variable::set_bundle_items(variable=`variable`, bundle=item("stick"), items=[item("stick"), item("stick")], setting_mode="ADD");
+variable.set_bundle_items(variable=`variable`, bundle=item("stick"), items=[item("stick"), item("stick")], setting_mode="ADD");
 ```
 
 **Аргументы:**
@@ -7979,7 +7979,7 @@ variable::set_bundle_items(variable=`variable`, bundle=item("stick"), items=[ite
 | setting_mode | Маркер<br/>**ADD** - Добавить<br/>**REMOVE** - Удалить<br/>**SET** - Установить | Тип изменения                                                       |
 
 <h3 id=set_variable_set_compass_lodestone>
-  <code>variable::set_compass_lodestone</code>
+  <code>variable.set_compass_lodestone</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -7989,7 +7989,7 @@ variable::set_bundle_items(variable=`variable`, bundle=item("stick"), items=[ite
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_compass_lodestone(item("stick"), location(0,0,0,0,0), "FALSE");
+`variable` = variable.set_compass_lodestone(item("stick"), location(0,0,0,0,0), "FALSE");
 
 //Или от объекта
 
@@ -7997,11 +7997,11 @@ variable::set_bundle_items(variable=`variable`, bundle=item("stick"), items=[ite
 
 //Или в сухую позиционно
 
-variable::set_compass_lodestone(`variable`, item("stick"), location(0,0,0,0,0), "FALSE");
+variable.set_compass_lodestone(`variable`, item("stick"), location(0,0,0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-variable::set_compass_lodestone(variable=`variable`, item=item("stick"), location=location(0,0,0,0,0), tracked="FALSE");
+variable.set_compass_lodestone(variable=`variable`, item=item("stick"), location=location(0,0,0,0,0), tracked="FALSE");
 ```
 
 **Аргументы:**
@@ -8014,7 +8014,7 @@ variable::set_compass_lodestone(variable=`variable`, item=item("stick"), locatio
 | tracked  | Маркер<br/>**FALSE** - Не проверять<br/>**TRUE** - Проверять | Наличие магнетита на местоположении |
 
 <h3 id=set_variable_set_component_children>
-  <code>variable::set_component_children</code>
+  <code>variable.set_component_children</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8024,7 +8024,7 @@ variable::set_compass_lodestone(variable=`variable`, item=item("stick"), locatio
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_component_children("component", ["children", "children"]);
+`variable` = variable.set_component_children("component", ["children", "children"]);
 
 //Или от объекта
 
@@ -8032,11 +8032,11 @@ variable::set_compass_lodestone(variable=`variable`, item=item("stick"), locatio
 
 //Или в сухую позиционно
 
-variable::set_component_children(`variable`, "component", ["children", "children"]);
+variable.set_component_children(`variable`, "component", ["children", "children"]);
 
 //Или в сухую по ключам
 
-variable::set_component_children(variable=`variable`, component="component", children=["children", "children"]);
+variable.set_component_children(variable=`variable`, component="component", children=["children", "children"]);
 ```
 
 **Аргументы:**
@@ -8048,7 +8048,7 @@ variable::set_component_children(variable=`variable`, component="component", chi
 | children  | Список\[Текст\]     | Дочерние стилизуемые тексты<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_set_component_click>
-  <code>variable::set_component_click</code>
+  <code>variable.set_component_click</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8058,7 +8058,7 @@ variable::set_component_children(variable=`variable`, component="component", chi
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_component_click("component", "value", "CHANGE_PAGE");
+`variable` = variable.set_component_click("component", "value", "CHANGE_PAGE");
 
 //Или от объекта
 
@@ -8066,11 +8066,11 @@ variable::set_component_children(variable=`variable`, component="component", chi
 
 //Или в сухую позиционно
 
-variable::set_component_click(`variable`, "component", "value", "CHANGE_PAGE");
+variable.set_component_click(`variable`, "component", "value", "CHANGE_PAGE");
 
 //Или в сухую по ключам
 
-variable::set_component_click(variable=`variable`, component="component", value="value", click_action="CHANGE_PAGE");
+variable.set_component_click(variable=`variable`, component="component", value="value", click_action="CHANGE_PAGE");
 ```
 
 **Аргументы:**
@@ -8083,7 +8083,7 @@ variable::set_component_click(variable=`variable`, component="component", value=
 | click_action | Маркер<br/>**CHANGE_PAGE** - Изменить страницу книги<br/>**COPY_TO_CLIPBOARD** - Скопировать в буфер обмена<br/>**COPY_TO_CLIPBORD** - Скопировать в буфер обмена<br/>**OPEN_URL** - Открыть ссылку<br/>**SUGGEST_COMMAND** - Предложить сообщение | Действие при нажатии      |
 
 <h3 id=set_variable_set_component_decorations>
-  <code>variable::set_component_decorations</code>
+  <code>variable.set_component_decorations</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8093,7 +8093,7 @@ variable::set_component_click(variable=`variable`, component="component", value=
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_component_decorations("component", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE");
+`variable` = variable.set_component_decorations("component", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE");
 
 //Или от объекта
 
@@ -8101,11 +8101,11 @@ variable::set_component_click(variable=`variable`, component="component", value=
 
 //Или в сухую позиционно
 
-variable::set_component_decorations(`variable`, "component", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE");
+variable.set_component_decorations(`variable`, "component", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE");
 
 //Или в сухую по ключам
 
-variable::set_component_decorations(variable=`variable`, component="component", bold="FALSE", italic="FALSE", underlined="FALSE", strikethrough="FALSE", obfuscated="FALSE");
+variable.set_component_decorations(variable=`variable`, component="component", bold="FALSE", italic="FALSE", underlined="FALSE", strikethrough="FALSE", obfuscated="FALSE");
 ```
 
 **Аргументы:**
@@ -8121,7 +8121,7 @@ variable::set_component_decorations(variable=`variable`, component="component", 
 | obfuscated    | Маркер<br/>**FALSE** - Нет<br/>**NOT_SET** - Не установлено<br/>**TRUE** - Да | Зашифрованный текст       |
 
 <h3 id=set_variable_set_component_entity_hover>
-  <code>variable::set_component_entity_hover</code>
+  <code>variable.set_component_entity_hover</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8131,7 +8131,7 @@ variable::set_component_decorations(variable=`variable`, component="component", 
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_component_entity_hover("component", "name_or_uuid");
+`variable` = variable.set_component_entity_hover("component", "name_or_uuid");
 
 //Или от объекта
 
@@ -8139,11 +8139,11 @@ variable::set_component_decorations(variable=`variable`, component="component", 
 
 //Или в сухую позиционно
 
-variable::set_component_entity_hover(`variable`, "component", "name_or_uuid");
+variable.set_component_entity_hover(`variable`, "component", "name_or_uuid");
 
 //Или в сухую по ключам
 
-variable::set_component_entity_hover(variable=`variable`, component="component", name_or_uuid="name_or_uuid");
+variable.set_component_entity_hover(variable=`variable`, component="component", name_or_uuid="name_or_uuid");
 ```
 
 **Аргументы:**
@@ -8155,7 +8155,7 @@ variable::set_component_entity_hover(variable=`variable`, component="component",
 | name_or_uuid | Текст               | Имя или UUID сущности     |
 
 <h3 id=set_variable_set_component_font>
-  <code>variable::set_component_font</code>
+  <code>variable.set_component_font</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8165,7 +8165,7 @@ variable::set_component_entity_hover(variable=`variable`, component="component",
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_component_font("component", "namespace", "value");
+`variable` = variable.set_component_font("component", "namespace", "value");
 
 //Или от объекта
 
@@ -8173,11 +8173,11 @@ variable::set_component_entity_hover(variable=`variable`, component="component",
 
 //Или в сухую позиционно
 
-variable::set_component_font(`variable`, "component", "namespace", "value");
+variable.set_component_font(`variable`, "component", "namespace", "value");
 
 //Или в сухую по ключам
 
-variable::set_component_font(variable=`variable`, component="component", namespace="namespace", value="value");
+variable.set_component_font(variable=`variable`, component="component", namespace="namespace", value="value");
 ```
 
 **Аргументы:**
@@ -8190,7 +8190,7 @@ variable::set_component_font(variable=`variable`, component="component", namespa
 | value     | Текст               | ID шрифта                            |
 
 <h3 id=set_variable_set_component_hex_color>
-  <code>variable::set_component_hex_color</code>
+  <code>variable.set_component_hex_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8200,7 +8200,7 @@ variable::set_component_font(variable=`variable`, component="component", namespa
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_component_hex_color("component", "color");
+`variable` = variable.set_component_hex_color("component", "color");
 
 //Или от объекта
 
@@ -8208,11 +8208,11 @@ variable::set_component_font(variable=`variable`, component="component", namespa
 
 //Или в сухую позиционно
 
-variable::set_component_hex_color(`variable`, "component", "color");
+variable.set_component_hex_color(`variable`, "component", "color");
 
 //Или в сухую по ключам
 
-variable::set_component_hex_color(variable=`variable`, component="component", color="color");
+variable.set_component_hex_color(variable=`variable`, component="component", color="color");
 ```
 
 **Аргументы:**
@@ -8224,7 +8224,7 @@ variable::set_component_hex_color(variable=`variable`, component="component", co
 | color     | Текст               | HEX-цвет                  |
 
 <h3 id=set_variable_set_component_hover>
-  <code>variable::set_component_hover</code>
+  <code>variable.set_component_hover</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8234,7 +8234,7 @@ variable::set_component_hex_color(variable=`variable`, component="component", co
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_component_hover("component", "hover");
+`variable` = variable.set_component_hover("component", "hover");
 
 //Или от объекта
 
@@ -8242,11 +8242,11 @@ variable::set_component_hex_color(variable=`variable`, component="component", co
 
 //Или в сухую позиционно
 
-variable::set_component_hover(`variable`, "component", "hover");
+variable.set_component_hover(`variable`, "component", "hover");
 
 //Или в сухую по ключам
 
-variable::set_component_hover(variable=`variable`, component="component", hover="hover");
+variable.set_component_hover(variable=`variable`, component="component", hover="hover");
 ```
 
 **Аргументы:**
@@ -8258,7 +8258,7 @@ variable::set_component_hover(variable=`variable`, component="component", hover=
 | hover     | Текст               | Стилизуемый текст, отображаемый при наведении |
 
 <h3 id=set_variable_set_component_insertion>
-  <code>variable::set_component_insertion</code>
+  <code>variable.set_component_insertion</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8268,7 +8268,7 @@ variable::set_component_hover(variable=`variable`, component="component", hover=
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_component_insertion("component", "insertion");
+`variable` = variable.set_component_insertion("component", "insertion");
 
 //Или от объекта
 
@@ -8276,11 +8276,11 @@ variable::set_component_hover(variable=`variable`, component="component", hover=
 
 //Или в сухую позиционно
 
-variable::set_component_insertion(`variable`, "component", "insertion");
+variable.set_component_insertion(`variable`, "component", "insertion");
 
 //Или в сухую по ключам
 
-variable::set_component_insertion(variable=`variable`, component="component", insertion="insertion");
+variable.set_component_insertion(variable=`variable`, component="component", insertion="insertion");
 ```
 
 **Аргументы:**
@@ -8292,7 +8292,7 @@ variable::set_component_insertion(variable=`variable`, component="component", in
 | insertion | Текст               | Предлагаемое сообщение    |
 
 <h3 id=set_variable_set_component_item_hover>
-  <code>variable::set_component_item_hover</code>
+  <code>variable.set_component_item_hover</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8302,7 +8302,7 @@ variable::set_component_insertion(variable=`variable`, component="component", in
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_component_item_hover("component", item("stick"));
+`variable` = variable.set_component_item_hover("component", item("stick"));
 
 //Или от объекта
 
@@ -8310,11 +8310,11 @@ variable::set_component_insertion(variable=`variable`, component="component", in
 
 //Или в сухую позиционно
 
-variable::set_component_item_hover(`variable`, "component", item("stick"));
+variable.set_component_item_hover(`variable`, "component", item("stick"));
 
 //Или в сухую по ключам
 
-variable::set_component_item_hover(variable=`variable`, component="component", hover=item("stick"));
+variable.set_component_item_hover(variable=`variable`, component="component", hover=item("stick"));
 ```
 
 **Аргументы:**
@@ -8326,7 +8326,7 @@ variable::set_component_item_hover(variable=`variable`, component="component", h
 | hover     | Предмет             | Предмет, отображаемый при наведении |
 
 <h3 id=set_variable_set_component_shadow_color>
-  <code>variable::set_component_shadow_color</code>
+  <code>variable.set_component_shadow_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8336,7 +8336,7 @@ variable::set_component_item_hover(variable=`variable`, component="component", h
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_component_shadow_color("component", "color");
+`variable` = variable.set_component_shadow_color("component", "color");
 
 //Или от объекта
 
@@ -8344,11 +8344,11 @@ variable::set_component_item_hover(variable=`variable`, component="component", h
 
 //Или в сухую позиционно
 
-variable::set_component_shadow_color(`variable`, "component", "color");
+variable.set_component_shadow_color(`variable`, "component", "color");
 
 //Или в сухую по ключам
 
-variable::set_component_shadow_color(variable=`variable`, component="component", color="color");
+variable.set_component_shadow_color(variable=`variable`, component="component", color="color");
 ```
 
 **Аргументы:**
@@ -8360,7 +8360,7 @@ variable::set_component_shadow_color(variable=`variable`, component="component",
 | color     | Текст               | HEX цвет                  |
 
 <h3 id=set_variable_set_coordinate>
-  <code>variable::set_coordinate</code>
+  <code>variable.set_coordinate</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8370,7 +8370,7 @@ variable::set_component_shadow_color(variable=`variable`, component="component",
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_coordinate(location(0,0,0,0,0), 1, "PITCH");
+`variable` = variable.set_coordinate(location(0,0,0,0,0), 1, "PITCH");
 
 //Или от объекта
 
@@ -8378,11 +8378,11 @@ variable::set_component_shadow_color(variable=`variable`, component="component",
 
 //Или в сухую позиционно
 
-variable::set_coordinate(`variable`, location(0,0,0,0,0), 1, "PITCH");
+variable.set_coordinate(`variable`, location(0,0,0,0,0), 1, "PITCH");
 
 //Или в сухую по ключам
 
-variable::set_coordinate(variable=`variable`, location=location(0,0,0,0,0), coordinate=1, type="PITCH");
+variable.set_coordinate(variable=`variable`, location=location(0,0,0,0,0), coordinate=1, type="PITCH");
 ```
 
 **Аргументы:**
@@ -8395,7 +8395,7 @@ variable::set_coordinate(variable=`variable`, location=location(0,0,0,0,0), coor
 | type       | Маркер<br/>**PITCH** - Вертикальный поворот<br/>**X** - Ось X<br/>**Y** - Ось Y<br/>**YAW** - Горизонтальный поворот<br/>**Z** - Ось Z | Тип координаты               |
 
 <h3 id=set_variable_set_item_amount>
-  <code>variable::set_item_amount</code>
+  <code>variable.set_item_amount</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8405,7 +8405,7 @@ variable::set_coordinate(variable=`variable`, location=location(0,0,0,0,0), coor
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_amount(item("stick"), 1);
+`variable` = variable.set_item_amount(item("stick"), 1);
 
 //Или от объекта
 
@@ -8413,11 +8413,11 @@ variable::set_coordinate(variable=`variable`, location=location(0,0,0,0,0), coor
 
 //Или в сухую позиционно
 
-variable::set_item_amount(`variable`, item("stick"), 1);
+variable.set_item_amount(`variable`, item("stick"), 1);
 
 //Или в сухую по ключам
 
-variable::set_item_amount(variable=`variable`, item=item("stick"), amount=1);
+variable.set_item_amount(variable=`variable`, item=item("stick"), amount=1);
 ```
 
 **Аргументы:**
@@ -8429,7 +8429,7 @@ variable::set_item_amount(variable=`variable`, item=item("stick"), amount=1);
 | amount   | Число                 | Количество                |
 
 <h3 id=set_variable_set_item_attribute>
-  <code>variable::set_item_attribute</code>
+  <code>variable.set_item_attribute</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8439,7 +8439,7 @@ variable::set_item_amount(variable=`variable`, item=item("stick"), amount=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_attribute(item("stick"), 1, "name", "ARMOR", "ALL", "ADD_NUMBER");
+`variable` = variable.set_item_attribute(item("stick"), 1, "name", "ARMOR", "ALL", "ADD_NUMBER");
 
 //Или от объекта
 
@@ -8447,11 +8447,11 @@ variable::set_item_amount(variable=`variable`, item=item("stick"), amount=1);
 
 //Или в сухую позиционно
 
-variable::set_item_attribute(`variable`, item("stick"), 1, "name", "ARMOR", "ALL", "ADD_NUMBER");
+variable.set_item_attribute(`variable`, item("stick"), 1, "name", "ARMOR", "ALL", "ADD_NUMBER");
 
 //Или в сухую по ключам
 
-variable::set_item_attribute(variable=`variable`, item=item("stick"), amount=1, name="name", attribute="ARMOR", slot="ALL", operation="ADD_NUMBER");
+variable.set_item_attribute(variable=`variable`, item=item("stick"), amount=1, name="name", attribute="ARMOR", slot="ALL", operation="ADD_NUMBER");
 ```
 
 **Аргументы:**
@@ -8467,7 +8467,7 @@ variable::set_item_attribute(variable=`variable`, item=item("stick"), amount=1, 
 | operation | Маркер<br/>**ADD_NUMBER** - Количество (amount)<br/>**ADD_SCALAR** - Процент (percentage)<br/>**MULTIPLY_SCALAR_1** - Произведение (multiplicative)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Операция атрибута         |
 
 <h3 id=set_variable_set_item_break_sound>
-  <code>variable::set_item_break_sound</code>
+  <code>variable.set_item_break_sound</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8477,7 +8477,7 @@ variable::set_item_attribute(variable=`variable`, item=item("stick"), amount=1, 
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_break_sound(item("stick"), "break_sound");
+`variable` = variable.set_item_break_sound(item("stick"), "break_sound");
 
 //Или от объекта
 
@@ -8485,11 +8485,11 @@ variable::set_item_attribute(variable=`variable`, item=item("stick"), amount=1, 
 
 //Или в сухую позиционно
 
-variable::set_item_break_sound(`variable`, item("stick"), "break_sound");
+variable.set_item_break_sound(`variable`, item("stick"), "break_sound");
 
 //Или в сухую по ключам
 
-variable::set_item_break_sound(variable=`variable`, item=item("stick"), break_sound="break_sound");
+variable.set_item_break_sound(variable=`variable`, item=item("stick"), break_sound="break_sound");
 ```
 
 **Аргументы:**
@@ -8501,7 +8501,7 @@ variable::set_item_break_sound(variable=`variable`, item=item("stick"), break_so
 | break_sound | Текст                 | Звук поломки              |
 
 <h3 id=set_variable_set_item_color>
-  <code>variable::set_item_color</code>
+  <code>variable.set_item_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8517,7 +8517,7 @@ variable::set_item_break_sound(variable=`variable`, item=item("stick"), break_so
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_color(item("stick"), "color");
+`variable` = variable.set_item_color(item("stick"), "color");
 
 //Или от объекта
 
@@ -8525,11 +8525,11 @@ variable::set_item_break_sound(variable=`variable`, item=item("stick"), break_so
 
 //Или в сухую позиционно
 
-variable::set_item_color(`variable`, item("stick"), "color");
+variable.set_item_color(`variable`, item("stick"), "color");
 
 //Или в сухую по ключам
 
-variable::set_item_color(variable=`variable`, item=item("stick"), color="color");
+variable.set_item_color(variable=`variable`, item=item("stick"), color="color");
 ```
 
 **Аргументы:**
@@ -8541,7 +8541,7 @@ variable::set_item_color(variable=`variable`, item=item("stick"), color="color")
 | color    | Текст                 | Цвет                      |
 
 <h3 id=set_variable_set_item_component>
-  <code>variable::set_item_component</code>
+  <code>variable.set_item_component</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8551,7 +8551,7 @@ variable::set_item_color(variable=`variable`, item=item("stick"), color="color")
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_component(item("stick"), "component", "any value");
+`variable` = variable.set_item_component(item("stick"), "component", "any value");
 
 //Или от объекта
 
@@ -8559,11 +8559,11 @@ variable::set_item_color(variable=`variable`, item=item("stick"), color="color")
 
 //Или в сухую позиционно
 
-variable::set_item_component(`variable`, item("stick"), "component", "any value");
+variable.set_item_component(`variable`, item("stick"), "component", "any value");
 
 //Или в сухую по ключам
 
-variable::set_item_component(variable=`variable`, item=item("stick"), component="component", value="any value");
+variable.set_item_component(variable=`variable`, item=item("stick"), component="component", value="any value");
 ```
 
 **Аргументы:**
@@ -8576,7 +8576,7 @@ variable::set_item_component(variable=`variable`, item=item("stick"), component=
 | value     | Любое значение        | Значение        |
 
 <h3 id=set_variable_set_item_custom_model_data>
-  <code>variable::set_item_custom_model_data</code>
+  <code>variable.set_item_custom_model_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8588,7 +8588,7 @@ variable::set_item_component(variable=`variable`, item=item("stick"), component=
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_custom_model_data(item("stick"), 1);
+`variable` = variable.set_item_custom_model_data(item("stick"), 1);
 
 //Или от объекта
 
@@ -8596,11 +8596,11 @@ variable::set_item_component(variable=`variable`, item=item("stick"), component=
 
 //Или в сухую позиционно
 
-variable::set_item_custom_model_data(`variable`, item("stick"), 1);
+variable.set_item_custom_model_data(`variable`, item("stick"), 1);
 
 //Или в сухую по ключам
 
-variable::set_item_custom_model_data(variable=`variable`, item=item("stick"), model=1);
+variable.set_item_custom_model_data(variable=`variable`, item=item("stick"), model=1);
 ```
 
 **Аргументы:**
@@ -8612,7 +8612,7 @@ variable::set_item_custom_model_data(variable=`variable`, item=item("stick"), mo
 | model    | Число                 | Номер модели              |
 
 <h3 id=set_variable_set_item_custom_tag>
-  <code>variable::set_item_custom_tag</code>
+  <code>variable.set_item_custom_tag</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8622,7 +8622,7 @@ variable::set_item_custom_model_data(variable=`variable`, item=item("stick"), mo
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_custom_tag(item("stick"), "tag_name", "tag_value");
+`variable` = variable.set_item_custom_tag(item("stick"), "tag_name", "tag_value");
 
 //Или от объекта
 
@@ -8630,11 +8630,11 @@ variable::set_item_custom_model_data(variable=`variable`, item=item("stick"), mo
 
 //Или в сухую позиционно
 
-variable::set_item_custom_tag(`variable`, item("stick"), "tag_name", "tag_value");
+variable.set_item_custom_tag(`variable`, item("stick"), "tag_name", "tag_value");
 
 //Или в сухую по ключам
 
-variable::set_item_custom_tag(variable=`variable`, item=item("stick"), tag_name="tag_name", tag_value="tag_value");
+variable.set_item_custom_tag(variable=`variable`, item=item("stick"), tag_name="tag_name", tag_value="tag_value");
 ```
 
 **Аргументы:**
@@ -8647,7 +8647,7 @@ variable::set_item_custom_tag(variable=`variable`, item=item("stick"), tag_name=
 | tag_value | Текст                 | Значение тега             |
 
 <h3 id=set_variable_set_item_destroyable_blocks>
-  <code>variable::set_item_destroyable_blocks</code>
+  <code>variable.set_item_destroyable_blocks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8657,7 +8657,7 @@ variable::set_item_custom_tag(variable=`variable`, item=item("stick"), tag_name=
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_destroyable_blocks([item("stick"), item("stick")], item("stick"));
+`variable` = variable.set_item_destroyable_blocks([item("stick"), item("stick")], item("stick"));
 
 //Или от объекта
 
@@ -8665,11 +8665,11 @@ variable::set_item_custom_tag(variable=`variable`, item=item("stick"), tag_name=
 
 //Или в сухую позиционно
 
-variable::set_item_destroyable_blocks(`variable`, [item("stick"), item("stick")], item("stick"));
+variable.set_item_destroyable_blocks(`variable`, [item("stick"), item("stick")], item("stick"));
 
 //Или в сухую по ключам
 
-variable::set_item_destroyable_blocks(variable=`variable`, destroyable=[item("stick"), item("stick")], item=item("stick"));
+variable.set_item_destroyable_blocks(variable=`variable`, destroyable=[item("stick"), item("stick")], item=item("stick"));
 ```
 
 **Аргументы:**
@@ -8681,7 +8681,7 @@ variable::set_item_destroyable_blocks(variable=`variable`, destroyable=[item("st
 | item        | Предмет               | Предмет                                                                            |
 
 <h3 id=set_variable_set_item_durability>
-  <code>variable::set_item_durability</code>
+  <code>variable.set_item_durability</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8691,7 +8691,7 @@ variable::set_item_destroyable_blocks(variable=`variable`, destroyable=[item("st
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_durability(item("stick"), 1, "DAMAGE");
+`variable` = variable.set_item_durability(item("stick"), 1, "DAMAGE");
 
 //Или от объекта
 
@@ -8699,11 +8699,11 @@ variable::set_item_destroyable_blocks(variable=`variable`, destroyable=[item("st
 
 //Или в сухую позиционно
 
-variable::set_item_durability(`variable`, item("stick"), 1, "DAMAGE");
+variable.set_item_durability(`variable`, item("stick"), 1, "DAMAGE");
 
 //Или в сухую по ключам
 
-variable::set_item_durability(variable=`variable`, item=item("stick"), durability=1, durability_type="DAMAGE");
+variable.set_item_durability(variable=`variable`, item=item("stick"), durability=1, durability_type="DAMAGE");
 ```
 
 **Аргументы:**
@@ -8716,7 +8716,7 @@ variable::set_item_durability(variable=`variable`, item=item("stick"), durabilit
 | durability_type | Маркер<br/>**DAMAGE** - Текущая прочность<br/>**DAMAGE_PERCENTAGE** - Текущий процент прочности<br/>**MAXIMUM** - Максимальная прочность<br/>**MAX_DAMAGE** - Максимальная прочность<br/>**REMAINING** - Остаточная прочность<br/>**REMAINING_PERCENTAGE** - Остаточный процент прочности | Тип прочности             |
 
 <h3 id=set_variable_set_item_enchantments>
-  <code>variable::set_item_enchantments</code>
+  <code>variable.set_item_enchantments</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8726,7 +8726,7 @@ variable::set_item_durability(variable=`variable`, item=item("stick"), durabilit
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_enchantments(item("stick"), {"enchantments":`enchantments`});
+`variable` = variable.set_item_enchantments(item("stick"), {"enchantments":`enchantments`});
 
 //Или от объекта
 
@@ -8734,11 +8734,11 @@ variable::set_item_durability(variable=`variable`, item=item("stick"), durabilit
 
 //Или в сухую позиционно
 
-variable::set_item_enchantments(`variable`, item("stick"), {"enchantments":`enchantments`});
+variable.set_item_enchantments(`variable`, item("stick"), {"enchantments":`enchantments`});
 
 //Или в сухую по ключам
 
-variable::set_item_enchantments(variable=`variable`, item=item("stick"), enchantments={"enchantments":`enchantments`});
+variable.set_item_enchantments(variable=`variable`, item=item("stick"), enchantments={"enchantments":`enchantments`});
 ```
 
 **Аргументы:**
@@ -8750,7 +8750,7 @@ variable::set_item_enchantments(variable=`variable`, item=item("stick"), enchant
 | enchantments | Словарь               | Зачарования и их уровни   |
 
 <h3 id=set_variable_set_item_food_properties>
-  <code>variable::set_item_food_properties</code>
+  <code>variable.set_item_food_properties</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8760,7 +8760,7 @@ variable::set_item_enchantments(variable=`variable`, item=item("stick"), enchant
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_food_properties(item("stick"), 1, 2, "TRUE");
+`variable` = variable.set_item_food_properties(item("stick"), 1, 2, "TRUE");
 
 //Или от объекта
 
@@ -8768,11 +8768,11 @@ variable::set_item_enchantments(variable=`variable`, item=item("stick"), enchant
 
 //Или в сухую позиционно
 
-variable::set_item_food_properties(`variable`, item("stick"), 1, 2, "TRUE");
+variable.set_item_food_properties(`variable`, item("stick"), 1, 2, "TRUE");
 
 //Или в сухую по ключам
 
-variable::set_item_food_properties(variable=`variable`, item=item("stick"), nutrition=1, saturation=2, can_always_eat="TRUE");
+variable.set_item_food_properties(variable=`variable`, item=item("stick"), nutrition=1, saturation=2, can_always_eat="TRUE");
 ```
 
 **Аргументы:**
@@ -8786,7 +8786,7 @@ variable::set_item_food_properties(variable=`variable`, item=item("stick"), nutr
 | can_always_eat | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет | Возможность сьесть без голода |
 
 <h3 id=set_variable_set_item_glider>
-  <code>variable::set_item_glider</code>
+  <code>variable.set_item_glider</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8798,7 +8798,7 @@ variable::set_item_food_properties(variable=`variable`, item=item("stick"), nutr
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_glider(item("stick"), "TRUE");
+`variable` = variable.set_item_glider(item("stick"), "TRUE");
 
 //Или от объекта
 
@@ -8806,11 +8806,11 @@ variable::set_item_food_properties(variable=`variable`, item=item("stick"), nutr
 
 //Или в сухую позиционно
 
-variable::set_item_glider(`variable`, item("stick"), "TRUE");
+variable.set_item_glider(`variable`, item("stick"), "TRUE");
 
 //Или в сухую по ключам
 
-variable::set_item_glider(variable=`variable`, item=item("stick"), glider="TRUE");
+variable.set_item_glider(variable=`variable`, item=item("stick"), glider="TRUE");
 ```
 
 **Аргументы:**
@@ -8822,7 +8822,7 @@ variable::set_item_glider(variable=`variable`, item=item("stick"), glider="TRUE"
 | glider   | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет | Скольжение                |
 
 <h3 id=set_variable_set_item_glint_override>
-  <code>variable::set_item_glint_override</code>
+  <code>variable.set_item_glint_override</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8832,7 +8832,7 @@ variable::set_item_glider(variable=`variable`, item=item("stick"), glider="TRUE"
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_glint_override(item("stick"), "TRUE");
+`variable` = variable.set_item_glint_override(item("stick"), "TRUE");
 
 //Или от объекта
 
@@ -8840,11 +8840,11 @@ variable::set_item_glider(variable=`variable`, item=item("stick"), glider="TRUE"
 
 //Или в сухую позиционно
 
-variable::set_item_glint_override(`variable`, item("stick"), "TRUE");
+variable.set_item_glint_override(`variable`, item("stick"), "TRUE");
 
 //Или в сухую по ключам
 
-variable::set_item_glint_override(variable=`variable`, item=item("stick"), glowing="TRUE");
+variable.set_item_glint_override(variable=`variable`, item=item("stick"), glowing="TRUE");
 ```
 
 **Аргументы:**
@@ -8856,7 +8856,7 @@ variable::set_item_glint_override(variable=`variable`, item=item("stick"), glowi
 | glowing  | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет<br/>**NOT_SET** - По умолчанию | Свечение                  |
 
 <h3 id=set_variable_set_item_hidden_tooltip>
-  <code>variable::set_item_hidden_tooltip</code>
+  <code>variable.set_item_hidden_tooltip</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8866,7 +8866,7 @@ variable::set_item_glint_override(variable=`variable`, item=item("stick"), glowi
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_hidden_tooltip(item("stick"), "TRUE");
+`variable` = variable.set_item_hidden_tooltip(item("stick"), "TRUE");
 
 //Или от объекта
 
@@ -8874,11 +8874,11 @@ variable::set_item_glint_override(variable=`variable`, item=item("stick"), glowi
 
 //Или в сухую позиционно
 
-variable::set_item_hidden_tooltip(`variable`, item("stick"), "TRUE");
+variable.set_item_hidden_tooltip(`variable`, item("stick"), "TRUE");
 
 //Или в сухую по ключам
 
-variable::set_item_hidden_tooltip(variable=`variable`, item=item("stick"), tooltip_hidden="TRUE");
+variable.set_item_hidden_tooltip(variable=`variable`, item=item("stick"), tooltip_hidden="TRUE");
 ```
 
 **Аргументы:**
@@ -8890,7 +8890,7 @@ variable::set_item_hidden_tooltip(variable=`variable`, item=item("stick"), toolt
 | tooltip_hidden | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет | Скрытие всплывающей подсказки |
 
 <h3 id=set_variable_set_item_lore>
-  <code>variable::set_item_lore</code>
+  <code>variable.set_item_lore</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8902,7 +8902,7 @@ variable::set_item_hidden_tooltip(variable=`variable`, item=item("stick"), toolt
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_lore(item("stick"), ["lore", "lore"]);
+`variable` = variable.set_item_lore(item("stick"), ["lore", "lore"]);
 
 //Или от объекта
 
@@ -8910,11 +8910,11 @@ variable::set_item_hidden_tooltip(variable=`variable`, item=item("stick"), toolt
 
 //Или в сухую позиционно
 
-variable::set_item_lore(`variable`, item("stick"), ["lore", "lore"]);
+variable.set_item_lore(`variable`, item("stick"), ["lore", "lore"]);
 
 //Или в сухую по ключам
 
-variable::set_item_lore(variable=`variable`, item=item("stick"), lore=["lore", "lore"]);
+variable.set_item_lore(variable=`variable`, item=item("stick"), lore=["lore", "lore"]);
 ```
 
 **Аргументы:**
@@ -8926,7 +8926,7 @@ variable::set_item_lore(variable=`variable`, item=item("stick"), lore=["lore", "
 | lore     | Список\[Текст\]       | Новое описание<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_set_item_lore_line>
-  <code>variable::set_item_lore_line</code>
+  <code>variable.set_item_lore_line</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8936,7 +8936,7 @@ variable::set_item_lore(variable=`variable`, item=item("stick"), lore=["lore", "
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_lore_line(item("stick"), "text", 1, "APPEND");
+`variable` = variable.set_item_lore_line(item("stick"), "text", 1, "APPEND");
 
 //Или от объекта
 
@@ -8944,11 +8944,11 @@ variable::set_item_lore(variable=`variable`, item=item("stick"), lore=["lore", "
 
 //Или в сухую позиционно
 
-variable::set_item_lore_line(`variable`, item("stick"), "text", 1, "APPEND");
+variable.set_item_lore_line(`variable`, item("stick"), "text", 1, "APPEND");
 
 //Или в сухую по ключам
 
-variable::set_item_lore_line(variable=`variable`, item=item("stick"), text="text", line=1, mode="APPEND");
+variable.set_item_lore_line(variable=`variable`, item=item("stick"), text="text", line=1, mode="APPEND");
 ```
 
 **Аргументы:**
@@ -8962,7 +8962,7 @@ variable::set_item_lore_line(variable=`variable`, item=item("stick"), text="text
 | mode     | Маркер<br/>**APPEND** - Добавление<br/>**MERGE** - Замена | Режим установки           |
 
 <h3 id=set_variable_set_item_max_stack_size>
-  <code>variable::set_item_max_stack_size</code>
+  <code>variable.set_item_max_stack_size</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -8975,7 +8975,7 @@ variable::set_item_lore_line(variable=`variable`, item=item("stick"), text="text
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_max_stack_size(item("stick"), 1);
+`variable` = variable.set_item_max_stack_size(item("stick"), 1);
 
 //Или от объекта
 
@@ -8983,11 +8983,11 @@ variable::set_item_lore_line(variable=`variable`, item=item("stick"), text="text
 
 //Или в сухую позиционно
 
-variable::set_item_max_stack_size(`variable`, item("stick"), 1);
+variable.set_item_max_stack_size(`variable`, item("stick"), 1);
 
 //Или в сухую по ключам
 
-variable::set_item_max_stack_size(variable=`variable`, item=item("stick"), size=1);
+variable.set_item_max_stack_size(variable=`variable`, item=item("stick"), size=1);
 ```
 
 **Аргументы:**
@@ -8999,7 +8999,7 @@ variable::set_item_max_stack_size(variable=`variable`, item=item("stick"), size=
 | size     | Число                 | Количество предметов в стаке |
 
 <h3 id=set_variable_set_item_model_data>
-  <code>variable::set_item_model_data</code>
+  <code>variable.set_item_model_data</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9009,7 +9009,7 @@ variable::set_item_max_stack_size(variable=`variable`, item=item("stick"), size=
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_model_data(item("stick"), "model");
+`variable` = variable.set_item_model_data(item("stick"), "model");
 
 //Или от объекта
 
@@ -9017,11 +9017,11 @@ variable::set_item_max_stack_size(variable=`variable`, item=item("stick"), size=
 
 //Или в сухую позиционно
 
-variable::set_item_model_data(`variable`, item("stick"), "model");
+variable.set_item_model_data(`variable`, item("stick"), "model");
 
 //Или в сухую по ключам
 
-variable::set_item_model_data(variable=`variable`, item=item("stick"), model="model");
+variable.set_item_model_data(variable=`variable`, item=item("stick"), model="model");
 ```
 
 **Аргументы:**
@@ -9033,7 +9033,7 @@ variable::set_item_model_data(variable=`variable`, item=item("stick"), model="mo
 | model    | Текст                 | Модель предмета (пример: "minecraft:diamond_sword") |
 
 <h3 id=set_variable_set_item_name>
-  <code>variable::set_item_name</code>
+  <code>variable.set_item_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9043,7 +9043,7 @@ variable::set_item_model_data(variable=`variable`, item=item("stick"), model="mo
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_name(item("stick"), "text");
+`variable` = variable.set_item_name(item("stick"), "text");
 
 //Или от объекта
 
@@ -9051,11 +9051,11 @@ variable::set_item_model_data(variable=`variable`, item=item("stick"), model="mo
 
 //Или в сухую позиционно
 
-variable::set_item_name(`variable`, item("stick"), "text");
+variable.set_item_name(`variable`, item("stick"), "text");
 
 //Или в сухую по ключам
 
-variable::set_item_name(variable=`variable`, item=item("stick"), text="text");
+variable.set_item_name(variable=`variable`, item=item("stick"), text="text");
 ```
 
 **Аргументы:**
@@ -9067,7 +9067,7 @@ variable::set_item_name(variable=`variable`, item=item("stick"), text="text");
 | text     | Текст                 | Имя                       |
 
 <h3 id=set_variable_set_item_placeable_blocks>
-  <code>variable::set_item_placeable_blocks</code>
+  <code>variable.set_item_placeable_blocks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9077,7 +9077,7 @@ variable::set_item_name(variable=`variable`, item=item("stick"), text="text");
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_placeable_blocks([item("stick"), item("stick")], item("stick"));
+`variable` = variable.set_item_placeable_blocks([item("stick"), item("stick")], item("stick"));
 
 //Или от объекта
 
@@ -9085,11 +9085,11 @@ variable::set_item_name(variable=`variable`, item=item("stick"), text="text");
 
 //Или в сухую позиционно
 
-variable::set_item_placeable_blocks(`variable`, [item("stick"), item("stick")], item("stick"));
+variable.set_item_placeable_blocks(`variable`, [item("stick"), item("stick")], item("stick"));
 
 //Или в сухую по ключам
 
-variable::set_item_placeable_blocks(variable=`variable`, placeable=[item("stick"), item("stick")], item=item("stick"));
+variable.set_item_placeable_blocks(variable=`variable`, placeable=[item("stick"), item("stick")], item=item("stick"));
 ```
 
 **Аргументы:**
@@ -9101,7 +9101,7 @@ variable::set_item_placeable_blocks(variable=`variable`, placeable=[item("stick"
 | item      | Предмет               | Предмет                                                                                |
 
 <h3 id=set_variable_set_item_rarity>
-  <code>variable::set_item_rarity</code>
+  <code>variable.set_item_rarity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9111,7 +9111,7 @@ variable::set_item_placeable_blocks(variable=`variable`, placeable=[item("stick"
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_rarity(item("stick"), "NONE");
+`variable` = variable.set_item_rarity(item("stick"), "NONE");
 
 //Или от объекта
 
@@ -9119,11 +9119,11 @@ variable::set_item_placeable_blocks(variable=`variable`, placeable=[item("stick"
 
 //Или в сухую позиционно
 
-variable::set_item_rarity(`variable`, item("stick"), "NONE");
+variable.set_item_rarity(`variable`, item("stick"), "NONE");
 
 //Или в сухую по ключам
 
-variable::set_item_rarity(variable=`variable`, item=item("stick"), rarity="NONE");
+variable.set_item_rarity(variable=`variable`, item=item("stick"), rarity="NONE");
 ```
 
 **Аргументы:**
@@ -9135,7 +9135,7 @@ variable::set_item_rarity(variable=`variable`, item=item("stick"), rarity="NONE"
 | rarity   | Маркер<br/>**NONE** - Никакая (none)<br/>**COMMON** - Обычная (common)<br/>**UNCOMMON** - Необычная (uncommon)<br/>**RARE** - Редкая (rare)<br/>**EPIC** - Эпическая (epic) | Редкость                  |
 
 <h3 id=set_variable_set_item_tooltip_style>
-  <code>variable::set_item_tooltip_style</code>
+  <code>variable.set_item_tooltip_style</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9145,7 +9145,7 @@ variable::set_item_rarity(variable=`variable`, item=item("stick"), rarity="NONE"
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_tooltip_style(item("stick"), "style");
+`variable` = variable.set_item_tooltip_style(item("stick"), "style");
 
 //Или от объекта
 
@@ -9153,11 +9153,11 @@ variable::set_item_rarity(variable=`variable`, item=item("stick"), rarity="NONE"
 
 //Или в сухую позиционно
 
-variable::set_item_tooltip_style(`variable`, item("stick"), "style");
+variable.set_item_tooltip_style(`variable`, item("stick"), "style");
 
 //Или в сухую по ключам
 
-variable::set_item_tooltip_style(variable=`variable`, item=item("stick"), style="style");
+variable.set_item_tooltip_style(variable=`variable`, item=item("stick"), style="style");
 ```
 
 **Аргументы:**
@@ -9169,7 +9169,7 @@ variable::set_item_tooltip_style(variable=`variable`, item=item("stick"), style=
 | style    | Текст                 | Ключ стиля подсказки      |
 
 <h3 id=set_variable_set_item_type>
-  <code>variable::set_item_type</code>
+  <code>variable.set_item_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9179,7 +9179,7 @@ variable::set_item_tooltip_style(variable=`variable`, item=item("stick"), style=
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_type(item("stick"), "type");
+`variable` = variable.set_item_type(item("stick"), "type");
 
 //Или от объекта
 
@@ -9187,11 +9187,11 @@ variable::set_item_tooltip_style(variable=`variable`, item=item("stick"), style=
 
 //Или в сухую позиционно
 
-variable::set_item_type(`variable`, item("stick"), "type");
+variable.set_item_type(`variable`, item("stick"), "type");
 
 //Или в сухую по ключам
 
-variable::set_item_type(variable=`variable`, item=item("stick"), type="type");
+variable.set_item_type(variable=`variable`, item=item("stick"), type="type");
 ```
 
 **Аргументы:**
@@ -9203,7 +9203,7 @@ variable::set_item_type(variable=`variable`, item=item("stick"), type="type");
 | type     | Текст                 | Тип предмета              |
 
 <h3 id=set_variable_set_item_unbreakable>
-  <code>variable::set_item_unbreakable</code>
+  <code>variable.set_item_unbreakable</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9213,7 +9213,7 @@ variable::set_item_type(variable=`variable`, item=item("stick"), type="type");
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_unbreakable(item("stick"), "FALSE");
+`variable` = variable.set_item_unbreakable(item("stick"), "FALSE");
 
 //Или от объекта
 
@@ -9221,11 +9221,11 @@ variable::set_item_type(variable=`variable`, item=item("stick"), type="type");
 
 //Или в сухую позиционно
 
-variable::set_item_unbreakable(`variable`, item("stick"), "FALSE");
+variable.set_item_unbreakable(`variable`, item("stick"), "FALSE");
 
 //Или в сухую по ключам
 
-variable::set_item_unbreakable(variable=`variable`, item=item("stick"), unbreakable="FALSE");
+variable.set_item_unbreakable(variable=`variable`, item=item("stick"), unbreakable="FALSE");
 ```
 
 **Аргументы:**
@@ -9237,7 +9237,7 @@ variable::set_item_unbreakable(variable=`variable`, item=item("stick"), unbreaka
 | unbreakable | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Неломаемость              |
 
 <h3 id=set_variable_set_item_use_remainder>
-  <code>variable::set_item_use_remainder</code>
+  <code>variable.set_item_use_remainder</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9247,7 +9247,7 @@ variable::set_item_unbreakable(variable=`variable`, item=item("stick"), unbreaka
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_use_remainder(item("stick"), item("stick"));
+`variable` = variable.set_item_use_remainder(item("stick"), item("stick"));
 
 //Или от объекта
 
@@ -9255,11 +9255,11 @@ variable::set_item_unbreakable(variable=`variable`, item=item("stick"), unbreaka
 
 //Или в сухую позиционно
 
-variable::set_item_use_remainder(`variable`, item("stick"), item("stick"));
+variable.set_item_use_remainder(`variable`, item("stick"), item("stick"));
 
 //Или в сухую по ключам
 
-variable::set_item_use_remainder(variable=`variable`, item=item("stick"), remainder=item("stick"));
+variable.set_item_use_remainder(variable=`variable`, item=item("stick"), remainder=item("stick"));
 ```
 
 **Аргументы:**
@@ -9271,7 +9271,7 @@ variable::set_item_use_remainder(variable=`variable`, item=item("stick"), remain
 | remainder | Предмет               | Предмет, в который превратится |
 
 <h3 id=set_variable_set_item_visibility_flags>
-  <code>variable::set_item_visibility_flags</code>
+  <code>variable.set_item_visibility_flags</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9281,7 +9281,7 @@ variable::set_item_use_remainder(variable=`variable`, item=item("stick"), remain
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_visibility_flags(item("stick"), "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE");
+`variable` = variable.set_item_visibility_flags(item("stick"), "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE");
 
 //Или от объекта
 
@@ -9289,11 +9289,11 @@ variable::set_item_use_remainder(variable=`variable`, item=item("stick"), remain
 
 //Или в сухую позиционно
 
-variable::set_item_visibility_flags(`variable`, item("stick"), "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE");
+variable.set_item_visibility_flags(`variable`, item("stick"), "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE", "NO_CHANGE");
 
 //Или в сухую по ключам
 
-variable::set_item_visibility_flags(variable=`variable`, item=item("stick"), hide_dye="NO_CHANGE", hide_enchantments="NO_CHANGE", hide_attributes="NO_CHANGE", hide_unbreakable="NO_CHANGE", hide_place_on="NO_CHANGE", hide_destroys="NO_CHANGE", hide_potion_effects="NO_CHANGE", hide_armor_trim="NO_CHANGE");
+variable.set_item_visibility_flags(variable=`variable`, item=item("stick"), hide_dye="NO_CHANGE", hide_enchantments="NO_CHANGE", hide_attributes="NO_CHANGE", hide_unbreakable="NO_CHANGE", hide_place_on="NO_CHANGE", hide_destroys="NO_CHANGE", hide_potion_effects="NO_CHANGE", hide_armor_trim="NO_CHANGE");
 ```
 
 **Аргументы:**
@@ -9312,7 +9312,7 @@ variable::set_item_visibility_flags(variable=`variable`, item=item("stick"), hid
 | hide_armor_trim     | Маркер<br/>**NO_CHANGE** - Без изменений<br/>**OFF** - Выключено<br/>**ON** - Включено | Скрытие отделки брони      |
 
 <h3 id=set_variable_set_item_weapon>
-  <code>variable::set_item_weapon</code>
+  <code>variable.set_item_weapon</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9322,7 +9322,7 @@ variable::set_item_visibility_flags(variable=`variable`, item=item("stick"), hid
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_item_weapon(item("stick"), 1, 2);
+`variable` = variable.set_item_weapon(item("stick"), 1, 2);
 
 //Или от объекта
 
@@ -9330,11 +9330,11 @@ variable::set_item_visibility_flags(variable=`variable`, item=item("stick"), hid
 
 //Или в сухую позиционно
 
-variable::set_item_weapon(`variable`, item("stick"), 1, 2);
+variable.set_item_weapon(`variable`, item("stick"), 1, 2);
 
 //Или в сухую по ключам
 
-variable::set_item_weapon(variable=`variable`, item=item("stick"), item_damage_per_attack=1, disable_blocking=2);
+variable.set_item_weapon(variable=`variable`, item=item("stick"), item_damage_per_attack=1, disable_blocking=2);
 ```
 
 **Аргументы:**
@@ -9347,7 +9347,7 @@ variable::set_item_weapon(variable=`variable`, item=item("stick"), item_damage_p
 | disable_blocking       | Число                 | Задержка щита после удара |
 
 <h3 id=set_variable_set_list_value>
-  <code>variable::set_list_value</code>
+  <code>variable.set_list_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9357,7 +9357,7 @@ variable::set_item_weapon(variable=`variable`, item=item("stick"), item_damage_p
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_list_value([`list`, `list`], 1, "any value");
+`variable` = variable.set_list_value([`list`, `list`], 1, "any value");
 
 //Или от объекта
 
@@ -9365,11 +9365,11 @@ variable::set_item_weapon(variable=`variable`, item=item("stick"), item_damage_p
 
 //Или в сухую позиционно
 
-variable::set_list_value(`variable`, [`list`, `list`], 1, "any value");
+variable.set_list_value(`variable`, [`list`, `list`], 1, "any value");
 
 //Или в сухую по ключам
 
-variable::set_list_value(variable=`variable`, list=[`list`, `list`], number=1, value="any value");
+variable.set_list_value(variable=`variable`, list=[`list`, `list`], number=1, value="any value");
 ```
 
 **Аргументы:**
@@ -9382,7 +9382,7 @@ variable::set_list_value(variable=`variable`, list=[`list`, `list`], number=1, v
 | value    | Любое значение       | Значение                  |
 
 <h3 id=set_variable_set_location_direction>
-  <code>variable::set_location_direction</code>
+  <code>variable.set_location_direction</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9392,7 +9392,7 @@ variable::set_list_value(variable=`variable`, list=[`list`, `list`], number=1, v
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_location_direction(location(0,0,0,0,0), vector(0,0,0));
+`variable` = variable.set_location_direction(location(0,0,0,0,0), vector(0,0,0));
 
 //Или от объекта
 
@@ -9400,11 +9400,11 @@ variable::set_list_value(variable=`variable`, list=[`list`, `list`], number=1, v
 
 //Или в сухую позиционно
 
-variable::set_location_direction(`variable`, location(0,0,0,0,0), vector(0,0,0));
+variable.set_location_direction(`variable`, location(0,0,0,0,0), vector(0,0,0));
 
 //Или в сухую по ключам
 
-variable::set_location_direction(variable=`variable`, location=location(0,0,0,0,0), vector=vector(0,0,0));
+variable.set_location_direction(variable=`variable`, location=location(0,0,0,0,0), vector=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -9416,7 +9416,7 @@ variable::set_location_direction(variable=`variable`, location=location(0,0,0,0,
 | vector   | Вектор                       | Вектор направления           |
 
 <h3 id=set_variable_set_map_value>
-  <code>variable::set_map_value</code>
+  <code>variable.set_map_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9426,7 +9426,7 @@ variable::set_location_direction(variable=`variable`, location=location(0,0,0,0,
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_map_value({"map":`map`}, ["any value", "any value"], ["any value", "any value"]);
+`variable` = variable.set_map_value({"map":`map`}, ["any value", "any value"], ["any value", "any value"]);
 
 //Или от объекта
 
@@ -9434,11 +9434,11 @@ variable::set_location_direction(variable=`variable`, location=location(0,0,0,0,
 
 //Или в сухую позиционно
 
-variable::set_map_value(`variable`, {"map":`map`}, ["any value", "any value"], ["any value", "any value"]);
+variable.set_map_value(`variable`, {"map":`map`}, ["any value", "any value"], ["any value", "any value"]);
 
 //Или в сухую по ключам
 
-variable::set_map_value(variable=`variable`, map={"map":`map`}, key=["any value", "any value"], value=["any value", "any value"]);
+variable.set_map_value(variable=`variable`, map={"map":`map`}, key=["any value", "any value"], value=["any value", "any value"]);
 ```
 
 **Аргументы:**
@@ -9451,7 +9451,7 @@ variable::set_map_value(variable=`variable`, map={"map":`map`}, key=["any value"
 | value    | Список\[Любое значение\] | Новое значение<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_set_particle_amount>
-  <code>variable::set_particle_amount</code>
+  <code>variable.set_particle_amount</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9461,7 +9461,7 @@ variable::set_map_value(variable=`variable`, map={"map":`map`}, key=["any value"
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_particle_amount(particle("fire"), 1);
+`variable` = variable.set_particle_amount(particle("fire"), 1);
 
 //Или от объекта
 
@@ -9469,11 +9469,11 @@ variable::set_map_value(variable=`variable`, map={"map":`map`}, key=["any value"
 
 //Или в сухую позиционно
 
-variable::set_particle_amount(`variable`, particle("fire"), 1);
+variable.set_particle_amount(`variable`, particle("fire"), 1);
 
 //Или в сухую по ключам
 
-variable::set_particle_amount(variable=`variable`, particle=particle("fire"), amount=1);
+variable.set_particle_amount(variable=`variable`, particle=particle("fire"), amount=1);
 ```
 
 **Аргументы:**
@@ -9485,7 +9485,7 @@ variable::set_particle_amount(variable=`variable`, particle=particle("fire"), am
 | amount   | Число                       | Новое количество          |
 
 <h3 id=set_variable_set_particle_color>
-  <code>variable::set_particle_color</code>
+  <code>variable.set_particle_color</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9495,7 +9495,7 @@ variable::set_particle_amount(variable=`variable`, particle=particle("fire"), am
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_particle_color(particle("fire"), "hex_color", "COLOR");
+`variable` = variable.set_particle_color(particle("fire"), "hex_color", "COLOR");
 
 //Или от объекта
 
@@ -9503,11 +9503,11 @@ variable::set_particle_amount(variable=`variable`, particle=particle("fire"), am
 
 //Или в сухую позиционно
 
-variable::set_particle_color(`variable`, particle("fire"), "hex_color", "COLOR");
+variable.set_particle_color(`variable`, particle("fire"), "hex_color", "COLOR");
 
 //Или в сухую по ключам
 
-variable::set_particle_color(variable=`variable`, particle=particle("fire"), hex_color="hex_color", color_type="COLOR");
+variable.set_particle_color(variable=`variable`, particle=particle("fire"), hex_color="hex_color", color_type="COLOR");
 ```
 
 **Аргументы:**
@@ -9520,7 +9520,7 @@ variable::set_particle_color(variable=`variable`, particle=particle("fire"), hex
 | color_type | Маркер<br/>**COLOR** - Обычный цвет<br/>**TO_COLOR** - Цвет перехода | Тип цвета                 |
 
 <h3 id=set_variable_set_particle_material>
-  <code>variable::set_particle_material</code>
+  <code>variable.set_particle_material</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9530,7 +9530,7 @@ variable::set_particle_color(variable=`variable`, particle=particle("fire"), hex
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_particle_material(particle("fire"), item("stick"));
+`variable` = variable.set_particle_material(particle("fire"), item("stick"));
 
 //Или от объекта
 
@@ -9538,11 +9538,11 @@ variable::set_particle_color(variable=`variable`, particle=particle("fire"), hex
 
 //Или в сухую позиционно
 
-variable::set_particle_material(`variable`, particle("fire"), item("stick"));
+variable.set_particle_material(`variable`, particle("fire"), item("stick"));
 
 //Или в сухую по ключам
 
-variable::set_particle_material(variable=`variable`, particle=particle("fire"), material=item("stick"));
+variable.set_particle_material(variable=`variable`, particle=particle("fire"), material=item("stick"));
 ```
 
 **Аргументы:**
@@ -9554,7 +9554,7 @@ variable::set_particle_material(variable=`variable`, particle=particle("fire"), 
 | material | Предмет                     | Новый материал            |
 
 <h3 id=set_variable_set_particle_offset>
-  <code>variable::set_particle_offset</code>
+  <code>variable.set_particle_offset</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9564,7 +9564,7 @@ variable::set_particle_material(variable=`variable`, particle=particle("fire"), 
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_particle_offset(particle("fire"), vector(0,0,0));
+`variable` = variable.set_particle_offset(particle("fire"), vector(0,0,0));
 
 //Или от объекта
 
@@ -9572,11 +9572,11 @@ variable::set_particle_material(variable=`variable`, particle=particle("fire"), 
 
 //Или в сухую позиционно
 
-variable::set_particle_offset(`variable`, particle("fire"), vector(0,0,0));
+variable.set_particle_offset(`variable`, particle("fire"), vector(0,0,0));
 
 //Или в сухую по ключам
 
-variable::set_particle_offset(variable=`variable`, particle=particle("fire"), offset=vector(0,0,0));
+variable.set_particle_offset(variable=`variable`, particle=particle("fire"), offset=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -9588,7 +9588,7 @@ variable::set_particle_offset(variable=`variable`, particle=particle("fire"), of
 | offset   | Вектор                      | Новое движение            |
 
 <h3 id=set_variable_set_particle_size>
-  <code>variable::set_particle_size</code>
+  <code>variable.set_particle_size</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9598,7 +9598,7 @@ variable::set_particle_offset(variable=`variable`, particle=particle("fire"), of
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_particle_size(particle("fire"), 1);
+`variable` = variable.set_particle_size(particle("fire"), 1);
 
 //Или от объекта
 
@@ -9606,11 +9606,11 @@ variable::set_particle_offset(variable=`variable`, particle=particle("fire"), of
 
 //Или в сухую позиционно
 
-variable::set_particle_size(`variable`, particle("fire"), 1);
+variable.set_particle_size(`variable`, particle("fire"), 1);
 
 //Или в сухую по ключам
 
-variable::set_particle_size(variable=`variable`, particle=particle("fire"), size=1);
+variable.set_particle_size(variable=`variable`, particle=particle("fire"), size=1);
 ```
 
 **Аргументы:**
@@ -9622,7 +9622,7 @@ variable::set_particle_size(variable=`variable`, particle=particle("fire"), size
 | size     | Число                       | Новый размер              |
 
 <h3 id=set_variable_set_particle_spread>
-  <code>variable::set_particle_spread</code>
+  <code>variable.set_particle_spread</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9632,7 +9632,7 @@ variable::set_particle_size(variable=`variable`, particle=particle("fire"), size
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_particle_spread(particle("fire"), 1, 2);
+`variable` = variable.set_particle_spread(particle("fire"), 1, 2);
 
 //Или от объекта
 
@@ -9640,11 +9640,11 @@ variable::set_particle_size(variable=`variable`, particle=particle("fire"), size
 
 //Или в сухую позиционно
 
-variable::set_particle_spread(`variable`, particle("fire"), 1, 2);
+variable.set_particle_spread(`variable`, particle("fire"), 1, 2);
 
 //Или в сухую по ключам
 
-variable::set_particle_spread(variable=`variable`, particle=particle("fire"), horizontal=1, vertical=2);
+variable.set_particle_spread(variable=`variable`, particle=particle("fire"), horizontal=1, vertical=2);
 ```
 
 **Аргументы:**
@@ -9657,7 +9657,7 @@ variable::set_particle_spread(variable=`variable`, particle=particle("fire"), ho
 | vertical   | Число                       | Вертикальная плоскость    |
 
 <h3 id=set_variable_set_particle_type>
-  <code>variable::set_particle_type</code>
+  <code>variable.set_particle_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9667,7 +9667,7 @@ variable::set_particle_spread(variable=`variable`, particle=particle("fire"), ho
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_particle_type(particle("fire"), "type");
+`variable` = variable.set_particle_type(particle("fire"), "type");
 
 //Или от объекта
 
@@ -9675,11 +9675,11 @@ variable::set_particle_spread(variable=`variable`, particle=particle("fire"), ho
 
 //Или в сухую позиционно
 
-variable::set_particle_type(`variable`, particle("fire"), "type");
+variable.set_particle_type(`variable`, particle("fire"), "type");
 
 //Или в сухую по ключам
 
-variable::set_particle_type(variable=`variable`, particle=particle("fire"), type="type");
+variable.set_particle_type(variable=`variable`, particle=particle("fire"), type="type");
 ```
 
 **Аргументы:**
@@ -9691,7 +9691,7 @@ variable::set_particle_type(variable=`variable`, particle=particle("fire"), type
 | type     | Текст                       | Новый тип частицы         |
 
 <h3 id=set_variable_set_potion_effect_amplifier>
-  <code>variable::set_potion_effect_amplifier</code>
+  <code>variable.set_potion_effect_amplifier</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9701,7 +9701,7 @@ variable::set_particle_type(variable=`variable`, particle=particle("fire"), type
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_potion_effect_amplifier(potion("slow_falling"), 1);
+`variable` = variable.set_potion_effect_amplifier(potion("slow_falling"), 1);
 
 //Или от объекта
 
@@ -9709,11 +9709,11 @@ variable::set_particle_type(variable=`variable`, particle=particle("fire"), type
 
 //Или в сухую позиционно
 
-variable::set_potion_effect_amplifier(`variable`, potion("slow_falling"), 1);
+variable.set_potion_effect_amplifier(`variable`, potion("slow_falling"), 1);
 
 //Или в сухую по ключам
 
-variable::set_potion_effect_amplifier(variable=`variable`, potion=potion("slow_falling"), amplifier=1);
+variable.set_potion_effect_amplifier(variable=`variable`, potion=potion("slow_falling"), amplifier=1);
 ```
 
 **Аргументы:**
@@ -9725,7 +9725,7 @@ variable::set_potion_effect_amplifier(variable=`variable`, potion=potion("slow_f
 | amplifier | Число               | Сила зелья                |
 
 <h3 id=set_variable_set_potion_effect_duration>
-  <code>variable::set_potion_effect_duration</code>
+  <code>variable.set_potion_effect_duration</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9735,7 +9735,7 @@ variable::set_potion_effect_amplifier(variable=`variable`, potion=potion("slow_f
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_potion_effect_duration(potion("slow_falling"), 1);
+`variable` = variable.set_potion_effect_duration(potion("slow_falling"), 1);
 
 //Или от объекта
 
@@ -9743,11 +9743,11 @@ variable::set_potion_effect_amplifier(variable=`variable`, potion=potion("slow_f
 
 //Или в сухую позиционно
 
-variable::set_potion_effect_duration(`variable`, potion("slow_falling"), 1);
+variable.set_potion_effect_duration(`variable`, potion("slow_falling"), 1);
 
 //Или в сухую по ключам
 
-variable::set_potion_effect_duration(variable=`variable`, potion=potion("slow_falling"), duration=1);
+variable.set_potion_effect_duration(variable=`variable`, potion=potion("slow_falling"), duration=1);
 ```
 
 **Аргументы:**
@@ -9759,7 +9759,7 @@ variable::set_potion_effect_duration(variable=`variable`, potion=potion("slow_fa
 | duration | Число               | Длительность              |
 
 <h3 id=set_variable_set_potion_effect_type>
-  <code>variable::set_potion_effect_type</code>
+  <code>variable.set_potion_effect_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9769,7 +9769,7 @@ variable::set_potion_effect_duration(variable=`variable`, potion=potion("slow_fa
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_potion_effect_type(potion("slow_falling"), "effect_type");
+`variable` = variable.set_potion_effect_type(potion("slow_falling"), "effect_type");
 
 //Или от объекта
 
@@ -9777,11 +9777,11 @@ variable::set_potion_effect_duration(variable=`variable`, potion=potion("slow_fa
 
 //Или в сухую позиционно
 
-variable::set_potion_effect_type(`variable`, potion("slow_falling"), "effect_type");
+variable.set_potion_effect_type(`variable`, potion("slow_falling"), "effect_type");
 
 //Или в сухую по ключам
 
-variable::set_potion_effect_type(variable=`variable`, potion=potion("slow_falling"), effect_type="effect_type");
+variable.set_potion_effect_type(variable=`variable`, potion=potion("slow_falling"), effect_type="effect_type");
 ```
 
 **Аргументы:**
@@ -9793,7 +9793,7 @@ variable::set_potion_effect_type(variable=`variable`, potion=potion("slow_fallin
 | effect_type | Текст               | ID эффекта                |
 
 <h3 id=set_variable_set_sound_pitch>
-  <code>variable::set_sound_pitch</code>
+  <code>variable.set_sound_pitch</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9803,7 +9803,7 @@ variable::set_potion_effect_type(variable=`variable`, potion=potion("slow_fallin
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_sound_pitch(sound("entity.zombie.hurt"), 1);
+`variable` = variable.set_sound_pitch(sound("entity.zombie.hurt"), 1);
 
 //Или от объекта
 
@@ -9811,11 +9811,11 @@ variable::set_potion_effect_type(variable=`variable`, potion=potion("slow_fallin
 
 //Или в сухую позиционно
 
-variable::set_sound_pitch(`variable`, sound("entity.zombie.hurt"), 1);
+variable.set_sound_pitch(`variable`, sound("entity.zombie.hurt"), 1);
 
 //Или в сухую по ключам
 
-variable::set_sound_pitch(variable=`variable`, sound=sound("entity.zombie.hurt"), pitch=1);
+variable.set_sound_pitch(variable=`variable`, sound=sound("entity.zombie.hurt"), pitch=1);
 ```
 
 **Аргументы:**
@@ -9827,7 +9827,7 @@ variable::set_sound_pitch(variable=`variable`, sound=sound("entity.zombie.hurt")
 | pitch    | Число              | Новое значение высоты     |
 
 <h3 id=set_variable_set_sound_source>
-  <code>variable::set_sound_source</code>
+  <code>variable.set_sound_source</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9837,7 +9837,7 @@ variable::set_sound_pitch(variable=`variable`, sound=sound("entity.zombie.hurt")
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_sound_source(sound("entity.zombie.hurt"), "AMBIENT");
+`variable` = variable.set_sound_source(sound("entity.zombie.hurt"), "AMBIENT");
 
 //Или от объекта
 
@@ -9845,11 +9845,11 @@ variable::set_sound_pitch(variable=`variable`, sound=sound("entity.zombie.hurt")
 
 //Или в сухую позиционно
 
-variable::set_sound_source(`variable`, sound("entity.zombie.hurt"), "AMBIENT");
+variable.set_sound_source(`variable`, sound("entity.zombie.hurt"), "AMBIENT");
 
 //Или в сухую по ключам
 
-variable::set_sound_source(variable=`variable`, sound=sound("entity.zombie.hurt"), source="AMBIENT");
+variable.set_sound_source(variable=`variable`, sound=sound("entity.zombie.hurt"), source="AMBIENT");
 ```
 
 **Аргументы:**
@@ -9861,7 +9861,7 @@ variable::set_sound_source(variable=`variable`, sound=sound("entity.zombie.hurt"
 | source   | Маркер<br/>**AMBIENT** - Окружение (ambient)<br/>**BLOCK** - Блоки (block)<br/>**HOSTILE** - Враждебные существа (hostile)<br/>**MASTER** - Общий (master)<br/>**MUSIC** - Музыка (music)<br/>**NEUTRAL** - Дружелюбные существа (neutral)<br/>**PLAYER** - Игроки (player)<br/>**RECORD** - Музыкальные блоки (record)<br/>**VOICE** - Голос/Речь (voice)<br/>**WEATHER** - Погода (weather) | Источник звука            |
 
 <h3 id=set_variable_set_sound_type>
-  <code>variable::set_sound_type</code>
+  <code>variable.set_sound_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9871,7 +9871,7 @@ variable::set_sound_source(variable=`variable`, sound=sound("entity.zombie.hurt"
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_sound_type(sound("entity.zombie.hurt"), "namespace", "value");
+`variable` = variable.set_sound_type(sound("entity.zombie.hurt"), "namespace", "value");
 
 //Или от объекта
 
@@ -9879,11 +9879,11 @@ variable::set_sound_source(variable=`variable`, sound=sound("entity.zombie.hurt"
 
 //Или в сухую позиционно
 
-variable::set_sound_type(`variable`, sound("entity.zombie.hurt"), "namespace", "value");
+variable.set_sound_type(`variable`, sound("entity.zombie.hurt"), "namespace", "value");
 
 //Или в сухую по ключам
 
-variable::set_sound_type(variable=`variable`, sound=sound("entity.zombie.hurt"), namespace="namespace", value="value");
+variable.set_sound_type(variable=`variable`, sound=sound("entity.zombie.hurt"), namespace="namespace", value="value");
 ```
 
 **Аргументы:**
@@ -9896,7 +9896,7 @@ variable::set_sound_type(variable=`variable`, sound=sound("entity.zombie.hurt"),
 | value     | Текст              | ID звука                             |
 
 <h3 id=set_variable_set_sound_variation>
-  <code>variable::set_sound_variation</code>
+  <code>variable.set_sound_variation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9909,7 +9909,7 @@ variable::set_sound_type(variable=`variable`, sound=sound("entity.zombie.hurt"),
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_sound_variation(sound("entity.zombie.hurt"), "variation");
+`variable` = variable.set_sound_variation(sound("entity.zombie.hurt"), "variation");
 
 //Или от объекта
 
@@ -9917,11 +9917,11 @@ variable::set_sound_type(variable=`variable`, sound=sound("entity.zombie.hurt"),
 
 //Или в сухую позиционно
 
-variable::set_sound_variation(`variable`, sound("entity.zombie.hurt"), "variation");
+variable.set_sound_variation(`variable`, sound("entity.zombie.hurt"), "variation");
 
 //Или в сухую по ключам
 
-variable::set_sound_variation(variable=`variable`, sound=sound("entity.zombie.hurt"), variation="variation");
+variable.set_sound_variation(variable=`variable`, sound=sound("entity.zombie.hurt"), variation="variation");
 ```
 
 **Аргументы:**
@@ -9933,7 +9933,7 @@ variable::set_sound_variation(variable=`variable`, sound=sound("entity.zombie.hu
 | variation | Текст              | Вариация                  |
 
 <h3 id=set_variable_set_sound_volume_action>
-  <code>variable::set_sound_volume_action</code>
+  <code>variable.set_sound_volume_action</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9943,7 +9943,7 @@ variable::set_sound_variation(variable=`variable`, sound=sound("entity.zombie.hu
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_sound_volume_action(sound("entity.zombie.hurt"), 1);
+`variable` = variable.set_sound_volume_action(sound("entity.zombie.hurt"), 1);
 
 //Или от объекта
 
@@ -9951,11 +9951,11 @@ variable::set_sound_variation(variable=`variable`, sound=sound("entity.zombie.hu
 
 //Или в сухую позиционно
 
-variable::set_sound_volume_action(`variable`, sound("entity.zombie.hurt"), 1);
+variable.set_sound_volume_action(`variable`, sound("entity.zombie.hurt"), 1);
 
 //Или в сухую по ключам
 
-variable::set_sound_volume_action(variable=`variable`, sound=sound("entity.zombie.hurt"), volume=1);
+variable.set_sound_volume_action(variable=`variable`, sound=sound("entity.zombie.hurt"), volume=1);
 ```
 
 **Аргументы:**
@@ -9967,7 +9967,7 @@ variable::set_sound_volume_action(variable=`variable`, sound=sound("entity.zombi
 | volume   | Число              | Новое значение громкости  |
 
 <h3 id=set_variable_set_template_code>
-  <code>variable::set_template_code</code>
+  <code>variable.set_template_code</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -9977,7 +9977,7 @@ variable::set_sound_volume_action(variable=`variable`, sound=sound("entity.zombi
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_template_code(item("stick"), "any value");
+`variable` = variable.set_template_code(item("stick"), "any value");
 
 //Или от объекта
 
@@ -9985,11 +9985,11 @@ variable::set_sound_volume_action(variable=`variable`, sound=sound("entity.zombi
 
 //Или в сухую позиционно
 
-variable::set_template_code(`variable`, item("stick"), "any value");
+variable.set_template_code(`variable`, item("stick"), "any value");
 
 //Или в сухую по ключам
 
-variable::set_template_code(variable=`variable`, template=item("stick"), code="any value");
+variable.set_template_code(variable=`variable`, template=item("stick"), code="any value");
 ```
 
 **Аргументы:**
@@ -10000,7 +10000,7 @@ variable::set_template_code(variable=`variable`, template=item("stick"), code="a
 | code     | Любое значение        | Словарь/текст JSON        |
 
 <h3 id=set_variable_set_texture_to_map>
-  <code>variable::set_texture_to_map</code>
+  <code>variable.set_texture_to_map</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10010,7 +10010,7 @@ variable::set_template_code(variable=`variable`, template=item("stick"), code="a
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_texture_to_map(item("stick"), "url");
+`variable` = variable.set_texture_to_map(item("stick"), "url");
 
 //Или от объекта
 
@@ -10018,11 +10018,11 @@ variable::set_template_code(variable=`variable`, template=item("stick"), code="a
 
 //Или в сухую позиционно
 
-variable::set_texture_to_map(`variable`, item("stick"), "url");
+variable.set_texture_to_map(`variable`, item("stick"), "url");
 
 //Или в сухую по ключам
 
-variable::set_texture_to_map(variable=`variable`, map=item("stick"), url="url");
+variable.set_texture_to_map(variable=`variable`, map=item("stick"), url="url");
 ```
 
 **Аргументы:**
@@ -10034,7 +10034,7 @@ variable::set_texture_to_map(variable=`variable`, map=item("stick"), url="url");
 | url      | Текст                 | Ссылка на изображение     |
 
 <h3 id=set_variable_set_vector_component>
-  <code>variable::set_vector_component</code>
+  <code>variable.set_vector_component</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10044,7 +10044,7 @@ variable::set_texture_to_map(variable=`variable`, map=item("stick"), url="url");
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_vector_component(vector(0,0,0), 1, "X");
+`variable` = variable.set_vector_component(vector(0,0,0), 1, "X");
 
 //Или от объекта
 
@@ -10052,11 +10052,11 @@ variable::set_texture_to_map(variable=`variable`, map=item("stick"), url="url");
 
 //Или в сухую позиционно
 
-variable::set_vector_component(`variable`, vector(0,0,0), 1, "X");
+variable.set_vector_component(`variable`, vector(0,0,0), 1, "X");
 
 //Или в сухую по ключам
 
-variable::set_vector_component(variable=`variable`, vector=vector(0,0,0), value=1, vector_component="X");
+variable.set_vector_component(variable=`variable`, vector=vector(0,0,0), value=1, vector_component="X");
 ```
 
 **Аргументы:**
@@ -10069,7 +10069,7 @@ variable::set_vector_component(variable=`variable`, vector=vector(0,0,0), value=
 | vector_component | Маркер<br/>**X** - Координата X<br/>**Y** - Координата Y<br/>**Z** - Координата Z | Тип координаты            |
 
 <h3 id=set_variable_set_vector_length>
-  <code>variable::set_vector_length</code>
+  <code>variable.set_vector_length</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10079,7 +10079,7 @@ variable::set_vector_component(variable=`variable`, vector=vector(0,0,0), value=
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_vector_length(vector(0,0,0), 1);
+`variable` = variable.set_vector_length(vector(0,0,0), 1);
 
 //Или от объекта
 
@@ -10087,11 +10087,11 @@ variable::set_vector_component(variable=`variable`, vector=vector(0,0,0), value=
 
 //Или в сухую позиционно
 
-variable::set_vector_length(`variable`, vector(0,0,0), 1);
+variable.set_vector_length(`variable`, vector(0,0,0), 1);
 
 //Или в сухую по ключам
 
-variable::set_vector_length(variable=`variable`, vector=vector(0,0,0), length=1);
+variable.set_vector_length(variable=`variable`, vector=vector(0,0,0), length=1);
 ```
 
 **Аргументы:**
@@ -10103,7 +10103,7 @@ variable::set_vector_length(variable=`variable`, vector=vector(0,0,0), length=1)
 | length   | Число                | Новая длина               |
 
 <h3 id=set_variable_shift_all_coordinates>
-  <code>variable::shift_all_coordinates</code>
+  <code>variable.shift_all_coordinates</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10113,7 +10113,7 @@ variable::set_vector_length(variable=`variable`, vector=vector(0,0,0), length=1)
 
 **Пример использования:**
 ```ts
-`variable` = variable::shift_all_coordinates(location(0,0,0,0,0), 1, 2, 3, 4, 5);
+`variable` = variable.shift_all_coordinates(location(0,0,0,0,0), 1, 2, 3, 4, 5);
 
 //Или от объекта
 
@@ -10121,11 +10121,11 @@ variable::set_vector_length(variable=`variable`, vector=vector(0,0,0), length=1)
 
 //Или в сухую позиционно
 
-variable::shift_all_coordinates(`variable`, location(0,0,0,0,0), 1, 2, 3, 4, 5);
+variable.shift_all_coordinates(`variable`, location(0,0,0,0,0), 1, 2, 3, 4, 5);
 
 //Или в сухую по ключам
 
-variable::shift_all_coordinates(variable=`variable`, location=location(0,0,0,0,0), x=1, y=2, z=3, yaw=4, pitch=5);
+variable.shift_all_coordinates(variable=`variable`, location=location(0,0,0,0,0), x=1, y=2, z=3, yaw=4, pitch=5);
 ```
 
 **Аргументы:**
@@ -10141,7 +10141,7 @@ variable::shift_all_coordinates(variable=`variable`, location=location(0,0,0,0,0
 | pitch    | Число                        | Сдвиг по вертикальному повороту   |
 
 <h3 id=set_variable_shift_coordinate>
-  <code>variable::shift_coordinate</code>
+  <code>variable.shift_coordinate</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10151,7 +10151,7 @@ variable::shift_all_coordinates(variable=`variable`, location=location(0,0,0,0,0
 
 **Пример использования:**
 ```ts
-`variable` = variable::shift_coordinate(location(0,0,0,0,0), 1, "PITCH");
+`variable` = variable.shift_coordinate(location(0,0,0,0,0), 1, "PITCH");
 
 //Или от объекта
 
@@ -10159,11 +10159,11 @@ variable::shift_all_coordinates(variable=`variable`, location=location(0,0,0,0,0
 
 //Или в сухую позиционно
 
-variable::shift_coordinate(`variable`, location(0,0,0,0,0), 1, "PITCH");
+variable.shift_coordinate(`variable`, location(0,0,0,0,0), 1, "PITCH");
 
 //Или в сухую по ключам
 
-variable::shift_coordinate(variable=`variable`, location=location(0,0,0,0,0), distance=1, type="PITCH");
+variable.shift_coordinate(variable=`variable`, location=location(0,0,0,0,0), distance=1, type="PITCH");
 ```
 
 **Аргументы:**
@@ -10176,7 +10176,7 @@ variable::shift_coordinate(variable=`variable`, location=location(0,0,0,0,0), di
 | type     | Маркер<br/>**PITCH** - Вертикальный поворот<br/>**X** - X<br/>**Y** - Y<br/>**YAW** - Горизонтальный поворот<br/>**Z** - Z | Тип координаты            |
 
 <h3 id=set_variable_shift_location_in_direction>
-  <code>variable::shift_location_in_direction</code>
+  <code>variable.shift_location_in_direction</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10186,7 +10186,7 @@ variable::shift_coordinate(variable=`variable`, location=location(0,0,0,0,0), di
 
 **Пример использования:**
 ```ts
-`variable` = variable::shift_location_in_direction(location(0,0,0,0,0), 1, "FORWARD");
+`variable` = variable.shift_location_in_direction(location(0,0,0,0,0), 1, "FORWARD");
 
 //Или от объекта
 
@@ -10194,11 +10194,11 @@ variable::shift_coordinate(variable=`variable`, location=location(0,0,0,0,0), di
 
 //Или в сухую позиционно
 
-variable::shift_location_in_direction(`variable`, location(0,0,0,0,0), 1, "FORWARD");
+variable.shift_location_in_direction(`variable`, location(0,0,0,0,0), 1, "FORWARD");
 
 //Или в сухую по ключам
 
-variable::shift_location_in_direction(variable=`variable`, location=location(0,0,0,0,0), shift=1, direction="FORWARD");
+variable.shift_location_in_direction(variable=`variable`, location=location(0,0,0,0,0), shift=1, direction="FORWARD");
 ```
 
 **Аргументы:**
@@ -10211,7 +10211,7 @@ variable::shift_location_in_direction(variable=`variable`, location=location(0,0
 | direction | Маркер<br/>**FORWARD** - Вперёд/Назад<br/>**SIDEWAYS** - Вправо/Влево<br/>**UPWARD** - Вверх/Вниз | Направление               |
 
 <h3 id=set_variable_shift_location_on_vector>
-  <code>variable::shift_location_on_vector</code>
+  <code>variable.shift_location_on_vector</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10221,7 +10221,7 @@ variable::shift_location_in_direction(variable=`variable`, location=location(0,0
 
 **Пример использования:**
 ```ts
-`variable` = variable::shift_location_on_vector(location(0,0,0,0,0), vector(0,0,0), 1);
+`variable` = variable.shift_location_on_vector(location(0,0,0,0,0), vector(0,0,0), 1);
 
 //Или от объекта
 
@@ -10229,11 +10229,11 @@ variable::shift_location_in_direction(variable=`variable`, location=location(0,0
 
 //Или в сухую позиционно
 
-variable::shift_location_on_vector(`variable`, location(0,0,0,0,0), vector(0,0,0), 1);
+variable.shift_location_on_vector(`variable`, location(0,0,0,0,0), vector(0,0,0), 1);
 
 //Или в сухую по ключам
 
-variable::shift_location_on_vector(variable=`variable`, location=location(0,0,0,0,0), vector=vector(0,0,0), length=1);
+variable.shift_location_on_vector(variable=`variable`, location=location(0,0,0,0,0), vector=vector(0,0,0), length=1);
 ```
 
 **Аргументы:**
@@ -10246,7 +10246,7 @@ variable::shift_location_on_vector(variable=`variable`, location=location(0,0,0,
 | length   | Число                        | Расстояние сдвига         |
 
 <h3 id=set_variable_shift_location_towards_location>
-  <code>variable::shift_location_towards_location</code>
+  <code>variable.shift_location_towards_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10256,7 +10256,7 @@ variable::shift_location_on_vector(variable=`variable`, location=location(0,0,0,
 
 **Пример использования:**
 ```ts
-`variable` = variable::shift_location_towards_location(location(0,0,0,0,0), location(0,0,0,0,0), 1);
+`variable` = variable.shift_location_towards_location(location(0,0,0,0,0), location(0,0,0,0,0), 1);
 
 //Или от объекта
 
@@ -10264,11 +10264,11 @@ variable::shift_location_on_vector(variable=`variable`, location=location(0,0,0,
 
 //Или в сухую позиционно
 
-variable::shift_location_towards_location(`variable`, location(0,0,0,0,0), location(0,0,0,0,0), 1);
+variable.shift_location_towards_location(`variable`, location(0,0,0,0,0), location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-variable::shift_location_towards_location(variable=`variable`, location_from=location(0,0,0,0,0), location_to=location(0,0,0,0,0), distance=1);
+variable.shift_location_towards_location(variable=`variable`, location_from=location(0,0,0,0,0), location_to=location(0,0,0,0,0), distance=1);
 ```
 
 **Аргументы:**
@@ -10281,7 +10281,7 @@ variable::shift_location_towards_location(variable=`variable`, location_from=loc
 | distance      | Число                        | На сколько смещать местоположение |
 
 <h3 id=set_variable_simplex_noise_3d>
-  <code>variable::simplex_noise_3d</code>
+  <code>variable.simplex_noise_3d</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10291,7 +10291,7 @@ variable::shift_location_towards_location(variable=`variable`, location_from=loc
 
 **Пример использования:**
 ```ts
-`variable` = variable::simplex_noise_3d(location(0,0,0,0,0), 1, 2, 3, 4, 5, "FULL_RANGE", "FALSE");
+`variable` = variable.simplex_noise_3d(location(0,0,0,0,0), 1, 2, 3, 4, 5, "FULL_RANGE", "FALSE");
 
 //Или от объекта
 
@@ -10299,11 +10299,11 @@ variable::shift_location_towards_location(variable=`variable`, location_from=loc
 
 //Или в сухую позиционно
 
-variable::simplex_noise_3d(`variable`, location(0,0,0,0,0), 1, 2, 3, 4, 5, "FULL_RANGE", "FALSE");
+variable.simplex_noise_3d(`variable`, location(0,0,0,0,0), 1, 2, 3, 4, 5, "FULL_RANGE", "FALSE");
 
 //Или в сухую по ключам
 
-variable::simplex_noise_3d(variable=`variable`, location=location(0,0,0,0,0), seed=1, loc_frequency=2, octaves=3, frequency=4, amplitude=5, range_mode="FULL_RANGE", normalized="FALSE");
+variable.simplex_noise_3d(variable=`variable`, location=location(0,0,0,0,0), seed=1, loc_frequency=2, octaves=3, frequency=4, amplitude=5, range_mode="FULL_RANGE", normalized="FALSE");
 ```
 
 **Аргументы:**
@@ -10321,7 +10321,7 @@ variable::simplex_noise_3d(variable=`variable`, location=location(0,0,0,0,0), se
 | normalized    | Маркер<br/>**FALSE** - Не нормализировать<br/>**TRUE** - Нормализировать                            | Нормализация значений             |
 
 <h3 id=set_variable_sine>
-  <code>variable::sine</code>
+  <code>variable.sine</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10331,7 +10331,7 @@ variable::simplex_noise_3d(variable=`variable`, location=location(0,0,0,0,0), se
 
 **Пример использования:**
 ```ts
-`variable` = variable::sine(1, "ARCSINE", "DEGREES");
+`variable` = variable.sine(1, "ARCSINE", "DEGREES");
 
 //Или от объекта
 
@@ -10339,11 +10339,11 @@ variable::simplex_noise_3d(variable=`variable`, location=location(0,0,0,0,0), se
 
 //Или в сухую позиционно
 
-variable::sine(`variable`, 1, "ARCSINE", "DEGREES");
+variable.sine(`variable`, 1, "ARCSINE", "DEGREES");
 
 //Или в сухую по ключам
 
-variable::sine(variable=`variable`, number=1, variant="ARCSINE", input="DEGREES");
+variable.sine(variable=`variable`, number=1, variant="ARCSINE", input="DEGREES");
 ```
 
 **Аргументы:**
@@ -10356,7 +10356,7 @@ variable::sine(variable=`variable`, number=1, variant="ARCSINE", input="DEGREES"
 | input    | Маркер<br/>**DEGREES** - Градусы<br/>**RADIANS** - Радианы                                                                                                   | Тип угла                   |
 
 <h3 id=set_variable_sort_any_list>
-  <code>variable::sort_list</code>
+  <code>variable.sort_list</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10370,7 +10370,7 @@ variable::sine(variable=`variable`, number=1, variant="ARCSINE", input="DEGREES"
 
 **Пример использования:**
 ```ts
-`variable` = variable::sort_list([`list`, `list`], "ASCENDING");
+`variable` = variable.sort_list([`list`, `list`], "ASCENDING");
 
 //Или от объекта
 
@@ -10378,11 +10378,11 @@ variable::sine(variable=`variable`, number=1, variant="ARCSINE", input="DEGREES"
 
 //Или в сухую позиционно
 
-variable::sort_list(`variable`, [`list`, `list`], "ASCENDING");
+variable.sort_list(`variable`, [`list`, `list`], "ASCENDING");
 
 //Или в сухую по ключам
 
-variable::sort_list(variable=`variable`, list=[`list`, `list`], sort_mode="ASCENDING");
+variable.sort_list(variable=`variable`, list=[`list`, `list`], sort_mode="ASCENDING");
 ```
 
 **Аргументы:**
@@ -10394,7 +10394,7 @@ variable::sort_list(variable=`variable`, list=[`list`, `list`], sort_mode="ASCEN
 | sort_mode | Маркер<br/>**ASCENDING** - По возрастанию<br/>**DESCENDING** - По убыванию | Способ сортировки         |
 
 <h3 id=set_variable_sort_any_map>
-  <code>variable::sort_map</code>
+  <code>variable.sort_map</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10404,7 +10404,7 @@ variable::sort_list(variable=`variable`, list=[`list`, `list`], sort_mode="ASCEN
 
 **Пример использования:**
 ```ts
-`variable` = variable::sort_map({"map":`map`}, "ASCENDING", "KEYS");
+`variable` = variable.sort_map({"map":`map`}, "ASCENDING", "KEYS");
 
 //Или от объекта
 
@@ -10412,11 +10412,11 @@ variable::sort_list(variable=`variable`, list=[`list`, `list`], sort_mode="ASCEN
 
 //Или в сухую позиционно
 
-variable::sort_map(`variable`, {"map":`map`}, "ASCENDING", "KEYS");
+variable.sort_map(`variable`, {"map":`map`}, "ASCENDING", "KEYS");
 
 //Или в сухую по ключам
 
-variable::sort_map(variable=`variable`, map={"map":`map`}, sort_order="ASCENDING", sort_type="KEYS");
+variable.sort_map(variable=`variable`, map={"map":`map`}, sort_order="ASCENDING", sort_type="KEYS");
 ```
 
 **Аргументы:**
@@ -10429,7 +10429,7 @@ variable::sort_map(variable=`variable`, map={"map":`map`}, sort_order="ASCENDING
 | sort_type  | Маркер<br/>**KEYS** - По ключу<br/>**VALUES** - По значению                | Тип сортировки            |
 
 <h3 id=set_variable_split_text>
-  <code>variable::split_text</code>
+  <code>variable.split_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10439,7 +10439,7 @@ variable::sort_map(variable=`variable`, map={"map":`map`}, sort_order="ASCENDING
 
 **Пример использования:**
 ```ts
-`variable` = variable::split_text("text", "delimiter");
+`variable` = variable.split_text("text", "delimiter");
 
 //Или от объекта
 
@@ -10447,11 +10447,11 @@ variable::sort_map(variable=`variable`, map={"map":`map`}, sort_order="ASCENDING
 
 //Или в сухую позиционно
 
-variable::split_text(`variable`, "text", "delimiter");
+variable.split_text(`variable`, "text", "delimiter");
 
 //Или в сухую по ключам
 
-variable::split_text(variable=`variable`, text="text", delimiter="delimiter");
+variable.split_text(variable=`variable`, text="text", delimiter="delimiter");
 ```
 
 **Аргументы:**
@@ -10463,7 +10463,7 @@ variable::split_text(variable=`variable`, text="text", delimiter="delimiter");
 | delimiter | Текст                | Разделитель               |
 
 <h3 id=set_variable_split_text_by_length>
-  <code>variable::split_text_by_length</code>
+  <code>variable.split_text_by_length</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10473,7 +10473,7 @@ variable::split_text(variable=`variable`, text="text", delimiter="delimiter");
 
 **Пример использования:**
 ```ts
-`variable` = variable::split_text_by_length("text", 1);
+`variable` = variable.split_text_by_length("text", 1);
 
 //Или от объекта
 
@@ -10481,11 +10481,11 @@ variable::split_text(variable=`variable`, text="text", delimiter="delimiter");
 
 //Или в сухую позиционно
 
-variable::split_text_by_length(`variable`, "text", 1);
+variable.split_text_by_length(`variable`, "text", 1);
 
 //Или в сухую по ключам
 
-variable::split_text_by_length(variable=`variable`, text="text", max_length=1);
+variable.split_text_by_length(variable=`variable`, text="text", max_length=1);
 ```
 
 **Аргументы:**
@@ -10497,7 +10497,7 @@ variable::split_text_by_length(variable=`variable`, text="text", max_length=1);
 | max_length | Число                | Длина строки              |
 
 <h3 id=set_variable_strip_text>
-  <code>variable::strip_text</code>
+  <code>variable.strip_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10507,7 +10507,7 @@ variable::split_text_by_length(variable=`variable`, text="text", max_length=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::strip_text("text", "ALL");
+`variable` = variable.strip_text("text", "ALL");
 
 //Или от объекта
 
@@ -10515,11 +10515,11 @@ variable::split_text_by_length(variable=`variable`, text="text", max_length=1);
 
 //Или в сухую позиционно
 
-variable::strip_text(`variable`, "text", "ALL");
+variable.strip_text(`variable`, "text", "ALL");
 
 //Или в сухую по ключам
 
-variable::strip_text(variable=`variable`, text="text", strip_type="ALL");
+variable.strip_text(variable=`variable`, text="text", strip_type="ALL");
 ```
 
 **Аргументы:**
@@ -10531,7 +10531,7 @@ variable::strip_text(variable=`variable`, text="text", strip_type="ALL");
 | strip_type | Маркер<br/>**ALL** - В начале и конце<br/>**END** - В конце<br/>**INDENT** - Отступы<br/>**START** - В начале | Тип удаления              |
 
 <h3 id=set_variable_subtract>
-  <code>variable::subtract</code>
+  <code>variable.subtract</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10541,15 +10541,15 @@ variable::strip_text(variable=`variable`, text="text", strip_type="ALL");
 
 **Пример использования:**
 ```ts
-`variable` = variable::subtract([1, 2]);
+`variable` = variable.subtract([1, 2]);
 
 //Или в сухую позиционно
 
-variable::subtract(`variable`, [1, 2]);
+variable.subtract(`variable`, [1, 2]);
 
 //Или в сухую по ключам
 
-variable::subtract(variable=`variable`, value=[1, 2]);
+variable.subtract(variable=`variable`, value=[1, 2]);
 ```
 
 **Аргументы:**
@@ -10560,7 +10560,7 @@ variable::subtract(variable=`variable`, value=[1, 2]);
 | value    | Список\[Число\]     | Числа для вычитания<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_subtract_vectors>
-  <code>variable::subtract_vectors</code>
+  <code>variable.subtract_vectors</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10570,15 +10570,15 @@ variable::subtract(variable=`variable`, value=[1, 2]);
 
 **Пример использования:**
 ```ts
-`variable` = variable::subtract_vectors([vector(0,0,0), vector(0,0,0)]);
+`variable` = variable.subtract_vectors([vector(0,0,0), vector(0,0,0)]);
 
 //Или в сухую позиционно
 
-variable::subtract_vectors(`variable`, [vector(0,0,0), vector(0,0,0)]);
+variable.subtract_vectors(`variable`, [vector(0,0,0), vector(0,0,0)]);
 
 //Или в сухую по ключам
 
-variable::subtract_vectors(variable=`variable`, vectors=[vector(0,0,0), vector(0,0,0)]);
+variable.subtract_vectors(variable=`variable`, vectors=[vector(0,0,0), vector(0,0,0)]);
 ```
 
 **Аргументы:**
@@ -10589,7 +10589,7 @@ variable::subtract_vectors(variable=`variable`, vectors=[vector(0,0,0), vector(0
 | vectors  | Список\[Вектор\]     | Вектора для получения разницы<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_tangent>
-  <code>variable::tangent</code>
+  <code>variable.tangent</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10599,7 +10599,7 @@ variable::subtract_vectors(variable=`variable`, vectors=[vector(0,0,0), vector(0
 
 **Пример использования:**
 ```ts
-`variable` = variable::tangent(1, "ARCTANGENT", "DEGREES");
+`variable` = variable.tangent(1, "ARCTANGENT", "DEGREES");
 
 //Или от объекта
 
@@ -10607,11 +10607,11 @@ variable::subtract_vectors(variable=`variable`, vectors=[vector(0,0,0), vector(0
 
 //Или в сухую позиционно
 
-variable::tangent(`variable`, 1, "ARCTANGENT", "DEGREES");
+variable.tangent(`variable`, 1, "ARCTANGENT", "DEGREES");
 
 //Или в сухую по ключам
 
-variable::tangent(variable=`variable`, number=1, variant="ARCTANGENT", input="DEGREES");
+variable.tangent(variable=`variable`, number=1, variant="ARCTANGENT", input="DEGREES");
 ```
 
 **Аргументы:**
@@ -10624,7 +10624,7 @@ variable::tangent(variable=`variable`, number=1, variant="ARCTANGENT", input="DE
 | input    | Маркер<br/>**DEGREES** - Градусы<br/>**RADIANS** - Радианы                                                                                                                       | Тип угла                     |
 
 <h3 id=set_variable_text>
-  <code>variable::set_text</code>
+  <code>variable.set_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10634,15 +10634,15 @@ variable::tangent(variable=`variable`, number=1, variant="ARCTANGENT", input="DE
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_text(["text", "text"], "CONCATENATION");
+`variable` = variable.set_text(["text", "text"], "CONCATENATION");
 
 //Или в сухую позиционно
 
-variable::set_text(`variable`, ["text", "text"], "CONCATENATION");
+variable.set_text(`variable`, ["text", "text"], "CONCATENATION");
 
 //Или в сухую по ключам
 
-variable::set_text(variable=`variable`, text=["text", "text"], merging="CONCATENATION");
+variable.set_text(variable=`variable`, text=["text", "text"], merging="CONCATENATION");
 ```
 
 **Аргументы:**
@@ -10654,7 +10654,7 @@ variable::set_text(variable=`variable`, text=["text", "text"], merging="CONCATEN
 | merging  | Маркер<br/>**CONCATENATION** - Объединение<br/>**SEPARATE_LINES** - Разделение на строки<br/>**SPACES** - Разделение пробелом | Объединение текста                                               |
 
 <h3 id=set_variable_text_case>
-  <code>variable::set_text_case</code>
+  <code>variable.set_text_case</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10664,7 +10664,7 @@ variable::set_text(variable=`variable`, text=["text", "text"], merging="CONCATEN
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_text_case("text", "INVERT");
+`variable` = variable.set_text_case("text", "INVERT");
 
 //Или от объекта
 
@@ -10672,11 +10672,11 @@ variable::set_text(variable=`variable`, text=["text", "text"], merging="CONCATEN
 
 //Или в сухую позиционно
 
-variable::set_text_case(`variable`, "text", "INVERT");
+variable.set_text_case(`variable`, "text", "INVERT");
 
 //Или в сухую по ключам
 
-variable::set_text_case(variable=`variable`, text="text", case_type="INVERT");
+variable.set_text_case(variable=`variable`, text="text", case_type="INVERT");
 ```
 
 **Аргументы:**
@@ -10688,7 +10688,7 @@ variable::set_text_case(variable=`variable`, text="text", case_type="INVERT");
 | case_type | Маркер<br/>**INVERT** - Инвертировать<br/>**LOWER** - Нижний<br/>**PROPER** - Первый символ<br/>**RANDOM** - Случайный<br/>**UPPER** - Верхний | Тип регистра              |
 
 <h3 id=set_variable_text_length>
-  <code>variable::get_text_length</code>
+  <code>variable.get_text_length</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10698,7 +10698,7 @@ variable::set_text_case(variable=`variable`, text="text", case_type="INVERT");
 
 **Пример использования:**
 ```ts
-`variable` = variable::get_text_length("text");
+`variable` = variable.get_text_length("text");
 
 //Или от объекта
 
@@ -10706,11 +10706,11 @@ variable::set_text_case(variable=`variable`, text="text", case_type="INVERT");
 
 //Или в сухую позиционно
 
-variable::get_text_length(`variable`, "text");
+variable.get_text_length(`variable`, "text");
 
 //Или в сухую по ключам
 
-variable::get_text_length(variable=`variable`, text="text");
+variable.get_text_length(variable=`variable`, text="text");
 ```
 
 **Аргументы:**
@@ -10721,7 +10721,7 @@ variable::get_text_length(variable=`variable`, text="text");
 | text     | Текст               | Текст для получения длины |
 
 <h3 id=set_variable_text_to_bytes>
-  <code>variable::text_to_bytes</code>
+  <code>variable.text_to_bytes</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10731,7 +10731,7 @@ variable::get_text_length(variable=`variable`, text="text");
 
 **Пример использования:**
 ```ts
-`variable` = variable::text_to_bytes("text", "UTF_16");
+`variable` = variable.text_to_bytes("text", "UTF_16");
 
 //Или от объекта
 
@@ -10739,11 +10739,11 @@ variable::get_text_length(variable=`variable`, text="text");
 
 //Или в сухую позиционно
 
-variable::text_to_bytes(`variable`, "text", "UTF_16");
+variable.text_to_bytes(`variable`, "text", "UTF_16");
 
 //Или в сухую по ключам
 
-variable::text_to_bytes(variable=`variable`, text="text", charset="UTF_16");
+variable.text_to_bytes(variable=`variable`, text="text", charset="UTF_16");
 ```
 
 **Аргументы:**
@@ -10755,7 +10755,7 @@ variable::text_to_bytes(variable=`variable`, text="text", charset="UTF_16");
 | charset  | Маркер<br/>**UTF_16** - UTF-16<br/>**UTF_8** - UTF-8<br/>**ASCII** - ASCII | Кодировка                 |
 
 <h3 id=set_variable_text_to_chars>
-  <code>variable::text_to_chars</code>
+  <code>variable.text_to_chars</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10765,7 +10765,7 @@ variable::text_to_bytes(variable=`variable`, text="text", charset="UTF_16");
 
 **Пример использования:**
 ```ts
-`variable` = variable::text_to_chars("text", "CHARS");
+`variable` = variable.text_to_chars("text", "CHARS");
 
 //Или от объекта
 
@@ -10773,11 +10773,11 @@ variable::text_to_bytes(variable=`variable`, text="text", charset="UTF_16");
 
 //Или в сухую позиционно
 
-variable::text_to_chars(`variable`, "text", "CHARS");
+variable.text_to_chars(`variable`, "text", "CHARS");
 
 //Или в сухую по ключам
 
-variable::text_to_chars(variable=`variable`, text="text", chars_type="CHARS");
+variable.text_to_chars(variable=`variable`, text="text", chars_type="CHARS");
 ```
 
 **Аргументы:**
@@ -10789,7 +10789,7 @@ variable::text_to_chars(variable=`variable`, text="text", chars_type="CHARS");
 | chars_type | Маркер<br/>**CHARS** - Символы (UTF-16)<br/>**CODES** - Коды символов (UTF-16)<br/>**CODEPOINTS_CHARS** - Символы (Unicode)<br/>**CODEPOINTS** - Кодовые точки (Unicode) | Тип символов              |
 
 <h3 id=set_variable_to_char>
-  <code>variable::to_char</code>
+  <code>variable.to_char</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10799,7 +10799,7 @@ variable::text_to_chars(variable=`variable`, text="text", chars_type="CHARS");
 
 **Пример использования:**
 ```ts
-`variable` = variable::to_char(1);
+`variable` = variable.to_char(1);
 
 //Или от объекта
 
@@ -10807,11 +10807,11 @@ variable::text_to_chars(variable=`variable`, text="text", chars_type="CHARS");
 
 //Или в сухую позиционно
 
-variable::to_char(`variable`, 1);
+variable.to_char(`variable`, 1);
 
 //Или в сухую по ключам
 
-variable::to_char(variable=`variable`, number=1);
+variable.to_char(variable=`variable`, number=1);
 ```
 
 **Аргументы:**
@@ -10822,7 +10822,7 @@ variable::to_char(variable=`variable`, number=1);
 | number   | Число               | Число для получения символа |
 
 <h3 id=set_variable_to_hsb>
-  <code>variable::to_hsb</code>
+  <code>variable.to_hsb</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10832,15 +10832,15 @@ variable::to_char(variable=`variable`, number=1);
 
 **Пример использования:**
 ```ts
-`variable` = variable::to_hsb(1, 2, 3);
+`variable` = variable.to_hsb(1, 2, 3);
 
 //Или в сухую позиционно
 
-variable::to_hsb(`variable`, 1, 2, 3);
+variable.to_hsb(`variable`, 1, 2, 3);
 
 //Или в сухую по ключам
 
-variable::to_hsb(variable=`variable`, hue=1, saturation=2, brightness=3);
+variable.to_hsb(variable=`variable`, hue=1, saturation=2, brightness=3);
 ```
 
 **Аргументы:**
@@ -10853,7 +10853,7 @@ variable::to_hsb(variable=`variable`, hue=1, saturation=2, brightness=3);
 | brightness | Число               | Яркость (0 - 100)         |
 
 <h3 id=set_variable_to_hsl>
-  <code>variable::to_hsl</code>
+  <code>variable.to_hsl</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10863,15 +10863,15 @@ variable::to_hsb(variable=`variable`, hue=1, saturation=2, brightness=3);
 
 **Пример использования:**
 ```ts
-`variable` = variable::to_hsl(1, 2, 3);
+`variable` = variable.to_hsl(1, 2, 3);
 
 //Или в сухую позиционно
 
-variable::to_hsl(`variable`, 1, 2, 3);
+variable.to_hsl(`variable`, 1, 2, 3);
 
 //Или в сухую по ключам
 
-variable::to_hsl(variable=`variable`, hue=1, saturation=2, lightness=3);
+variable.to_hsl(variable=`variable`, hue=1, saturation=2, lightness=3);
 ```
 
 **Аргументы:**
@@ -10884,7 +10884,7 @@ variable::to_hsl(variable=`variable`, hue=1, saturation=2, lightness=3);
 | lightness  | Число               | Светлота (0 - 100)        |
 
 <h3 id=set_variable_to_json>
-  <code>variable::to_json</code>
+  <code>variable.to_json</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10894,15 +10894,15 @@ variable::to_hsl(variable=`variable`, hue=1, saturation=2, lightness=3);
 
 **Пример использования:**
 ```ts
-`variable` = variable::to_json("any value", "FALSE");
+`variable` = variable.to_json("any value", "FALSE");
 
 //Или в сухую позиционно
 
-variable::to_json(`variable`, "any value", "FALSE");
+variable.to_json(`variable`, "any value", "FALSE");
 
 //Или в сухую по ключам
 
-variable::to_json(variable=`variable`, value="any value", pretty_print="FALSE");
+variable.to_json(variable=`variable`, value="any value", pretty_print="FALSE");
 ```
 
 **Аргументы:**
@@ -10914,7 +10914,7 @@ variable::to_json(variable=`variable`, value="any value", pretty_print="FALSE");
 | pretty_print | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Форматирование Pretty Print  |
 
 <h3 id=set_variable_to_rgb>
-  <code>variable::to_rgb</code>
+  <code>variable.to_rgb</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10924,15 +10924,15 @@ variable::to_json(variable=`variable`, value="any value", pretty_print="FALSE");
 
 **Пример использования:**
 ```ts
-`variable` = variable::to_rgb(1, 2, 3);
+`variable` = variable.to_rgb(1, 2, 3);
 
 //Или в сухую позиционно
 
-variable::to_rgb(`variable`, 1, 2, 3);
+variable.to_rgb(`variable`, 1, 2, 3);
 
 //Или в сухую по ключам
 
-variable::to_rgb(variable=`variable`, red=1, green=2, blue=3);
+variable.to_rgb(variable=`variable`, red=1, green=2, blue=3);
 ```
 
 **Аргументы:**
@@ -10945,7 +10945,7 @@ variable::to_rgb(variable=`variable`, red=1, green=2, blue=3);
 | blue     | Число               | Синий канал (0 - 255)     |
 
 <h3 id=set_variable_trim_list>
-  <code>variable::trim_list</code>
+  <code>variable.trim_list</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10955,7 +10955,7 @@ variable::to_rgb(variable=`variable`, red=1, green=2, blue=3);
 
 **Пример использования:**
 ```ts
-`variable` = variable::trim_list([`list`, `list`], 1, 2);
+`variable` = variable.trim_list([`list`, `list`], 1, 2);
 
 //Или от объекта
 
@@ -10963,11 +10963,11 @@ variable::to_rgb(variable=`variable`, red=1, green=2, blue=3);
 
 //Или в сухую позиционно
 
-variable::trim_list(`variable`, [`list`, `list`], 1, 2);
+variable.trim_list(`variable`, [`list`, `list`], 1, 2);
 
 //Или в сухую по ключам
 
-variable::trim_list(variable=`variable`, list=[`list`, `list`], start=1, end=2);
+variable.trim_list(variable=`variable`, list=[`list`, `list`], start=1, end=2);
 ```
 
 **Аргументы:**
@@ -10980,7 +10980,7 @@ variable::trim_list(variable=`variable`, list=[`list`, `list`], start=1, end=2);
 | end      | Число                | Индекс конца              |
 
 <h3 id=set_variable_trim_text>
-  <code>variable::trim_text</code>
+  <code>variable.trim_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -10990,7 +10990,7 @@ variable::trim_list(variable=`variable`, list=[`list`, `list`], start=1, end=2);
 
 **Пример использования:**
 ```ts
-`variable` = variable::trim_text("text", 1, 2);
+`variable` = variable.trim_text("text", 1, 2);
 
 //Или от объекта
 
@@ -10998,11 +10998,11 @@ variable::trim_list(variable=`variable`, list=[`list`, `list`], start=1, end=2);
 
 //Или в сухую позиционно
 
-variable::trim_text(`variable`, "text", 1, 2);
+variable.trim_text(`variable`, "text", 1, 2);
 
 //Или в сухую по ключам
 
-variable::trim_text(variable=`variable`, text="text", start=1, end=2);
+variable.trim_text(variable=`variable`, text="text", start=1, end=2);
 ```
 
 **Аргументы:**
@@ -11015,7 +11015,7 @@ variable::trim_text(variable=`variable`, text="text", start=1, end=2);
 | end      | Число               | Конечная позиция          |
 
 <h3 id=set_variable_unset_item_components>
-  <code>variable::unset_item_components</code>
+  <code>variable.unset_item_components</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -11025,7 +11025,7 @@ variable::trim_text(variable=`variable`, text="text", start=1, end=2);
 
 **Пример использования:**
 ```ts
-`variable` = variable::unset_item_components(item("stick"), ["components", "components"]);
+`variable` = variable.unset_item_components(item("stick"), ["components", "components"]);
 
 //Или от объекта
 
@@ -11033,11 +11033,11 @@ variable::trim_text(variable=`variable`, text="text", start=1, end=2);
 
 //Или в сухую позиционно
 
-variable::unset_item_components(`variable`, item("stick"), ["components", "components"]);
+variable.unset_item_components(`variable`, item("stick"), ["components", "components"]);
 
 //Или в сухую по ключам
 
-variable::unset_item_components(variable=`variable`, item=item("stick"), components=["components", "components"]);
+variable.unset_item_components(variable=`variable`, item=item("stick"), components=["components", "components"]);
 ```
 
 **Аргументы:**
@@ -11049,7 +11049,7 @@ variable::unset_item_components(variable=`variable`, item=item("stick"), compone
 | components | Список\[Текст\]       | Ключи удаляемых компонентов<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=set_variable_value>
-  <code>variable::set_value</code>
+  <code>variable.set_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -11059,15 +11059,15 @@ variable::unset_item_components(variable=`variable`, item=item("stick"), compone
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_value("any value");
+`variable` = variable.set_value("any value");
 
 //Или в сухую позиционно
 
-variable::set_value(`variable`, "any value");
+variable.set_value(`variable`, "any value");
 
 //Или в сухую по ключам
 
-variable::set_value(variable=`variable`, value="any value");
+variable.set_value(variable=`variable`, value="any value");
 ```
 
 **Аргументы:**
@@ -11078,7 +11078,7 @@ variable::set_value(variable=`variable`, value="any value");
 | value    | Любое значение               | Значение для присвоения   |
 
 <h3 id=set_variable_vector>
-  <code>variable::set_vector</code>
+  <code>variable.set_vector</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -11088,15 +11088,15 @@ variable::set_value(variable=`variable`, value="any value");
 
 **Пример использования:**
 ```ts
-`variable` = variable::set_vector(1, 2, 3);
+`variable` = variable.set_vector(1, 2, 3);
 
 //Или в сухую позиционно
 
-variable::set_vector(`variable`, 1, 2, 3);
+variable.set_vector(`variable`, 1, 2, 3);
 
 //Или в сухую по ключам
 
-variable::set_vector(variable=`variable`, x=1, y=2, z=3);
+variable.set_vector(variable=`variable`, x=1, y=2, z=3);
 ```
 
 **Аргументы:**
@@ -11109,7 +11109,7 @@ variable::set_vector(variable=`variable`, x=1, y=2, z=3);
 | z        | Число                | Координата Z              |
 
 <h3 id=set_variable_vector_cross_product>
-  <code>variable::vector_cross_product</code>
+  <code>variable.vector_cross_product</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -11119,15 +11119,15 @@ variable::set_vector(variable=`variable`, x=1, y=2, z=3);
 
 **Пример использования:**
 ```ts
-`variable` = variable::vector_cross_product(vector(0,0,0), vector(0,0,0));
+`variable` = variable.vector_cross_product(vector(0,0,0), vector(0,0,0));
 
 //Или в сухую позиционно
 
-variable::vector_cross_product(`variable`, vector(0,0,0), vector(0,0,0));
+variable.vector_cross_product(`variable`, vector(0,0,0), vector(0,0,0));
 
 //Или в сухую по ключам
 
-variable::vector_cross_product(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0));
+variable.vector_cross_product(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -11139,7 +11139,7 @@ variable::vector_cross_product(variable=`variable`, vector_1=vector(0,0,0), vect
 | vector_2 | Вектор               | Второй вектор             |
 
 <h3 id=set_variable_vector_dot_product>
-  <code>variable::vector_dot_product</code>
+  <code>variable.vector_dot_product</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -11149,15 +11149,15 @@ variable::vector_cross_product(variable=`variable`, vector_1=vector(0,0,0), vect
 
 **Пример использования:**
 ```ts
-`variable` = variable::vector_dot_product(vector(0,0,0), vector(0,0,0));
+`variable` = variable.vector_dot_product(vector(0,0,0), vector(0,0,0));
 
 //Или в сухую позиционно
 
-variable::vector_dot_product(`variable`, vector(0,0,0), vector(0,0,0));
+variable.vector_dot_product(`variable`, vector(0,0,0), vector(0,0,0));
 
 //Или в сухую по ключам
 
-variable::vector_dot_product(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0));
+variable.vector_dot_product(variable=`variable`, vector_1=vector(0,0,0), vector_2=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -11169,7 +11169,7 @@ variable::vector_dot_product(variable=`variable`, vector_1=vector(0,0,0), vector
 | vector_2 | Вектор              | Второй вектор             |
 
 <h3 id=set_variable_vector_to_direction_name>
-  <code>variable::vector_to_direction_name</code>
+  <code>variable.vector_to_direction_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -11179,7 +11179,7 @@ variable::vector_dot_product(variable=`variable`, vector_1=vector(0,0,0), vector
 
 **Пример использования:**
 ```ts
-`variable` = variable::vector_to_direction_name(vector(0,0,0));
+`variable` = variable.vector_to_direction_name(vector(0,0,0));
 
 //Или от объекта
 
@@ -11187,11 +11187,11 @@ variable::vector_dot_product(variable=`variable`, vector_1=vector(0,0,0), vector
 
 //Или в сухую позиционно
 
-variable::vector_to_direction_name(`variable`, vector(0,0,0));
+variable.vector_to_direction_name(`variable`, vector(0,0,0));
 
 //Или в сухую по ключам
 
-variable::vector_to_direction_name(variable=`variable`, vector=vector(0,0,0));
+variable.vector_to_direction_name(variable=`variable`, vector=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -11202,7 +11202,7 @@ variable::vector_to_direction_name(variable=`variable`, vector=vector(0,0,0));
 | vector   | Вектор              | Вектор для получения      |
 
 <h3 id=set_variable_voronoi_noise_3d>
-  <code>variable::voronoi_noise_3d</code>
+  <code>variable.voronoi_noise_3d</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -11212,7 +11212,7 @@ variable::vector_to_direction_name(variable=`variable`, vector=vector(0,0,0));
 
 **Пример использования:**
 ```ts
-`variable` = variable::voronoi_noise_3d(location(0,0,0,0,0), 1, 2, 3, "FULL_RANGE", "FALSE");
+`variable` = variable.voronoi_noise_3d(location(0,0,0,0,0), 1, 2, 3, "FULL_RANGE", "FALSE");
 
 //Или от объекта
 
@@ -11220,11 +11220,11 @@ variable::vector_to_direction_name(variable=`variable`, vector=vector(0,0,0));
 
 //Или в сухую позиционно
 
-variable::voronoi_noise_3d(`variable`, location(0,0,0,0,0), 1, 2, 3, "FULL_RANGE", "FALSE");
+variable.voronoi_noise_3d(`variable`, location(0,0,0,0,0), 1, 2, 3, "FULL_RANGE", "FALSE");
 
 //Или в сухую по ключам
 
-variable::voronoi_noise_3d(variable=`variable`, location=location(0,0,0,0,0), seed=1, frequency=2, displacement=3, range_mode="FULL_RANGE", enable_distance="FALSE");
+variable.voronoi_noise_3d(variable=`variable`, location=location(0,0,0,0,0), seed=1, frequency=2, displacement=3, range_mode="FULL_RANGE", enable_distance="FALSE");
 ```
 
 **Аргументы:**
@@ -11240,7 +11240,7 @@ variable::voronoi_noise_3d(variable=`variable`, location=location(0,0,0,0,0), se
 | enable_distance | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить               | Режим расстояния                  |
 
 <h3 id=set_variable_warp>
-  <code>variable::wrap</code>
+  <code>variable.wrap</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -11250,7 +11250,7 @@ variable::voronoi_noise_3d(variable=`variable`, location=location(0,0,0,0,0), se
 
 **Пример использования:**
 ```ts
-`variable` = variable::wrap(1, 2, 3);
+`variable` = variable.wrap(1, 2, 3);
 
 //Или от объекта
 
@@ -11258,11 +11258,11 @@ variable::voronoi_noise_3d(variable=`variable`, location=location(0,0,0,0,0), se
 
 //Или в сухую позиционно
 
-variable::wrap(`variable`, 1, 2, 3);
+variable.wrap(`variable`, 1, 2, 3);
 
 //Или в сухую по ключам
 
-variable::wrap(variable=`variable`, number=1, min=2, max=3);
+variable.wrap(variable=`variable`, number=1, min=2, max=3);
 ```
 
 **Аргументы:**
