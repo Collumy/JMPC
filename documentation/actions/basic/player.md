@@ -18,7 +18,7 @@
 **Важно:** эти селекторы доступны только для действий от объекта `player`.
 
 <h3 id=if_player_chat_colors_enabled>
-  <code>player::chat_colors_enabled</code>
+  <code>player.chat_colors_enabled</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -29,12 +29,12 @@
 **Пример использования:**
 ```ts
 if player(chat_colors_enabled()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_chat_message_equals>
-  <code>player::chat_message_equals</code>
+  <code>player.chat_message_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -45,13 +45,13 @@ if player(chat_colors_enabled()){
 **Пример использования:**
 ```ts
 if player(chat_message_equals(["chat_messages", "chat_messages"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(chat_message_equals(chat_messages=["chat_messages", "chat_messages"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -62,7 +62,7 @@ if player(chat_message_equals(chat_messages=["chat_messages", "chat_messages"]))
 | chat_messages | Список\[Текст\] | Сообщение<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_player_collides_at_location>
-  <code>player::collides_at_location</code>
+  <code>player.collides_at_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -73,13 +73,13 @@ if player(chat_message_equals(chat_messages=["chat_messages", "chat_messages"]))
 **Пример использования:**
 ```ts
 if player(collides_at_location(location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(collides_at_location(location=location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -90,7 +90,7 @@ if player(collides_at_location(location=location(0,0,0,0,0))){
 | location | Местоположение | Местоположение для проверки |
 
 <h3 id=if_player_collides_using_hitbox>
-  <code>player::collides_using_hitbox</code>
+  <code>player.collides_using_hitbox</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -101,13 +101,13 @@ if player(collides_at_location(location=location(0,0,0,0,0))){
 **Пример использования:**
 ```ts
 if player(collides_using_hitbox(location(0,0,0,0,0), location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(collides_using_hitbox(min=location(0,0,0,0,0), max=location(0,0,0,0,0))){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -119,7 +119,7 @@ if player(collides_using_hitbox(min=location(0,0,0,0,0), max=location(0,0,0,0,0)
 | max | Местоположение | Второй угол хитбокса |
 
 <h3 id=if_player_collides_with_entity>
-  <code>player::collides_with_entity</code>
+  <code>player.collides_with_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -130,13 +130,13 @@ if player(collides_using_hitbox(min=location(0,0,0,0,0), max=location(0,0,0,0,0)
 **Пример использования:**
 ```ts
 if player(collides_with_entity("name_or_uuid", "CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(collides_with_entity(name_or_uuid="name_or_uuid", check_type="CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -148,7 +148,7 @@ if player(collides_with_entity(name_or_uuid="name_or_uuid", check_type="CONTAINS
 | check_type   | Маркер<br/>**CONTAINS** - Содержит<br/>**OVERLAPS** - Пересекается | Тип проверки столкновения |
 
 <h3 id=if_player_cursor_item_equals>
-  <code>player::cursor_item_equals</code>
+  <code>player.cursor_item_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -159,13 +159,13 @@ if player(collides_with_entity(name_or_uuid="name_or_uuid", check_type="CONTAINS
 **Пример использования:**
 ```ts
 if player(cursor_item_equals([item("stick"), item("stick")], "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(cursor_item_equals(items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -177,7 +177,7 @@ if player(cursor_item_equals(items=[item("stick"), item("stick")], comparison_mo
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать только количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения                                                    |
 
 <h3 id=if_player_dummy>
-  <code>player::is_dummy</code>
+  <code>player.is_dummy</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -188,12 +188,12 @@ if player(cursor_item_equals(items=[item("stick"), item("stick")], comparison_mo
 **Пример использования:**
 ```ts
 if player(is_dummy()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_gamemode_equals>
-  <code>player::gamemode_equals</code>
+  <code>player.gamemode_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -204,13 +204,13 @@ if player(is_dummy()){
 **Пример использования:**
 ```ts
 if player(gamemode_equals("ADVENTURE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(gamemode_equals(gamemode="ADVENTURE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -221,7 +221,7 @@ if player(gamemode_equals(gamemode="ADVENTURE")){
 | gamemode | Маркер<br/>**ADVENTURE** - Приключение<br/>**CREATIVE** - Творческий<br/>**SPECTATOR** - Наблюдатель<br/>**SURVIVAL** - Выживание | Режим игры |
 
 <h3 id=if_player_has_input>
-  <code>player::has_input</code>
+  <code>player.has_input</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -232,13 +232,13 @@ if player(gamemode_equals(gamemode="ADVENTURE")){
 **Пример использования:**
 ```ts
 if player(has_input("FORWARD")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(has_input(input_type="FORWARD")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -249,7 +249,7 @@ if player(has_input(input_type="FORWARD")){
 | input_type | Маркер<br/>**FORWARD** - Вперёд<br/>**BACKWARDS** - Назад<br/>**LEFT** - Влево<br/>**RIGHT** - Вправо<br/>**JUMP** - Прыжок<br/>**SNEAK** - Приседание<br/>**SPRINT** - Бег | Клавиша передвижения |
 
 <h3 id=if_player_has_item>
-  <code>player::has_item</code>
+  <code>player.has_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -260,13 +260,13 @@ if player(has_input(input_type="FORWARD")){
 **Пример использования:**
 ```ts
 if player(has_item([item("stick"), item("stick")], "ALL", "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(has_item(items=[item("stick"), item("stick")], check_mode="ALL", comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -279,7 +279,7 @@ if player(has_item(items=[item("stick"), item("stick")], check_mode="ALL", compa
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения                                                    |
 
 <h3 id=if_player_has_item_at_least>
-  <code>player::has_item_at_least</code>
+  <code>player.has_item_at_least</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -290,13 +290,13 @@ if player(has_item(items=[item("stick"), item("stick")], check_mode="ALL", compa
 **Пример использования:**
 ```ts
 if player(has_item_at_least(item("stick"), 1, "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(has_item_at_least(item=item("stick"), count=1, comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -309,7 +309,7 @@ if player(has_item_at_least(item=item("stick"), count=1, comparison_mode="EXACTL
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения        |
 
 <h3 id=if_player_has_item_in_slot>
-  <code>player::has_item_in_slot</code>
+  <code>player.has_item_in_slot</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -320,13 +320,13 @@ if player(has_item_at_least(item=item("stick"), count=1, comparison_mode="EXACTL
 **Пример использования:**
 ```ts
 if player(has_item_in_slot([1, 2], [item("stick"), item("stick")], "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(has_item_in_slot(slots=[1, 2], items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -339,7 +339,7 @@ if player(has_item_in_slot(slots=[1, 2], items=[item("stick"), item("stick")], c
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать только количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения                                                       |
 
 <h3 id=if_player_has_potion_effect>
-  <code>player::has_potion_effect</code>
+  <code>player.has_potion_effect</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -350,13 +350,13 @@ if player(has_item_in_slot(slots=[1, 2], items=[item("stick"), item("stick")], c
 **Пример использования:**
 ```ts
 if player(has_potion_effect([potion("slow_falling"), potion("slow_falling")], "ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(has_potion_effect(potions=[potion("slow_falling"), potion("slow_falling")], check_mode="ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -368,7 +368,7 @@ if player(has_potion_effect(potions=[potion("slow_falling"), potion("slow_fallin
 | check_mode | Маркер<br/>**ALL** - Все эффекты<br/>**ANY** - Любой эффект | Режим проверки                                                  |
 
 <h3 id=if_player_has_privilege>
-  <code>player::has_privilege</code>
+  <code>player.has_privilege</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -381,13 +381,13 @@ if player(has_potion_effect(potions=[potion("slow_falling"), potion("slow_fallin
 **Пример использования:**
 ```ts
 if player(has_privilege("BUILDER", "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(has_privilege(privilege="BUILDER", exact="FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -399,7 +399,7 @@ if player(has_privilege(privilege="BUILDER", exact="FALSE")){
 | exact     | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить                                                                                                                                      | Точность проверки |
 
 <h3 id=if_player_has_room_for_item>
-  <code>player::has_room_for_item</code>
+  <code>player.has_room_for_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -410,13 +410,13 @@ if player(has_privilege(privilege="BUILDER", exact="FALSE")){
 **Пример использования:**
 ```ts
 if player(has_room_for_item([item("stick"), item("stick")], "ARMOR", "ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(has_room_for_item(items=[item("stick"), item("stick")], checked_slots="ARMOR", check_mode="ALL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -429,7 +429,7 @@ if player(has_room_for_item(items=[item("stick"), item("stick")], checked_slots=
 | check_mode    | Маркер<br/>**ALL** - Все предметы<br/>**ANY** - Любые предметы                                                                                                                         | Режим проверки предметов                                           |
 
 <h3 id=if_player_hotbar_slot_equals>
-  <code>player::hotbar_slot_equals</code>
+  <code>player.hotbar_slot_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -440,13 +440,13 @@ if player(has_room_for_item(items=[item("stick"), item("stick")], checked_slots=
 **Пример использования:**
 ```ts
 if player(hotbar_slot_equals(1)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(hotbar_slot_equals(slot=1)){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -457,7 +457,7 @@ if player(hotbar_slot_equals(slot=1)){
 | slot | Число | Номер слота для проверки |
 
 <h3 id=if_player_in_area>
-  <code>player::in_area</code>
+  <code>player.in_area</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -468,13 +468,13 @@ if player(hotbar_slot_equals(slot=1)){
 **Пример использования:**
 ```ts
 if player(in_area(location(0,0,0,0,0), location(0,0,0,0,0), "FALSE", "HITBOX", "CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(in_area(location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0), ignore_y_axis="FALSE", intersect_type="HITBOX", check_type="CONTAINS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -489,7 +489,7 @@ if player(in_area(location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0)
 | check_type     | Маркер<br/>**CONTAINS** - Содержит<br/>**OVERLAPS** - Пересекается | Тип проверки хитбокса |
 
 <h3 id=if_player_inventory_menu_slot_equals>
-  <code>player::inventory_menu_slot_equals</code>
+  <code>player.inventory_menu_slot_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -500,13 +500,13 @@ if player(in_area(location_1=location(0,0,0,0,0), location_2=location(0,0,0,0,0)
 **Пример использования:**
 ```ts
 if player(inventory_menu_slot_equals([1, 2], [item("stick"), item("stick")], "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(inventory_menu_slot_equals(slots=[1, 2], items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -519,7 +519,7 @@ if player(inventory_menu_slot_equals(slots=[1, 2], items=[item("stick"), item("s
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать только количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения                                                       |
 
 <h3 id=if_player_inventory_type_open>
-  <code>player::inventory_type_open</code>
+  <code>player.inventory_type_open</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -530,13 +530,13 @@ if player(inventory_menu_slot_equals(slots=[1, 2], items=[item("stick"), item("s
 **Пример использования:**
 ```ts
 if player(inventory_type_open("ANVIL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(inventory_type_open(inventory_type="ANVIL")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -547,7 +547,7 @@ if player(inventory_type_open(inventory_type="ANVIL")){
 | inventory_type | Маркер<br/>**ANVIL** - Наковальня<br/>**BARREL** - Бочка<br/>**BEACON** - Маяк<br/>**BLAST_FURNACE** - Плавильная печь<br/>**BREWING** - Зельеварка<br/>**CARTOGRAPHY** - Стол картографа<br/>**CHEST** - Сундук<br/>**CHISELED_BOOKSHELF** - Резная книжная полка<br/>**COMPOSTER** - Компостер<br/>**CRAFTER** - Сборщик<br/>**CRAFTING** - Не открыт<br/>**CREATIVE** - Инвентарь креатива<br/>**DECORATED_POT** - Ваза<br/>**DISPENSER** - Раздатчик<br/>**DROPPER** - Выбрасыватель<br/>**ENCHANTING** - Чародейский стол<br/>**ENDER_CHEST** - Эндер-сундук<br/>**FURNACE** - Печь<br/>**GRINDSTONE** - Точило<br/>**HOPPER** - Воронка<br/>**JUKEBOX** - Нотный блок<br/>**LECTERN** - Кафедра<br/>**LOOM** - Ткацкий станок<br/>**MERCHANT** - Торговец<br/>**PLAYER** - Инвентарь игрока<br/>**SHULKER_BOX** - Шалкеровый ящик<br/>**SMITHING** - Стол кузнеца (старый)<br/>**SMITHING_NEW** - Стол кузнеца<br/>**SMOKER** - Коптильня<br/>**STONECUTTER** - Камнерез<br/>**WORKBENCH** - Верстак | Тип инвентаря |
 
 <h3 id=if_player_is_allow_server_listing>
-  <code>player::is_allow_server_listing</code>
+  <code>player.is_allow_server_listing</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -558,12 +558,12 @@ if player(inventory_type_open(inventory_type="ANVIL")){
 **Пример использования:**
 ```ts
 if player(is_allow_server_listing()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_blocking>
-  <code>player::is_blocking</code>
+  <code>player.is_blocking</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -574,12 +574,12 @@ if player(is_allow_server_listing()){
 **Пример использования:**
 ```ts
 if player(is_blocking()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_disguised>
-  <code>player::is_disguised</code>
+  <code>player.is_disguised</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -590,12 +590,12 @@ if player(is_blocking()){
 **Пример использования:**
 ```ts
 if player(is_disguised()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_flying>
-  <code>player::is_flying</code>
+  <code>player.is_flying</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -606,12 +606,12 @@ if player(is_disguised()){
 **Пример использования:**
 ```ts
 if player(is_flying()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_gliding>
-  <code>player::is_gliding</code>
+  <code>player.is_gliding</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -622,12 +622,12 @@ if player(is_flying()){
 **Пример использования:**
 ```ts
 if player(is_gliding()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_holding>
-  <code>player::holding</code>
+  <code>player.holding</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -638,13 +638,13 @@ if player(is_gliding()){
 **Пример использования:**
 ```ts
 if player(holding([item("stick"), item("stick")], "EITHER_HAND", "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(holding(items=[item("stick"), item("stick")], hand_slot="EITHER_HAND", comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -657,7 +657,7 @@ if player(holding(items=[item("stick"), item("stick")], hand_slot="EITHER_HAND",
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать только количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения                                                    |
 
 <h3 id=if_player_is_looking_at_block>
-  <code>player::is_looking_at_block</code>
+  <code>player.is_looking_at_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -668,13 +668,13 @@ if player(holding(items=[item("stick"), item("stick")], hand_slot="EITHER_HAND",
 **Пример использования:**
 ```ts
 if player(is_looking_at_block(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], [location(0,0,0,0,0), location(0,0,0,0,0)], 1, "ALWAYS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(is_looking_at_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], locations=[location(0,0,0,0,0), location(0,0,0,0,0)], distance=1, fluid_mode="ALWAYS")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -688,7 +688,7 @@ if player(is_looking_at_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:oa
 | fluid_mode | Маркер<br/>**ALWAYS** - Все виды жидкостей<br/>**NEVER** - Игнорировать жидкости<br/>**SOURCE_ONLY** - Только источники жидкостей | Режим жидкости                                                              |
 
 <h3 id=if_player_is_near>
-  <code>player::is_near</code>
+  <code>player.is_near</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -699,13 +699,13 @@ if player(is_looking_at_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:oa
 **Пример использования:**
 ```ts
 if player(is_near(1, location(0,0,0,0,0), "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(is_near(range=1, location=location(0,0,0,0,0), ignore_y_axis="FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -718,7 +718,7 @@ if player(is_near(range=1, location=location(0,0,0,0,0), ignore_y_axis="FALSE"))
 | ignore_y_axis | Маркер<br/>**FALSE** - Не игнорировать<br/>**TRUE** - Игнорировать | Игнорировать ось Y          |
 
 <h3 id=if_player_is_on_ground>
-  <code>player::is_on_ground</code>
+  <code>player.is_on_ground</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -729,12 +729,12 @@ if player(is_near(range=1, location=location(0,0,0,0,0), ignore_y_axis="FALSE"))
 **Пример использования:**
 ```ts
 if player(is_on_ground()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_online_mode>
-  <code>player::is_online_mode</code>
+  <code>player.is_online_mode</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -745,12 +745,12 @@ if player(is_on_ground()){
 **Пример использования:**
 ```ts
 if player(is_online_mode()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_riding_entity>
-  <code>player::is_riding_entity</code>
+  <code>player.is_riding_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -761,13 +761,13 @@ if player(is_online_mode()){
 **Пример использования:**
 ```ts
 if player(is_riding_entity(["entity_ids", "entity_ids"], "FARTHEST")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(is_riding_entity(entity_ids=["entity_ids", "entity_ids"], compare_mode="FARTHEST")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -779,7 +779,7 @@ if player(is_riding_entity(entity_ids=["entity_ids", "entity_ids"], compare_mode
 | compare_mode | Маркер<br/>**FARTHEST** - creative_plus.action.if_player_is_riding_entity.argument.compare_mode.enum.farthest.name<br/>**NAME_OR_UUID** - Имя или UUID<br/>**NEAREST** - creative_plus.action.if_player_is_riding_entity.argument.compare_mode.enum.nearest.name<br/>**TYPE** - Тип существа | Режим сравнения                                                                      |
 
 <h3 id=if_player_is_self_disguised>
-  <code>player::is_self_disguised</code>
+  <code>player.is_self_disguised</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -790,12 +790,12 @@ if player(is_riding_entity(entity_ids=["entity_ids", "entity_ids"], compare_mode
 **Пример использования:**
 ```ts
 if player(is_self_disguised()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_sleeping>
-  <code>player::is_sleeping</code>
+  <code>player.is_sleeping</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -806,12 +806,12 @@ if player(is_self_disguised()){
 **Пример использования:**
 ```ts
 if player(is_sleeping()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_sneaking>
-  <code>player::is_sneaking</code>
+  <code>player.is_sneaking</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -822,12 +822,12 @@ if player(is_sleeping()){
 **Пример использования:**
 ```ts
 if player(is_sneaking()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_sprinting>
-  <code>player::is_sprinting</code>
+  <code>player.is_sprinting</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -838,12 +838,12 @@ if player(is_sneaking()){
 **Пример использования:**
 ```ts
 if player(is_sprinting()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_standing_on_block>
-  <code>player::is_standing_on_block</code>
+  <code>player.is_standing_on_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -854,13 +854,13 @@ if player(is_sprinting()){
 **Пример использования:**
 ```ts
 if player(is_standing_on_block(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], [location(0,0,0,0,0), location(0,0,0,0,0)], "FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(is_standing_on_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], locations=[location(0,0,0,0,0), location(0,0,0,0,0)], only_solid="FALSE")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -873,7 +873,7 @@ if player(is_standing_on_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:o
 | only_solid | Маркер<br/>**FALSE** - Учитывать<br/>**TRUE** - Не учитывать | Учитывать проходимые блоки                                               |
 
 <h3 id=if_player_is_swimming>
-  <code>player::is_swimming</code>
+  <code>player.is_swimming</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -884,12 +884,12 @@ if player(is_standing_on_block(blocks=["minecraft:oak_log[axis=x]", "minecraft:o
 **Пример использования:**
 ```ts
 if player(is_swimming()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=if_player_is_using_item>
-  <code>player::is_using_item</code>
+  <code>player.is_using_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -900,13 +900,13 @@ if player(is_swimming()){
 **Пример использования:**
 ```ts
 if player(is_using_item([item("stick"), item("stick")], "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(is_using_item(items=[item("stick"), item("stick")], comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -918,7 +918,7 @@ if player(is_using_item(items=[item("stick"), item("stick")], comparison_mode="E
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать только количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения                                                    |
 
 <h3 id=if_player_is_wearing_item>
-  <code>player::is_wearing_item</code>
+  <code>player.is_wearing_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -929,13 +929,13 @@ if player(is_using_item(items=[item("stick"), item("stick")], comparison_mode="E
 **Пример использования:**
 ```ts
 if player(is_wearing_item([item("stick"), item("stick")], "ALL", "EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(is_wearing_item(items=[item("stick"), item("stick")], check_mode="ALL", comparison_mode="EXACTLY")){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -948,7 +948,7 @@ if player(is_wearing_item(items=[item("stick"), item("stick")], check_mode="ALL"
 | comparison_mode | Маркер<br/>**EXACTLY** - Полное сравнение<br/>**IGNORE_DURABILITY_AND_STACK_SIZE** - Игнорировать количество и прочность<br/>**IGNORE_STACK_SIZE** - Игнорировать только количество<br/>**TYPE_ONLY** - Только тип предмета | Режим сравнения                                                   |
 
 <h3 id=if_player_item_is_not_on_cooldown>
-  <code>player::item_is_not_on_cooldown</code>
+  <code>player.item_is_not_on_cooldown</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -959,13 +959,13 @@ if player(is_wearing_item(items=[item("stick"), item("stick")], check_mode="ALL"
 **Пример использования:**
 ```ts
 if player(item_is_not_on_cooldown([item("stick"), item("stick")])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(item_is_not_on_cooldown(items=[item("stick"), item("stick")])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -976,7 +976,7 @@ if player(item_is_not_on_cooldown(items=[item("stick"), item("stick")])){
 | items | Список\[Предмет\] | Предметы для проверки<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_player_name_equals>
-  <code>player::name_equals</code>
+  <code>player.name_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -987,13 +987,13 @@ if player(item_is_not_on_cooldown(items=[item("stick"), item("stick")])){
 **Пример использования:**
 ```ts
 if player(name_equals(["names_or_uuids", "names_or_uuids"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 
 //Или в сухую по ключам
 
 if player(name_equals(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
@@ -1004,7 +1004,7 @@ if player(name_equals(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
 | names_or_uuids | Список\[Текст\] | Имена или UUID для проверки<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=if_player_text_filtering_enabled>
-  <code>player::text_filtering_enabled</code>
+  <code>player.text_filtering_enabled</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1015,12 +1015,12 @@ if player(name_equals(names_or_uuids=["names_or_uuids", "names_or_uuids"])){
 **Пример использования:**
 ```ts
 if player(text_filtering_enabled()){
-    player::message("Условие верно");
+    player.message("Условие верно");
 }
 ```
 
 <h3 id=player_add_inventory_menu_row>
-  <code>player::add_inventory_menu_row</code>
+  <code>player.add_inventory_menu_row</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1030,11 +1030,11 @@ if player(text_filtering_enabled()){
 
 **Пример использования:**
 ```ts
-player::add_inventory_menu_row([item("stick"), item("stick")], "BUTTON");
+player.add_inventory_menu_row([item("stick"), item("stick")], "BUTTON");
 
 //Или в сухую по ключам
 
-player::add_inventory_menu_row(items=[item("stick"), item("stick")], position="BUTTON");
+player.add_inventory_menu_row(items=[item("stick"), item("stick")], position="BUTTON");
 ```
 
 **Аргументы:**
@@ -1045,7 +1045,7 @@ player::add_inventory_menu_row(items=[item("stick"), item("stick")], position="B
 | position | Маркер<br/>**BUTTON** - Добавить строку снизу<br/>**TOP** - Добавить строку сверху | Позиция строки                                        |
 
 <h3 id=player_allow_placing_breaking_blocks>
-  <code>player::allow_placing_breaking_blocks</code>
+  <code>player.allow_placing_breaking_blocks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1055,11 +1055,11 @@ player::add_inventory_menu_row(items=[item("stick"), item("stick")], position="B
 
 **Пример использования:**
 ```ts
-player::allow_placing_breaking_blocks(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], "FALSE");
+player.allow_placing_breaking_blocks(["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], "FALSE");
 
 //Или в сухую по ключам
 
-player::allow_placing_breaking_blocks(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], allow="FALSE");
+player.allow_placing_breaking_blocks(blocks=["minecraft:oak_log[axis=x]", "minecraft:oak_log[axis=x]"], allow="FALSE");
 ```
 
 **Аргументы:**
@@ -1070,7 +1070,7 @@ player::allow_placing_breaking_blocks(blocks=["minecraft:oak_log[axis=x]", "mine
 | allow  | Маркер<br/>**FALSE** - creative_plus.action.player_allow_placing_breaking_blocks.argument.allow.enum.false.name<br/>**TRUE** - creative_plus.action.player_allow_placing_breaking_blocks.argument.allow.enum.true.name | creative_plus.action.player_allow_placing_breaking_blocks.argument.allow.name                                               |
 
 <h3 id=player_boost_elytra>
-  <code>player::boost_elytra</code>
+  <code>player.boost_elytra</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1080,11 +1080,11 @@ player::allow_placing_breaking_blocks(blocks=["minecraft:oak_log[axis=x]", "mine
 
 **Пример использования:**
 ```ts
-player::boost_elytra(item("stick"));
+player.boost_elytra(item("stick"));
 
 //Или в сухую по ключам
 
-player::boost_elytra(firework=item("stick"));
+player.boost_elytra(firework=item("stick"));
 ```
 
 **Аргументы:**
@@ -1094,7 +1094,7 @@ player::boost_elytra(firework=item("stick"));
 | firework | Предмет | Фейерверк для ускорения |
 
 <h3 id=player_clear_active_item>
-  <code>player::clear_active_item</code>
+  <code>player.clear_active_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1104,11 +1104,11 @@ player::boost_elytra(firework=item("stick"));
 
 **Пример использования:**
 ```ts
-player::clear_active_item();
+player.clear_active_item();
 ```
 
 <h3 id=player_clear_chat>
-  <code>player::clear_chat</code>
+  <code>player.clear_chat</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1118,11 +1118,11 @@ player::clear_active_item();
 
 **Пример использования:**
 ```ts
-player::clear_chat();
+player.clear_chat();
 ```
 
 <h3 id=player_clear_debug_markers>
-  <code>player::clear_debug_markers</code>
+  <code>player.clear_debug_markers</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1132,11 +1132,11 @@ player::clear_chat();
 
 **Пример использования:**
 ```ts
-player::clear_debug_markers();
+player.clear_debug_markers();
 ```
 
 <h3 id=player_clear_ender_chest_contents>
-  <code>player::clear_ender_chest_contents</code>
+  <code>player.clear_ender_chest_contents</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1146,11 +1146,11 @@ player::clear_debug_markers();
 
 **Пример использования:**
 ```ts
-player::clear_ender_chest_contents();
+player.clear_ender_chest_contents();
 ```
 
 <h3 id=player_clear_inventory>
-  <code>player::clear_inventory</code>
+  <code>player.clear_inventory</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1160,11 +1160,11 @@ player::clear_ender_chest_contents();
 
 **Пример использования:**
 ```ts
-player::clear_inventory("ARMOR");
+player.clear_inventory("ARMOR");
 
 //Или в сухую по ключам
 
-player::clear_inventory(clear_mode="ARMOR");
+player.clear_inventory(clear_mode="ARMOR");
 ```
 
 **Аргументы:**
@@ -1174,7 +1174,7 @@ player::clear_inventory(clear_mode="ARMOR");
 | clear_mode | Маркер<br/>**ARMOR** - Броня<br/>**ENTIRE** - Весь инвентарь<br/>**HOTBAR** - Хот-бар<br/>**MAIN** - Главный инвентарь<br/>**UPPER** - Верхний инвентарь | Режим очистки |
 
 <h3 id=player_clear_items>
-  <code>player::clear_items</code>
+  <code>player.clear_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1184,11 +1184,11 @@ player::clear_inventory(clear_mode="ARMOR");
 
 **Пример использования:**
 ```ts
-player::clear_items([item("stick"), item("stick")]);
+player.clear_items([item("stick"), item("stick")]);
 
 //Или в сухую по ключам
 
-player::clear_items(items=[item("stick"), item("stick")]);
+player.clear_items(items=[item("stick"), item("stick")]);
 ```
 
 **Аргументы:**
@@ -1198,7 +1198,7 @@ player::clear_items(items=[item("stick"), item("stick")]);
 | items | Список\[Предмет\] | Предметы для очистки<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=player_clear_potion_effects>
-  <code>player::clear_potion_effects</code>
+  <code>player.clear_potion_effects</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1208,11 +1208,11 @@ player::clear_items(items=[item("stick"), item("stick")]);
 
 **Пример использования:**
 ```ts
-player::clear_potion_effects();
+player.clear_potion_effects();
 ```
 
 <h3 id=player_close_dialog_menu>
-  <code>player::close_dialog_menu</code>
+  <code>player.close_dialog_menu</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1222,11 +1222,11 @@ player::clear_potion_effects();
 
 **Пример использования:**
 ```ts
-player::close_dialog_menu();
+player.close_dialog_menu();
 ```
 
 <h3 id=player_close_inventory>
-  <code>player::close_inventory</code>
+  <code>player.close_inventory</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1236,11 +1236,11 @@ player::close_dialog_menu();
 
 **Пример использования:**
 ```ts
-player::close_inventory();
+player.close_inventory();
 ```
 
 <h3 id=player_complete_using_active_item>
-  <code>player::complete_using_active_item</code>
+  <code>player.complete_using_active_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1250,11 +1250,11 @@ player::close_inventory();
 
 **Пример использования:**
 ```ts
-player::complete_using_active_item();
+player.complete_using_active_item();
 ```
 
 <h3 id=player_damage>
-  <code>player::damage</code>
+  <code>player.damage</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1264,11 +1264,11 @@ player::complete_using_active_item();
 
 **Пример использования:**
 ```ts
-player::damage(1, "source");
+player.damage(1, "source");
 
 //Или в сухую по ключам
 
-player::damage(damage=1, source="source");
+player.damage(damage=1, source="source");
 ```
 
 **Аргументы:**
@@ -1279,7 +1279,7 @@ player::damage(damage=1, source="source");
 | source | Текст | Источник урона (имя или UUID существа) |
 
 <h3 id=player_disguise_as_block>
-  <code>player::disguise_as_block</code>
+  <code>player.disguise_as_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1289,11 +1289,11 @@ player::damage(damage=1, source="source");
 
 **Пример использования:**
 ```ts
-player::disguise_as_block("minecraft:oak_log[axis=x]", "FALSE");
+player.disguise_as_block("minecraft:oak_log[axis=x]", "FALSE");
 
 //Или в сухую по ключам
 
-player::disguise_as_block(block="minecraft:oak_log[axis=x]", visible_to_self="FALSE");
+player.disguise_as_block(block="minecraft:oak_log[axis=x]", visible_to_self="FALSE");
 ```
 
 **Аргументы:**
@@ -1304,7 +1304,7 @@ player::disguise_as_block(block="minecraft:oak_log[axis=x]", visible_to_self="FA
 | visible_to_self | Маркер<br/>**FALSE** - Не видно<br/>**TRUE** - Видно | Видимость для игрока |
 
 <h3 id=player_disguise_as_entity>
-  <code>player::disguise_as_entity</code>
+  <code>player.disguise_as_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1314,11 +1314,11 @@ player::disguise_as_block(block="minecraft:oak_log[axis=x]", visible_to_self="FA
 
 **Пример использования:**
 ```ts
-player::disguise_as_entity(item("stick"), "FALSE");
+player.disguise_as_entity(item("stick"), "FALSE");
 
 //Или в сухую по ключам
 
-player::disguise_as_entity(entity_type=item("stick"), visible_to_self="FALSE");
+player.disguise_as_entity(entity_type=item("stick"), visible_to_self="FALSE");
 ```
 
 **Аргументы:**
@@ -1329,7 +1329,7 @@ player::disguise_as_entity(entity_type=item("stick"), visible_to_self="FALSE");
 | visible_to_self | Маркер<br/>**FALSE** - Не видно<br/>**TRUE** - Видно | Видимость для игрока    |
 
 <h3 id=player_disguise_as_item>
-  <code>player::disguise_as_item</code>
+  <code>player.disguise_as_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1339,11 +1339,11 @@ player::disguise_as_entity(entity_type=item("stick"), visible_to_self="FALSE");
 
 **Пример использования:**
 ```ts
-player::disguise_as_item(item("stick"), "FALSE");
+player.disguise_as_item(item("stick"), "FALSE");
 
 //Или в сухую по ключам
 
-player::disguise_as_item(item=item("stick"), visible_to_self="FALSE");
+player.disguise_as_item(item=item("stick"), visible_to_self="FALSE");
 ```
 
 **Аргументы:**
@@ -1354,7 +1354,7 @@ player::disguise_as_item(item=item("stick"), visible_to_self="FALSE");
 | visible_to_self | Маркер<br/>**FALSE** - Не видно<br/>**TRUE** - Видно | Видимость для игрока   |
 
 <h3 id=player_display_bell_ring>
-  <code>player::display_bell_ring</code>
+  <code>player.display_bell_ring</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1368,7 +1368,7 @@ player::disguise_as_item(item=item("stick"), visible_to_self="FALSE");
 
 **Пример использования:**
 ```ts
-player::display_bell_ring(location(0,0,0,0,0), "DOWN");
+player.display_bell_ring(location(0,0,0,0,0), "DOWN");
 
 //Или от объекта
 
@@ -1376,7 +1376,7 @@ location(0,0,0,0,0).display_bell_ring("DOWN");
 
 //Или в сухую по ключам
 
-player::display_bell_ring(location=location(0,0,0,0,0), direction="DOWN");
+player.display_bell_ring(location=location(0,0,0,0,0), direction="DOWN");
 ```
 
 **Аргументы:**
@@ -1387,7 +1387,7 @@ player::display_bell_ring(location=location(0,0,0,0,0), direction="DOWN");
 | direction | Маркер<br/>**DOWN** - Вниз (down)<br/>**EAST** - Восток (east)<br/>**NORTH** - Север (north)<br/>**SOUTH** - Юг (south)<br/>**WEST** - Запад (west) | Направление удара       |
 
 <h3 id=player_display_block>
-  <code>player::display_block</code>
+  <code>player.display_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1397,11 +1397,11 @@ player::display_bell_ring(location=location(0,0,0,0,0), direction="DOWN");
 
 **Пример использования:**
 ```ts
-player::display_block([location(0,0,0,0,0), location(0,0,0,0,0)], "minecraft:oak_log[axis=x]");
+player.display_block([location(0,0,0,0,0), location(0,0,0,0,0)], "minecraft:oak_log[axis=x]");
 
 //Или в сухую по ключам
 
-player::display_block(location=[location(0,0,0,0,0), location(0,0,0,0,0)], block="minecraft:oak_log[axis=x]");
+player.display_block(location=[location(0,0,0,0,0), location(0,0,0,0,0)], block="minecraft:oak_log[axis=x]");
 ```
 
 **Аргументы:**
@@ -1412,7 +1412,7 @@ player::display_block(location=[location(0,0,0,0,0), location(0,0,0,0,0)], block
 | block    | Блок                     | Блок, который требуется отобразить                                |
 
 <h3 id=player_display_end_gateway_beam>
-  <code>player::display_end_gateway_beam</code>
+  <code>player.display_end_gateway_beam</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1422,11 +1422,11 @@ player::display_block(location=[location(0,0,0,0,0), location(0,0,0,0,0)], block
 
 **Пример использования:**
 ```ts
-player::display_end_gateway_beam(location(0,0,0,0,0), "DARK_PURPLE");
+player.display_end_gateway_beam(location(0,0,0,0,0), "DARK_PURPLE");
 
 //Или в сухую по ключам
 
-player::display_end_gateway_beam(location=location(0,0,0,0,0), color="DARK_PURPLE");
+player.display_end_gateway_beam(location=location(0,0,0,0,0), color="DARK_PURPLE");
 ```
 
 **Аргументы:**
@@ -1437,7 +1437,7 @@ player::display_end_gateway_beam(location=location(0,0,0,0,0), color="DARK_PURPL
 | color    | Маркер<br/>**DARK_PURPLE** - Тёмно-фиолетовый<br/>**LIGHT_PURPLE** - Светло-фиолетовый | Цвет луча           |
 
 <h3 id=player_display_hologram>
-  <code>player::display_hologram</code>
+  <code>player.display_hologram</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1449,11 +1449,11 @@ player::display_end_gateway_beam(location=location(0,0,0,0,0), color="DARK_PURPL
 
 **Пример использования:**
 ```ts
-player::display_hologram(location(0,0,0,0,0), "text");
+player.display_hologram(location(0,0,0,0,0), "text");
 
 //Или в сухую по ключам
 
-player::display_hologram(location=location(0,0,0,0,0), text="text");
+player.display_hologram(location=location(0,0,0,0,0), text="text");
 ```
 
 **Аргументы:**
@@ -1464,7 +1464,7 @@ player::display_hologram(location=location(0,0,0,0,0), text="text");
 | text     | Текст          | Текст голограммы          |
 
 <h3 id=player_display_lightning>
-  <code>player::display_lightning</code>
+  <code>player.display_lightning</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1474,11 +1474,11 @@ player::display_hologram(location=location(0,0,0,0,0), text="text");
 
 **Пример использования:**
 ```ts
-player::display_lightning(location(0,0,0,0,0));
+player.display_lightning(location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-player::display_lightning(location=location(0,0,0,0,0));
+player.display_lightning(location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -1488,7 +1488,7 @@ player::display_lightning(location=location(0,0,0,0,0));
 | location | Местоположение | Место удара молнии |
 
 <h3 id=player_display_particle>
-  <code>player::display_particle</code>
+  <code>player.display_particle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1498,11 +1498,11 @@ player::display_lightning(location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-player::display_particle([particle("fire"), particle("fire")], [location(0,0,0,0,0), location(0,0,0,0,0)]);
+player.display_particle([particle("fire"), particle("fire")], [location(0,0,0,0,0), location(0,0,0,0,0)]);
 
 //Или в сухую по ключам
 
-player::display_particle(particle=[particle("fire"), particle("fire")], location=[location(0,0,0,0,0), location(0,0,0,0,0)]);
+player.display_particle(particle=[particle("fire"), particle("fire")], location=[location(0,0,0,0,0), location(0,0,0,0,0)]);
 ```
 
 **Аргументы:**
@@ -1513,7 +1513,7 @@ player::display_particle(particle=[particle("fire"), particle("fire")], location
 | location | Список\[Местоположение\] | Местоположение эффекта<br/>Аргумент поддерживает разложение списков        |
 
 <h3 id=player_display_particle_circle>
-  <code>player::display_particle_circle</code>
+  <code>player.display_particle_circle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1523,11 +1523,11 @@ player::display_particle(particle=[particle("fire"), particle("fire")], location
 
 **Пример использования:**
 ```ts
-player::display_particle_circle(particle("fire"), location(0,0,0,0,0), 1, 2, 3, vector(0,0,0), "DEGREES");
+player.display_particle_circle(particle("fire"), location(0,0,0,0,0), 1, 2, 3, vector(0,0,0), "DEGREES");
 
 //Или в сухую по ключам
 
-player::display_particle_circle(particle=particle("fire"), center=location(0,0,0,0,0), radius=1, points=2, start_angle=3, perpendicular=vector(0,0,0), angle_unit="DEGREES");
+player.display_particle_circle(particle=particle("fire"), center=location(0,0,0,0,0), radius=1, points=2, start_angle=3, perpendicular=vector(0,0,0), angle_unit="DEGREES");
 ```
 
 **Аргументы:**
@@ -1543,7 +1543,7 @@ player::display_particle_circle(particle=particle("fire"), center=location(0,0,0
 | angle_unit    | Маркер<br/>**DEGREES** - Градусы<br/>**RADIANS** - Радианы | Тип угла                                                      |
 
 <h3 id=player_display_particle_cube>
-  <code>player::display_particle_cube</code>
+  <code>player.display_particle_cube</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1553,11 +1553,11 @@ player::display_particle_circle(particle=particle("fire"), center=location(0,0,0
 
 **Пример использования:**
 ```ts
-player::display_particle_cube(particle("fire"), location(0,0,0,0,0), location(0,0,0,0,0), 1, "HOLLOW");
+player.display_particle_cube(particle("fire"), location(0,0,0,0,0), location(0,0,0,0,0), 1, "HOLLOW");
 
 //Или в сухую по ключам
 
-player::display_particle_cube(particle=particle("fire"), first_corner=location(0,0,0,0,0), second_corner=location(0,0,0,0,0), spacing=1, type="HOLLOW");
+player.display_particle_cube(particle=particle("fire"), first_corner=location(0,0,0,0,0), second_corner=location(0,0,0,0,0), spacing=1, type="HOLLOW");
 ```
 
 **Аргументы:**
@@ -1571,7 +1571,7 @@ player::display_particle_cube(particle=particle("fire"), first_corner=location(0
 | type          | Маркер<br/>**HOLLOW** - Полый<br/>**SOLID** - Заполненный<br/>**WIREFRAME** - Каркас | Тип куба                      |
 
 <h3 id=player_display_particle_line>
-  <code>player::display_particle_line</code>
+  <code>player.display_particle_line</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1581,11 +1581,11 @@ player::display_particle_cube(particle=particle("fire"), first_corner=location(0
 
 **Пример использования:**
 ```ts
-player::display_particle_line(particle("fire"), location(0,0,0,0,0), location(0,0,0,0,0), 1, "DISTANCE");
+player.display_particle_line(particle("fire"), location(0,0,0,0,0), location(0,0,0,0,0), 1, "DISTANCE");
 
 //Или в сухую по ключам
 
-player::display_particle_line(particle=particle("fire"), start=location(0,0,0,0,0), end=location(0,0,0,0,0), divider=1, unit_of_measurement="DISTANCE");
+player.display_particle_line(particle=particle("fire"), start=location(0,0,0,0,0), end=location(0,0,0,0,0), divider=1, unit_of_measurement="DISTANCE");
 ```
 
 **Аргументы:**
@@ -1599,7 +1599,7 @@ player::display_particle_line(particle=particle("fire"), start=location(0,0,0,0,
 | unit_of_measurement | Маркер<br/>**DISTANCE** - По расстоянию<br/>**POINTS** - По количеству | Тип отображения частиц                |
 
 <h3 id=player_display_particle_ray>
-  <code>player::display_particle_ray</code>
+  <code>player.display_particle_ray</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1609,11 +1609,11 @@ player::display_particle_line(particle=particle("fire"), start=location(0,0,0,0,
 
 **Пример использования:**
 ```ts
-player::display_particle_ray(particle("fire"), location(0,0,0,0,0), vector(0,0,0), 1, "DISTANCE");
+player.display_particle_ray(particle("fire"), location(0,0,0,0,0), vector(0,0,0), 1, "DISTANCE");
 
 //Или в сухую по ключам
 
-player::display_particle_ray(particle=particle("fire"), start=location(0,0,0,0,0), ray=vector(0,0,0), divider=1, unit_of_measurement="DISTANCE");
+player.display_particle_ray(particle=particle("fire"), start=location(0,0,0,0,0), ray=vector(0,0,0), divider=1, unit_of_measurement="DISTANCE");
 ```
 
 **Аргументы:**
@@ -1627,7 +1627,7 @@ player::display_particle_ray(particle=particle("fire"), start=location(0,0,0,0,0
 | unit_of_measurement | Маркер<br/>**DISTANCE** - По расстоянию<br/>**POINTS** - По количеству | Тип отображения частиц                |
 
 <h3 id=player_display_particle_sphere>
-  <code>player::display_particle_sphere</code>
+  <code>player.display_particle_sphere</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1637,11 +1637,11 @@ player::display_particle_ray(particle=particle("fire"), start=location(0,0,0,0,0
 
 **Пример использования:**
 ```ts
-player::display_particle_sphere(particle("fire"), location(0,0,0,0,0), 1, 2);
+player.display_particle_sphere(particle("fire"), location(0,0,0,0,0), 1, 2);
 
 //Или в сухую по ключам
 
-player::display_particle_sphere(particle=particle("fire"), center=location(0,0,0,0,0), radius=1, points=2);
+player.display_particle_sphere(particle=particle("fire"), center=location(0,0,0,0,0), radius=1, points=2);
 ```
 
 **Аргументы:**
@@ -1654,7 +1654,7 @@ player::display_particle_sphere(particle=particle("fire"), center=location(0,0,0
 | points   | Число          | Количество точек сферы        |
 
 <h3 id=player_display_particle_spiral>
-  <code>player::display_particle_spiral</code>
+  <code>player.display_particle_spiral</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1664,11 +1664,11 @@ player::display_particle_sphere(particle=particle("fire"), center=location(0,0,0
 
 **Пример использования:**
 ```ts
-player::display_particle_spiral(particle("fire"), location(0,0,0,0,0), 1, 2, 3, 4, 5, "DEGREES");
+player.display_particle_spiral(particle("fire"), location(0,0,0,0,0), 1, 2, 3, 4, 5, "DEGREES");
 
 //Или в сухую по ключам
 
-player::display_particle_spiral(particle=particle("fire"), center=location(0,0,0,0,0), distance=1, radius=2, points=3, rotations=4, start_angle=5, angle_unit="DEGREES");
+player.display_particle_spiral(particle=particle("fire"), center=location(0,0,0,0,0), distance=1, radius=2, points=3, rotations=4, start_angle=5, angle_unit="DEGREES");
 ```
 
 **Аргументы:**
@@ -1685,7 +1685,7 @@ player::display_particle_spiral(particle=particle("fire"), center=location(0,0,0
 | angle_unit  | Маркер<br/>**DEGREES** - Градусы<br/>**RADIANS** - Радианы | Тип угла                      |
 
 <h3 id=player_display_pick_up_animation>
-  <code>player::display_pick_up_animation</code>
+  <code>player.display_pick_up_animation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1698,11 +1698,11 @@ player::display_particle_spiral(particle=particle("fire"), center=location(0,0,0
 
 **Пример использования:**
 ```ts
-player::display_pick_up_animation("collected_name_or_uuid", "collector_name_or_uuid", 1);
+player.display_pick_up_animation("collected_name_or_uuid", "collector_name_or_uuid", 1);
 
 //Или в сухую по ключам
 
-player::display_pick_up_animation(collected_name_or_uuid="collected_name_or_uuid", collector_name_or_uuid="collector_name_or_uuid", amount=1);
+player.display_pick_up_animation(collected_name_or_uuid="collected_name_or_uuid", collector_name_or_uuid="collector_name_or_uuid", amount=1);
 ```
 
 **Аргументы:**
@@ -1714,7 +1714,7 @@ player::display_pick_up_animation(collected_name_or_uuid="collected_name_or_uuid
 | amount                 | Число | Количество поднимаемых предметов         |
 
 <h3 id=player_display_sign_text>
-  <code>player::display_sign_text</code>
+  <code>player.display_sign_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1724,11 +1724,11 @@ player::display_pick_up_animation(collected_name_or_uuid="collected_name_or_uuid
 
 **Пример использования:**
 ```ts
-player::display_sign_text(location(0,0,0,0,0), "line_1", "line_2", "line_3", "line_4", "ALL");
+player.display_sign_text(location(0,0,0,0,0), "line_1", "line_2", "line_3", "line_4", "ALL");
 
 //Или в сухую по ключам
 
-player::display_sign_text(location=location(0,0,0,0,0), line_1="line_1", line_2="line_2", line_3="line_3", line_4="line_4", side="ALL");
+player.display_sign_text(location=location(0,0,0,0,0), line_1="line_1", line_2="line_2", line_3="line_3", line_4="line_4", side="ALL");
 ```
 
 **Аргументы:**
@@ -1743,7 +1743,7 @@ player::display_sign_text(location=location(0,0,0,0,0), line_1="line_1", line_2=
 | side     | Маркер<br/>**ALL** - Любая<br/>**BACK** - Задняя<br/>**FRONT** - Передняя | Сторона таблички          |
 
 <h3 id=player_display_vibration>
-  <code>player::display_vibration</code>
+  <code>player.display_vibration</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1753,11 +1753,11 @@ player::display_sign_text(location=location(0,0,0,0,0), line_1="line_1", line_2=
 
 **Пример использования:**
 ```ts
-player::display_vibration(location(0,0,0,0,0), location(0,0,0,0,0), 1);
+player.display_vibration(location(0,0,0,0,0), location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-player::display_vibration(from=location(0,0,0,0,0), to=location(0,0,0,0,0), destination_time=1);
+player.display_vibration(from=location(0,0,0,0,0), to=location(0,0,0,0,0), destination_time=1);
 ```
 
 **Аргументы:**
@@ -1769,7 +1769,7 @@ player::display_vibration(from=location(0,0,0,0,0), to=location(0,0,0,0,0), dest
 | destination_time | Число          | Время полёта до места назначения в тиках |
 
 <h3 id=player_dummy>
-  <code>player::dummy</code>
+  <code>player.dummy</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1779,11 +1779,11 @@ player::display_vibration(from=location(0,0,0,0,0), to=location(0,0,0,0,0), dest
 
 **Пример использования:**
 ```ts
-player::dummy();
+player.dummy();
 ```
 
 <h3 id=player_expand_inventory_menu>
-  <code>player::expand_inventory_menu</code>
+  <code>player.expand_inventory_menu</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1793,11 +1793,11 @@ player::dummy();
 
 **Пример использования:**
 ```ts
-player::expand_inventory_menu([item("stick"), item("stick")], 1);
+player.expand_inventory_menu([item("stick"), item("stick")], 1);
 
 //Или в сухую по ключам
 
-player::expand_inventory_menu(items=[item("stick"), item("stick")], size=1);
+player.expand_inventory_menu(items=[item("stick"), item("stick")], size=1);
 ```
 
 **Аргументы:**
@@ -1808,7 +1808,7 @@ player::expand_inventory_menu(items=[item("stick"), item("stick")], size=1);
 | size  | Число             | Количество строк для расширения                                      |
 
 <h3 id=player_face_location>
-  <code>player::face_location</code>
+  <code>player.face_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1818,11 +1818,11 @@ player::expand_inventory_menu(items=[item("stick"), item("stick")], size=1);
 
 **Пример использования:**
 ```ts
-player::face_location(location(0,0,0,0,0));
+player.face_location(location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-player::face_location(location=location(0,0,0,0,0));
+player.face_location(location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -1832,7 +1832,7 @@ player::face_location(location=location(0,0,0,0,0));
 | location | Местоположение | Местоположение |
 
 <h3 id=player_force_flight_mode>
-  <code>player::force_flight_mode</code>
+  <code>player.force_flight_mode</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1842,11 +1842,11 @@ player::face_location(location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-player::force_flight_mode("FALSE");
+player.force_flight_mode("FALSE");
 
 //Или в сухую по ключам
 
-player::force_flight_mode(is_flying="FALSE");
+player.force_flight_mode(is_flying="FALSE");
 ```
 
 **Аргументы:**
@@ -1856,7 +1856,7 @@ player::force_flight_mode(is_flying="FALSE");
 | is_flying | Маркер<br/>**FALSE** - creative_plus.action.player_force_flight_mode.argument.is_flying.enum.false.name<br/>**TRUE** - creative_plus.action.player_force_flight_mode.argument.is_flying.enum.true.name | creative_plus.action.player_force_flight_mode.argument.is_flying.name |
 
 <h3 id=player_get_attribute>
-  <code>player::get_attribute</code>
+  <code>player.get_attribute</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1866,15 +1866,15 @@ player::force_flight_mode(is_flying="FALSE");
 
 **Пример использования:**
 ```ts
-`variable` = player::get_attribute("GENERIC_MAX_HEALTH", "VALUE");
+`variable` = player.get_attribute("GENERIC_MAX_HEALTH", "VALUE");
 
 //Или в сухую позиционно
 
-player::get_attribute(`variable`, "GENERIC_MAX_HEALTH", "VALUE");
+player.get_attribute(`variable`, "GENERIC_MAX_HEALTH", "VALUE");
 
 //Или в сухую по ключам
 
-player::get_attribute(variable=`variable`, attribute_type="GENERIC_MAX_HEALTH", return_value="VALUE");
+player.get_attribute(variable=`variable`, attribute_type="GENERIC_MAX_HEALTH", return_value="VALUE");
 ```
 
 **Аргументы:**
@@ -1886,7 +1886,7 @@ player::get_attribute(variable=`variable`, attribute_type="GENERIC_MAX_HEALTH", 
 | return_value   | Маркер<br/>**VALUE** - Текущее значение<br/>**BASE_VALUE** - Базовое значение<br/>**DEFAULT_VALUE** - Значение по умолчанию                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Тип значения              |
 
 <h3 id=player_get_nbt>
-  <code>player::get_nbt</code>
+  <code>player.get_nbt</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1896,15 +1896,15 @@ player::get_attribute(variable=`variable`, attribute_type="GENERIC_MAX_HEALTH", 
 
 **Пример использования:**
 ```ts
-`variable` = player::get_nbt("path", "ANY_VALUE");
+`variable` = player.get_nbt("path", "ANY_VALUE");
 
 //Или в сухую позиционно
 
-player::get_nbt(`variable`, "path", "ANY_VALUE");
+player.get_nbt(`variable`, "path", "ANY_VALUE");
 
 //Или в сухую по ключам
 
-player::get_nbt(variable=`variable`, path="path", value_type="ANY_VALUE");
+player.get_nbt(variable=`variable`, path="path", value_type="ANY_VALUE");
 ```
 
 **Аргументы:**
@@ -1916,7 +1916,7 @@ player::get_nbt(variable=`variable`, path="path", value_type="ANY_VALUE");
 | value_type | Маркер<br/>**ANY_VALUE** - Любое значение<br/>**NBT_STRING** - NBT-строка | Тип данных                |
 
 <h3 id=player_give_experience>
-  <code>player::give_experience</code>
+  <code>player.give_experience</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1926,11 +1926,11 @@ player::get_nbt(variable=`variable`, path="path", value_type="ANY_VALUE");
 
 **Пример использования:**
 ```ts
-player::give_experience(1, "LEVEL");
+player.give_experience(1, "LEVEL");
 
 //Или в сухую по ключам
 
-player::give_experience(experience=1, mode="LEVEL");
+player.give_experience(experience=1, mode="LEVEL");
 ```
 
 **Аргументы:**
@@ -1941,7 +1941,7 @@ player::give_experience(experience=1, mode="LEVEL");
 | mode       | Маркер<br/>**LEVEL** - Как уровень<br/>**LEVEL_PERCENTAGE** - Как процент от уровня<br/>**POINTS** - Как очки опыта | Тип прибавления         |
 
 <h3 id=player_give_items>
-  <code>player::give_items</code>
+  <code>player.give_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1951,11 +1951,11 @@ player::give_experience(experience=1, mode="LEVEL");
 
 **Пример использования:**
 ```ts
-player::give_items([item("stick"), item("stick")], 1);
+player.give_items([item("stick"), item("stick")], 1);
 
 //Или в сухую по ключам
 
-player::give_items(items=[item("stick"), item("stick")], amount=1);
+player.give_items(items=[item("stick"), item("stick")], amount=1);
 ```
 
 **Аргументы:**
@@ -1966,7 +1966,7 @@ player::give_items(items=[item("stick"), item("stick")], amount=1);
 | amount | Число             | Количество предметов для выдачи                                  |
 
 <h3 id=player_give_potion_effect>
-  <code>player::give_potion_effect</code>
+  <code>player.give_potion_effect</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -1976,11 +1976,11 @@ player::give_items(items=[item("stick"), item("stick")], amount=1);
 
 **Пример использования:**
 ```ts
-player::give_potion_effect([potion("slow_falling"), potion("slow_falling")], "FALSE", "FALSE", "AMBIENT");
+player.give_potion_effect([potion("slow_falling"), potion("slow_falling")], "FALSE", "FALSE", "AMBIENT");
 
 //Или в сухую по ключам
 
-player::give_potion_effect(potions=[potion("slow_falling"), potion("slow_falling")], show_icon="FALSE", overwrite="FALSE", particle_mode="AMBIENT");
+player.give_potion_effect(potions=[potion("slow_falling"), potion("slow_falling")], show_icon="FALSE", overwrite="FALSE", particle_mode="AMBIENT");
 ```
 
 **Аргументы:**
@@ -1993,7 +1993,7 @@ player::give_potion_effect(potions=[potion("slow_falling"), potion("slow_falling
 | particle_mode | Маркер<br/>**AMBIENT** - Прозрачными<br/>**NONE** - Нет<br/>**REGULAR** - Да | Показывать частицы                                              |
 
 <h3 id=player_give_random_item>
-  <code>player::give_random_item</code>
+  <code>player.give_random_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2003,11 +2003,11 @@ player::give_potion_effect(potions=[potion("slow_falling"), potion("slow_falling
 
 **Пример использования:**
 ```ts
-player::give_random_item([item("stick"), item("stick")]);
+player.give_random_item([item("stick"), item("stick")]);
 
 //Или в сухую по ключам
 
-player::give_random_item(items=[item("stick"), item("stick")]);
+player.give_random_item(items=[item("stick"), item("stick")]);
 ```
 
 **Аргументы:**
@@ -2017,7 +2017,7 @@ player::give_random_item(items=[item("stick"), item("stick")]);
 | items | Список\[Предмет\] | Предметы для выбора<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=player_heal>
-  <code>player::heal</code>
+  <code>player.heal</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2027,11 +2027,11 @@ player::give_random_item(items=[item("stick"), item("stick")]);
 
 **Пример использования:**
 ```ts
-player::heal(1);
+player.heal(1);
 
 //Или в сухую по ключам
 
-player::heal(heal=1);
+player.heal(heal=1);
 ```
 
 **Аргументы:**
@@ -2041,7 +2041,7 @@ player::heal(heal=1);
 | heal | Число | Количество половинок сердец для излечения |
 
 <h3 id=player_hide_entity>
-  <code>player::hide_entity</code>
+  <code>player.hide_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2051,11 +2051,11 @@ player::heal(heal=1);
 
 **Пример использования:**
 ```ts
-player::hide_entity(["name_or_uuid", "name_or_uuid"], "FALSE");
+player.hide_entity(["name_or_uuid", "name_or_uuid"], "FALSE");
 
 //Или в сухую по ключам
 
-player::hide_entity(name_or_uuid=["name_or_uuid", "name_or_uuid"], hide="FALSE");
+player.hide_entity(name_or_uuid=["name_or_uuid", "name_or_uuid"], hide="FALSE");
 ```
 
 **Аргументы:**
@@ -2066,7 +2066,7 @@ player::hide_entity(name_or_uuid=["name_or_uuid", "name_or_uuid"], hide="FALSE")
 | hide         | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Скрытие                                                            |
 
 <h3 id=player_hide_scoreboard>
-  <code>player::hide_scoreboard</code>
+  <code>player.hide_scoreboard</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2076,11 +2076,11 @@ player::hide_entity(name_or_uuid=["name_or_uuid", "name_or_uuid"], hide="FALSE")
 
 **Пример использования:**
 ```ts
-player::hide_scoreboard();
+player.hide_scoreboard();
 ```
 
 <h3 id=player_kick>
-  <code>player::kick</code>
+  <code>player.kick</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2090,11 +2090,11 @@ player::hide_scoreboard();
 
 **Пример использования:**
 ```ts
-player::kick();
+player.kick();
 ```
 
 <h3 id=player_launch_forward>
-  <code>player::launch_forward</code>
+  <code>player.launch_forward</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2104,11 +2104,11 @@ player::kick();
 
 **Пример использования:**
 ```ts
-player::launch_forward(1, "FALSE", "YAW");
+player.launch_forward(1, "FALSE", "YAW");
 
 //Или в сухую по ключам
 
-player::launch_forward(power=1, increment="FALSE", launch_axis="YAW");
+player.launch_forward(power=1, increment="FALSE", launch_axis="YAW");
 ```
 
 **Аргументы:**
@@ -2120,7 +2120,7 @@ player::launch_forward(power=1, increment="FALSE", launch_axis="YAW");
 | launch_axis | Маркер<br/>**YAW** - Только по горизонтали<br/>**YAW_AND_PITCH** - Все оси | Ось запуска               |
 
 <h3 id=player_launch_projectile>
-  <code>player::launch_projectile</code>
+  <code>player.launch_projectile</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2130,11 +2130,11 @@ player::launch_forward(power=1, increment="FALSE", launch_axis="YAW");
 
 **Пример использования:**
 ```ts
-player::launch_projectile(item("stick"), location(0,0,0,0,0), "name", 1, 2, particle("fire"));
+player.launch_projectile(item("stick"), location(0,0,0,0,0), "name", 1, 2, particle("fire"));
 
 //Или в сухую по ключам
 
-player::launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0), name="name", speed=1, inaccuracy=2, trail=particle("fire"));
+player.launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0), name="name", speed=1, inaccuracy=2, trail=particle("fire"));
 ```
 
 **Аргументы:**
@@ -2149,7 +2149,7 @@ player::launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0)
 | trail      | Эффект частиц  | След, который будет оставаться за снарядом       |
 
 <h3 id=player_launch_to_location>
-  <code>player::launch_to_location</code>
+  <code>player.launch_to_location</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2159,11 +2159,11 @@ player::launch_projectile(projectile=item("stick"), location=location(0,0,0,0,0)
 
 **Пример использования:**
 ```ts
-player::launch_to_location(location(0,0,0,0,0), 1, "FALSE");
+player.launch_to_location(location(0,0,0,0,0), 1, "FALSE");
 
 //Или в сухую по ключам
 
-player::launch_to_location(location=location(0,0,0,0,0), power=1, increment="FALSE");
+player.launch_to_location(location=location(0,0,0,0,0), power=1, increment="FALSE");
 ```
 
 **Аргументы:**
@@ -2175,7 +2175,7 @@ player::launch_to_location(location=location(0,0,0,0,0), power=1, increment="FAL
 | increment | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Учитывать текущую инерцию |
 
 <h3 id=player_launch_up>
-  <code>player::launch_up</code>
+  <code>player.launch_up</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2185,11 +2185,11 @@ player::launch_to_location(location=location(0,0,0,0,0), power=1, increment="FAL
 
 **Пример использования:**
 ```ts
-player::launch_up(1, "FALSE");
+player.launch_up(1, "FALSE");
 
 //Или в сухую по ключам
 
-player::launch_up(power=1, increment="FALSE");
+player.launch_up(power=1, increment="FALSE");
 ```
 
 **Аргументы:**
@@ -2200,7 +2200,7 @@ player::launch_up(power=1, increment="FALSE");
 | increment | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Учитывать текущую инерцию |
 
 <h3 id=player_leave_vehicle>
-  <code>player::leave_vehicle</code>
+  <code>player.leave_vehicle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2210,11 +2210,11 @@ player::launch_up(power=1, increment="FALSE");
 
 **Пример использования:**
 ```ts
-player::leave_vehicle();
+player.leave_vehicle();
 ```
 
 <h3 id=player_load_inventory>
-  <code>player::load_inventory</code>
+  <code>player.load_inventory</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2226,11 +2226,11 @@ player::leave_vehicle();
 
 **Пример использования:**
 ```ts
-player::load_inventory();
+player.load_inventory();
 ```
 
 <h3 id=player_mimic_disguise_from_entity>
-  <code>player::mimic_disguise_from_entity</code>
+  <code>player.mimic_disguise_from_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2240,11 +2240,11 @@ player::load_inventory();
 
 **Пример использования:**
 ```ts
-player::mimic_disguise_from_entity("name_or_uuid", "TRUE", "ALL", "TRUE");
+player.mimic_disguise_from_entity("name_or_uuid", "TRUE", "ALL", "TRUE");
 
 //Или в сухую по ключам
 
-player::mimic_disguise_from_entity(name_or_uuid="name_or_uuid", include_disguise="TRUE", disguise="ALL", remove_original_entity="TRUE");
+player.mimic_disguise_from_entity(name_or_uuid="name_or_uuid", include_disguise="TRUE", disguise="ALL", remove_original_entity="TRUE");
 ```
 
 **Аргументы:**
@@ -2257,7 +2257,7 @@ player::mimic_disguise_from_entity(name_or_uuid="name_or_uuid", include_disguise
 | remove_original_entity | Маркер<br/>**TRUE** - Да<br/>**FALSE** - Нет                                                                | Удалить настоящую сущность           |
 
 <h3 id=player_open_book>
-  <code>player::open_book</code>
+  <code>player.open_book</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2267,11 +2267,11 @@ player::mimic_disguise_from_entity(name_or_uuid="name_or_uuid", include_disguise
 
 **Пример использования:**
 ```ts
-player::open_book(item("stick"));
+player.open_book(item("stick"));
 
 //Или в сухую по ключам
 
-player::open_book(book=item("stick"));
+player.open_book(book=item("stick"));
 ```
 
 **Аргументы:**
@@ -2281,7 +2281,7 @@ player::open_book(book=item("stick"));
 | book | Предмет | Книга для открытия |
 
 <h3 id=player_open_container_inventory>
-  <code>player::open_container_inventory</code>
+  <code>player.open_container_inventory</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2291,11 +2291,11 @@ player::open_book(book=item("stick"));
 
 **Пример использования:**
 ```ts
-player::open_container_inventory(location(0,0,0,0,0));
+player.open_container_inventory(location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-player::open_container_inventory(location=location(0,0,0,0,0));
+player.open_container_inventory(location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -2305,7 +2305,7 @@ player::open_container_inventory(location=location(0,0,0,0,0));
 | location | Местоположение | Местоположение блока для открытия |
 
 <h3 id=player_open_ender_chest>
-  <code>player::open_ender_chest</code>
+  <code>player.open_ender_chest</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2315,11 +2315,11 @@ player::open_container_inventory(location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-player::open_ender_chest();
+player.open_ender_chest();
 ```
 
 <h3 id=player_open_working_menu>
-  <code>player::open_working_menu</code>
+  <code>player.open_working_menu</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2329,11 +2329,11 @@ player::open_ender_chest();
 
 **Пример использования:**
 ```ts
-player::open_working_menu("title", "CRAFTING");
+player.open_working_menu("title", "CRAFTING");
 
 //Или в сухую по ключам
 
-player::open_working_menu(title="title", menu_type="CRAFTING");
+player.open_working_menu(title="title", menu_type="CRAFTING");
 ```
 
 **Аргументы:**
@@ -2344,7 +2344,7 @@ player::open_working_menu(title="title", menu_type="CRAFTING");
 | menu_type | Маркер<br/>**CRAFTING** - Верстак<br/>**ANVIL** - Наковальня<br/>**SMITHING** - Кузнечный стол<br/>**CARTOGRAPHY_TABLE** - Стол картографа<br/>**LOOM** - Ткацкий станок<br/>**GRINDSTONE** - Точило<br/>**STONECUTTER** - Камнерез<br/>**ENCHANTMENT** - Чародейский стол | Тип функционала    |
 
 <h3 id=player_play_animation_action>
-  <code>player::play_animation_action</code>
+  <code>player.play_animation_action</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2354,11 +2354,11 @@ player::open_working_menu(title="title", menu_type="CRAFTING");
 
 **Пример использования:**
 ```ts
-player::play_animation_action("DAMAGE");
+player.play_animation_action("DAMAGE");
 
 //Или в сухую по ключам
 
-player::play_animation_action(animation="DAMAGE");
+player.play_animation_action(animation="DAMAGE");
 ```
 
 **Аргументы:**
@@ -2368,7 +2368,7 @@ player::play_animation_action(animation="DAMAGE");
 | animation | Маркер<br/>**DAMAGE** - Получение урона<br/>**JUMPSCARE** - Древний страж<br/>**TOTEM** - Тотем<br/>**WAKE_UP** - Подъём с кровати | Тип анимации |
 
 <h3 id=player_play_hurt_animation>
-  <code>player::play_hurt_animation</code>
+  <code>player.play_hurt_animation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2378,11 +2378,11 @@ player::play_animation_action(animation="DAMAGE");
 
 **Пример использования:**
 ```ts
-player::play_hurt_animation(1);
+player.play_hurt_animation(1);
 
 //Или в сухую по ключам
 
-player::play_hurt_animation(yaw=1);
+player.play_hurt_animation(yaw=1);
 ```
 
 **Аргументы:**
@@ -2392,7 +2392,7 @@ player::play_hurt_animation(yaw=1);
 | yaw | Число | Угол получения урона (от 0 до 360 градусов) |
 
 <h3 id=player_play_sound>
-  <code>player::play_sound</code>
+  <code>player.play_sound</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2402,11 +2402,11 @@ player::play_hurt_animation(yaw=1);
 
 **Пример использования:**
 ```ts
-player::play_sound(sound("entity.zombie.hurt"), location(0,0,0,0,0));
+player.play_sound(sound("entity.zombie.hurt"), location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-player::play_sound(sound=sound("entity.zombie.hurt"), location=location(0,0,0,0,0));
+player.play_sound(sound=sound("entity.zombie.hurt"), location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -2417,7 +2417,7 @@ player::play_sound(sound=sound("entity.zombie.hurt"), location=location(0,0,0,0,
 | location | Местоположение | Местоположение звука  |
 
 <h3 id=player_play_sound_from_entity>
-  <code>player::play_sound_from_entity</code>
+  <code>player.play_sound_from_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2429,11 +2429,11 @@ player::play_sound(sound=sound("entity.zombie.hurt"), location=location(0,0,0,0,
 
 **Пример использования:**
 ```ts
-player::play_sound_from_entity("name_or_uuid", [sound("entity.zombie.hurt"), sound("entity.zombie.hurt")]);
+player.play_sound_from_entity("name_or_uuid", [sound("entity.zombie.hurt"), sound("entity.zombie.hurt")]);
 
 //Или в сухую по ключам
 
-player::play_sound_from_entity(name_or_uuid="name_or_uuid", sounds=[sound("entity.zombie.hurt"), sound("entity.zombie.hurt")]);
+player.play_sound_from_entity(name_or_uuid="name_or_uuid", sounds=[sound("entity.zombie.hurt"), sound("entity.zombie.hurt")]);
 ```
 
 **Аргументы:**
@@ -2444,7 +2444,7 @@ player::play_sound_from_entity(name_or_uuid="name_or_uuid", sounds=[sound("entit
 | sounds       | Список\[Звук\] | Звук для проигрывания<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=player_play_sound_sequence>
-  <code>player::play_sound_sequence</code>
+  <code>player.play_sound_sequence</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2454,11 +2454,11 @@ player::play_sound_from_entity(name_or_uuid="name_or_uuid", sounds=[sound("entit
 
 **Пример использования:**
 ```ts
-player::play_sound_sequence([sound("entity.zombie.hurt"), sound("entity.zombie.hurt")], location(0,0,0,0,0), 1);
+player.play_sound_sequence([sound("entity.zombie.hurt"), sound("entity.zombie.hurt")], location(0,0,0,0,0), 1);
 
 //Или в сухую по ключам
 
-player::play_sound_sequence(sounds=[sound("entity.zombie.hurt"), sound("entity.zombie.hurt")], location=location(0,0,0,0,0), delay=1);
+player.play_sound_sequence(sounds=[sound("entity.zombie.hurt"), sound("entity.zombie.hurt")], location=location(0,0,0,0,0), delay=1);
 ```
 
 **Аргументы:**
@@ -2470,7 +2470,7 @@ player::play_sound_sequence(sounds=[sound("entity.zombie.hurt"), sound("entity.z
 | delay    | Число          | Задержка в тиках                                                    |
 
 <h3 id=player_randomized_teleport>
-  <code>player::randomized_teleport</code>
+  <code>player.randomized_teleport</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2480,11 +2480,11 @@ player::play_sound_sequence(sounds=[sound("entity.zombie.hurt"), sound("entity.z
 
 **Пример использования:**
 ```ts
-player::randomized_teleport([location(0,0,0,0,0), location(0,0,0,0,0)], "FALSE", "FALSE", "FALSE");
+player.randomized_teleport([location(0,0,0,0,0), location(0,0,0,0,0)], "FALSE", "FALSE", "FALSE");
 
 //Или в сухую по ключам
 
-player::randomized_teleport(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], keep_rotation="FALSE", keep_velocity="FALSE", dismount="FALSE");
+player.randomized_teleport(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], keep_rotation="FALSE", keep_velocity="FALSE", dismount="FALSE");
 ```
 
 **Аргументы:**
@@ -2497,7 +2497,7 @@ player::randomized_teleport(locations=[location(0,0,0,0,0), location(0,0,0,0,0)]
 | dismount      | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да             | Спешиться после телепортации                                       |
 
 <h3 id=player_redirect_world>
-  <code>player::redirect_world</code>
+  <code>player.redirect_world</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2507,11 +2507,11 @@ player::randomized_teleport(locations=[location(0,0,0,0,0), location(0,0,0,0,0)]
 
 **Пример использования:**
 ```ts
-player::redirect_world("world_id");
+player.redirect_world("world_id");
 
 //Или в сухую по ключам
 
-player::redirect_world(world_id="world_id");
+player.redirect_world(world_id="world_id");
 ```
 
 **Аргументы:**
@@ -2521,7 +2521,7 @@ player::redirect_world(world_id="world_id");
 | world_id | Текст | ID мира  |
 
 <h3 id=player_remove_boss_bar>
-  <code>player::remove_boss_bar</code>
+  <code>player.remove_boss_bar</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2531,11 +2531,11 @@ player::redirect_world(world_id="world_id");
 
 **Пример использования:**
 ```ts
-player::remove_boss_bar("id");
+player.remove_boss_bar("id");
 
 //Или в сухую по ключам
 
-player::remove_boss_bar(id="id");
+player.remove_boss_bar(id="id");
 ```
 
 **Аргументы:**
@@ -2545,7 +2545,7 @@ player::remove_boss_bar(id="id");
 | id | Текст | ID босс-бара |
 
 <h3 id=player_remove_disguise>
-  <code>player::remove_disguise</code>
+  <code>player.remove_disguise</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2555,11 +2555,11 @@ player::remove_boss_bar(id="id");
 
 **Пример использования:**
 ```ts
-player::remove_disguise();
+player.remove_disguise();
 ```
 
 <h3 id=player_remove_display_blocks>
-  <code>player::remove_display_blocks</code>
+  <code>player.remove_display_blocks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2569,11 +2569,11 @@ player::remove_disguise();
 
 **Пример использования:**
 ```ts
-player::remove_display_blocks(location(0,0,0,0,0), location(0,0,0,0,0));
+player.remove_display_blocks(location(0,0,0,0,0), location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-player::remove_display_blocks(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0));
+player.remove_display_blocks(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -2584,7 +2584,7 @@ player::remove_display_blocks(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,
 | pos_2 | Местоположение | Местоположение второго угла |
 
 <h3 id=player_remove_inventory_menu_row>
-  <code>player::remove_inventory_menu_row</code>
+  <code>player.remove_inventory_menu_row</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2594,11 +2594,11 @@ player::remove_display_blocks(pos_1=location(0,0,0,0,0), pos_2=location(0,0,0,0,
 
 **Пример использования:**
 ```ts
-player::remove_inventory_menu_row(1, "BUTTON");
+player.remove_inventory_menu_row(1, "BUTTON");
 
 //Или в сухую по ключам
 
-player::remove_inventory_menu_row(size=1, position="BUTTON");
+player.remove_inventory_menu_row(size=1, position="BUTTON");
 ```
 
 **Аргументы:**
@@ -2609,7 +2609,7 @@ player::remove_inventory_menu_row(size=1, position="BUTTON");
 | position | Маркер<br/>**BUTTON** - Убрать строку снизу<br/>**TOP** - Убрать строку сверху | Позиция строки   |
 
 <h3 id=player_remove_items>
-  <code>player::remove_items</code>
+  <code>player.remove_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2619,11 +2619,11 @@ player::remove_inventory_menu_row(size=1, position="BUTTON");
 
 **Пример использования:**
 ```ts
-player::remove_items([item("stick"), item("stick")]);
+player.remove_items([item("stick"), item("stick")]);
 
 //Или в сухую по ключам
 
-player::remove_items(items=[item("stick"), item("stick")]);
+player.remove_items(items=[item("stick"), item("stick")]);
 ```
 
 **Аргументы:**
@@ -2633,7 +2633,7 @@ player::remove_items(items=[item("stick"), item("stick")]);
 | items | Список\[Предмет\] | Предметы для удаления<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=player_remove_pose>
-  <code>player::remove_pose</code>
+  <code>player.remove_pose</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2643,11 +2643,11 @@ player::remove_items(items=[item("stick"), item("stick")]);
 
 **Пример использования:**
 ```ts
-player::remove_pose();
+player.remove_pose();
 ```
 
 <h3 id=player_remove_potion_effect>
-  <code>player::remove_potion_effect</code>
+  <code>player.remove_potion_effect</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2657,11 +2657,11 @@ player::remove_pose();
 
 **Пример использования:**
 ```ts
-player::remove_potion_effect([potion("slow_falling"), potion("slow_falling")]);
+player.remove_potion_effect([potion("slow_falling"), potion("slow_falling")]);
 
 //Или в сухую по ключам
 
-player::remove_potion_effect(potions=[potion("slow_falling"), potion("slow_falling")]);
+player.remove_potion_effect(potions=[potion("slow_falling"), potion("slow_falling")]);
 ```
 
 **Аргументы:**
@@ -2671,7 +2671,7 @@ player::remove_potion_effect(potions=[potion("slow_falling"), potion("slow_falli
 | potions | Список\[Зелье\] | Эффекты для удаления<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=player_remove_self_disguise>
-  <code>player::remove_self_disguise</code>
+  <code>player.remove_self_disguise</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2681,11 +2681,11 @@ player::remove_potion_effect(potions=[potion("slow_falling"), potion("slow_falli
 
 **Пример использования:**
 ```ts
-player::remove_self_disguise();
+player.remove_self_disguise();
 ```
 
 <h3 id=player_remove_skin>
-  <code>player::remove_skin</code>
+  <code>player.remove_skin</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2695,11 +2695,11 @@ player::remove_self_disguise();
 
 **Пример использования:**
 ```ts
-player::remove_skin();
+player.remove_skin();
 ```
 
 <h3 id=player_remove_world_border>
-  <code>player::remove_world_border</code>
+  <code>player.remove_world_border</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2709,11 +2709,11 @@ player::remove_skin();
 
 **Пример использования:**
 ```ts
-player::remove_world_border();
+player.remove_world_border();
 ```
 
 <h3 id=player_replace_items>
-  <code>player::replace_items</code>
+  <code>player.replace_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2723,11 +2723,11 @@ player::remove_world_border();
 
 **Пример использования:**
 ```ts
-player::replace_items([item("stick"), item("stick")], item("stick"), 1);
+player.replace_items([item("stick"), item("stick")], item("stick"), 1);
 
 //Или в сухую по ключам
 
-player::replace_items(items=[item("stick"), item("stick")], replace=item("stick"), count=1);
+player.replace_items(items=[item("stick"), item("stick")], replace=item("stick"), count=1);
 ```
 
 **Аргументы:**
@@ -2739,7 +2739,7 @@ player::replace_items(items=[item("stick"), item("stick")], replace=item("stick"
 | count   | Число             | Количество предметов для замены                                  |
 
 <h3 id=player_reset_weather>
-  <code>player::reset_weather</code>
+  <code>player.reset_weather</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2749,11 +2749,11 @@ player::replace_items(items=[item("stick"), item("stick")], replace=item("stick"
 
 **Пример использования:**
 ```ts
-player::reset_weather();
+player.reset_weather();
 ```
 
 <h3 id=player_ride_entity>
-  <code>player::ride_entity</code>
+  <code>player.ride_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2763,11 +2763,11 @@ player::reset_weather();
 
 **Пример использования:**
 ```ts
-player::ride_entity("name_or_uuid");
+player.ride_entity("name_or_uuid");
 
 //Или в сухую по ключам
 
-player::ride_entity(name_or_uuid="name_or_uuid");
+player.ride_entity(name_or_uuid="name_or_uuid");
 ```
 
 **Аргументы:**
@@ -2777,7 +2777,7 @@ player::ride_entity(name_or_uuid="name_or_uuid");
 | name_or_uuid | Текст | Имя или UUID цели |
 
 <h3 id=player_save_inventory>
-  <code>player::save_inventory</code>
+  <code>player.save_inventory</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2787,11 +2787,11 @@ player::ride_entity(name_or_uuid="name_or_uuid");
 
 **Пример использования:**
 ```ts
-player::save_inventory();
+player.save_inventory();
 ```
 
 <h3 id=player_self_disguise_as_block>
-  <code>player::self_disguise_as_block</code>
+  <code>player.self_disguise_as_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2801,11 +2801,11 @@ player::save_inventory();
 
 **Пример использования:**
 ```ts
-player::self_disguise_as_block("minecraft:oak_log[axis=x]");
+player.self_disguise_as_block("minecraft:oak_log[axis=x]");
 
 //Или в сухую по ключам
 
-player::self_disguise_as_block(block="minecraft:oak_log[axis=x]");
+player.self_disguise_as_block(block="minecraft:oak_log[axis=x]");
 ```
 
 **Аргументы:**
@@ -2815,7 +2815,7 @@ player::self_disguise_as_block(block="minecraft:oak_log[axis=x]");
 | block | Блок | Блок для маскировки |
 
 <h3 id=player_self_disguise_as_entity>
-  <code>player::self_disguise_as_entity</code>
+  <code>player.self_disguise_as_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2825,11 +2825,11 @@ player::self_disguise_as_block(block="minecraft:oak_log[axis=x]");
 
 **Пример использования:**
 ```ts
-player::self_disguise_as_entity(item("stick"));
+player.self_disguise_as_entity(item("stick"));
 
 //Или в сухую по ключам
 
-player::self_disguise_as_entity(entity_type=item("stick"));
+player.self_disguise_as_entity(entity_type=item("stick"));
 ```
 
 **Аргументы:**
@@ -2839,7 +2839,7 @@ player::self_disguise_as_entity(entity_type=item("stick"));
 | entity_type | Предмет | Сущность для маскировки |
 
 <h3 id=player_self_disguise_as_item>
-  <code>player::self_disguise_as_item</code>
+  <code>player.self_disguise_as_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2849,11 +2849,11 @@ player::self_disguise_as_entity(entity_type=item("stick"));
 
 **Пример использования:**
 ```ts
-player::self_disguise_as_item(item("stick"));
+player.self_disguise_as_item(item("stick"));
 
 //Или в сухую по ключам
 
-player::self_disguise_as_item(item=item("stick"));
+player.self_disguise_as_item(item=item("stick"));
 ```
 
 **Аргументы:**
@@ -2863,7 +2863,7 @@ player::self_disguise_as_item(item=item("stick"));
 | item | Предмет | Предмет для маскировки |
 
 <h3 id=player_send_action_bar>
-  <code>player::send_action_bar</code>
+  <code>player.send_action_bar</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2873,11 +2873,11 @@ player::self_disguise_as_item(item=item("stick"));
 
 **Пример использования:**
 ```ts
-player::send_action_bar(["messages", "messages"], "CONCATENATION");
+player.send_action_bar(["messages", "messages"], "CONCATENATION");
 
 //Или в сухую по ключам
 
-player::send_action_bar(messages=["messages", "messages"], merging="CONCATENATION");
+player.send_action_bar(messages=["messages", "messages"], merging="CONCATENATION");
 ```
 
 **Аргументы:**
@@ -2888,7 +2888,7 @@ player::send_action_bar(messages=["messages", "messages"], merging="CONCATENATIO
 | merging  | Маркер<br/>**CONCATENATION** - Объединение<br/>**SPACES** - Разделение пробелом | Объединение текста                                                 |
 
 <h3 id=player_send_advancement>
-  <code>player::send_advancement</code>
+  <code>player.send_advancement</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2898,11 +2898,11 @@ player::send_action_bar(messages=["messages", "messages"], merging="CONCATENATIO
 
 **Пример использования:**
 ```ts
-player::send_advancement(item("stick"), "name", "CHALLENGE");
+player.send_advancement(item("stick"), "name", "CHALLENGE");
 
 //Или в сухую по ключам
 
-player::send_advancement(icon=item("stick"), name="name", frame="CHALLENGE");
+player.send_advancement(icon=item("stick"), name="name", frame="CHALLENGE");
 ```
 
 **Аргументы:**
@@ -2914,7 +2914,7 @@ player::send_advancement(icon=item("stick"), name="name", frame="CHALLENGE");
 | frame | Маркер<br/>**CHALLENGE** - Испытание<br/>**GOAL** - Цель<br/>**TASK** - Обычное достижение | Тип достижения      |
 
 <h3 id=player_send_break_animation>
-  <code>player::send_break_animation</code>
+  <code>player.send_break_animation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2924,11 +2924,11 @@ player::send_advancement(icon=item("stick"), name="name", frame="CHALLENGE");
 
 **Пример использования:**
 ```ts
-player::send_break_animation([location(0,0,0,0,0), location(0,0,0,0,0)], 1);
+player.send_break_animation([location(0,0,0,0,0), location(0,0,0,0,0)], 1);
 
 //Или в сухую по ключам
 
-player::send_break_animation(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], stage=1);
+player.send_break_animation(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], stage=1);
 ```
 
 **Аргументы:**
@@ -2939,7 +2939,7 @@ player::send_break_animation(locations=[location(0,0,0,0,0), location(0,0,0,0,0)
 | stage     | Число                    | Уровень разрушения блока (от 0 до 10)                              |
 
 <h3 id=player_send_dialogue>
-  <code>player::send_dialogue</code>
+  <code>player.send_dialogue</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2949,11 +2949,11 @@ player::send_break_animation(locations=[location(0,0,0,0,0), location(0,0,0,0,0)
 
 **Пример использования:**
 ```ts
-player::send_dialogue(["messages", "messages"], 1);
+player.send_dialogue(["messages", "messages"], 1);
 
 //Или в сухую по ключам
 
-player::send_dialogue(messages=["messages", "messages"], delay=1);
+player.send_dialogue(messages=["messages", "messages"], delay=1);
 ```
 
 **Аргументы:**
@@ -2964,7 +2964,7 @@ player::send_dialogue(messages=["messages", "messages"], delay=1);
 | delay    | Число           | Задержка между сообщениями                                      |
 
 <h3 id=player_send_hover>
-  <code>player::send_hover</code>
+  <code>player.send_hover</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2974,11 +2974,11 @@ player::send_dialogue(messages=["messages", "messages"], delay=1);
 
 **Пример использования:**
 ```ts
-player::send_hover("message", "hover");
+player.send_hover("message", "hover");
 
 //Или в сухую по ключам
 
-player::send_hover(message="message", hover="hover");
+player.send_hover(message="message", hover="hover");
 ```
 
 **Аргументы:**
@@ -2989,7 +2989,7 @@ player::send_hover(message="message", hover="hover");
 | hover   | Текст | Сообщение при наведении курсором |
 
 <h3 id=player_send_message>
-  <code>player::message</code>
+  <code>player.message</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2999,11 +2999,11 @@ player::send_hover(message="message", hover="hover");
 
 **Пример использования:**
 ```ts
-player::message(["messages", "messages"], "CONCATENATION");
+player.message(["messages", "messages"], "CONCATENATION");
 
 //Или в сухую по ключам
 
-player::message(messages=["messages", "messages"], merging="CONCATENATION");
+player.message(messages=["messages", "messages"], merging="CONCATENATION");
 ```
 
 **Аргументы:**
@@ -3014,7 +3014,7 @@ player::message(messages=["messages", "messages"], merging="CONCATENATION");
 | merging  | Маркер<br/>**CONCATENATION** - Объединение<br/>**SEPARATE_LINES** - Разделение на строки<br/>**SPACES** - Разделение пробелом | Объединение текста                                              |
 
 <h3 id=player_send_minimessage>
-  <code>player::send_minimessage</code>
+  <code>player.send_minimessage</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3024,11 +3024,11 @@ player::message(messages=["messages", "messages"], merging="CONCATENATION");
 
 **Пример использования:**
 ```ts
-player::send_minimessage("minimessage");
+player.send_minimessage("minimessage");
 
 //Или в сухую по ключам
 
-player::send_minimessage(minimessage="minimessage");
+player.send_minimessage(minimessage="minimessage");
 ```
 
 **Аргументы:**
@@ -3038,7 +3038,7 @@ player::send_minimessage(minimessage="minimessage");
 | minimessage | Текст | Сообщение формата MiniMessage |
 
 <h3 id=player_send_title>
-  <code>player::send_title</code>
+  <code>player.send_title</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3048,11 +3048,11 @@ player::send_minimessage(minimessage="minimessage");
 
 **Пример использования:**
 ```ts
-player::send_title("title", "subtitle", 1, 2, 3);
+player.send_title("title", "subtitle", 1, 2, 3);
 
 //Или в сухую по ключам
 
-player::send_title(title="title", subtitle="subtitle", fade_in=1, stay=2, fade_out=3);
+player.send_title(title="title", subtitle="subtitle", fade_in=1, stay=2, fade_out=3);
 ```
 
 **Аргументы:**
@@ -3066,7 +3066,7 @@ player::send_title(title="title", subtitle="subtitle", fade_in=1, stay=2, fade_o
 | fade_out | Число | Время удаления в тиках  |
 
 <h3 id=player_set_absorption_health>
-  <code>player::set_absorption_health</code>
+  <code>player.set_absorption_health</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3076,11 +3076,11 @@ player::send_title(title="title", subtitle="subtitle", fade_in=1, stay=2, fade_o
 
 **Пример использования:**
 ```ts
-player::set_absorption_health(1);
+player.set_absorption_health(1);
 
 //Или в сухую по ключам
 
-player::set_absorption_health(health=1);
+player.set_absorption_health(health=1);
 ```
 
 **Аргументы:**
@@ -3090,7 +3090,7 @@ player::set_absorption_health(health=1);
 | health | Число | Количество дополнительного здоровья |
 
 <h3 id=player_set_air_ticks>
-  <code>player::set_air_ticks</code>
+  <code>player.set_air_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3100,11 +3100,11 @@ player::set_absorption_health(health=1);
 
 **Пример использования:**
 ```ts
-player::set_air_ticks(1);
+player.set_air_ticks(1);
 
 //Или в сухую по ключам
 
-player::set_air_ticks(ticks=1);
+player.set_air_ticks(ticks=1);
 ```
 
 **Аргументы:**
@@ -3114,7 +3114,7 @@ player::set_air_ticks(ticks=1);
 | ticks | Число | Количество оставшегося воздуха (в тиках) |
 
 <h3 id=player_set_allow_flying>
-  <code>player::set_allow_flying</code>
+  <code>player.set_allow_flying</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3124,11 +3124,11 @@ player::set_air_ticks(ticks=1);
 
 **Пример использования:**
 ```ts
-player::set_allow_flying("FALSE");
+player.set_allow_flying("FALSE");
 
 //Или в сухую по ключам
 
-player::set_allow_flying(allow_flying="FALSE");
+player.set_allow_flying(allow_flying="FALSE");
 ```
 
 **Аргументы:**
@@ -3138,7 +3138,7 @@ player::set_allow_flying(allow_flying="FALSE");
 | allow_flying | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Может летать |
 
 <h3 id=player_set_armor>
-  <code>player::set_armor</code>
+  <code>player.set_armor</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3150,11 +3150,11 @@ player::set_allow_flying(allow_flying="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_armor(item("stick"), item("stick"), item("stick"), item("stick"));
+player.set_armor(item("stick"), item("stick"), item("stick"), item("stick"));
 
 //Или в сухую по ключам
 
-player::set_armor(helmet=item("stick"), chestplate=item("stick"), leggings=item("stick"), boots=item("stick"));
+player.set_armor(helmet=item("stick"), chestplate=item("stick"), leggings=item("stick"), boots=item("stick"));
 ```
 
 **Аргументы:**
@@ -3167,7 +3167,7 @@ player::set_armor(helmet=item("stick"), chestplate=item("stick"), leggings=item(
 | boots      | Предмет | Ботинки       |
 
 <h3 id=player_set_arrows_in_body>
-  <code>player::set_arrows_in_body</code>
+  <code>player.set_arrows_in_body</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3177,11 +3177,11 @@ player::set_armor(helmet=item("stick"), chestplate=item("stick"), leggings=item(
 
 **Пример использования:**
 ```ts
-player::set_arrows_in_body(1);
+player.set_arrows_in_body(1);
 
 //Или в сухую по ключам
 
-player::set_arrows_in_body(amount=1);
+player.set_arrows_in_body(amount=1);
 ```
 
 **Аргументы:**
@@ -3191,7 +3191,7 @@ player::set_arrows_in_body(amount=1);
 | amount | Число | Количество отображаемых стрел |
 
 <h3 id=player_set_attack_speed>
-  <code>player::set_attack_speed</code>
+  <code>player.set_attack_speed</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3201,11 +3201,11 @@ player::set_arrows_in_body(amount=1);
 
 **Пример использования:**
 ```ts
-player::set_attack_speed(1);
+player.set_attack_speed(1);
 
 //Или в сухую по ключам
 
-player::set_attack_speed(speed=1);
+player.set_attack_speed(speed=1);
 ```
 
 **Аргументы:**
@@ -3215,7 +3215,7 @@ player::set_attack_speed(speed=1);
 | speed | Число | Скорость атаки |
 
 <h3 id=player_set_attribute>
-  <code>player::set_attribute</code>
+  <code>player.set_attribute</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3225,11 +3225,11 @@ player::set_attack_speed(speed=1);
 
 **Пример использования:**
 ```ts
-player::set_attribute(1, "CAMERA_DISTANCE");
+player.set_attribute(1, "CAMERA_DISTANCE");
 
 //Или в сухую по ключам
 
-player::set_attribute(value=1, attribute_type="CAMERA_DISTANCE");
+player.set_attribute(value=1, attribute_type="CAMERA_DISTANCE");
 ```
 
 **Аргументы:**
@@ -3240,7 +3240,7 @@ player::set_attribute(value=1, attribute_type="CAMERA_DISTANCE");
 | attribute_type | Маркер<br/>**CAMERA_DISTANCE** - Расстояние камеры при виде от третьего лица<br/>**GENERIC_ARMOR** - Очки защиты (generic.armor)<br/>**GENERIC_ARMOR_TOUGHNESS** - Очки плотности защиты (generic.armor_toughness)<br/>**GENERIC_ATTACK_DAMAGE** - Урон атаки (generic.attack_damage)<br/>**GENERIC_ATTACK_KNOCKBACK** - Отталкивание атаки (generic.attack_knockback)<br/>**GENERIC_ATTACK_SPEED** - Скорость атаки (generic.attack_speed)<br/>**GENERIC_BURNING_TIME** - Время горения<br/>**GENERIC_EXPLOSION_KNOCKBACK_RESISTANCE** - Сопротивление отбрасыванию от взрыва<br/>**GENERIC_FALL_DAMAGE_MULTIPLIER** - Множитель урона от падения<br/>**GENERIC_FLYING_SPEED** - Скорость полёта (generic.flying_speed)<br/>**GENERIC_FOLLOW_RANGE** - Расстояние следования (generic.follow_range)<br/>**GENERIC_GRAVITY** - Гравитация<br/>**GENERIC_JUMP_STRENGTH** - Сила прыжка<br/>**GENERIC_KNOCKBACK_RESISTANCE** - Сопротивление отталкиванию (generic.knockback_resistance)<br/>**GENERIC_LUCK** - Удача рыбалки (generic.luck)<br/>**GENERIC_MAX_ABSORPTION** - Максимальное поглощение (generic.max_absorption)<br/>**GENERIC_MAX_HEALTH** - Максимальное здоровье (generic.max_health)<br/>**GENERIC_MOVEMENT_EFFICIENCY** - Скорость передвижения по замедляющим блокам<br/>**GENERIC_MOVEMENT_SPEED** - Скорость передвижения (generic.movement_speed)<br/>**GENERIC_OXYGEN_BONUS** - Воздух под водой<br/>**GENERIC_SAFE_FALL_DISTANCE** - Безопасная высота падения<br/>**GENERIC_SCALE** - Масштаб<br/>**GENERIC_STEP_HEIGHT** - Высота шага<br/>**GENERIC_WATER_MOVEMENT_EFFICIENCY** - Скорость передвижения под водой<br/>**PLAYER_BLOCK_BREAK_SPEED** - Скорость ломания блока<br/>**PLAYER_BLOCK_INTERACTION_RANGE** - Расстояние взаимодействия с блоками<br/>**PLAYER_ENTITY_INTERACTION_RANGE** - Расстояние взаимодействия с сущностями<br/>**PLAYER_MINING_EFFICIENCY** - Скорость копания<br/>**PLAYER_SNEAKING_SPEED** - Скорость передвижения крадясь<br/>**PLAYER_SUBMERGED_MINING_SPEED** - Скорость копания под водой<br/>**PLAYER_SWEEPING_DAMAGE_RATIO** - Коэффициент разящего удара<br/>**TEMP_RANGE** - Расстояние приманивания<br/>**WAYPOINT_RECEIVE_RANGE** - Расстояние улавливания локатора (waypoint_receive_range)<br/>**WAYPOINT_TRANSMIT_RANGE** - Расстояние улавливания локатором (waypoint_transmit_range)<br/>**ZOMBIE_SPAWN_REINFORCEMENTS** - Шанс подкрепления зомби | Тип атрибута      |
 
 <h3 id=player_set_bee_stingers_in_body>
-  <code>player::set_bee_stingers_in_body</code>
+  <code>player.set_bee_stingers_in_body</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3250,11 +3250,11 @@ player::set_attribute(value=1, attribute_type="CAMERA_DISTANCE");
 
 **Пример использования:**
 ```ts
-player::set_bee_stingers_in_body(1);
+player.set_bee_stingers_in_body(1);
 
 //Или в сухую по ключам
 
-player::set_bee_stingers_in_body(amount=1);
+player.set_bee_stingers_in_body(amount=1);
 ```
 
 **Аргументы:**
@@ -3264,7 +3264,7 @@ player::set_bee_stingers_in_body(amount=1);
 | amount | Число | Количество отображаемых жал пчёл |
 
 <h3 id=player_set_block_opened_state>
-  <code>player::set_block_opened_state</code>
+  <code>player.set_block_opened_state</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3280,11 +3280,11 @@ player::set_bee_stingers_in_body(amount=1);
 
 **Пример использования:**
 ```ts
-player::set_block_opened_state(location(0,0,0,0,0), "FALSE");
+player.set_block_opened_state(location(0,0,0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-player::set_block_opened_state(location=location(0,0,0,0,0), is_opened="FALSE");
+player.set_block_opened_state(location=location(0,0,0,0,0), is_opened="FALSE");
 ```
 
 **Аргументы:**
@@ -3295,7 +3295,7 @@ player::set_block_opened_state(location=location(0,0,0,0,0), is_opened="FALSE");
 | is_opened | Маркер<br/>**FALSE** - Закрытый<br/>**TRUE** - Открытый | Состояние            |
 
 <h3 id=player_set_boss_bar>
-  <code>player::set_boss_bar</code>
+  <code>player.set_boss_bar</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3305,11 +3305,11 @@ player::set_block_opened_state(location=location(0,0,0,0,0), is_opened="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_boss_bar("id", "title", 1, "DARK_SKY", "NOTCHED_10", "BLUE");
+player.set_boss_bar("id", "title", 1, "DARK_SKY", "NOTCHED_10", "BLUE");
 
 //Или в сухую по ключам
 
-player::set_boss_bar(id="id", title="title", progress=1, sky_effect="DARK_SKY", style="NOTCHED_10", color="BLUE");
+player.set_boss_bar(id="id", title="title", progress=1, sky_effect="DARK_SKY", style="NOTCHED_10", color="BLUE");
 ```
 
 **Аргументы:**
@@ -3324,7 +3324,7 @@ player::set_boss_bar(id="id", title="title", progress=1, sky_effect="DARK_SKY", 
 | color      | Маркер<br/>**BLUE** - Синий<br/>**GREEN** - Зелёный<br/>**PINK** - Розовый<br/>**PURPLE** - Фиолетовый<br/>**RED** - Красный<br/>**WHITE** - Белый<br/>**YELLOW** - Жёлтый | Цвет                  |
 
 <h3 id=player_set_chat_completions>
-  <code>player::set_chat_completions</code>
+  <code>player.set_chat_completions</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3334,11 +3334,11 @@ player::set_boss_bar(id="id", title="title", progress=1, sky_effect="DARK_SKY", 
 
 **Пример использования:**
 ```ts
-player::set_chat_completions(["completions", "completions"], "ADD");
+player.set_chat_completions(["completions", "completions"], "ADD");
 
 //Или в сухую по ключам
 
-player::set_chat_completions(completions=["completions", "completions"], setting_mode="ADD");
+player.set_chat_completions(completions=["completions", "completions"], setting_mode="ADD");
 ```
 
 **Аргументы:**
@@ -3349,7 +3349,7 @@ player::set_chat_completions(completions=["completions", "completions"], setting
 | setting_mode | Маркер<br/>**ADD** - Добавить<br/>**REMOVE** - Удалить<br/>**SET** - Установить | Тип обновления                                         |
 
 <h3 id=player_set_collidable>
-  <code>player::set_collidable</code>
+  <code>player.set_collidable</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3359,11 +3359,11 @@ player::set_chat_completions(completions=["completions", "completions"], setting
 
 **Пример использования:**
 ```ts
-player::set_collidable("FALSE");
+player.set_collidable("FALSE");
 
 //Или в сухую по ключам
 
-player::set_collidable(collidable="FALSE");
+player.set_collidable(collidable="FALSE");
 ```
 
 **Аргументы:**
@@ -3373,7 +3373,7 @@ player::set_collidable(collidable="FALSE");
 | collidable | Маркер<br/>**FALSE** - Не сталкивается с другими игроками<br/>**TRUE** - Сталкивается с другими игроками | Режим столкновения |
 
 <h3 id=player_set_compass_target>
-  <code>player::set_compass_target</code>
+  <code>player.set_compass_target</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3383,11 +3383,11 @@ player::set_collidable(collidable="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_compass_target(location(0,0,0,0,0));
+player.set_compass_target(location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-player::set_compass_target(location=location(0,0,0,0,0));
+player.set_compass_target(location=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -3397,7 +3397,7 @@ player::set_compass_target(location=location(0,0,0,0,0));
 | location | Местоположение | Цель компаса |
 
 <h3 id=player_set_cursor_item>
-  <code>player::set_cursor_item</code>
+  <code>player.set_cursor_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3407,11 +3407,11 @@ player::set_compass_target(location=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-player::set_cursor_item(item("stick"));
+player.set_cursor_item(item("stick"));
 
 //Или в сухую по ключам
 
-player::set_cursor_item(item=item("stick"));
+player.set_cursor_item(item=item("stick"));
 ```
 
 **Аргументы:**
@@ -3421,7 +3421,7 @@ player::set_cursor_item(item=item("stick"));
 | item | Предмет | Предмет для установки |
 
 <h3 id=player_set_death_drops>
-  <code>player::set_death_drops</code>
+  <code>player.set_death_drops</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3431,11 +3431,11 @@ player::set_cursor_item(item=item("stick"));
 
 **Пример использования:**
 ```ts
-player::set_death_drops("FALSE");
+player.set_death_drops("FALSE");
 
 //Или в сухую по ключам
 
-player::set_death_drops(death_drops="FALSE");
+player.set_death_drops(death_drops="FALSE");
 ```
 
 **Аргументы:**
@@ -3445,7 +3445,7 @@ player::set_death_drops(death_drops="FALSE");
 | death_drops | Маркер<br/>**FALSE** - Не выпадают<br/>**TRUE** - Выпадают | Выпадение предметов |
 
 <h3 id=player_set_death_screen_score>
-  <code>player::set_death_screen_score</code>
+  <code>player.set_death_screen_score</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3457,11 +3457,11 @@ player::set_death_drops(death_drops="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_death_screen_score(1);
+player.set_death_screen_score(1);
 
 //Или в сухую по ключам
 
-player::set_death_screen_score(score=1);
+player.set_death_screen_score(score=1);
 ```
 
 **Аргументы:**
@@ -3471,7 +3471,7 @@ player::set_death_screen_score(score=1);
 | score | Число | Количество очков |
 
 <h3 id=player_set_default_visible>
-  <code>player::set_default_visible</code>
+  <code>player.set_default_visible</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3483,11 +3483,11 @@ player::set_death_screen_score(score=1);
 
 **Пример использования:**
 ```ts
-player::set_default_visible("TRUE");
+player.set_default_visible("TRUE");
 
 //Или в сухую по ключам
 
-player::set_default_visible(default_visible="TRUE");
+player.set_default_visible(default_visible="TRUE");
 ```
 
 **Аргументы:**
@@ -3497,7 +3497,7 @@ player::set_default_visible(default_visible="TRUE");
 | default_visible | Маркер<br/>**TRUE** - Видимый<br/>**FALSE** - Невидимый | Видимость |
 
 <h3 id=player_set_ender_chest_contents>
-  <code>player::set_ender_chest_contents</code>
+  <code>player.set_ender_chest_contents</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3507,11 +3507,11 @@ player::set_default_visible(default_visible="TRUE");
 
 **Пример использования:**
 ```ts
-player::set_ender_chest_contents([item("stick"), item("stick")]);
+player.set_ender_chest_contents([item("stick"), item("stick")]);
 
 //Или в сухую по ключам
 
-player::set_ender_chest_contents(items=[item("stick"), item("stick")]);
+player.set_ender_chest_contents(items=[item("stick"), item("stick")]);
 ```
 
 **Аргументы:**
@@ -3521,7 +3521,7 @@ player::set_ender_chest_contents(items=[item("stick"), item("stick")]);
 | items | Список\[Предмет\] | Предметы для установки<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=player_set_entity_glowing>
-  <code>player::set_entity_glowing</code>
+  <code>player.set_entity_glowing</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3531,11 +3531,11 @@ player::set_ender_chest_contents(items=[item("stick"), item("stick")]);
 
 **Пример использования:**
 ```ts
-player::set_entity_glowing(["name_or_uuid", "name_or_uuid"], "AQUA", "FALSE");
+player.set_entity_glowing(["name_or_uuid", "name_or_uuid"], "AQUA", "FALSE");
 
 //Или в сухую по ключам
 
-player::set_entity_glowing(name_or_uuid=["name_or_uuid", "name_or_uuid"], color="AQUA", glow="FALSE");
+player.set_entity_glowing(name_or_uuid=["name_or_uuid", "name_or_uuid"], color="AQUA", glow="FALSE");
 ```
 
 **Аргументы:**
@@ -3547,7 +3547,7 @@ player::set_entity_glowing(name_or_uuid=["name_or_uuid", "name_or_uuid"], color=
 | glow         | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить                                                                                                                                                                                                                                                                                                                                                                                                     | Свечение                                                           |
 
 <h3 id=player_set_equipment>
-  <code>player::set_equipment</code>
+  <code>player.set_equipment</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3557,11 +3557,11 @@ player::set_entity_glowing(name_or_uuid=["name_or_uuid", "name_or_uuid"], color=
 
 **Пример использования:**
 ```ts
-player::set_equipment(item("stick"), "BODY");
+player.set_equipment(item("stick"), "BODY");
 
 //Или в сухую по ключам
 
-player::set_equipment(item=item("stick"), slot="BODY");
+player.set_equipment(item=item("stick"), slot="BODY");
 ```
 
 **Аргументы:**
@@ -3572,7 +3572,7 @@ player::set_equipment(item=item("stick"), slot="BODY");
 | slot | Маркер<br/>**BODY** - Тело<br/>**CHEST** - Нагрудник<br/>**FEET** - Ботинки<br/>**HAND** - Основная рука<br/>**HEAD** - Шлем<br/>**LEGS** - Поножи<br/>**OFF_HAND** - Второстепенная рука<br/>**SADDLE** - Седло | Слот снаряжения     |
 
 <h3 id=player_set_exhaustion>
-  <code>player::set_exhaustion</code>
+  <code>player.set_exhaustion</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3582,11 +3582,11 @@ player::set_equipment(item=item("stick"), slot="BODY");
 
 **Пример использования:**
 ```ts
-player::set_exhaustion(1, "ADD");
+player.set_exhaustion(1, "ADD");
 
 //Или в сухую по ключам
 
-player::set_exhaustion(exhaustion=1, mode="ADD");
+player.set_exhaustion(exhaustion=1, mode="ADD");
 ```
 
 **Аргументы:**
@@ -3597,7 +3597,7 @@ player::set_exhaustion(exhaustion=1, mode="ADD");
 | mode       | Маркер<br/>**ADD** - Добавление<br/>**SET** - Установка | Режим установки   |
 
 <h3 id=player_set_experience>
-  <code>player::set_experience</code>
+  <code>player.set_experience</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3607,11 +3607,11 @@ player::set_exhaustion(exhaustion=1, mode="ADD");
 
 **Пример использования:**
 ```ts
-player::set_experience(1, "LEVEL");
+player.set_experience(1, "LEVEL");
 
 //Или в сухую по ключам
 
-player::set_experience(experience=1, mode="LEVEL");
+player.set_experience(experience=1, mode="LEVEL");
 ```
 
 **Аргументы:**
@@ -3622,7 +3622,7 @@ player::set_experience(experience=1, mode="LEVEL");
 | mode       | Маркер<br/>**LEVEL** - Как уровень<br/>**LEVEL_PERCENTAGE** - Как процент от уровня<br/>**POINTS** - Как очки опыта | Тип установки            |
 
 <h3 id=player_set_fall_distance>
-  <code>player::set_fall_distance</code>
+  <code>player.set_fall_distance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3632,11 +3632,11 @@ player::set_experience(experience=1, mode="LEVEL");
 
 **Пример использования:**
 ```ts
-player::set_fall_distance(1);
+player.set_fall_distance(1);
 
 //Или в сухую по ключам
 
-player::set_fall_distance(distance=1);
+player.set_fall_distance(distance=1);
 ```
 
 **Аргументы:**
@@ -3646,7 +3646,7 @@ player::set_fall_distance(distance=1);
 | distance | Число | Дистанция падения |
 
 <h3 id=player_set_fire_ticks>
-  <code>player::set_fire_ticks</code>
+  <code>player.set_fire_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3656,11 +3656,11 @@ player::set_fall_distance(distance=1);
 
 **Пример использования:**
 ```ts
-player::set_fire_ticks(1);
+player.set_fire_ticks(1);
 
 //Или в сухую по ключам
 
-player::set_fire_ticks(ticks=1);
+player.set_fire_ticks(ticks=1);
 ```
 
 **Аргументы:**
@@ -3670,7 +3670,7 @@ player::set_fire_ticks(ticks=1);
 | ticks | Число | Длительность (в тиках) |
 
 <h3 id=player_set_flying>
-  <code>player::set_flying</code>
+  <code>player.set_flying</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3680,11 +3680,11 @@ player::set_fire_ticks(ticks=1);
 
 **Пример использования:**
 ```ts
-player::set_flying("FALSE");
+player.set_flying("FALSE");
 
 //Или в сухую по ключам
 
-player::set_flying(is_flying="FALSE");
+player.set_flying(is_flying="FALSE");
 ```
 
 **Аргументы:**
@@ -3694,7 +3694,7 @@ player::set_flying(is_flying="FALSE");
 | is_flying | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Полёт    |
 
 <h3 id=player_set_fog_distance>
-  <code>player::set_fog_distance</code>
+  <code>player.set_fog_distance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3704,11 +3704,11 @@ player::set_flying(is_flying="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_fog_distance(1);
+player.set_fog_distance(1);
 
 //Или в сухую по ключам
 
-player::set_fog_distance(distance=1);
+player.set_fog_distance(distance=1);
 ```
 
 **Аргументы:**
@@ -3718,7 +3718,7 @@ player::set_fog_distance(distance=1);
 | distance | Число | Дистанция прорисовки в чанках (2-32) |
 
 <h3 id=player_set_food>
-  <code>player::set_food</code>
+  <code>player.set_food</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3728,11 +3728,11 @@ player::set_fog_distance(distance=1);
 
 **Пример использования:**
 ```ts
-player::set_food(1, "ADD");
+player.set_food(1, "ADD");
 
 //Или в сухую по ключам
 
-player::set_food(food=1, mode="ADD");
+player.set_food(food=1, mode="ADD");
 ```
 
 **Аргументы:**
@@ -3743,7 +3743,7 @@ player::set_food(food=1, mode="ADD");
 | mode | Маркер<br/>**ADD** - Прибавление<br/>**SET** - Установка | Режим установки |
 
 <h3 id=player_set_freeze_ticks>
-  <code>player::set_freeze_ticks</code>
+  <code>player.set_freeze_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3753,11 +3753,11 @@ player::set_food(food=1, mode="ADD");
 
 **Пример использования:**
 ```ts
-player::set_freeze_ticks(1, "FALSE");
+player.set_freeze_ticks(1, "FALSE");
 
 //Или в сухую по ключам
 
-player::set_freeze_ticks(ticks=1, ticking_locked="FALSE");
+player.set_freeze_ticks(ticks=1, ticking_locked="FALSE");
 ```
 
 **Аргументы:**
@@ -3768,7 +3768,7 @@ player::set_freeze_ticks(ticks=1, ticking_locked="FALSE");
 | ticking_locked | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить | Блокировка состояния (время не будет изменяться) |
 
 <h3 id=player_set_gamemode>
-  <code>player::set_gamemode</code>
+  <code>player.set_gamemode</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3778,11 +3778,11 @@ player::set_freeze_ticks(ticks=1, ticking_locked="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_gamemode("ADVENTURE", "KEEP_ORIGINAL");
+player.set_gamemode("ADVENTURE", "KEEP_ORIGINAL");
 
 //Или в сухую по ключам
 
-player::set_gamemode(gamemode="ADVENTURE", flight_mode="KEEP_ORIGINAL");
+player.set_gamemode(gamemode="ADVENTURE", flight_mode="KEEP_ORIGINAL");
 ```
 
 **Аргументы:**
@@ -3793,7 +3793,7 @@ player::set_gamemode(gamemode="ADVENTURE", flight_mode="KEEP_ORIGINAL");
 | flight_mode | Маркер<br/>**KEEP_ORIGINAL** - Оставить изначальный<br/>**RESPECT_GAMEMODE** - Учитывать режим игры                               | Режим полёта |
 
 <h3 id=player_set_gliding>
-  <code>player::set_gliding</code>
+  <code>player.set_gliding</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3803,11 +3803,11 @@ player::set_gamemode(gamemode="ADVENTURE", flight_mode="KEEP_ORIGINAL");
 
 **Пример использования:**
 ```ts
-player::set_gliding("FALSE");
+player.set_gliding("FALSE");
 
 //Или в сухую по ключам
 
-player::set_gliding(is_gliding="FALSE");
+player.set_gliding(is_gliding="FALSE");
 ```
 
 **Аргументы:**
@@ -3817,7 +3817,7 @@ player::set_gliding(is_gliding="FALSE");
 | is_gliding | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Полёт на элитрах |
 
 <h3 id=player_set_health>
-  <code>player::set_health</code>
+  <code>player.set_health</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3827,11 +3827,11 @@ player::set_gliding(is_gliding="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_health(1);
+player.set_health(1);
 
 //Или в сухую по ключам
 
-player::set_health(health=1);
+player.set_health(health=1);
 ```
 
 **Аргументы:**
@@ -3841,7 +3841,7 @@ player::set_health(health=1);
 | health | Число | Количество здоровья |
 
 <h3 id=player_set_hotbar_slot>
-  <code>player::set_hotbar_slot</code>
+  <code>player.set_hotbar_slot</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3851,11 +3851,11 @@ player::set_health(health=1);
 
 **Пример использования:**
 ```ts
-player::set_hotbar_slot(1);
+player.set_hotbar_slot(1);
 
 //Или в сухую по ключам
 
-player::set_hotbar_slot(slot=1);
+player.set_hotbar_slot(slot=1);
 ```
 
 **Аргументы:**
@@ -3865,7 +3865,7 @@ player::set_hotbar_slot(slot=1);
 | slot | Число | Номер слота |
 
 <h3 id=player_set_instant_respawn>
-  <code>player::set_instant_respawn</code>
+  <code>player.set_instant_respawn</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3875,11 +3875,11 @@ player::set_hotbar_slot(slot=1);
 
 **Пример использования:**
 ```ts
-player::set_instant_respawn("FALSE");
+player.set_instant_respawn("FALSE");
 
 //Или в сухую по ключам
 
-player::set_instant_respawn(instant_respawn="FALSE");
+player.set_instant_respawn(instant_respawn="FALSE");
 ```
 
 **Аргументы:**
@@ -3889,7 +3889,7 @@ player::set_instant_respawn(instant_respawn="FALSE");
 | instant_respawn | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Мгновенное возрождение |
 
 <h3 id=player_set_inventory_kept>
-  <code>player::set_inventory_kept</code>
+  <code>player.set_inventory_kept</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3899,11 +3899,11 @@ player::set_instant_respawn(instant_respawn="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_inventory_kept("FALSE");
+player.set_inventory_kept("FALSE");
 
 //Или в сухую по ключам
 
-player::set_inventory_kept(kept="FALSE");
+player.set_inventory_kept(kept="FALSE");
 ```
 
 **Аргументы:**
@@ -3913,7 +3913,7 @@ player::set_inventory_kept(kept="FALSE");
 | kept | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Сохранение инвентаря |
 
 <h3 id=player_set_inventory_menu_custom_id>
-  <code>player::set_inventory_menu_custom_id</code>
+  <code>player.set_inventory_menu_custom_id</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3923,11 +3923,11 @@ player::set_inventory_kept(kept="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_inventory_menu_custom_id("custom_id");
+player.set_inventory_menu_custom_id("custom_id");
 
 //Или в сухую по ключам
 
-player::set_inventory_menu_custom_id(custom_id="custom_id");
+player.set_inventory_menu_custom_id(custom_id="custom_id");
 ```
 
 **Аргументы:**
@@ -3937,7 +3937,7 @@ player::set_inventory_menu_custom_id(custom_id="custom_id");
 | custom_id | Текст | Кастомный ID |
 
 <h3 id=player_set_inventory_menu_item>
-  <code>player::set_inventory_menu_item</code>
+  <code>player.set_inventory_menu_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3947,11 +3947,11 @@ player::set_inventory_menu_custom_id(custom_id="custom_id");
 
 **Пример использования:**
 ```ts
-player::set_inventory_menu_item(item("stick"), 1);
+player.set_inventory_menu_item(item("stick"), 1);
 
 //Или в сухую по ключам
 
-player::set_inventory_menu_item(item=item("stick"), slot=1);
+player.set_inventory_menu_item(item=item("stick"), slot=1);
 ```
 
 **Аргументы:**
@@ -3962,7 +3962,7 @@ player::set_inventory_menu_item(item=item("stick"), slot=1);
 | slot | Число   | Слот для установки    |
 
 <h3 id=player_set_inventory_menu_name>
-  <code>player::set_inventory_menu_name</code>
+  <code>player.set_inventory_menu_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3972,11 +3972,11 @@ player::set_inventory_menu_item(item=item("stick"), slot=1);
 
 **Пример использования:**
 ```ts
-player::set_inventory_menu_name("text");
+player.set_inventory_menu_name("text");
 
 //Или в сухую по ключам
 
-player::set_inventory_menu_name(text="text");
+player.set_inventory_menu_name(text="text");
 ```
 
 **Аргументы:**
@@ -3986,7 +3986,7 @@ player::set_inventory_menu_name(text="text");
 | text | Текст | Новое название |
 
 <h3 id=player_set_invulnerability_ticks>
-  <code>player::set_invulnerability_ticks</code>
+  <code>player.set_invulnerability_ticks</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -3996,10 +3996,10 @@ player::set_inventory_menu_name(text="text");
 
 **Пример использования:**
 ```ts
-player::set_invulnerability_ticks(1);
+player.set_invulnerability_ticks(1);
 //Или в сухую по ключам
 
-player::set_invulnerability_ticks(ticks=1);
+player.set_invulnerability_ticks(ticks=1);
 ```
 
 **Аргументы:**
@@ -4009,7 +4009,7 @@ player::set_invulnerability_ticks(ticks=1);
 | ticks | Число | Длительность неуязвимости (в тиках) |
 
 <h3 id=player_set_item_cooldown>
-  <code>player::set_item_cooldown</code>
+  <code>player.set_item_cooldown</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4021,11 +4021,11 @@ player::set_invulnerability_ticks(ticks=1);
 
 **Пример использования:**
 ```ts
-player::set_item_cooldown(1, item("stick"), sound("entity.zombie.hurt"));
+player.set_item_cooldown(1, item("stick"), sound("entity.zombie.hurt"));
 
 //Или в сухую по ключам
 
-player::set_item_cooldown(cooldown=1, item=item("stick"), sound=sound("entity.zombie.hurt"));
+player.set_item_cooldown(cooldown=1, item=item("stick"), sound=sound("entity.zombie.hurt"));
 ```
 
 **Аргументы:**
@@ -4037,7 +4037,7 @@ player::set_item_cooldown(cooldown=1, item=item("stick"), sound=sound("entity.zo
 | sound    | Звук    | Звук сброса задержки      |
 
 <h3 id=player_set_item_group_cooldown>
-  <code>player::set_item_group_cooldown</code>
+  <code>player.set_item_group_cooldown</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4049,11 +4049,11 @@ player::set_item_cooldown(cooldown=1, item=item("stick"), sound=sound("entity.zo
 
 **Пример использования:**
 ```ts
-player::set_item_group_cooldown("key", 1);
+player.set_item_group_cooldown("key", 1);
 
 //Или в сухую по ключам
 
-player::set_item_group_cooldown(key="key", cooldown=1);
+player.set_item_group_cooldown(key="key", cooldown=1);
 ```
 
 **Аргументы:**
@@ -4064,7 +4064,7 @@ player::set_item_group_cooldown(key="key", cooldown=1);
 | cooldown | Число | Задержка         |
 
 <h3 id=player_set_items>
-  <code>player::set_items</code>
+  <code>player.set_items</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4074,11 +4074,11 @@ player::set_item_group_cooldown(key="key", cooldown=1);
 
 **Пример использования:**
 ```ts
-player::set_items([item("stick"), item("stick")]);
+player.set_items([item("stick"), item("stick")]);
 
 //Или в сухую по ключам
 
-player::set_items(items=[item("stick"), item("stick")]);
+player.set_items(items=[item("stick"), item("stick")]);
 ```
 
 **Аргументы:**
@@ -4088,7 +4088,7 @@ player::set_items(items=[item("stick"), item("stick")]);
 | items | Список\[Предмет\] | Предметы для выдачи в соответствующие слоты<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=player_set_max_health>
-  <code>player::set_max_health</code>
+  <code>player.set_max_health</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4098,11 +4098,11 @@ player::set_items(items=[item("stick"), item("stick")]);
 
 **Пример использования:**
 ```ts
-player::set_max_health(1, "FALSE");
+player.set_max_health(1, "FALSE");
 
 //Или в сухую по ключам
 
-player::set_max_health(health=1, heal="FALSE");
+player.set_max_health(health=1, heal="FALSE");
 ```
 
 **Аргументы:**
@@ -4113,7 +4113,7 @@ player::set_max_health(health=1, heal="FALSE");
 | heal   | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Исцелить игрока                  |
 
 <h3 id=player_set_movement_speed>
-  <code>player::set_movement_speed</code>
+  <code>player.set_movement_speed</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4123,11 +4123,11 @@ player::set_max_health(health=1, heal="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_movement_speed(1, "FLY");
+player.set_movement_speed(1, "FLY");
 
 //Или в сухую по ключам
 
-player::set_movement_speed(distance=1, movement_type="FLY");
+player.set_movement_speed(distance=1, movement_type="FLY");
 ```
 
 **Аргументы:**
@@ -4138,7 +4138,7 @@ player::set_movement_speed(distance=1, movement_type="FLY");
 | movement_type | Маркер<br/>**FLY** - Полёт<br/>**WALK** - Ходьба | Тип движения      |
 
 <h3 id=player_set_nametag_visible>
-  <code>player::set_nametag_visible</code>
+  <code>player.set_nametag_visible</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4148,11 +4148,11 @@ player::set_movement_speed(distance=1, movement_type="FLY");
 
 **Пример использования:**
 ```ts
-player::set_nametag_visible("FALSE");
+player.set_nametag_visible("FALSE");
 
 //Или в сухую по ключам
 
-player::set_nametag_visible(visible="FALSE");
+player.set_nametag_visible(visible="FALSE");
 ```
 
 **Аргументы:**
@@ -4162,7 +4162,7 @@ player::set_nametag_visible(visible="FALSE");
 | visible | Маркер<br/>**FALSE** - Не отображать<br/>**TRUE** - Отображать | Отображение ника |
 
 <h3 id=player_set_player_list_info>
-  <code>player::set_player_list_info</code>
+  <code>player.set_player_list_info</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4172,11 +4172,11 @@ player::set_nametag_visible(visible="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_player_list_info(["text", "text"], "CONCATENATION", "FOOTER");
+player.set_player_list_info(["text", "text"], "CONCATENATION", "FOOTER");
 
 //Или в сухую по ключам
 
-player::set_player_list_info(text=["text", "text"], merging="CONCATENATION", position="FOOTER");
+player.set_player_list_info(text=["text", "text"], merging="CONCATENATION", position="FOOTER");
 ```
 
 **Аргументы:**
@@ -4188,7 +4188,7 @@ player::set_player_list_info(text=["text", "text"], merging="CONCATENATION", pos
 | position | Маркер<br/>**FOOTER** - Снизу<br/>**HEADER** - Сверху                                                                         | Позиция                                                             |
 
 <h3 id=player_set_pose>
-  <code>player::set_pose</code>
+  <code>player.set_pose</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4198,11 +4198,11 @@ player::set_player_list_info(text=["text", "text"], merging="CONCATENATION", pos
 
 **Пример использования:**
 ```ts
-player::set_pose("CROAKING", "FALSE");
+player.set_pose("CROAKING", "FALSE");
 
 //Или в сухую по ключам
 
-player::set_pose(pose="CROAKING", locked="FALSE");
+player.set_pose(pose="CROAKING", locked="FALSE");
 ```
 
 **Аргументы:**
@@ -4213,7 +4213,7 @@ player::set_pose(pose="CROAKING", locked="FALSE");
 | locked | Маркер<br/>**FALSE** - Выключить<br/>**TRUE** - Включить                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Блокировка позы   |
 
 <h3 id=player_set_pvp>
-  <code>player::set_pvp</code>
+  <code>player.set_pvp</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4223,11 +4223,11 @@ player::set_pose(pose="CROAKING", locked="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_pvp("FALSE");
+player.set_pvp("FALSE");
 
 //Или в сухую по ключам
 
-player::set_pvp(pvp="FALSE");
+player.set_pvp(pvp="FALSE");
 ```
 
 **Аргументы:**
@@ -4237,7 +4237,7 @@ player::set_pvp(pvp="FALSE");
 | pvp | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да | Может атаковать |
 
 <h3 id=player_set_rain_level>
-  <code>player::set_rain_level</code>
+  <code>player.set_rain_level</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4247,11 +4247,11 @@ player::set_pvp(pvp="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_rain_level(1);
+player.set_rain_level(1);
 
 //Или в сухую по ключам
 
-player::set_rain_level(rain_level=1);
+player.set_rain_level(rain_level=1);
 ```
 
 **Аргументы:**
@@ -4261,7 +4261,7 @@ player::set_rain_level(rain_level=1);
 | rain_level | Число | Уровень дождя (от 0 до 100) |
 
 <h3 id=player_set_rotation>
-  <code>player::set_rotation</code>
+  <code>player.set_rotation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4271,11 +4271,11 @@ player::set_rain_level(rain_level=1);
 
 **Пример использования:**
 ```ts
-player::set_rotation(1, 2);
+player.set_rotation(1, 2);
 
 //Или в сухую по ключам
 
-player::set_rotation(yaw=1, pitch=2);
+player.set_rotation(yaw=1, pitch=2);
 ```
 
 **Аргументы:**
@@ -4286,7 +4286,7 @@ player::set_rotation(yaw=1, pitch=2);
 | pitch | Число | Вертикальный поворот (pitch) |
 
 <h3 id=player_set_rotation_by_vector>
-  <code>player::set_rotation_by_vector</code>
+  <code>player.set_rotation_by_vector</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4296,11 +4296,11 @@ player::set_rotation(yaw=1, pitch=2);
 
 **Пример использования:**
 ```ts
-player::set_rotation_by_vector(vector(0,0,0));
+player.set_rotation_by_vector(vector(0,0,0));
 
 //Или в сухую по ключам
 
-player::set_rotation_by_vector(vector=vector(0,0,0));
+player.set_rotation_by_vector(vector=vector(0,0,0));
 ```
 
 **Аргументы:**
@@ -4310,7 +4310,7 @@ player::set_rotation_by_vector(vector=vector(0,0,0));
 | vector | Вектор | Вектор для поворота |
 
 <h3 id=player_set_saturation>
-  <code>player::set_saturation</code>
+  <code>player.set_saturation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4320,11 +4320,11 @@ player::set_rotation_by_vector(vector=vector(0,0,0));
 
 **Пример использования:**
 ```ts
-player::set_saturation(1, "ADD");
+player.set_saturation(1, "ADD");
 
 //Или в сухую по ключам
 
-player::set_saturation(saturation=1, mode="ADD");
+player.set_saturation(saturation=1, mode="ADD");
 ```
 
 **Аргументы:**
@@ -4335,7 +4335,7 @@ player::set_saturation(saturation=1, mode="ADD");
 | mode       | Маркер<br/>**ADD** - Прибавление<br/>**SET** - Установка | Режим установки      |
 
 <h3 id=player_set_simulation_distance>
-  <code>player::set_simulation_distance</code>
+  <code>player.set_simulation_distance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4345,11 +4345,11 @@ player::set_saturation(saturation=1, mode="ADD");
 
 **Пример использования:**
 ```ts
-player::set_simulation_distance(1);
+player.set_simulation_distance(1);
 
 //Или в сухую по ключам
 
-player::set_simulation_distance(distance=1);
+player.set_simulation_distance(distance=1);
 ```
 
 **Аргументы:**
@@ -4359,7 +4359,7 @@ player::set_simulation_distance(distance=1);
 | distance | Число | Дистанция симуляции в чанках (2-32) |
 
 <h3 id=player_set_skin>
-  <code>player::set_skin</code>
+  <code>player.set_skin</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4369,11 +4369,11 @@ player::set_simulation_distance(distance=1);
 
 **Пример использования:**
 ```ts
-player::set_skin("name_or_uuid", "MOJANG");
+player.set_skin("name_or_uuid", "MOJANG");
 
 //Или в сухую по ключам
 
-player::set_skin(name_or_uuid="name_or_uuid", server_type="MOJANG");
+player.set_skin(name_or_uuid="name_or_uuid", server_type="MOJANG");
 ```
 
 **Аргументы:**
@@ -4384,7 +4384,7 @@ player::set_skin(name_or_uuid="name_or_uuid", server_type="MOJANG");
 | server_type  | Маркер<br/>**MOJANG** - Скин Mojang<br/>**SERVER** - Скин JustMC | Тип сервера скинов                  |
 
 <h3 id=player_set_slot_item>
-  <code>player::set_slot_item</code>
+  <code>player.set_slot_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4394,11 +4394,11 @@ player::set_skin(name_or_uuid="name_or_uuid", server_type="MOJANG");
 
 **Пример использования:**
 ```ts
-player::set_slot_item(item("stick"), 1);
+player.set_slot_item(item("stick"), 1);
 
 //Или в сухую по ключам
 
-player::set_slot_item(item=item("stick"), slot=1);
+player.set_slot_item(item=item("stick"), slot=1);
 ```
 
 **Аргументы:**
@@ -4409,7 +4409,7 @@ player::set_slot_item(item=item("stick"), slot=1);
 | slot | Число   | Слот для выдачи    |
 
 <h3 id=player_set_spawn_point>
-  <code>player::set_spawn_point</code>
+  <code>player.set_spawn_point</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4419,11 +4419,11 @@ player::set_slot_item(item=item("stick"), slot=1);
 
 **Пример использования:**
 ```ts
-player::set_spawn_point(location(0,0,0,0,0));
+player.set_spawn_point(location(0,0,0,0,0));
 
 //Или в сухую по ключам
 
-player::set_spawn_point(spawn_point=location(0,0,0,0,0));
+player.set_spawn_point(spawn_point=location(0,0,0,0,0));
 ```
 
 **Аргументы:**
@@ -4433,7 +4433,7 @@ player::set_spawn_point(spawn_point=location(0,0,0,0,0));
 | spawn_point | Местоположение | Местоположение возрождения |
 
 <h3 id=player_set_thunder_level>
-  <code>player::set_thunder_level</code>
+  <code>player.set_thunder_level</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4445,11 +4445,11 @@ player::set_spawn_point(spawn_point=location(0,0,0,0,0));
 
 **Пример использования:**
 ```ts
-player::set_thunder_level(1);
+player.set_thunder_level(1);
 
 //Или в сухую по ключам
 
-player::set_thunder_level(thunder_level=1);
+player.set_thunder_level(thunder_level=1);
 ```
 
 **Аргументы:**
@@ -4459,7 +4459,7 @@ player::set_thunder_level(thunder_level=1);
 | thunder_level | Число | Уровень грозы (от 0 до 100) |
 
 <h3 id=player_set_tick_rate>
-  <code>player::set_tick_rate</code>
+  <code>player.set_tick_rate</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4469,11 +4469,11 @@ player::set_thunder_level(thunder_level=1);
 
 **Пример использования:**
 ```ts
-player::set_tick_rate(1);
+player.set_tick_rate(1);
 
 //Или в сухую по ключам
 
-player::set_tick_rate(tick_rate=1);
+player.set_tick_rate(tick_rate=1);
 ```
 
 **Аргументы:**
@@ -4483,7 +4483,7 @@ player::set_tick_rate(tick_rate=1);
 | tick_rate | Число | Тик-рейт |
 
 <h3 id=player_set_time>
-  <code>player::set_time</code>
+  <code>player.set_time</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4493,11 +4493,11 @@ player::set_tick_rate(tick_rate=1);
 
 **Пример использования:**
 ```ts
-player::set_time(1);
+player.set_time(1);
 
 //Или в сухую по ключам
 
-player::set_time(time=1);
+player.set_time(time=1);
 ```
 
 **Аргументы:**
@@ -4507,7 +4507,7 @@ player::set_time(time=1);
 | time | Число | Время в тиках |
 
 <h3 id=player_set_velocity>
-  <code>player::set_velocity</code>
+  <code>player.set_velocity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4517,11 +4517,11 @@ player::set_time(time=1);
 
 **Пример использования:**
 ```ts
-player::set_velocity(vector(0,0,0), "FALSE");
+player.set_velocity(vector(0,0,0), "FALSE");
 
 //Или в сухую по ключам
 
-player::set_velocity(velocity=vector(0,0,0), increment="FALSE");
+player.set_velocity(velocity=vector(0,0,0), increment="FALSE");
 ```
 
 **Аргументы:**
@@ -4532,7 +4532,7 @@ player::set_velocity(velocity=vector(0,0,0), increment="FALSE");
 | increment | Маркер<br/>**FALSE** - Выключено<br/>**TRUE** - Включено | Учитывать текущую инерцию |
 
 <h3 id=player_set_visual_fire>
-  <code>player::set_visual_fire</code>
+  <code>player.set_visual_fire</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4542,11 +4542,11 @@ player::set_velocity(velocity=vector(0,0,0), increment="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_visual_fire("FALSE");
+player.set_visual_fire("FALSE");
 
 //Или в сухую по ключам
 
-player::set_visual_fire(visual_fire="FALSE");
+player.set_visual_fire(visual_fire="FALSE");
 ```
 
 **Аргументы:**
@@ -4556,7 +4556,7 @@ player::set_visual_fire(visual_fire="FALSE");
 | visual_fire | Маркер<br/>**FALSE** - Выключить<br/>**NOT_SET** - По умолчанию<br/>**TRUE** - Включить | Визуальный огонь |
 
 <h3 id=player_set_weather>
-  <code>player::set_weather</code>
+  <code>player.set_weather</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4566,11 +4566,11 @@ player::set_visual_fire(visual_fire="FALSE");
 
 **Пример использования:**
 ```ts
-player::set_weather("CLEAR");
+player.set_weather("CLEAR");
 
 //Или в сухую по ключам
 
-player::set_weather(weather_type="CLEAR");
+player.set_weather(weather_type="CLEAR");
 ```
 
 **Аргументы:**
@@ -4580,7 +4580,7 @@ player::set_weather(weather_type="CLEAR");
 | weather_type | Маркер<br/>**CLEAR** - Солнечная<br/>**DOWNFALL** - Дождливая | Тип погоды |
 
 <h3 id=player_set_world_border>
-  <code>player::set_world_border</code>
+  <code>player.set_world_border</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4590,11 +4590,11 @@ player::set_weather(weather_type="CLEAR");
 
 **Пример использования:**
 ```ts
-player::set_world_border(location(0,0,0,0,0), 1, 2);
+player.set_world_border(location(0,0,0,0,0), 1, 2);
 
 //Или в сухую по ключам
 
-player::set_world_border(center=location(0,0,0,0,0), size=1, warning=2);
+player.set_world_border(center=location(0,0,0,0,0), size=1, warning=2);
 ```
 
 **Аргументы:**
@@ -4606,7 +4606,7 @@ player::set_world_border(center=location(0,0,0,0,0), size=1, warning=2);
 | warning | Число          | Расстояние до появления красной обводки |
 
 <h3 id=player_shift_world_border>
-  <code>player::shift_world_border</code>
+  <code>player.shift_world_border</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4616,11 +4616,11 @@ player::set_world_border(center=location(0,0,0,0,0), size=1, warning=2);
 
 **Пример использования:**
 ```ts
-player::shift_world_border(1, 2, 3);
+player.shift_world_border(1, 2, 3);
 
 //Или в сухую по ключам
 
-player::shift_world_border(old_size=1, size=2, time=3);
+player.shift_world_border(old_size=1, size=2, time=3);
 ```
 
 **Аргументы:**
@@ -4632,7 +4632,7 @@ player::shift_world_border(old_size=1, size=2, time=3);
 | time     | Число | Время изменения размера    |
 
 <h3 id=player_show_debug_marker>
-  <code>player::show_debug_marker</code>
+  <code>player.show_debug_marker</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4644,11 +4644,11 @@ player::shift_world_border(old_size=1, size=2, time=3);
 
 **Пример использования:**
 ```ts
-player::show_debug_marker(location(0,0,0,0,0), "name", 1, 2, 3, 4, 5);
+player.show_debug_marker(location(0,0,0,0,0), "name", 1, 2, 3, 4, 5);
 
 //Или в сухую по ключам
 
-player::show_debug_marker(location=location(0,0,0,0,0), name="name", duration=1, red=2, green=3, blue=4, alpha=5);
+player.show_debug_marker(location=location(0,0,0,0,0), name="name", duration=1, red=2, green=3, blue=4, alpha=5);
 ```
 
 **Аргументы:**
@@ -4664,7 +4664,7 @@ player::show_debug_marker(location=location(0,0,0,0,0), name="name", duration=1,
 | alpha    | Число          | Непрозрачность (от 0 до 100)                  |
 
 <h3 id=player_show_demo_screen>
-  <code>player::show_demo_screen</code>
+  <code>player.show_demo_screen</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4674,11 +4674,11 @@ player::show_debug_marker(location=location(0,0,0,0,0), name="name", duration=1,
 
 **Пример использования:**
 ```ts
-player::show_demo_screen();
+player.show_demo_screen();
 ```
 
 <h3 id=player_show_dialog_menu_from_nbt>
-  <code>player::show_dialog_menu_from_nbt</code>
+  <code>player.show_dialog_menu_from_nbt</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4688,11 +4688,11 @@ player::show_demo_screen();
 
 **Пример использования:**
 ```ts
-player::show_dialog_menu_from_nbt("dialog_nbt");
+player.show_dialog_menu_from_nbt("dialog_nbt");
 
 //Или в сухую по ключам
 
-player::show_dialog_menu_from_nbt(dialog_nbt="dialog_nbt");
+player.show_dialog_menu_from_nbt(dialog_nbt="dialog_nbt");
 ```
 
 **Аргументы:**
@@ -4702,7 +4702,7 @@ player::show_dialog_menu_from_nbt(dialog_nbt="dialog_nbt");
 | dialog_nbt | Текст | NBT-теги диалогового окна |
 
 <h3 id=player_show_inventory_menu>
-  <code>player::show_inventory_menu</code>
+  <code>player.show_inventory_menu</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4712,11 +4712,11 @@ player::show_dialog_menu_from_nbt(dialog_nbt="dialog_nbt");
 
 **Пример использования:**
 ```ts
-player::show_inventory_menu([item("stick"), item("stick")], "name", "custom_id", "ANVIL");
+player.show_inventory_menu([item("stick"), item("stick")], "name", "custom_id", "ANVIL");
 
 //Или в сухую по ключам
 
-player::show_inventory_menu(items=[item("stick"), item("stick")], name="name", custom_id="custom_id", inventory_type="ANVIL");
+player.show_inventory_menu(items=[item("stick"), item("stick")], name="name", custom_id="custom_id", inventory_type="ANVIL");
 ```
 
 **Аргументы:**
@@ -4729,7 +4729,7 @@ player::show_inventory_menu(items=[item("stick"), item("stick")], name="name", c
 | inventory_type | Маркер<br/>**ANVIL** - Наковальня<br/>**BARREL** - Бочка<br/>**BEACON** - Маяк<br/>**BLAST_FURNACE** - Плавильная печь<br/>**BREWING** - Зельеварка<br/>**CARTOGRAPHY** - Стол картографа<br/>**CHEST** - Сундук<br/>**COMPOSTER** - Компостер<br/>**CRAFTER** - Сборщик<br/>**CRAFTING** - Не открыт<br/>**CREATIVE** - Инвентарь креатива<br/>**DISPENSER** - Раздатчик<br/>**DROPPER** - Выбрасыватель<br/>**ENCHANTING** - Чародейский стол<br/>**ENDER_CHEST** - Эндер-сундук<br/>**FURNACE** - Печь<br/>**GRINDSTONE** - Точило<br/>**HOPPER** - Воронка<br/>**LECTERN** - Кафедра<br/>**LOOM** - Ткацкий станок<br/>**MERCHANT** - Торговец<br/>**PLAYER** - Инвентарь игрока<br/>**SHULKER_BOX** - Шалкеровый ящик<br/>**SMITHING** - Стол кузнеца<br/>**SMOKER** - Коптильня<br/>**STONECUTTER** - Камнерез<br/>**WORKBENCH** - Верстак | Тип инвентаря                                                   |
 
 <h3 id=player_show_scoreboard>
-  <code>player::show_scoreboard</code>
+  <code>player.show_scoreboard</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4739,11 +4739,11 @@ player::show_inventory_menu(items=[item("stick"), item("stick")], name="name", c
 
 **Пример использования:**
 ```ts
-player::show_scoreboard("id");
+player.show_scoreboard("id");
 
 //Или в сухую по ключам
 
-player::show_scoreboard(id="id");
+player.show_scoreboard(id="id");
 ```
 
 **Аргументы:**
@@ -4753,7 +4753,7 @@ player::show_scoreboard(id="id");
 | id | Текст | ID скорборда |
 
 <h3 id=player_show_win_screen>
-  <code>player::show_win_screen</code>
+  <code>player.show_win_screen</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4765,11 +4765,11 @@ player::show_scoreboard(id="id");
 
 **Пример использования:**
 ```ts
-player::show_win_screen();
+player.show_win_screen();
 ```
 
 <h3 id=player_spectate_target>
-  <code>player::spectate_target</code>
+  <code>player.spectate_target</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4779,11 +4779,11 @@ player::show_win_screen();
 
 **Пример использования:**
 ```ts
-player::spectate_target("name_or_uuid");
+player.spectate_target("name_or_uuid");
 
 //Или в сухую по ключам
 
-player::spectate_target(name_or_uuid="name_or_uuid");
+player.spectate_target(name_or_uuid="name_or_uuid");
 ```
 
 **Аргументы:**
@@ -4793,7 +4793,7 @@ player::spectate_target(name_or_uuid="name_or_uuid");
 | name_or_uuid | Текст | Имя или UUID цели |
 
 <h3 id=player_start_using_item>
-  <code>player::start_using_item</code>
+  <code>player.start_using_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4803,11 +4803,11 @@ player::spectate_target(name_or_uuid="name_or_uuid");
 
 **Пример использования:**
 ```ts
-player::start_using_item("MAIN_HAND");
+player.start_using_item("MAIN_HAND");
 
 //Или в сухую по ключам
 
-player::start_using_item(equipment="MAIN_HAND");
+player.start_using_item(equipment="MAIN_HAND");
 ```
 
 **Аргументы:**
@@ -4817,7 +4817,7 @@ player::start_using_item(equipment="MAIN_HAND");
 | equipment | Маркер<br/>**MAIN_HAND** - Основная рука<br/>**OFF_HAND** - Второстепенная рука | Тип руки |
 
 <h3 id=player_stop_sound>
-  <code>player::stop_sound</code>
+  <code>player.stop_sound</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4827,11 +4827,11 @@ player::start_using_item(equipment="MAIN_HAND");
 
 **Пример использования:**
 ```ts
-player::stop_sound([sound("entity.zombie.hurt"), sound("entity.zombie.hurt")]);
+player.stop_sound([sound("entity.zombie.hurt"), sound("entity.zombie.hurt")]);
 
 //Или в сухую по ключам
 
-player::stop_sound(sounds=[sound("entity.zombie.hurt"), sound("entity.zombie.hurt")]);
+player.stop_sound(sounds=[sound("entity.zombie.hurt"), sound("entity.zombie.hurt")]);
 ```
 
 **Аргументы:**
@@ -4841,7 +4841,7 @@ player::stop_sound(sounds=[sound("entity.zombie.hurt"), sound("entity.zombie.hur
 | sounds | Список\[Звук\] | Эффекты для остановки<br/>Аргумент поддерживает разложение списков |
 
 <h3 id=player_stop_sounds_by_source>
-  <code>player::stop_sounds_by_source</code>
+  <code>player.stop_sounds_by_source</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4851,11 +4851,11 @@ player::stop_sound(sounds=[sound("entity.zombie.hurt"), sound("entity.zombie.hur
 
 **Пример использования:**
 ```ts
-player::stop_sounds_by_source("AMBIENT");
+player.stop_sounds_by_source("AMBIENT");
 
 //Или в сухую по ключам
 
-player::stop_sounds_by_source(source="AMBIENT");
+player.stop_sounds_by_source(source="AMBIENT");
 ```
 
 **Аргументы:**
@@ -4865,7 +4865,7 @@ player::stop_sounds_by_source(source="AMBIENT");
 | source | Маркер<br/>**AMBIENT** - Окружение (ambient)<br/>**BLOCK** - Блоки (block)<br/>**HOSTILE** - Враждебные существа (hostile)<br/>**MASTER** - Общий (master)<br/>**MUSIC** - Музыка (music)<br/>**NEUTRAL** - Дружелюбные существа (neutral)<br/>**PLAYER** - Игроки (player)<br/>**RECORD** - Музыкальные блоки (record)<br/>**VOICE** - Голос/Речь (voice)<br/>**WEATHER** - Погода (weather) | Источник звука |
 
 <h3 id=player_swing_hand>
-  <code>player::swing_hand</code>
+  <code>player.swing_hand</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4875,11 +4875,11 @@ player::stop_sounds_by_source(source="AMBIENT");
 
 **Пример использования:**
 ```ts
-player::swing_hand("MAIN");
+player.swing_hand("MAIN");
 
 //Или в сухую по ключам
 
-player::swing_hand(hand_type="MAIN");
+player.swing_hand(hand_type="MAIN");
 ```
 
 **Аргументы:**
@@ -4889,7 +4889,7 @@ player::swing_hand(hand_type="MAIN");
 | hand_type | Маркер<br/>**MAIN** - Главная<br/>**OFF** - Второстепенная | Тип руки |
 
 <h3 id=player_teleport>
-  <code>player::teleport</code>
+  <code>player.teleport</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4901,11 +4901,11 @@ player::swing_hand(hand_type="MAIN");
 
 **Пример использования:**
 ```ts
-player::teleport(location(0,0,0,0,0), "FALSE", "FALSE", "FALSE");
+player.teleport(location(0,0,0,0,0), "FALSE", "FALSE", "FALSE");
 
 //Или в сухую по ключам
 
-player::teleport(location=location(0,0,0,0,0), keep_rotation="FALSE", keep_velocity="FALSE", dismount="FALSE");
+player.teleport(location=location(0,0,0,0,0), keep_rotation="FALSE", keep_velocity="FALSE", dismount="FALSE");
 ```
 
 **Аргументы:**
@@ -4918,7 +4918,7 @@ player::teleport(location=location(0,0,0,0,0), keep_rotation="FALSE", keep_veloc
 | dismount      | Маркер<br/>**FALSE** - Нет<br/>**TRUE** - Да             | Спешиться после телепортации |
 
 <h3 id=player_teleport_sequence>
-  <code>player::teleport_sequence</code>
+  <code>player.teleport_sequence</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -4928,11 +4928,11 @@ player::teleport(location=location(0,0,0,0,0), keep_rotation="FALSE", keep_veloc
 
 **Пример использования:**
 ```ts
-player::teleport_sequence([location(0,0,0,0,0), location(0,0,0,0,0)], 1);
+player.teleport_sequence([location(0,0,0,0,0), location(0,0,0,0,0)], 1);
 
 //Или в сухую по ключам
 
-player::teleport_sequence(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], delay=1);
+player.teleport_sequence(locations=[location(0,0,0,0,0), location(0,0,0,0,0)], delay=1);
 ```
 
 **Аргументы:**
