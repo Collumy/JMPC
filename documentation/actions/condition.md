@@ -42,7 +42,7 @@ event player_join:
     if myVar.exists():
 
     // Если есть в списке/словаре
-    if l`player`, l`player2` in list(g`myList`)
+    if l`player` in list(g`myList`)
     if l`player` in dict(g`myDict`)
 ```
 
