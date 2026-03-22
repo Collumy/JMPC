@@ -36,7 +36,10 @@ event player_join:
     // строковые проверки
     if text.contains("hello"):             
     if (username.startswith("Mr","Mrs","Dr")): 
-    if (filename.endswith(".txt",".log")):  
+    if (filename.endswith(".txt",".log")):
+
+    // переменные
+    if myVar.exists():
 
     // Если есть в списке/словаре
     if l`player`, l`player2` in list(g`myList`)
