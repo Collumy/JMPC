@@ -47,10 +47,10 @@ for loc in grid(location(0,64,0), location(5,64,5)):
 
 ```ts
 for index, item in list(items):
-    player::message("Слот ${index} = ${item}")
+    player.message("Слот $index = $item")
 
 for key, val in map(prices):
-    player::message("${key} стоит ${val}")
+    player.message("$key стоит $val")
 ```
 
 ---
