@@ -40,7 +40,7 @@ event player_join:
 
     // Если есть в списке/словаре
     if l`player`, l`player2` in list(g`myList`)
-    if l`player`, in dict(g`myDict`)
+    if l`player` in dict(g`myDict`)
 ```
 
 ## Отрицание
